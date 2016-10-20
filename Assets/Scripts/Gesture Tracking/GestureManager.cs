@@ -31,7 +31,7 @@ public class GestureManager : MonoBehaviour {
 			if (gesture.GestureUpdate(_HeadTracker, _HandsTracker)) {
 				Debug.Log("completed: " + gesture.Name);
 				_WaitingForReset = true;
-				break;
+				// break;
 			}
 		}	
 	}
