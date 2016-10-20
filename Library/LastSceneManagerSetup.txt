@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/Scenes/cloth test.unity
-  isLoaded: 1
-  isActive: 1
