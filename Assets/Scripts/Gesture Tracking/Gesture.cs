@@ -15,6 +15,7 @@ public class Gesture {
 		TimeToNextRule -= Time.deltaTime;
 		if (TimeToNextRule <= 0f) {
 			CurrentRuleIndex = 0;
+			Debug.Log(Name + " timed out checking rule");
 		}
 
 		var currentRule = Rules[CurrentRuleIndex];

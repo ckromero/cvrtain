@@ -129,6 +129,33 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012205468060, guid: 17b479124dcc74837b0cc70457f4b995,
+        type: 2}
+      propertyPath: Gestures.Array.data[0].Rules.Array.data[0].HeadState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012205468060, guid: 17b479124dcc74837b0cc70457f4b995,
+        type: 2}
+      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].LeftHandZone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000012205468060, guid: 17b479124dcc74837b0cc70457f4b995,
+        type: 2}
+      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].RightHandZone
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013006560342, guid: 17b479124dcc74837b0cc70457f4b995, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011377799224, guid: 17b479124dcc74837b0cc70457f4b995, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000014000161010, guid: 17b479124dcc74837b0cc70457f4b995, type: 2}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17b479124dcc74837b0cc70457f4b995, type: 2}
   m_IsPrefabParent: 0
