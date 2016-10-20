@@ -1,0 +1,339 @@
+fileFormatVersion: 2
+guid: cd8407b14287c4a6e87d107ef78f421c
+timeCreated: 1476820217
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: rightfist pump sprite sheet_0
+    21300002: rightfist pump sprite sheet_1
+    21300004: rightfist pump sprite sheet_2
+    21300006: rightfist pump sprite sheet_3
+    21300008: rightfist pump sprite sheet_4
+    21300010: rightfist pump sprite sheet_5
+    21300012: rightfist pump sprite sheet_6
+    21300014: rightfist pump sprite sheet_7
+    21300016: rightfist pump sprite sheet_8
+    21300018: rightfist pump sprite sheet_9
+    21300020: rightfist pump sprite sheet_10
+    21300022: rightfist pump sprite sheet_11
+    21300024: rightfist pump sprite sheet_12
+    21300026: rightfist pump sprite sheet_13
+    21300028: rightfist pump sprite sheet_14
+    21300030: rightfist pump sprite sheet_15
+    21300032: rightfist pump sprite sheet_16
+    21300034: rightfist pump sprite sheet_17
+    21300036: rightfist pump sprite sheet_18
+    21300038: rightfist pump sprite sheet_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 379
+        width: 280
+        height: 787
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_1
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 381
+        width: 255
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 381
+        width: 261
+        height: 781
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2431
+        y: 379
+        width: 268
+        height: 771
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_4
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 381
+        width: 277
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_5
+      rect:
+        serializedVersion: 2
+        x: 3226
+        y: 1136
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_6
+      rect:
+        serializedVersion: 2
+        x: 3854
+        y: 381
+        width: 278
+        height: 767
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_7
+      rect:
+        serializedVersion: 2
+        x: 3948
+        y: 1136
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_8
+      rect:
+        serializedVersion: 2
+        x: 6024
+        y: 381
+        width: 270
+        height: 769
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6752
+        y: 381
+        width: 269
+        height: 777
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_10
+      rect:
+        serializedVersion: 2
+        x: 7455
+        y: 381
+        width: 284
+        height: 785
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_11
+      rect:
+        serializedVersion: 2
+        x: 4573
+        y: 381
+        width: 284
+        height: 735
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_12
+      rect:
+        serializedVersion: 2
+        x: 5304
+        y: 381
+        width: 270
+        height: 750
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_13
+      rect:
+        serializedVersion: 2
+        x: 6271
+        y: 921
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_14
+      rect:
+        serializedVersion: 2
+        x: 6735
+        y: 936
+        width: 17
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_15
+      rect:
+        serializedVersion: 2
+        x: 6745
+        y: 916
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 824
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_17
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 824
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 7920
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: rightfist pump sprite sheet_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 7879
+        height: 1280
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
