@@ -21,7 +21,8 @@ public class GestureManager : MonoBehaviour {
 		if (_WaitingForReset) {
 			if (_HeadTracker.HeadState == HeadState.Upright) {
 				_WaitingForReset = false;
-			}
+                Debug.Log("completed: Reset");
+            }
 			else {
 				return;
 			}
