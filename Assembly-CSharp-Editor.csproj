@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+    <Compile Include="Assets\Editor\Gesture Tracking\FollowTransformEditor.cs" />
     <Compile Include="Assets\Editor\Gesture Tracking\GestureCallibratorEditor.cs" />
     <Compile Include="Assets\Editor\Gesture Tracking\HandsTrackerEditor.cs" />
     <Compile Include="Assets\Editor\ImageEffects\AntialiasingEditor.cs" />
@@ -213,8 +214,8 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\Editor\Gesture%20Tracking\GestureCallibratorEditor.cs" />
-    <Compile Include="Assets\Scripts\Gesture%20Tracking\GestureCallibrator.cs" />
+    <Compile Include="Assets\Editor\Gesture%20Tracking\FollowTransformEditor.cs" />
+    <Compile Include="Assets\Scripts\Gesture%20Tracking\FollowTransform.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
