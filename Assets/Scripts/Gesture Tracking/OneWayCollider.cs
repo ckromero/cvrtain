@@ -99,13 +99,13 @@ public class OneWayCollider : MonoBehaviour {
 		* to be rotated and have the gizmos correctly reflect that */
 		Gizmos.color = Color.blue;
 		var center = transform.TransformPoint(UpperColliderCenter);
-		var cubeMatrix = Matrix4x4.TRS(center, rotation, Vector3.one);
+		var cubeMatrix = Matrix4x4.TRS(center, rotation, transform.lossyScale);
 		Gizmos.matrix *= cubeMatrix;
 		Gizmos.DrawWireCube(Vector3.zero, UpperColliderSize);
 
 		Gizmos.color = Color.green;
 		center = transform.TransformPoint(LowerColliderCenter);
-		cubeMatrix = Matrix4x4.TRS(center, rotation, Vector3.one);
+		cubeMatrix = Matrix4x4.TRS(center, rotation, transform.lossyScale);
 		Gizmos.matrix = oldMatrix * cubeMatrix;
 		Gizmos.DrawWireCube(Vector3.zero, LowerColliderSize);
 

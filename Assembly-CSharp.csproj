@@ -48,6 +48,8 @@
     <Compile Include="Assets\Scripts\Gesture Tracking\BowGesture.cs" />
     <Compile Include="Assets\Scripts\Gesture Tracking\ColliderSubscriber.cs" />
     <Compile Include="Assets\Scripts\Gesture Tracking\Gesture.cs" />
+    <Compile Include="Assets\Scripts\Gesture Tracking\GestureAligner.cs" />
+    <Compile Include="Assets\Scripts\Gesture Tracking\GestureCallibrator.cs" />
     <Compile Include="Assets\Scripts\Gesture Tracking\GestureDetector.cs" />
     <Compile Include="Assets\Scripts\Gesture Tracking\GestureManager.cs" />
     <Compile Include="Assets\Scripts\Gesture Tracking\HandsTracker.cs" />
@@ -196,8 +198,8 @@
     <Reference Include="UnityEngine.Analytics">
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\Scripts\Gesture%20Tracking\GestureManager.cs" />
-    <Compile Include="Assets\Scripts\Gesture%20Tracking\Gesture.cs" />
+    <Compile Include="Assets\Scripts\Gesture%20Tracking\OneWayCollider.cs" />
+    <Compile Include="Assets\Scripts\Gesture%20Tracking\HandsTracker.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

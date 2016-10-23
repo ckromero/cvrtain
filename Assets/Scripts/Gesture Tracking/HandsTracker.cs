@@ -6,9 +6,9 @@ public class HandsTracker : MonoBehaviour {
 	public Transform LeftHand;
 	public Transform RightHand;
 
-	const int _DIVISIONS = 8;
-	const int _RINGS = 3;
-	const float _RING_RADIUS = 1.25f;
+	public int Divisions = 8;
+	public int Rings = 2;
+	public float RingRadius = 0.65f;
 
 	// public int LeftHandZone { get; private set; }
 
@@ -28,7 +28,7 @@ public class HandsTracker : MonoBehaviour {
 
 	private int CalculateZone(Vector2 position) {
 		var angle = Mathf.Atan2(position.y, position.x);
-		var zone = (int)Mathf.Floor(angle / (Mathf.PI * 2 / _DIVISIONS));
+		var zone = (int)Mathf.Floor(angle / (Mathf.PI * 2 / Divisions));
 		if (zone >= 0) zone++;
 		return zone;
 	}
@@ -36,7 +36,7 @@ public class HandsTracker : MonoBehaviour {
 	public int LeftHandRing {
 		get {
 			var distance = Vector3.Distance(LeftHand.position, transform.position);
-			distance = Mathf.Clamp(distance/_RING_RADIUS, 0, _RINGS);
+			distance = Mathf.Clamp(distance/RingRadius, 0, Rings);
 			return (int)Mathf.Floor(distance) + 1;
 		}
 	}
@@ -44,7 +44,7 @@ public class HandsTracker : MonoBehaviour {
 	public int RightHandRing {
 		get {
 			var distance = Vector3.Distance(RightHand.position, transform.position);
-			distance = Mathf.Clamp(distance/_RING_RADIUS, 0, _RINGS);
+			distance = Mathf.Clamp(distance/RingRadius, 0, Rings);
 			return (int)Mathf.Floor(distance) + 1;
 		}
 	}
@@ -60,8 +60,8 @@ public class HandsTracker : MonoBehaviour {
 	}
 	
 	void OnDrawGizmos() {
-		for (var i = 0; i < _DIVISIONS; i++) {
-			var angle = i * Mathf.PI / (_DIVISIONS / 2);
+		for (var i = 0; i < Divisions; i++) {
+			var angle = i * Mathf.PI / (Divisions / 2);
 
 			var target = Vector3.zero;
 			target.y = 5 * Mathf.Cos(angle);
@@ -73,10 +73,14 @@ public class HandsTracker : MonoBehaviour {
 			UnityEngine.Gizmos.DrawLine(start, target);
 		}
 
-		for (var i = 1; i <= _RINGS; i++) {
-			var color = Color.Lerp(Color.yellow, Color.magenta, (i-1f)/(_RINGS - 1f));
+		var oldMatrix = Gizmos.matrix;
+		var cubeMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
+		Gizmos.matrix = oldMatrix * cubeMatrix;
+		for (var i = 1; i <= Rings; i++) {
+			var color = Color.Lerp(Color.yellow, Color.magenta, (i-1f)/(Rings - 1f));
 			Gizmos.color = color;
-			Gizmos.DrawWireSphere(transform.position, i * _RING_RADIUS);
+			Gizmos.DrawWireSphere(Vector3.zero, i * RingRadius);
 		}
+		Gizmos.matrix = oldMatrix;
 	}
 }
