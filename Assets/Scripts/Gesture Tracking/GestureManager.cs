@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
 public class GestureManager : MonoBehaviour {
 
+	public Text TestOutputText;
 	public Gesture[] Gestures;
 
 	private HeadTracker _HeadTracker;
@@ -26,6 +28,7 @@ public class GestureManager : MonoBehaviour {
 			if (_HeadTracker.HeadState == HeadState.Upright) {
 				_WaitingForReset = false;
                 Debug.Log("completed: Reset");
+                TestOutputText.text = "";
                 foreach (var gesture in Gestures) {
                 	gesture.Reset();
                 }
@@ -42,16 +45,14 @@ public class GestureManager : MonoBehaviour {
 		foreach (var gesture in Gestures) {
 			gesture.GestureUpdate(_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-				Debug.Log("COMPLETED: " + gesture.Name);
+				var message = "COMPLETED: " + gesture.Name;
+				Debug.Log(message);
+				TestOutputText.text = message;
 				_WaitingForReset = true;
 				break;
 			}
-			if (sortedGestures.Count == 0) {
-				Debug.Log("evaluated " + gesture.Name + " first");
-			}
 			for (var i = 0; i <= sortedGestures.Count; i++) {
 				if (i == sortedGestures.Count) {
-					// sortedGestures.Insert(i, gesture);
 					sortedGestures.Add(gesture);
 					break;
 				}

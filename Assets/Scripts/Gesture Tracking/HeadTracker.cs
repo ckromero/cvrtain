@@ -39,7 +39,6 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("current HeadState: " + HeadState);
 	}
 
 	void OnBowTriggerEnter(Collider other) {
