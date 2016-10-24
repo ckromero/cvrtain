@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
-public class GestureManager : MonoBehaviour {
+public class GestureManager : MonoBehaviour, IGestureManager {
 
 	public Text TestOutputText;
 	public Gesture[] Gestures;
@@ -13,6 +13,12 @@ public class GestureManager : MonoBehaviour {
 
 	private bool _WaitingForReset = false;
 	private List<Gesture> _Gestures;
+
+	public CompletedGestureStruct LastGesture { get; private set; }
+
+	void Awake() {
+		LastGesture = new CompletedGestureStruct("", 0f);
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -55,6 +61,8 @@ public class GestureManager : MonoBehaviour {
               //  TestOutputText.text = "updating " + gesture.Name;
             //}
 			if (gesture.Completed) {
+				LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
+
 				var message = "COMPLETED: " + gesture.Name;
 				Debug.Log(message);
 				TestOutputText.text = message;
@@ -78,5 +86,33 @@ public class GestureManager : MonoBehaviour {
 		if (sortedGestures.Count == Gestures.Length) {
 			Gestures = sortedGestures.ToArray();
 		}
+	}
+
+	public bool CompareGestureNames(string[] names) {
+		var correct = true;
+		foreach (var name in names) {
+			var matchingGesture = false;
+			foreach (var gesture in Gestures) {
+				if (name == gesture.Name) {
+					matchingGesture = true;
+					break;
+				}
+			}
+			if (!matchingGesture) {
+				correct = false;
+			}
+			Debug.Log("ERROR: " + name + " is not a valid Gesture name!!!!");
+		}
+		return correct;
+	}
+}
+
+public struct CompletedGestureStruct {
+	public readonly string Name;
+	public readonly float Time;
+
+	public CompletedGestureStruct(string name, float time) {
+		this.Name = name;
+		this.Time = time;
 	}
 }
