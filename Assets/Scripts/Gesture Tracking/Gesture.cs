@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 [System.Serializable]
 public class Gesture {
@@ -63,7 +64,6 @@ public class Gesture {
 				_OnARule = true;
 				var time = currentRule.TimeLimit;
 				_TimeLeftOnRule = (time.Equals(0f)) ? Mathf.Infinity : time;
-				Debug.Log("completed rule " + CurrentRuleIndex + " of " + Name);
 			}
 			_TimeLeftOnRule -= Time.deltaTime;
 			if (_TimeLeftOnRule <= 0f) {
