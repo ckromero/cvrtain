@@ -19,9 +19,11 @@ public class FollowTransform : MonoBehaviour {
 	[HideInInspector]
 	public bool ZRotationLock;
 
+    private Quaternion _StartingRotation;
+
 	// Use this for initialization
 	void Start () {
-	
+        _StartingRotation = transform.rotation;
 	}
 	
 	// Update is called once per frame
@@ -60,6 +62,6 @@ public class FollowTransform : MonoBehaviour {
 		if (ZRotationLock) {
 			rotation.z = transform.eulerAngles.z;
 		}
-		transform.eulerAngles = rotation;
+		transform.eulerAngles = _StartingRotation.eulerAngles + rotation;
 	}
 }

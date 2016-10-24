@@ -42,8 +42,18 @@ public class GestureManager : MonoBehaviour {
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
 		var sortedGestures = new List<Gesture>();
-		foreach (var gesture in Gestures) {
-			gesture.GestureUpdate(_HeadTracker, _HandsTracker);
+        var index = 0;
+        var stateString = "";
+        foreach (var state in _HeadTracker.HeadStateList)
+        {
+            stateString += state + " ";
+        }
+        Debug.Log(stateString);
+        foreach (var gesture in Gestures) {
+           // if (index++ == 0) {
+                gesture.GestureUpdate(_HeadTracker, _HandsTracker);
+              //  TestOutputText.text = "updating " + gesture.Name;
+            //}
 			if (gesture.Completed) {
 				var message = "COMPLETED: " + gesture.Name;
 				Debug.Log(message);

@@ -5,14 +5,22 @@ using System.Collections.Generic;
 public enum HeadState {Upright, Bow, Curtsy, None};
 public class HeadTracker : MonoBehaviour {
 
-	public HeadState HeadState {
-		get {
-			if (_StateBuffer.Count > 0) {
-				return _StateBuffer[0];
-			}
-			return HeadState.None;
-		}
-	}
+    public HeadState HeadState {
+        get {
+            if (_StateBuffer.Count > 0) {
+                return _StateBuffer[0];
+            }
+            return HeadState.None;
+        }
+    }
+
+    public List<HeadState> HeadStateList
+    {
+        get
+        {
+            return _StateBuffer;
+        }
+    }
 
 	public OneWayCollider BowCollider;
 	public OneWayCollider CurtsyCollider;

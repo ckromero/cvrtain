@@ -26,9 +26,13 @@ public class Gesture {
 		var currentRule = Rules[CurrentRuleIndex];
 
 		var ruleComplete = true;
-		if (currentRule.HeadState != head.HeadState) {
-			ruleComplete = false;
-		}
+		//if (currentRule.HeadState != head.HeadState) {
+		//	ruleComplete = false;
+		//}
+        if (currentRule.HeadState != HeadState.None && !head.HeadStateList.Contains(currentRule.HeadState))
+        {
+            ruleComplete = false;
+        }
 
 		if (currentRule.LeftHandZone != 0 || !ruleComplete) {
 			if (currentRule.LeftHandZone != hands.LeftHandZone) {
