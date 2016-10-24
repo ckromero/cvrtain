@@ -9,20 +9,21 @@ public class HandsTracker : MonoBehaviour {
 	public int Divisions = 8;
 	public int Rings = 2;
 	public float RingRadius = 0.65f;
+	public float MinimumRadius = 0.65f;
 
 	// public int LeftHandZone { get; private set; }
 
 	public int LeftHandZone {
 		get {
 			var localPosition = transform.InverseTransformPoint(LeftHand.position);
-			return CalculateZone(new Vector2(localPosition.y, localPosition.z));
+			return -1 * CalculateZone(new Vector2(localPosition.y, localPosition.z));
 		}
 	}
 
 	public int RightHandZone {
 		get {
 			var localPosition = transform.InverseTransformPoint(RightHand.position);
-			return CalculateZone(new Vector2(localPosition.y, localPosition.z));
+			return -1 * CalculateZone(new Vector2(localPosition.y, localPosition.z));
 		}
 	}
 
@@ -36,7 +37,7 @@ public class HandsTracker : MonoBehaviour {
 	public int LeftHandRing {
 		get {
 			var distance = Vector3.Distance(LeftHand.position, transform.position);
-			distance = Mathf.Clamp(distance/RingRadius, 0, Rings);
+			distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings);
 			return (int)Mathf.Floor(distance) + 1;
 		}
 	}
@@ -44,17 +45,15 @@ public class HandsTracker : MonoBehaviour {
 	public int RightHandRing {
 		get {
 			var distance = Vector3.Distance(RightHand.position, transform.position);
-			distance = Mathf.Clamp(distance/RingRadius, 0, Rings);
+			distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings);
 			return (int)Mathf.Floor(distance) + 1;
 		}
 	}
 
-	// Use this for initialization
 	void Start () {
 	
 	}
 	
-	// Update is called once per frame
 	void Update () {
 
 	}
@@ -76,10 +75,10 @@ public class HandsTracker : MonoBehaviour {
 		var oldMatrix = Gizmos.matrix;
 		var cubeMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
 		Gizmos.matrix = oldMatrix * cubeMatrix;
-		for (var i = 1; i <= Rings; i++) {
-			var color = Color.Lerp(Color.yellow, Color.magenta, (i-1f)/(Rings - 1f));
+		for (var i = 0; i < Rings; i++) {
+			var color = Color.Lerp(Color.yellow, Color.magenta, i/(Rings - 1f));
 			Gizmos.color = color;
-			Gizmos.DrawWireSphere(Vector3.zero, i * RingRadius);
+			Gizmos.DrawWireSphere(Vector3.zero, i * RingRadius + MinimumRadius);
 		}
 		Gizmos.matrix = oldMatrix;
 	}

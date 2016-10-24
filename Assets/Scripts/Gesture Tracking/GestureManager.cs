@@ -24,7 +24,6 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 	void Start () {
 		_HeadTracker = GetComponent<HeadTracker>();
 		_HandsTracker = GetComponent<HandsTracker>();
-
 		_Gestures = new List<Gesture>(Gestures);
 	}
 	
@@ -44,27 +43,19 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 			}
 		}
 
+		// Debug.Log(LastGesture.Name);
+
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
 		var sortedGestures = new List<Gesture>();
-        var index = 0;
-        var stateString = "";
-        foreach (var state in _HeadTracker.HeadStateList)
-        {
-            stateString += state + " ";
-        }
-        Debug.Log(stateString);
         foreach (var gesture in Gestures) {
-           // if (index++ == 0) {
-                gesture.GestureUpdate(_HeadTracker, _HandsTracker);
-              //  TestOutputText.text = "updating " + gesture.Name;
-            //}
+            gesture.GestureUpdate(_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
 				LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
 
 				var message = "COMPLETED: " + gesture.Name;
-				Debug.Log(message);
+				// Debug.Log(message);
 				TestOutputText.text = message;
 				_WaitingForReset = true;
 				break;
@@ -80,7 +71,6 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 				}
 			}
 		}
-		// _Gestures = sortedGestures;
 		/* since the above loop can break prematurely, make sure that all
 		* gestures have actually been added to sortedGestures */
 		if (sortedGestures.Count == Gestures.Length) {

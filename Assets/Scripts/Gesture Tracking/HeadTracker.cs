@@ -18,7 +18,12 @@ public class HeadTracker : MonoBehaviour {
     {
         get
         {
-            return _StateBuffer;
+        	if (_StateBuffer.Count > 0) {
+        		return _StateBuffer;
+        	}
+        	var returnList = new List<HeadState>(1);
+        	returnList.Add(HeadState.None);
+            return returnList;
         }
     }
 

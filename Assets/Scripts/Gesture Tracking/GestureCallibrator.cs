@@ -7,16 +7,38 @@ public class GestureCallibrator : MonoBehaviour {
 	public float HeadOffset;
 	public Transform HeadTransform;
 
+	public SteamVR_TrackedObject LeftWand;
+	public SteamVR_TrackedObject RightWand;
+
+	private SteamVR_Controller.Device _LeftDevice;
+	private SteamVR_Controller.Device _RightDevice;
+	private bool _WandsEnabled;
+
 	// Use this for initialization
 	void Start () {
-	
+		try {
+			_LeftDevice = SteamVR_Controller.Input((int)LeftWand.index);	
+			_RightDevice = SteamVR_Controller.Input((int)RightWand.index);
+			_WandsEnabled = true;
+		}
+		catch (System.IndexOutOfRangeException e) {
+			_WandsEnabled = false;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(CallibrationKey)) {
-			Callibrate();
-		}	
+		if (_WandsEnabled) {
+			if (_LeftDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) ||
+				_RightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
+				Callibrate();
+			}
+		}
+		else {
+			if (Input.GetKeyDown(CallibrationKey)){
+				Callibrate();
+			}	
+		}
 	}
 
 	void OnDrawGizmos() {
