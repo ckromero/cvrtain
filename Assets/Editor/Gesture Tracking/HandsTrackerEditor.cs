@@ -9,6 +9,7 @@ public class HandsTrackerEditor : Editor {
 		
 		var leftLabel = "left hand\n" + t.LeftHandRing + " " + t.LeftHandZone;
 		var rightLabel = "right hand\n" + t.RightHandRing + " " + t.RightHandZone;
+		Handles.color = Color.cyan;
 		Handles.Label(t.LeftHand.position, leftLabel);
 		Handles.Label(t.RightHand.position, rightLabel);
 	}

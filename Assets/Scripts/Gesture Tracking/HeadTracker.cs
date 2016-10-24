@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public enum HeadState {Upright, Bow, Curtsy};
+public enum HeadState {Upright, Bow, Curtsy, None};
 public class HeadTracker : MonoBehaviour {
 
 	public HeadState HeadState {
@@ -10,12 +10,13 @@ public class HeadTracker : MonoBehaviour {
 			if (_StateBuffer.Count > 0) {
 				return _StateBuffer[0];
 			}
-			return HeadState.Upright;
+			return HeadState.None;
 		}
 	}
 
 	public OneWayCollider BowCollider;
 	public OneWayCollider CurtsyCollider;
+	public ColliderSubscriber UprightCollider;
 
 	private List<HeadState> _StateBuffer;
 
@@ -24,8 +25,12 @@ public class HeadTracker : MonoBehaviour {
 		BowCollider.OnTriggerExit += OnBowTriggerExit;
 		CurtsyCollider.OnTriggerEnter += OnCurtsyTriggerEnter;
 		CurtsyCollider.OnTriggerExit += OnCurtsyTriggerExit;
+		UprightCollider.OnTriggerEnterDelegate += OnUprightTriggerEnter;
+		UprightCollider.OnTriggerExitDelegate += OnUprightTriggerExit;
 
 		_StateBuffer = new List<HeadState>();
+
+		// _StateBuffer.Add(HeadState.Upright);
 	}
 
 	// Use this for initialization
@@ -34,6 +39,7 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log("current HeadState: " + HeadState);
 	}
 
 	void OnBowTriggerEnter(Collider other) {
@@ -50,5 +56,13 @@ public class HeadTracker : MonoBehaviour {
 
 	void OnCurtsyTriggerExit(Collider other) {
 		_StateBuffer.Remove(HeadState.Curtsy);
+	}
+
+	void OnUprightTriggerEnter(Collider other) {
+		_StateBuffer.Add(HeadState.Upright);
+	}
+
+	void OnUprightTriggerExit(Collider other) {
+		_StateBuffer.Remove(HeadState.Upright);
 	}
 }

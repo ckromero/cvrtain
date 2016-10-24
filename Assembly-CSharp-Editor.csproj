@@ -214,8 +214,7 @@
     <Reference Include="UnityEditor.OSXStandalone.Extensions">
       <HintPath>/Applications/Unity/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Compile Include="Assets\Editor\Gesture%20Tracking\FollowTransformEditor.cs" />
-    <Compile Include="Assets\Scripts\Gesture%20Tracking\FollowTransform.cs" />
+    <Compile Include="Assets\Editor\Gesture%20Tracking\GestureCallibratorEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">

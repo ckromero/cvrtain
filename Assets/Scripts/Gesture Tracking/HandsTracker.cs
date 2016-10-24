@@ -14,14 +14,14 @@ public class HandsTracker : MonoBehaviour {
 
 	public int LeftHandZone {
 		get {
-			var localPosition = LeftHand.localPosition;
+			var localPosition = transform.InverseTransformPoint(LeftHand.position);
 			return CalculateZone(new Vector2(localPosition.y, localPosition.z));
 		}
 	}
 
 	public int RightHandZone {
 		get {
-			var localPosition = RightHand.localPosition;
+			var localPosition = transform.InverseTransformPoint(RightHand.position);
 			return CalculateZone(new Vector2(localPosition.y, localPosition.z));
 		}
 	}

@@ -7,17 +7,22 @@ public class Gesture {
 	public GestureRule[] Rules;
 
 	public int CurrentRuleIndex { get; private set; }
-	public bool Completed { get; private set; }
+	public bool Completed {
+		get {
+			return CurrentRuleIndex >= Rules.Length - 1 && _OnARule;
+		}
+	}
 
-	private float TimeToNextRule = Mathf.Infinity;
+	private float _TimeToNextRule = Mathf.Infinity;
+	private float _TimeLeftOnRule = Mathf.Infinity;
+	private bool _OnARule = false;
 
 	public bool GestureUpdate(HeadTracker head, HandsTracker hands) {
-		TimeToNextRule -= Time.deltaTime;
-		if (TimeToNextRule <= 0f) {
-			CurrentRuleIndex = 0;
-			Debug.Log(Name + " timed out checking rule");
-		}
 
+		if (CurrentRuleIndex >= Rules.Length) {
+			Debug.Log("ERROR: " + Name + " has overrun rules");
+			return false;
+		}
 		var currentRule = Rules[CurrentRuleIndex];
 
 		var ruleComplete = true;
@@ -50,17 +55,51 @@ public class Gesture {
 		}
 
 		if (ruleComplete) {
-			CurrentRuleIndex++;
-			if (CurrentRuleIndex == Rules.Length) {
-				CurrentRuleIndex = 0;
-				return true;
+			if (!_OnARule) {
+				_OnARule = true;
+				var time = currentRule.TimeLimit;
+				_TimeLeftOnRule = (time.Equals(0f)) ? Mathf.Infinity : time;
+				Debug.Log("completed rule " + CurrentRuleIndex + " of " + Name);
 			}
-			Debug.Log("advancing rule of " + Name);
-			var delay = currentRule.Delay;
-			TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
+			_TimeLeftOnRule -= Time.deltaTime;
+			if (_TimeLeftOnRule <= 0f) {
+				Debug.Log(Name + " -- timed out on rule " + CurrentRuleIndex);
+				_TimeLeftOnRule = Mathf.Infinity;
+				CurrentRuleIndex = 0;
+				_OnARule = false;
+			}
+			// CurrentRuleIndex++;
+			// if (CurrentRuleIndex == Rules.Length) {
+			// 	CurrentRuleIndex = 0;
+			// 	return true;
+			// }
+			// Debug.Log("advancing rule of " + Name);
+			// var delay = currentRule.RuleGap;
+			// _TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
+		}
+		else {
+			if (_OnARule) {
+				_OnARule = false;
+				CurrentRuleIndex++;
+				var delay = currentRule.RuleGap;
+				_TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
+			}
+			_TimeToNextRule -= Time.deltaTime;
+			if (_TimeToNextRule <= 0f) {
+				Debug.Log(Name + " -- timed out getting to rule " + CurrentRuleIndex);
+				CurrentRuleIndex = 0;
+				_TimeToNextRule = Mathf.Infinity;
+			}
 		}
 
 		return false;
+	}
+
+	public void Reset() {
+		CurrentRuleIndex = 0;
+		_OnARule = false;
+		_TimeLeftOnRule = Mathf.Infinity;
+		_TimeToNextRule = Mathf.Infinity;
 	}
 }
 
@@ -71,5 +110,6 @@ public class GestureRule {
 	public int LeftHandRing;
 	public int RightHandZone;
 	public int RightHandRing;
-	public float Delay;
+	public float TimeLimit;
+	public float RuleGap;
 }

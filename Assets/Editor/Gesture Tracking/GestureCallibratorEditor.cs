@@ -7,8 +7,12 @@ public class GestureCallibratorEditor : Editor {
 		DrawDefaultInspector();
 
 		var script = (GestureCallibrator)target;
-		if (Application.isPlaying) {
-			if (GUILayout.Button("Callibrate")) {
+		var message = "Callibrate";
+		if (!Application.isPlaying) {
+			message += " (only during Play mode)";
+		}
+		if (GUILayout.Button(message)) {
+			if (Application.isPlaying) {
 				script.Callibrate();
 			}
 		}
