@@ -9,7 +9,6 @@ public class GestureManagerEditor : Editor {
 
 	private List<Gesture> _Gestures = new List<Gesture>(0);
 	private Object _Source = null;
-	private List<string> _TestingList = new List<string>(0);
 	private List<bool> _GestureVisible = new List<bool>(0);
 
 	private bool _ShowGestures = false;
@@ -44,10 +43,7 @@ public class GestureManagerEditor : Editor {
 			var toMoveDown = -1;
 
 			EditorGUI.indentLevel++;
-			// for (var i = 0; i < property.arraySize; i++) {
 			for (var i = 0; i < gestureList.Count; i++) {
-				// var gestureProperty = property.GetArrayElementAtIndex(i);
-				// var name = gestureProperty.FindPropertyRelative("Name").stringValue;
 				var name = gestureList[i].Name;
 				name = (name == "") ? "New Gesture" : name;
 
@@ -66,7 +62,6 @@ public class GestureManagerEditor : Editor {
 				EditorGUILayout.EndHorizontal();
 
 				if (visible) {
-					// EditorGUILayout.PropertyField(property.GetArrayElementAtIndex(i));
 					DisplayGesture(gestureList[i]);
 				}
 				_GestureVisible[i] = visible;
@@ -104,13 +99,13 @@ public class GestureManagerEditor : Editor {
 				gestureList.Add(new Gesture());
 			}
 			if (GUILayout.Button("Remove All")) {
-				_TestingList = new List<string>(0);
 				_GestureVisible = new List<bool>(0);
 				gestureList.Clear();
 			}
 		}
 
 		script.Gestures = gestureList.ToArray();
+		Debug.Log("I have: " + script.Gestures.Length + " Gestures");
 	}
 
 	private void DisplayGesture(Gesture gesture) {
@@ -140,7 +135,7 @@ public class GestureManagerEditor : Editor {
 				if (GUILayout.Button("Move Down", GUILayout.MaxWidth(75))) {
 					toMoveDown = i;
 				}
-				if (i >= 2 && GUILayout.Button("Remove", GUILayout.MaxWidth(75))) {
+				if (i >= 1 && GUILayout.Button("Remove", GUILayout.MaxWidth(75))) {
 					toRemove = i;
 				}
 				EditorGUILayout.EndHorizontal();

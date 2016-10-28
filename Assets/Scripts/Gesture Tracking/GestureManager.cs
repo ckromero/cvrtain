@@ -43,8 +43,6 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 			}
 		}
 
-		// Debug.Log(LastGesture.Name);
-
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
@@ -55,7 +53,6 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 				LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
 
 				var message = "COMPLETED: " + gesture.Name;
-				// Debug.Log(message);
 				TestOutputText.text = message;
 				_WaitingForReset = true;
 				break;

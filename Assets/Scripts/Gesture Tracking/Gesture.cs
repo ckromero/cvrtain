@@ -48,8 +48,8 @@ public class Gesture {
         if (currentRule.RequireHandAngles) {
         	var leftZone = hands.LeftHandZone;
         	var rightZone = hands.RightHandZone;
-        	if (currentRule.LeftHandAngles.x > leftZone ||
-        			leftZone > currentRule.LeftHandAngles.y) {
+        	if (currentRule.LeftHandAngles.x < leftZone ||
+        			leftZone < currentRule.LeftHandAngles.y) {
         		ruleComplete = false;
         	}
         	if (currentRule.RightHandAngles.x > rightZone ||
@@ -57,17 +57,6 @@ public class Gesture {
         		ruleComplete = false;
         	}
         }
-		// if (currentRule.LeftHandZone != 0 || !ruleComplete) {
-		// 	if (currentRule.LeftHandZone != hands.LeftHandZone) {
-		// 		ruleComplete = false;
-		// 	}
-		// }
-
-		// if (currentRule.RightHandZone != 0 || !ruleComplete) {
-		// 	if (currentRule.RightHandZone != hands.RightHandZone) {
-		// 		ruleComplete = false;
-		// 	}
-		// }
 
 		if (currentRule.RequireHandReach) {
 			var leftReach = hands.LeftHandRing;
@@ -81,18 +70,6 @@ public class Gesture {
 				ruleComplete = false;
 			}
 		}
-
-		// if (currentRule.LeftHandRing != 0 || !ruleComplete) {
-		// 	if (currentRule.LeftHandRing != hands.LeftHandRing) {
-		// 		ruleComplete = false;
-		// 	}
-		// }
-
-		// if (currentRule.RightHandRing != 0 || !ruleComplete) {
-		// 	if (currentRule.RightHandRing != hands.RightHandRing) {
-		// 		ruleComplete = false;
-		// 	}
-		// }
 
 		if (ruleComplete) {
 			if (!_OnARule) {

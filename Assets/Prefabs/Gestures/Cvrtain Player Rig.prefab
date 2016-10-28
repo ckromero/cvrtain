@@ -353,7 +353,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013247722384}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.57333344, y: 0.71099997, z: 0}
+  m_LocalPosition: {x: -0.57333344, y: 1.923, z: 0}
   m_LocalScale: {x: 0.33333346, y: 0.33333334, z: 0.33333346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -495,7 +495,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013379275678}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.57333344, y: 0.71099997, z: 0}
+  m_LocalPosition: {x: 0.57333344, y: 1.955, z: 0}
   m_LocalScale: {x: 0.33333346, y: 0.33333334, z: 0.33333346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -949,38 +949,18 @@ MonoBehaviour:
   Gestures:
   - Name: Bow
     Rules:
-    - HeadState: 1
-      LeftHandZone: 0
-      LeftHandRing: 0
-      RightHandZone: 0
-      RightHandRing: 0
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 1
+      LeftHandAngles: {x: 4, y: 3}
+      RightHandAngles: {x: -4, y: -3}
+      RequireHandReach: 0
+      LeftHandReach: {x: 0, y: 0}
+      RightHandReach: {x: 0, y: 0}
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
       TimeLimit: 0
-      RuleGap: 0
-  - Name: Hands up bow
-    Rules:
-    - HeadState: 0
-      LeftHandZone: 1
-      LeftHandRing: 3
-      RightHandZone: -1
-      RightHandRing: 3
-      TimeLimit: 0
-      RuleGap: 20
-    - HeadState: 1
-      LeftHandZone: 0
-      LeftHandRing: 0
-      RightHandZone: 0
-      RightHandRing: 0
-      TimeLimit: 0
-      RuleGap: 0
-  - Name: Curtsey
-    Rules:
-    - HeadState: 2
-      LeftHandZone: 3
-      LeftHandRing: 0
-      RightHandZone: -3
-      RightHandRing: 0
-      TimeLimit: 0
-      RuleGap: 0
 --- !u!114 &114000010184264474
 MonoBehaviour:
   m_ObjectHideFlags: 1
