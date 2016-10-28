@@ -29,19 +29,19 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 	
 	// Update is called once per frame
 	void Update () {
-		if (_WaitingForReset) {
-			if (_HeadTracker.HeadState == HeadState.Upright) {
-				_WaitingForReset = false;
-                Debug.Log("completed: Reset");
-                TestOutputText.text = "";
-                foreach (var gesture in Gestures) {
-                	gesture.Reset();
-                }
-            }
-			else {
-				return;
-			}
-		}
+		// if (_WaitingForReset) {
+		// 	if (_HeadTracker.HeadState == HeadState.Upright) {
+		// 		_WaitingForReset = false;
+  //               Debug.Log("completed: Reset");
+  //               TestOutputText.text = "";
+  //               foreach (var gesture in Gestures) {
+  //               	gesture.Reset();
+  //               }
+  //           }
+		// 	else {
+		// 		return;
+		// 	}
+		// }
 
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
@@ -53,9 +53,11 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 				LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
 
 				var message = "COMPLETED: " + gesture.Name;
-				TestOutputText.text = message;
-				_WaitingForReset = true;
-				break;
+				// TestOutputText.text = message;
+				// _WaitingForReset = true;
+				// break;
+				Debug.Log(message);
+				gesture.Reset();
 			}
 			for (var i = 0; i <= sortedGestures.Count; i++) {
 				if (i == sortedGestures.Count) {

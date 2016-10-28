@@ -950,6 +950,18 @@ MonoBehaviour:
   - Name: Bow
     Rules:
     - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      LeftHandAngles: {x: 0, y: 0}
+      RightHandAngles: {x: 0, y: 0}
+      RequireHandReach: 0
+      LeftHandReach: {x: 0, y: 0}
+      RightHandReach: {x: 0, y: 0}
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
       HeadState: 1
       RequireHandAngles: 1
       LeftHandAngles: {x: 4, y: 3}

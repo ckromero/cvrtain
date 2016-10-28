@@ -128,14 +128,15 @@ public class GestureManagerEditor : Editor {
 				var rule = rulesList[i];
 
 				EditorGUILayout.BeginHorizontal();
-				EditorGUILayout.LabelField("Rule " + (i+1));
+				var ruleLabel = (i == 0) ? "Start Rule" : "Rule " + (i+1);
+				EditorGUILayout.LabelField(ruleLabel);
 				if (GUILayout.Button("Move Up", GUILayout.MaxWidth(75))) {
 					toMoveUp = i;
 				}
 				if (GUILayout.Button("Move Down", GUILayout.MaxWidth(75))) {
 					toMoveDown = i;
 				}
-				if (i >= 1 && GUILayout.Button("Remove", GUILayout.MaxWidth(75))) {
+				if (i >= 2 && GUILayout.Button("Remove", GUILayout.MaxWidth(75))) {
 					toRemove = i;
 				}
 				EditorGUILayout.EndHorizontal();

@@ -203,6 +203,7 @@
       <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Compile Include="Assets\Scripts\Gesture%20Tracking\Gesture.cs" />
+    <Compile Include="Assets\Scripts\Gesture%20Tracking\GestureManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
