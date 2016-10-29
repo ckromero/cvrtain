@@ -10,35 +10,30 @@ public class GestureCallibrator : MonoBehaviour {
 	public SteamVR_TrackedObject LeftWand;
 	public SteamVR_TrackedObject RightWand;
 
-	private SteamVR_Controller.Device _LeftDevice;
-	private SteamVR_Controller.Device _RightDevice;
-	private bool _WandsEnabled;
-
 	// Use this for initialization
 	void Start () {
-		try {
-			_LeftDevice = SteamVR_Controller.Input((int)LeftWand.index);	
-			_RightDevice = SteamVR_Controller.Input((int)RightWand.index);
-			_WandsEnabled = true;
-		}
-		catch (System.IndexOutOfRangeException e) {
-			_WandsEnabled = false;
-		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (_WandsEnabled) {
-			if (_LeftDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) ||
-				_RightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
-				Callibrate();
-			}
-		}
-		else {
-			if (Input.GetKeyDown(CallibrationKey)){
-				Callibrate();
-			}	
-		}
+
+        try
+        {
+            var leftDevice = SteamVR_Controller.Input((int)LeftWand.index);
+            var rightDevice = SteamVR_Controller.Input((int)RightWand.index);
+            if (leftDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) ||
+                rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
+            {
+                Callibrate();
+            }
+        }
+        catch (System.IndexOutOfRangeException e)
+        {
+            if (Input.GetKeyDown(CallibrationKey))
+            {
+                Callibrate();
+            }
+        }
 	}
 
 	void OnDrawGizmos() {
@@ -49,6 +44,7 @@ public class GestureCallibrator : MonoBehaviour {
 	}
 
 	public void Callibrate() {
+        Debug.Log("callibrate!");
 		var headPosition = HeadTransform.localPosition;
 		var myPosition = transform.localPosition;
 		var yDiff = headPosition.y / (myPosition.y + HeadOffset);
