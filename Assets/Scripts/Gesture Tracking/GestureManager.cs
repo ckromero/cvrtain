@@ -29,51 +29,21 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 	
 	// Update is called once per frame
 	void Update () {
-		// if (_WaitingForReset) {
-		// 	if (_HeadTracker.HeadState == HeadState.Upright) {
-		// 		_WaitingForReset = false;
-  //               Debug.Log("completed: Reset");
-  //               TestOutputText.text = "";
-  //               foreach (var gesture in Gestures) {
-  //               	gesture.Reset();
-  //               }
-  //           }
-		// 	else {
-		// 		return;
-		// 	}
-		// }
-
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
-		var sortedGestures = new List<Gesture>();
+		var largestCompletion = 0;
         foreach (var gesture in Gestures) {
             gesture.GestureUpdate(_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-				LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
-
+				if (largestCompletion < gesture.CurrentRuleIndex) {
+					LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
+					largestCompletion = gesture.CurrentRuleIndex;
+				}
 				var message = "COMPLETED: " + gesture.Name;
-				// TestOutputText.text = message;
-				// _WaitingForReset = true;
-				// break;
 				Debug.Log(message);
 				gesture.Reset();
 			}
-			for (var i = 0; i <= sortedGestures.Count; i++) {
-				if (i == sortedGestures.Count) {
-					sortedGestures.Add(gesture);
-					break;
-				}
-				else if (gesture.CurrentRuleIndex > sortedGestures[i].CurrentRuleIndex) {
-					sortedGestures.Insert(i, gesture);
-					break;
-				}
-			}
-		}
-		/* since the above loop can break prematurely, make sure that all
-		* gestures have actually been added to sortedGestures */
-		if (sortedGestures.Count == Gestures.Length) {
-			Gestures = sortedGestures.ToArray();
 		}
 	}
 
@@ -96,6 +66,7 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 	}
 }
 
+/* contains the name of the gesture and the time that it was completed */
 public struct CompletedGestureStruct {
 	public readonly string Name;
 	public readonly float Time;

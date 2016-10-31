@@ -10,116 +10,92 @@ public class Gesture {
 	public int CurrentRuleIndex { get; private set; }
 	public bool Completed {
 		get {
-			return CurrentRuleIndex >= Rules.Length - 1 && _OnARule;
+			return CurrentRuleIndex >= Rules.Length - 1;
 		}
 	}
 
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
-	private bool _OnARule = false;
 
 	public Gesture() {
+		CurrentRuleIndex = -1;
 		Rules = new GestureRule[2];
 	}
 
-	public bool GestureUpdate(HeadTracker head, HandsTracker hands) {
+	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
 
-		if (CurrentRuleIndex >= Rules.Length) {
-			Debug.Log("ERROR: " + Name + " has overrun rules");
-			return false;
+		if (Completed) {
+			return;
 		}
-		var currentRule = Rules[CurrentRuleIndex];
 
+		if (CheckRule(head, hands, Rules[CurrentRuleIndex+1])) {
+			CurrentRuleIndex++;
+			Debug.Log("Completed rule: " + CurrentRuleIndex + " of " + Name);
+			if (!Completed) {
+				var rule = Rules[CurrentRuleIndex];
+				var time = (rule.HasMaximumDuration) ? rule.MaxDuration : Mathf.Infinity;
+				_TimeLeftOnRule = time;
+				time = (rule.HasTimeLimit) ? rule.TimeLimit : Mathf.Infinity;
+				_TimeToNextRule = time;
+			}
+		}
+		else if (CurrentRuleIndex >= 0 && CheckRule(head, hands, Rules[CurrentRuleIndex])) {
+			_TimeLeftOnRule -= Time.deltaTime;
+			if (_TimeLeftOnRule <= 0f) {
+				Debug.Log(Name + " -- timed out on rule " + CurrentRuleIndex);
+				Reset();
+			}
+		}
+		else {
+			_TimeToNextRule -= Time.deltaTime;
+			if (_TimeToNextRule <= 0f) {
+				Debug.Log(Name + " -- timed out getting to rule " + CurrentRuleIndex);
+				Reset();
+			}
+		}
+	}
+
+	public void Reset() {
+		CurrentRuleIndex = -1;
+		_TimeLeftOnRule = Mathf.Infinity;
+		_TimeToNextRule = Mathf.Infinity;
+	}
+
+	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
 		var ruleComplete = true;
-		//if (currentRule.HeadState != head.HeadState) {
-		//	ruleComplete = false;
-		//}
-
-		if (currentRule.RequireHeadState) {
-			if (!head.HeadStateList.Contains(currentRule.HeadState)) {
+		if (rule.RequireHeadState) {
+			if (!head.HeadStateList.Contains(rule.HeadState)) {
 				ruleComplete = false;
 			}
 		}	
-        // if (currentRule.HeadState != HeadState.None && !head.HeadStateList.Contains(currentRule.HeadState))
-        // {
-        //     ruleComplete = false;
-        // }
 
-        if (currentRule.RequireHandAngles) {
+        if (rule.RequireHandAngles) {
         	var leftZone = hands.LeftHandZone;
         	var rightZone = hands.RightHandZone;
-        	if (currentRule.LeftHandAngles.x < leftZone ||
-        			leftZone < currentRule.LeftHandAngles.y) {
+        	if (rule.LeftHandAngles.x < leftZone ||
+        			leftZone < rule.LeftHandAngles.y) {
         		ruleComplete = false;
         	}
-        	if (currentRule.RightHandAngles.x > rightZone ||
-        			rightZone > currentRule.RightHandAngles.y) {
+        	if (rule.RightHandAngles.x > rightZone ||
+        			rightZone > rule.RightHandAngles.y) {
         		ruleComplete = false;
         	}
         }
 
-		if (currentRule.RequireHandReach) {
+		if (rule.RequireHandReach) {
 			var leftReach = hands.LeftHandRing;
 			var rightReach = hands.RightHandRing;
-			if (currentRule.LeftHandReach.x > leftReach ||
-				currentRule.LeftHandReach.y < leftReach) {
+			if (rule.LeftHandReach.x > leftReach ||
+				rule.LeftHandReach.y < leftReach) {
 				ruleComplete = false;
 			}
-			if (currentRule.RightHandReach.x > rightReach ||
-				currentRule.RightHandReach.y < rightReach) {
+			if (rule.RightHandReach.x > rightReach ||
+				rule.RightHandReach.y < rightReach) {
 				ruleComplete = false;
 			}
 		}
 
-		if (ruleComplete) {
-			if (!_OnARule) {
-				_OnARule = true;
-				// var time = currentRule.TimeLimit;
-				var time = (currentRule.HasMaximumDuration) ? currentRule.MaxDuration : Mathf.Infinity;
-				// _TimeLeftOnRule = (time.Equals(0f)) ? Mathf.Infinity : time;
-				_TimeLeftOnRule = time;
-			}
-			_TimeLeftOnRule -= Time.deltaTime;
-			if (_TimeLeftOnRule <= 0f) {
-				Debug.Log(Name + " -- timed out on rule " + CurrentRuleIndex);
-				_TimeLeftOnRule = Mathf.Infinity;
-				CurrentRuleIndex = 0;
-				_OnARule = false;
-			}
-			// CurrentRuleIndex++;
-			// if (CurrentRuleIndex == Rules.Length) {
-			// 	CurrentRuleIndex = 0;
-			// 	return true;
-			// }
-			// Debug.Log("advancing rule of " + Name);
-			// var delay = currentRule.RuleGap;
-			// _TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
-		}
-		else {
-			if (_OnARule) {
-				_OnARule = false;
-				CurrentRuleIndex++;
-				// var delay = currentRule.RuleGap;
-				var delay = (currentRule.HasTimeLimit) ? currentRule.TimeLimit : Mathf.Infinity;
-				// _TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
-				_TimeToNextRule = delay;
-			}
-			_TimeToNextRule -= Time.deltaTime;
-			if (_TimeToNextRule <= 0f) {
-				Debug.Log(Name + " -- timed out getting to rule " + CurrentRuleIndex);
-				CurrentRuleIndex = 0;
-				_TimeToNextRule = Mathf.Infinity;
-			}
-		}
-
-		return false;
-	}
-
-	public void Reset() {
-		CurrentRuleIndex = 0;
-		_OnARule = false;
-		_TimeLeftOnRule = Mathf.Infinity;
-		_TimeToNextRule = Mathf.Infinity;
+		return ruleComplete;
 	}
 }
 

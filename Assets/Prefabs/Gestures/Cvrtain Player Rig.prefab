@@ -973,6 +973,44 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+  - Name: Hands up Bow
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      LeftHandAngles: {x: 0, y: 0}
+      RightHandAngles: {x: 0, y: 0}
+      RequireHandReach: 0
+      LeftHandReach: {x: 0, y: 0}
+      RightHandReach: {x: 0, y: 0}
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      LeftHandAngles: {x: 1, y: 0}
+      RightHandAngles: {x: -1, y: 0}
+      RequireHandReach: 1
+      LeftHandReach: {x: 2, y: 2}
+      RightHandReach: {x: 2, y: 2}
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 0
+      LeftHandAngles: {x: 0, y: 0}
+      RightHandAngles: {x: 0, y: 0}
+      RequireHandReach: 0
+      LeftHandReach: {x: 0, y: 0}
+      RightHandReach: {x: 0, y: 0}
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
 --- !u!114 &114000010184264474
 MonoBehaviour:
   m_ObjectHideFlags: 1

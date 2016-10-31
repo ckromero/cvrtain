@@ -62,7 +62,7 @@ public class GestureManagerEditor : Editor {
 				EditorGUILayout.EndHorizontal();
 
 				if (visible) {
-					DisplayGesture(gestureList[i]);
+					DisplayGesture(gestureList[i], property.GetArrayElementAtIndex(i));
 				}
 				_GestureVisible[i] = visible;
 			}
@@ -105,13 +105,16 @@ public class GestureManagerEditor : Editor {
 		}
 
 		script.Gestures = gestureList.ToArray();
-		Debug.Log("I have: " + script.Gestures.Length + " Gestures");
 	}
 
-	private void DisplayGesture(Gesture gesture) {
+	private void DisplayGesture(Gesture gesture, SerializedProperty gestureProperty) {
 
 		var name = (gesture.Name == "") ? "New Gesture" : gesture.Name;
-		gesture.Name = EditorGUILayout.TextField("Name", name);
+		// gesture.Name = EditorGUILayout.TextField("Name", name);
+
+		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("Name"));
+
+		var ruleProperties = gestureProperty.FindPropertyRelative("Rules");
 
 		var showRules = true;
 		if (showRules) {
@@ -141,8 +144,9 @@ public class GestureManagerEditor : Editor {
 				}
 				EditorGUILayout.EndHorizontal();
 
-				// EditorGUILayout.LabelField("a rule goes here");
-				DisplayRule(rule);
+				EditorGUI.indentLevel++;
+				EditorGUILayout.PropertyField(ruleProperties.GetArrayElementAtIndex(i));
+				EditorGUI.indentLevel--;
 			}
 
 			/* handle shuffling the gestures around as needed */
@@ -171,64 +175,5 @@ public class GestureManagerEditor : Editor {
 		}
 
 		EditorGUI.indentLevel--;	
-	}
-
-	private void DisplayRule(GestureRule rule) {
-		EditorGUI.indentLevel++;
-
-		rule.RequireHeadState = EditorGUILayout.Toggle("Require Head State", rule.RequireHeadState);
-		if (rule.RequireHeadState) {
-			rule.HeadState = (HeadState)EditorGUILayout.EnumPopup(rule.HeadState);
-		}
-
-		rule.RequireHandAngles = EditorGUILayout.Toggle("Require Hand Angles", rule.RequireHandAngles);
-		if (rule.RequireHandAngles) {
-			EditorGUILayout.BeginHorizontal();
-			var x = rule.LeftHandAngles.x;
-			var y = rule.LeftHandAngles.y;
-			rule.LeftHandAngles.x = EditorGUILayout.FloatField(x);
-			EditorGUILayout.LabelField("<= Left Hand <=");
-			rule.LeftHandAngles.y = EditorGUILayout.FloatField(y);
-			EditorGUILayout.EndHorizontal();	
-
-			EditorGUILayout.BeginHorizontal();
-			x = rule.RightHandAngles.x;
-			y = rule.RightHandAngles.y;
-			rule.RightHandAngles.x = EditorGUILayout.FloatField(x);
-			EditorGUILayout.LabelField("<= Right Hand <=");
-			rule.RightHandAngles.y = EditorGUILayout.FloatField(y);
-			EditorGUILayout.EndHorizontal();	
-		}
-
-		rule.RequireHandReach = EditorGUILayout.Toggle("Require Hand Reach", rule.RequireHandReach);
-		if (rule.RequireHandReach) {
-			EditorGUILayout.BeginHorizontal();
-			var x = rule.LeftHandReach.x;
-			var y = rule.LeftHandReach.y;
-			rule.LeftHandReach.x = (float)EditorGUILayout.IntField((int)x);
-			EditorGUILayout.LabelField("<= Left Hand <=");
-			rule.LeftHandReach.y = (float)EditorGUILayout.IntField((int)y);
-			EditorGUILayout.EndHorizontal();	
-
-			EditorGUILayout.BeginHorizontal();
-			x = rule.RightHandReach.x;
-			y = rule.RightHandReach.y;
-			rule.RightHandReach.x = (float)EditorGUILayout.IntField((int)x);
-			EditorGUILayout.LabelField("<= Right Hand <=");
-			rule.RightHandReach.y = (float)EditorGUILayout.IntField((int)y);
-			EditorGUILayout.EndHorizontal();	
-		}
-
-		rule.HasMaximumDuration = EditorGUILayout.Toggle("Limit Time on Rule", rule.HasMaximumDuration);
-		if (rule.HasMaximumDuration) {
-			rule.MaxDuration = EditorGUILayout.FloatField("Maximum time on rule", rule.MaxDuration);
-		}
-
-		rule.HasTimeLimit = EditorGUILayout.Toggle("Limited time until next rule", rule.HasTimeLimit);
-		if (rule.HasTimeLimit) {
-			rule.TimeLimit = EditorGUILayout.FloatField("Time until next rule", rule.TimeLimit);
-		}
-
-		EditorGUI.indentLevel--;
 	}
 }
