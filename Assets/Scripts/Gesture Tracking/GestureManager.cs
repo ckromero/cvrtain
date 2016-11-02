@@ -36,9 +36,9 @@ public class GestureManager : MonoBehaviour, IGestureManager {
         foreach (var gesture in Gestures) {
             gesture.GestureUpdate(_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-				if (largestCompletion < gesture.CurrentRuleIndex) {
+				if (largestCompletion < gesture.RuleIndex) {
 					LastGesture = new CompletedGestureStruct(gesture.Name, Time.time);
-					largestCompletion = gesture.CurrentRuleIndex;
+					largestCompletion = gesture.RuleIndex;
 				}
 				var message = "COMPLETED: " + gesture.Name;
 				Debug.Log(message);

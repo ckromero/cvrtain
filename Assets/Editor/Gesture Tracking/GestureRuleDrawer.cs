@@ -24,10 +24,21 @@ public class GestureRuleDrawer : PropertyDrawer {
 		EditorGUIUtility.labelWidth = 0f;
 		var requireAngle = property.FindPropertyRelative("RequireHandAngles").boolValue;
 		if (requireAngle) {
-			var vectorProperty = property.FindPropertyRelative("LeftHandAngles");
-			GreaterThanLessThan(vectorProperty, "Left Hand");
-			vectorProperty = property.FindPropertyRelative("RightHandAngles");
-			GreaterThanLessThan(vectorProperty, "Right Hand");
+			EditorGUI.indentLevel++;
+			var content = new GUIContent("Use Either Angle");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHandAngle"), content, layoutOptions);
+			var useEither = property.FindPropertyRelative("EitherHandAngle").boolValue;
+			var message1 = "Left Hand";
+			var message2 = "Right Hand";
+			if (useEither) {
+				message1 = "One Hand";
+				message2 = "Other Hand";
+			}
+			var maxMinProperty = property.FindPropertyRelative("LeftHandAngles");
+			MaxMin(maxMinProperty, message1);
+			maxMinProperty = property.FindPropertyRelative("RightHandAngles");
+			MaxMin(maxMinProperty, message2);
+			EditorGUI.indentLevel--;
 		}
 		
 		EditorGUIUtility.labelWidth = labelWidth;
@@ -35,10 +46,22 @@ public class GestureRuleDrawer : PropertyDrawer {
 		EditorGUIUtility.labelWidth = 0f;
 		var requireReach = property.FindPropertyRelative("RequireHandReach").boolValue;
 		if (requireReach) {
-			var vectorProperty = property.FindPropertyRelative("LeftHandReach");
-			GreaterThanLessThan(vectorProperty, "Left Hand");
-			vectorProperty = property.FindPropertyRelative("RightHandReach");
-			GreaterThanLessThan(vectorProperty, "Right Hand");
+			EditorGUI.indentLevel++;
+			var content = new GUIContent("Use Either Reach");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHandReach"), content, layoutOptions);
+
+			var useEither = property.FindPropertyRelative("EitherHandReach").boolValue;
+			var message1 = "Left Hand";
+			var message2 = "Right Hand";
+			if (useEither) {
+				message1 = "One Hand";
+				message2 = "Other Hand";
+			}
+			var maxMinProperty = property.FindPropertyRelative("LeftHandReach");
+			MaxMin(maxMinProperty, message1);
+			maxMinProperty = property.FindPropertyRelative("RightHandReach");
+			MaxMin(maxMinProperty, message2);
+			EditorGUI.indentLevel--;
 		}
 
 		EditorGUIUtility.labelWidth = labelWidth;
@@ -66,15 +89,27 @@ public class GestureRuleDrawer : PropertyDrawer {
 		var x = (int)vectorProperty.FindPropertyRelative("x").floatValue;
 		var y = (int)vectorProperty.FindPropertyRelative("y").floatValue;
 
-		EditorGUI.indentLevel++;
 		EditorGUILayout.BeginHorizontal();
 		x = EditorGUILayout.IntField(x);
 		EditorGUILayout.LabelField("<= " + name + " <=");
 		y = EditorGUILayout.IntField(y);
 		EditorGUILayout.EndHorizontal();
-		EditorGUI.indentLevel--;
 
 		vectorProperty.FindPropertyRelative("x").floatValue = x;
 		vectorProperty.FindPropertyRelative("y").floatValue = y;
+	}
+
+	private void MaxMin(SerializedProperty maxMinProperty, string name) {
+		var max = (int)maxMinProperty.FindPropertyRelative("Max").floatValue;
+		var min = (int)maxMinProperty.FindPropertyRelative("Min").floatValue;
+
+		EditorGUILayout.BeginHorizontal();
+		min = EditorGUILayout.IntField(min);
+		EditorGUILayout.LabelField("<= " + name + " <=");
+		max = EditorGUILayout.IntField(max);
+		EditorGUILayout.EndHorizontal();
+
+		maxMinProperty.FindPropertyRelative("Max").floatValue = max;
+		maxMinProperty.FindPropertyRelative("Min").floatValue = min;
 	}
 }

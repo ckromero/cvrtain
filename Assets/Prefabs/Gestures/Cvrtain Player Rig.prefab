@@ -353,7 +353,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013247722384}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.57333344, y: 1.923, z: 0}
+  m_LocalPosition: {x: -0.57333344, y: 1.906, z: 0}
   m_LocalScale: {x: 0.33333346, y: 0.33333334, z: 0.33333346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -495,7 +495,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013379275678}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0.57333344, y: 1.955, z: 0}
+  m_LocalPosition: {x: 0.511, y: 1.906, z: -0}
   m_LocalScale: {x: 0.33333346, y: 0.33333334, z: 0.33333346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -952,11 +952,22 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 0
-      LeftHandAngles: {x: 0, y: 0}
-      RightHandAngles: {x: 0, y: 0}
+      EitherHandAngle: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
       RequireHandReach: 0
-      LeftHandReach: {x: 0, y: 0}
-      RightHandReach: {x: 0, y: 0}
+      EitherHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -964,25 +975,47 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 1
       RequireHandAngles: 1
-      LeftHandAngles: {x: 4, y: 3}
-      RightHandAngles: {x: -4, y: -3}
+      EitherHandAngle: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
       RequireHandReach: 0
-      LeftHandReach: {x: 0, y: 0}
-      RightHandReach: {x: 0, y: 0}
+      EitherHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
-  - Name: Hands up Bow
+  - Name: Hands up bow
     Rules:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 0
-      LeftHandAngles: {x: 0, y: 0}
-      RightHandAngles: {x: 0, y: 0}
+      EitherHandAngle: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
       RequireHandReach: 0
-      LeftHandReach: {x: 0, y: 0}
-      RightHandReach: {x: 0, y: 0}
+      EitherHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -990,11 +1023,22 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 1
-      LeftHandAngles: {x: 1, y: 0}
-      RightHandAngles: {x: -1, y: 0}
+      EitherHandAngle: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
       RequireHandReach: 1
-      LeftHandReach: {x: 2, y: 2}
-      RightHandReach: {x: 2, y: 2}
+      EitherHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -1002,11 +1046,22 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 1
       RequireHandAngles: 0
-      LeftHandAngles: {x: 0, y: 0}
-      RightHandAngles: {x: 0, y: 0}
+      EitherHandAngle: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
       RequireHandReach: 0
-      LeftHandReach: {x: 0, y: 0}
-      RightHandReach: {x: 0, y: 0}
+      EitherHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -1184,6 +1239,8 @@ MonoBehaviour:
   Rings: 2
   RingRadius: 0.4
   MinimumRadius: 0.4
+  WaveLimits: {x: 0.1, y: 0.3}
+  WaveDistance: 0.4
 --- !u!114 &114000012170848876
 MonoBehaviour:
   m_ObjectHideFlags: 1
