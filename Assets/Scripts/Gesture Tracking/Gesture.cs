@@ -71,49 +71,31 @@ public class Gesture {
 		}	
 
         if (rule.RequireHandAngles) {
-        	var leftZone = hands.LeftHandZone;
-        	var rightZone = hands.RightHandZone;
         	var leftAngle = hands.LeftHandAngle;
         	var rightAngle = hands.RightHandAngle;
         	if (!rule.EitherHandAngle) {
         		if (!rule.LeftHandAngles.Contains(leftAngle)) {
-	        	// if (rule.LeftHandAngles.x < leftZone ||
-	        	// 		leftZone < rule.LeftHandAngles.y) {
-	        		// ruleComplete = false;
 	        		return false;
 	        	}
 	        	if (!rule.RightHandAngles.Contains(rightAngle)) {
-	        	// if (rule.RightHandAngles.x > rightZone ||
-	        	// 		rightZone > rule.RightHandAngles.y) {
-	        		// ruleComplete = false;
 	        		return false;
 	        	}
 	        }
 	        else {
 	        	var inLeftZone = false;
 	        	if (rule.LeftHandAngles.Contains(leftAngle)) {
-	        	// if (rule.LeftHandAngles.x > leftZone &&
-	        	// 	leftZone > rule.LeftHandAngles.y) {
 	        		inLeftZone = true;
 	        	}
 	        	/* if the leftHand is in neither zone, then the rule is false */
 	        	else if (!rule.RightHandAngles.Contains(leftAngle)) {
-	  			// else if (rule.RightHandAngles.x < leftZone &&
-	  			// 	leftZone < rule.RightHandAngles.y) {
 	  				return false;
 	  			}
 
 	  			/* check if right hand is in the zone the left hand is not */
 	  			if (inLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
-	  			// if (inLeftZone &&
-	  			// 	rule.RightHandAngles.x > rightZone &&
-	  			// 	rightZone > rule.RightHandAngles.y) {
 	  				return false;	
 	  			}
 	  			else if (!inLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
-	  			// else if (!inLeftZone &&
-	  						// rule.LeftHandAngles.x < rightZone &&
-	  						// rightZone < rule.LeftHandAngles.y) {
 	  				return false;
 	  			}
 	        }
@@ -124,41 +106,25 @@ public class Gesture {
 			var rightReach = hands.RightHandRing;
 			if (!rule.EitherHandReach) {
 				if (!rule.LeftHandReach.Contains(leftReach)) {
-				// if (rule.LeftHandReach.x > leftReach ||
-				// 	rule.LeftHandReach.y < leftReach) {
-					// ruleComplete = false;
 					return false;
 				}
 				if (!rule.RightHandReach.Contains(rightReach)) {
-				// if (rule.RightHandReach.x > rightReach ||
-				// 	rule.RightHandReach.y < rightReach) {
-					// ruleComplete = false;
 					return false;
 				}
 			}
 			else {
 				var inLeftZone = false;
 				if (rule.LeftHandReach.Contains(leftReach)) {
-				// if (rule.LeftHandReach.x < leftReach && 
-				// 	leftReach < rule.LeftHandReach.y) {
 					inLeftZone = true;
 				}
 				else if (!rule.RightHandReach.Contains(leftReach)) {
-				// else if (rule.RightHandReach.x > leftReach &&
-				// 			leftReach > rule.RightHandReach.y) {
 					return false;
 				}
 
 				if (inLeftZone && !rule.RightHandReach.Contains(rightReach)) {
-				// if (inLeftZone &&
-				// 	rule.RightHandReach.x > rightReach && 
-				// 	rightReach > rule.RightHandReach.y) {
 					return false;
 				}
 				else if (!inLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
-				// else if (!inLeftZone &&
-				// 			rule.LeftHandReach.x > rightReach &&
-				// 			rightReach > rule.LeftHandReach.y) {
 					return false;
 				}
 			}
