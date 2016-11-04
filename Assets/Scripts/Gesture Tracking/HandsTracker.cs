@@ -14,8 +14,8 @@ public class HandsTracker : MonoBehaviour {
 	public Vector2 WaveLimits;
 	public float WaveDistance = 1f;
 
-	private Vector3[] _TrackedLeftPositions = new Vector3[30];
-	private Vector3[] _TrackedRightPositions = new Vector3[30];
+	private Vector2[] _TrackedLeftPositions = new Vector2[30];
+	private Vector2[] _TrackedRightPositions = new Vector2[30];
 
 	private int _PositionIndex = 0;
 
@@ -99,11 +99,20 @@ public class HandsTracker : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (Waving) {
+			Debug.Log("I'm waving!!!");
+		}
 	}
 
 	void LateUpdate() {
-		var leftHand = LeftHand.position;
-		var rightHand = RightHand.position;
+		/* check for wave tracking */
+		var leftLocal = transform.InverseTransformPoint(LeftHand.position);
+		var rightLocal = transform.InverseTransformPoint(RightHand.position);
+		var leftHand = new Vector2(leftLocal.z, leftLocal.y);
+		var rightHand = new Vector2(rightLocal.z, rightLocal.y);
+
+		// var leftHand = LeftHand.position;
+		// var rightHand = RightHand.position;
 
 		_TrackedLeftPositions[_PositionIndex] = leftHand;
 		_TrackedRightPositions[_PositionIndex] = rightHand;
@@ -118,7 +127,7 @@ public class HandsTracker : MonoBehaviour {
 
 	}
 
-	private bool CheckForWave(Vector3[] positions) {
+	private bool CheckForWave(Vector2[] positions) {
 		var maxDelta = 0f;
 		var totalDistance = 0f;
 

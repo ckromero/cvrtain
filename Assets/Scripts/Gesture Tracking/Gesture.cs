@@ -62,10 +62,8 @@ public class Gesture {
 	}
 
 	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
-		// var ruleComplete = true;
 		if (rule.RequireHeadState) {
 			if (!head.HeadStateList.Contains(rule.HeadState)) {
-				// ruleComplete = false;
 				return false;
 			}
 		}	
