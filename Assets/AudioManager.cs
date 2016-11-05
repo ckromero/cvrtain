@@ -7,49 +7,155 @@ public class AudioManager : MonoBehaviour
 	public GameObject audioObject;
 	public AudioMixer audioMixer;
 	public float timeForTransition;
+	public float playNewSoundPercentage = 0.8f;
+
+	public enum AudienceState
+	{
+		murmur,
+		showOpen,
+		polite,
+		medium,
+		large,
+		huge,
+		showClose,
+		postShowPleased,
+		postShowNeutral,
+		postShowDisappointed,
+		quiet}
+	;
 
 
 
+	public AudioSource[] additionalMurmurSounds;
+	public AudioSource[] additionalPoliteSounds;
+	public AudioSource[] additionalMediumSounds;
+	public AudioSource[] additionalLargeSounds;
+	public AudioSource[] additionalHugeSounds;
+	public AudioSource[] additionalPostShowPleasedSounds;
+	public AudioSource[] additionalPostShowNeutralSounds;
+	public AudioSource[] additionalPostShowDisappointedSounds;
+
+	private AudienceState audState;
 	private  string currentAudioMixerSnapshot;
-	private AudioSource[] audios;
 
 	void Awake ()
 	{
-		TransitionAudio ("just room tone", timeForTransition);
+		ChangePad ("murmur");
 	}
 
 	void Start ()
 	{ 
-		audios = audioObject.GetComponents<AudioSource> ();
+		GameObject goc1 = GameObject.Find ("Coughs1");
+		GameObject goc2 = GameObject.Find ("Coughs2");
+
+		AudioSource c1 = goc1.GetComponent<AudioSource> ();
+		AudioSource c2 = goc2.GetComponent<AudioSource> ();
+
+		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
+
+		StartCoroutine (AdditionalSoundsBasedOnPads ());
+	}
+
+	void Update ()
+	{
+
+
 
 	}
 
-	public void ChangeClappingType (string type)
+	IEnumerator AdditionalSoundsBasedOnPads ()
 	{
-		Debug.Log ("ChangeClappingType received " + type);
+		while (true) { 
+			switch (audState) { 
+			case AudienceState.murmur:
+				PickSoundToPlay (additionalMurmurSounds);
+				break;
+			case AudienceState.polite:
+				PickSoundToPlay (additionalPoliteSounds);
+				break;
+			case AudienceState.medium:
+				PickSoundToPlay (additionalMediumSounds);
+				break;
+			case AudienceState.large:
+				PickSoundToPlay (additionalLargeSounds);
+				break;
+			case AudienceState.huge:
+				PickSoundToPlay (additionalHugeSounds);
+				break;
+			case AudienceState.postShowPleased:
+				PickSoundToPlay (additionalPostShowPleasedSounds);
+				break;
+			case AudienceState.postShowNeutral:
+				PickSoundToPlay (additionalPostShowNeutralSounds);
+				break;
+			case AudienceState.postShowDisappointed:
+				PickSoundToPlay (additionalPostShowDisappointedSounds);
+				break;
+			}
 
-		switch (type) {
-		case "small":
-			TransitionAudio ("small applause", timeForTransition);
+			yield return new WaitForSeconds (2.0f);	
+		}
+	}
+
+	void PickSoundToPlay (AudioSource[] audioArray)
+	{
+		if (audioArray.Length > 0) { 
+			float soundsIndex = Random.Range (0, audioArray.Length); 
+			AudioSource audioToPlay = audioArray [(int)soundsIndex];
+
+			if (Random.value > playNewSoundPercentage) {
+				TriggerAudio (audioToPlay.transform.name);
+//				TriggerSound (audioToPlay.transform.name);
+				Debug.Log ("AdditionalSoundsBasedOnPads triggered " + audioToPlay.transform.name);
+
+			}	
+		}
+	}
+
+
+	public void ChangePad (string pad)
+	{ 
+		Debug.Log ("ChangePad Received: " + pad);
+		
+		switch (pad) {
+		case "murmurs":
+			audState = AudienceState.murmur;	
+			TransitionAudio ("murmur", timeForTransition);
 			break;
-
+		case "polite":
+			audState = AudienceState.polite;	
+			TransitionAudio ("polite", timeForTransition);
+			break;
 		case "medium":
-			TransitionAudio ("medium applause", timeForTransition);
+			audState = AudienceState.medium;	
+			TransitionAudio ("medium", timeForTransition);
 			break;
-
 		case "large":
-			TransitionAudio ("large applause", timeForTransition);
+			audState = AudienceState.large;	
+			TransitionAudio ("large", timeForTransition);
+			break;
+		case "huge":
+			audState = AudienceState.huge;	
+			TransitionAudio ("huge", timeForTransition);
+			break;
+		case "postShowNeutral":
+			audState = AudienceState.postShowPleased;	
+			TransitionAudio ("postShowPleased", timeForTransition);
+			break;
+		case "postShowPleased":
+			audState = AudienceState.postShowNeutral;	
+			TransitionAudio ("postShowNeutral", timeForTransition);
+			break;
+		case "postShowDisappointed":
+			audState = AudienceState.postShowDisappointed;	
+			TransitionAudio ("postShowDisappointed", timeForTransition);
 			break;
 
-		case "room":
-			TransitionAudio ("just room tone", timeForTransition);
-			break;
+
+
 
 
 		}
-
-
-
 	}
 
 
@@ -58,14 +164,17 @@ public class AudioManager : MonoBehaviour
 
 		Debug.Log ("Trigger Sound received: " + soundName);
 		switch (soundName) { 
-		case "bravo":
-			TriggerAudio ("bravo");
+		case "AhhClap":
+			TriggerAudio ("AhhClap");
 			break;
-		case "Distant Cheers":
-			TriggerAudio ("Distant Cheers");
+		case "MildLaugh":
+			TriggerAudio ("MildLaugh");
 			break;
-		case "Rhythmic":
-			TriggerAudio ("Rhythmic 3");
+		case "Coughs1":
+			TriggerAudio ("Coughs1");
+			break;
+		case "Coughs2":
+			TriggerAudio ("Coughs2");
 			break;
 		}
 	}
@@ -73,25 +182,39 @@ public class AudioManager : MonoBehaviour
 
 	private void TriggerAudio (string audioName)
 	{ 
-		AudioSource audioToPlay = new AudioSource ();
-
-		//TODO: Optimize
-		foreach (AudioSource a in audios) { 
-			if (a.clip.name == audioName) {
-				audioToPlay = a;
-				break;
-			}
-		}
 		
-		if (audioToPlay != null) {
-			audioToPlay.Play ();
-		}
+		GameObject goAudio = GameObject.Find (audioName);
+		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
+//		Vector3 playbackPosition = goAudio.GetComponentInParent<Transform> ().position;
+		audioToPlay.Play ();
+
+
+//		Vector3 pos = Vector3.zero;
+//		if (location != "") { 
+//			GameObject goLocation = GameObject.Find (location);
+//			pos = goLocation.transform.position;
+//		}
+
+
+
+//		//TODO: Optimize
+//		foreach (AudioSource a in audios) { 
+//			if (a.clip.name == audioName) {
+//				audioToPlay = a;
+//				break;
+//			}
+//		}
+//		
+//		if (audioToPlay != null) {
+//			audioToPlay.Play ();
+//		}
 	}
 
 
 
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
+		Debug.Log ("TransitionAudio received " + amsToName);
 		AudioMixerSnapshot ams = audioMixer.FindSnapshot (amsToName);
 		AudioMixerSnapshot[] amsArray = new AudioMixerSnapshot[]{ ams };
 		float[] weightArray = new float[]{ weight };

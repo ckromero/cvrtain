@@ -1,12 +1,15 @@
 ﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gesture Tracking/HeadTracker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Gesture Tracking/GestureManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Gesture Tracking/HeadTracker.cs" Line="1" Column="1" />
+      <File FileName="Assets/AudioManager.cs" Line="88" Column="63" />
+      <File FileName="Assets/Scripts/Gesture Tracking/GestureManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/ckromero/code/CVRTAIN/Assets/AudioManager.cs" line="88" column="63" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
