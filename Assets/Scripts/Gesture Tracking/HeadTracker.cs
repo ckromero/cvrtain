@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum HeadState {Upright, Bow, Curtsy, None};
+public enum HeadFacing {Left, Front, Right, Floor, Back};
 public class HeadTracker : MonoBehaviour {
 
     public HeadState HeadState {
@@ -13,6 +14,8 @@ public class HeadTracker : MonoBehaviour {
             return HeadState.None;
         }
     }
+
+    public HeadFacing Facing { get; private set; }
 
     public List<HeadState> HeadStateList
     {
@@ -30,8 +33,11 @@ public class HeadTracker : MonoBehaviour {
 	public OneWayCollider BowCollider;
 	public OneWayCollider CurtsyCollider;
 	public ColliderSubscriber UprightCollider;
+	public Transform HeadTransform;
 
 	private List<HeadState> _StateBuffer;
+	[SerializeField]
+	private LayerMask _LookMask;
 
 	void Awake() {
 		BowCollider.OnTriggerEnter += OnBowTriggerEnter;
@@ -52,6 +58,11 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		RaycastHit hit;
+		if (Physics.Raycast(HeadTransform.position, HeadTransform.forward, out hit, _LookMask)) {
+			// Debug.Log("I am looking at: " + hit.collider.gameObject.name);
+			Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+		}
 	}
 
 	void OnBowTriggerEnter(Collider other) {
