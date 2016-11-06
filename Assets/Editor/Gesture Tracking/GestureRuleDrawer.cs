@@ -25,9 +25,9 @@ public class GestureRuleDrawer : PropertyDrawer {
 		var requireAngle = property.FindPropertyRelative("RequireHandAngles").boolValue;
 		if (requireAngle) {
 			EditorGUI.indentLevel++;
-			var content = new GUIContent("Use Either Angle");
-			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHandAngle"), content, layoutOptions);
-			var useEither = property.FindPropertyRelative("EitherHandAngle").boolValue;
+			var content = new GUIContent("Use Either Hand");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHand"), content, layoutOptions);
+			var useEither = property.FindPropertyRelative("EitherHand").boolValue;
 			var message1 = "Left Hand";
 			var message2 = "Right Hand";
 			if (useEither) {
@@ -47,10 +47,10 @@ public class GestureRuleDrawer : PropertyDrawer {
 		var requireReach = property.FindPropertyRelative("RequireHandReach").boolValue;
 		if (requireReach) {
 			EditorGUI.indentLevel++;
-			var content = new GUIContent("Use Either Reach");
-			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHandReach"), content, layoutOptions);
+			var content = new GUIContent("Use Either Hand");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHand"), content, layoutOptions);
 
-			var useEither = property.FindPropertyRelative("EitherHandReach").boolValue;
+			var useEither = property.FindPropertyRelative("EitherHand").boolValue;
 			var message1 = "Left Hand";
 			var message2 = "Right Hand";
 			if (useEither) {

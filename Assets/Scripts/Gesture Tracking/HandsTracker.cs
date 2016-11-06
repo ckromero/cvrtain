@@ -111,9 +111,6 @@ public class HandsTracker : MonoBehaviour {
 		var leftHand = new Vector2(leftLocal.z, leftLocal.y);
 		var rightHand = new Vector2(rightLocal.z, rightLocal.y);
 
-		// var leftHand = LeftHand.position;
-		// var rightHand = RightHand.position;
-
 		_TrackedLeftPositions[_PositionIndex] = leftHand;
 		_TrackedRightPositions[_PositionIndex] = rightHand;
 		_PositionIndex++;

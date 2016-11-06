@@ -68,10 +68,12 @@ public class Gesture {
 			}
 		}	
 
+
+		var leftHandInLeftZone = false;
         if (rule.RequireHandAngles) {
         	var leftAngle = hands.LeftHandAngle;
         	var rightAngle = hands.RightHandAngle;
-        	if (!rule.EitherHandAngle) {
+        	if (!rule.EitherHand) {
         		if (!rule.LeftHandAngles.Contains(leftAngle)) {
 	        		return false;
 	        	}
@@ -80,9 +82,8 @@ public class Gesture {
 	        	}
 	        }
 	        else {
-	        	var inLeftZone = false;
 	        	if (rule.LeftHandAngles.Contains(leftAngle)) {
-	        		inLeftZone = true;
+	        		leftHandInLeftZone = true;
 	        	}
 	        	/* if the leftHand is in neither zone, then the rule is false */
 	        	else if (!rule.RightHandAngles.Contains(leftAngle)) {
@@ -90,10 +91,10 @@ public class Gesture {
 	  			}
 
 	  			/* check if right hand is in the zone the left hand is not */
-	  			if (inLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
+	  			if (leftHandInLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
 	  				return false;	
 	  			}
-	  			else if (!inLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
+	  			else if (!leftHandInLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
 	  				return false;
 	  			}
 	        }
@@ -102,7 +103,7 @@ public class Gesture {
 		if (rule.RequireHandReach) {
 			var leftReach = hands.LeftHandRing;
 			var rightReach = hands.RightHandRing;
-			if (!rule.EitherHandReach) {
+			if (!rule.EitherHand) {
 				if (!rule.LeftHandReach.Contains(leftReach)) {
 					return false;
 				}
@@ -111,18 +112,23 @@ public class Gesture {
 				}
 			}
 			else {
-				var inLeftZone = false;
-				if (rule.LeftHandReach.Contains(leftReach)) {
-					inLeftZone = true;
+				if (!rule.RequireHandAngles) {
+					if (rule.LeftHandReach.Contains(leftReach)) {
+						leftHandInLeftZone = true;
+					}
 				}
-				else if (!rule.RightHandReach.Contains(leftReach)) {
+				else if (leftHandInLeftZone && !rule.LeftHandReach.Contains(leftReach)) {
 					return false;
 				}
 
-				if (inLeftZone && !rule.RightHandReach.Contains(rightReach)) {
+				if (!leftHandInLeftZone && !rule.RightHandReach.Contains(leftReach)) {
 					return false;
 				}
-				else if (!inLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
+
+				if (leftHandInLeftZone && !rule.RightHandReach.Contains(rightReach)) {
+					return false;
+				}
+				else if (!leftHandInLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
 					return false;
 				}
 			}
@@ -137,13 +143,12 @@ public class GestureRule {
 	public bool RequireHeadState;
 	public HeadState HeadState;
 	public bool RequireHandAngles;
-	public bool EitherHandAngle;
+	public bool EitherHand;
 	public AngleRange LeftHandAngles;
 	public AngleRange RightHandAngles;
 	// public Vector2 LeftHandAngles;
 	// public Vector2 RightHandAngles;
 	public bool RequireHandReach;
-	public bool EitherHandReach;
 	public Range LeftHandReach;
 	public Range RightHandReach;
 	// public Vector2 LeftHandReach;
