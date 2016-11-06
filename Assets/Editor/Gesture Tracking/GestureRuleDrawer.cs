@@ -65,6 +65,28 @@ public class GestureRuleDrawer : PropertyDrawer {
 		}
 
 		EditorGUIUtility.labelWidth = labelWidth;
+		EditorGUILayout.PropertyField(property.FindPropertyRelative("Waving"), layoutOptions);
+		EditorGUIUtility.labelWidth = 0f;
+		var waving = property.FindPropertyRelative("Waving").boolValue;
+		if (waving) {
+			EditorGUI.indentLevel++;
+			var content = new GUIContent("Use Either Hand");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHand"), content, layoutOptions);
+			var useEither = property.FindPropertyRelative("EitherHand").boolValue;
+			var message1 = "Left Hand";
+			var message2 = "Right Hand";
+			if (useEither) {
+				message1 = "One Hand";
+				message2 = "Other Hand";
+			}
+			content = new GUIContent(message1);
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("LeftHandWaving"), content);
+			content = new GUIContent(message2);
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("RightHandWaving"), content);
+			EditorGUI.indentLevel--;
+		}
+
+		EditorGUIUtility.labelWidth = labelWidth;
 		EditorGUILayout.PropertyField(property.FindPropertyRelative("HasMaximumDuration"), layoutOptions);
 		EditorGUIUtility.labelWidth = 0f;
 		var hasMaxDuration = property.FindPropertyRelative("HasMaximumDuration").boolValue;

@@ -71,7 +71,7 @@ public class HandsTracker : MonoBehaviour {
 			var distance = Vector3.Distance(LeftHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
 			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
-			distance = Mathf.Clamp(distance, 0, Rings + 1);
+			distance = Mathf.Clamp(distance, 0, Rings);
 			return (int)distance + 1;
 		}
 	}
@@ -81,7 +81,7 @@ public class HandsTracker : MonoBehaviour {
 			var distance = Vector3.Distance(RightHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
 			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
-			distance = Mathf.Clamp(distance, 0, Rings + 1);
+			distance = Mathf.Clamp(distance, 0, Rings);
 			return (int)distance + 1;
 		}
 	}

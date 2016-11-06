@@ -952,7 +952,7 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 0
-      EitherHandAngle: 0
+      EitherHand: 0
       LeftHandAngles:
         Max: 0
         Min: 0
@@ -960,7 +960,6 @@ MonoBehaviour:
         Max: 0
         Min: 0
       RequireHandReach: 0
-      EitherHandReach: 0
       LeftHandReach:
         Max: 0
         Min: 0
@@ -968,6 +967,8 @@ MonoBehaviour:
         Max: 0
         Min: 0
       Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -975,15 +976,14 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 1
       RequireHandAngles: 1
-      EitherHandAngle: 0
+      EitherHand: 0
       LeftHandAngles:
-        Max: 0
-        Min: 0
+        Max: 270
+        Min: 90
       RightHandAngles:
-        Max: 0
-        Min: 0
+        Max: 270
+        Min: 90
       RequireHandReach: 0
-      EitherHandReach: 0
       LeftHandReach:
         Max: 0
         Min: 0
@@ -991,6 +991,8 @@ MonoBehaviour:
         Max: 0
         Min: 0
       Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -1000,7 +1002,7 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 0
-      EitherHandAngle: 0
+      EitherHand: 0
       LeftHandAngles:
         Max: 0
         Min: 0
@@ -1008,7 +1010,6 @@ MonoBehaviour:
         Max: 0
         Min: 0
       RequireHandReach: 0
-      EitherHandReach: 0
       LeftHandReach:
         Max: 0
         Min: 0
@@ -1016,6 +1017,8 @@ MonoBehaviour:
         Max: 0
         Min: 0
       Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -1023,7 +1026,7 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 1
-      EitherHandAngle: 0
+      EitherHand: 0
       LeftHandAngles:
         Max: 0
         Min: 0
@@ -1031,7 +1034,6 @@ MonoBehaviour:
         Max: 0
         Min: 0
       RequireHandReach: 1
-      EitherHandReach: 0
       LeftHandReach:
         Max: 0
         Min: 0
@@ -1039,6 +1041,8 @@ MonoBehaviour:
         Max: 0
         Min: 0
       Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -1046,7 +1050,7 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 1
       RequireHandAngles: 0
-      EitherHandAngle: 0
+      EitherHand: 0
       LeftHandAngles:
         Max: 0
         Min: 0
@@ -1054,7 +1058,6 @@ MonoBehaviour:
         Max: 0
         Min: 0
       RequireHandReach: 0
-      EitherHandReach: 0
       LeftHandReach:
         Max: 0
         Min: 0
@@ -1062,6 +1065,158 @@ MonoBehaviour:
         Max: 0
         Min: 0
       Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+  - Name: One Hand High, One Hand Low
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 0
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 45
+        Min: 0
+      RightHandAngles:
+        Max: 180
+        Min: 135
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 2
+        Min: 2
+      Waving: 1
+      LeftHandWaving: 1
+      RightHandWaving: 1
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+  - Name: Pump it up
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 90
+        Min: 20
+      RightHandAngles:
+        Max: 90
+        Min: 20
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 3
+        Min: 3
+      Waving: 1
+      LeftHandWaving: 1
+      RightHandWaving: 1
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+  - Name: Deep bow
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 125
+        Min: 45
+      RightHandAngles:
+        Max: -90
+        Min: -180
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 2
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0

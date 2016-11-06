@@ -134,6 +134,60 @@ public class Gesture {
 			}
 		}
 
+		if (rule.Waving) {
+			if (!hands.Waving) {
+				return false;
+			}
+			var leftWaving = hands.LeftHandWaving;
+			var rightWaving = hands.RightHandWaving;
+			if (!rule.EitherHand) {
+				if (rule.LeftHandWaving && !leftWaving) {
+					return false;
+				}
+				if (rule.RightHandWaving && !rightWaving) {
+					return false;
+				}
+			}
+			else {
+				/* if neither angles nor reach were required, then check to
+				* determine which zone the left hand is acting in and set it */
+				if (!rule.RequireHandAngles && !rule.RequireHandReach) {
+					if (rule.LeftHandWaving && leftWaving) {
+						leftHandInLeftZone = true;
+					}
+				}
+
+				Debug.Log("making it here");
+				/* perform checks for the left hand */
+				/* if LEFT HAND is acting in the LEFT ZONE:
+				* check if a LEFT ZONE wave is required and if the LEFT HAND is doing it */
+				if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
+					Debug.Log("failing at check 1");
+					return false;
+				}
+				/* if LEFT HAND is acting in the RIGHT ZONE:
+				* check if a RIGHT ZONE wave required and if the LEFT HAND is doing it */
+				else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
+					Debug.Log("failing at check 2");
+					return false;
+				}
+
+				/* perform checks for the right hand */
+				/* if LEFT HAND is acting in the LEFT ZONE:
+				* check if a RIGHT ZONE wave is required, and if the RIGHT HAND is doing it */
+				if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
+					Debug.Log("failing at check 3");
+					return false;
+				}
+				/* if the LEFT HAND is acting in the RIGHT ZONE:
+				* check if a LEFT ZONE wave is required, and if the RIGHT HAND is doing it */
+				else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
+					Debug.Log("failing at check 4");
+					return false;
+				}
+			}
+		}
+
 		return true;
 	}
 }
@@ -146,14 +200,12 @@ public class GestureRule {
 	public bool EitherHand;
 	public AngleRange LeftHandAngles;
 	public AngleRange RightHandAngles;
-	// public Vector2 LeftHandAngles;
-	// public Vector2 RightHandAngles;
 	public bool RequireHandReach;
 	public Range LeftHandReach;
 	public Range RightHandReach;
-	// public Vector2 LeftHandReach;
-	// public Vector2 RightHandReach;
 	public bool Waving;
+	public bool LeftHandWaving;
+	public bool RightHandWaving;
 
 	public bool HasMaximumDuration;
 	public float MaxDuration;
