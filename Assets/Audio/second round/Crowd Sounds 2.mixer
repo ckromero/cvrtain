@@ -60,7 +60,7 @@ AudioMixerController:
     - 58612fd86f40247ce8762aed9668e8b1
     name: pads
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 245000012297259660}
+  m_TargetSnapshot: {fileID: 245000012219770066}
 --- !u!243 &24300001
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -420,7 +420,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 244000012774402352}
   m_UserColorIndex: 0
-  m_Mute: 1
+  m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243000013797278854
