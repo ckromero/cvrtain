@@ -30,3 +30,6 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-UnityScript.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb
