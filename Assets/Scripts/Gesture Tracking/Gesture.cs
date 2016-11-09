@@ -7,119 +7,188 @@ public class Gesture {
 	public string Name;
 	public GestureRule[] Rules;
 
-	public int CurrentRuleIndex { get; private set; }
+	public int RuleIndex { get; private set; }
 	public bool Completed {
 		get {
-			return CurrentRuleIndex >= Rules.Length - 1 && _OnARule;
+			return RuleIndex >= Rules.Length - 1;
 		}
 	}
 
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
-	private bool _OnARule = false;
 
 	public Gesture() {
+		RuleIndex = -1;
 		Rules = new GestureRule[2];
 	}
 
-	public bool GestureUpdate(HeadTracker head, HandsTracker hands) {
+	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
 
-		if (CurrentRuleIndex >= Rules.Length) {
-			Debug.Log("ERROR: " + Name + " has overrun rules");
-			return false;
-		}
-		var currentRule = Rules[CurrentRuleIndex];
-
-		var ruleComplete = true;
-		//if (currentRule.HeadState != head.HeadState) {
-		//	ruleComplete = false;
-		//}
-
-		if (currentRule.RequireHeadState) {
-			if (!head.HeadStateList.Contains(currentRule.HeadState)) {
-				ruleComplete = false;
-			}
-		}	
-        // if (currentRule.HeadState != HeadState.None && !head.HeadStateList.Contains(currentRule.HeadState))
-        // {
-        //     ruleComplete = false;
-        // }
-
-        if (currentRule.RequireHandAngles) {
-        	var leftZone = hands.LeftHandZone;
-        	var rightZone = hands.RightHandZone;
-        	if (currentRule.LeftHandAngles.x < leftZone ||
-        			leftZone < currentRule.LeftHandAngles.y) {
-        		ruleComplete = false;
-        	}
-        	if (currentRule.RightHandAngles.x > rightZone ||
-        			rightZone > currentRule.RightHandAngles.y) {
-        		ruleComplete = false;
-        	}
-        }
-
-		if (currentRule.RequireHandReach) {
-			var leftReach = hands.LeftHandRing;
-			var rightReach = hands.RightHandRing;
-			if (currentRule.LeftHandReach.x > leftReach ||
-				currentRule.LeftHandReach.y < leftReach) {
-				ruleComplete = false;
-			}
-			if (currentRule.RightHandReach.x > rightReach ||
-				currentRule.RightHandReach.y < rightReach) {
-				ruleComplete = false;
-			}
+		if (Completed) {
+			return;
 		}
 
-		if (ruleComplete) {
-			if (!_OnARule) {
-				_OnARule = true;
-				// var time = currentRule.TimeLimit;
-				var time = (currentRule.HasMaximumDuration) ? currentRule.MaxDuration : Mathf.Infinity;
-				// _TimeLeftOnRule = (time.Equals(0f)) ? Mathf.Infinity : time;
+		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
+			RuleIndex++;
+			Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+			if (!Completed) {
+				var rule = Rules[RuleIndex];
+				var time = (rule.HasMaximumDuration) ? rule.MaxDuration : Mathf.Infinity;
 				_TimeLeftOnRule = time;
+				time = (rule.HasTimeLimit) ? rule.TimeLimit : Mathf.Infinity;
+				_TimeToNextRule = time;
 			}
+		}
+		else if (RuleIndex >= 0 && CheckRule(head, hands, Rules[RuleIndex])) {
 			_TimeLeftOnRule -= Time.deltaTime;
 			if (_TimeLeftOnRule <= 0f) {
-				Debug.Log(Name + " -- timed out on rule " + CurrentRuleIndex);
-				_TimeLeftOnRule = Mathf.Infinity;
-				CurrentRuleIndex = 0;
-				_OnARule = false;
+				Debug.Log(Name + " -- timed out on rule " + RuleIndex);
+				Reset();
 			}
-			// CurrentRuleIndex++;
-			// if (CurrentRuleIndex == Rules.Length) {
-			// 	CurrentRuleIndex = 0;
-			// 	return true;
-			// }
-			// Debug.Log("advancing rule of " + Name);
-			// var delay = currentRule.RuleGap;
-			// _TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
 		}
 		else {
-			if (_OnARule) {
-				_OnARule = false;
-				CurrentRuleIndex++;
-				// var delay = currentRule.RuleGap;
-				var delay = (currentRule.HasTimeLimit) ? currentRule.TimeLimit : Mathf.Infinity;
-				// _TimeToNextRule = (delay.Equals(0f)) ? Mathf.Infinity : delay;
-				_TimeToNextRule = delay;
-			}
 			_TimeToNextRule -= Time.deltaTime;
 			if (_TimeToNextRule <= 0f) {
-				Debug.Log(Name + " -- timed out getting to rule " + CurrentRuleIndex);
-				CurrentRuleIndex = 0;
-				_TimeToNextRule = Mathf.Infinity;
+				Debug.Log(Name + " -- timed out getting to rule " + RuleIndex);
+				Reset();
 			}
 		}
-
-		return false;
 	}
 
 	public void Reset() {
-		CurrentRuleIndex = 0;
-		_OnARule = false;
+		RuleIndex = -1;
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
+	}
+
+	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
+		if (rule.RequireHeadState) {
+			if (!head.HeadStateList.Contains(rule.HeadState)) {
+				return false;
+			}
+		}	
+
+
+		var leftHandInLeftZone = false;
+        if (rule.RequireHandAngles) {
+        	var leftAngle = hands.LeftHandAngle;
+        	var rightAngle = hands.RightHandAngle;
+        	if (!rule.EitherHand) {
+        		if (!rule.LeftHandAngles.Contains(leftAngle)) {
+	        		return false;
+	        	}
+	        	if (!rule.RightHandAngles.Contains(rightAngle)) {
+	        		return false;
+	        	}
+	        }
+	        else {
+	        	if (rule.LeftHandAngles.Contains(leftAngle)) {
+	        		leftHandInLeftZone = true;
+	        	}
+	        	/* if the leftHand is in neither zone, then the rule is false */
+	        	else if (!rule.RightHandAngles.Contains(leftAngle)) {
+	  				return false;
+	  			}
+
+	  			/* check if right hand is in the zone the left hand is not */
+	  			if (leftHandInLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
+	  				return false;	
+	  			}
+	  			else if (!leftHandInLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
+	  				return false;
+	  			}
+	        }
+        }
+
+		if (rule.RequireHandReach) {
+			var leftReach = hands.LeftHandRing;
+			var rightReach = hands.RightHandRing;
+			if (!rule.EitherHand) {
+				if (!rule.LeftHandReach.Contains(leftReach)) {
+					return false;
+				}
+				if (!rule.RightHandReach.Contains(rightReach)) {
+					return false;
+				}
+			}
+			else {
+				if (!rule.RequireHandAngles) {
+					if (rule.LeftHandReach.Contains(leftReach)) {
+						leftHandInLeftZone = true;
+					}
+				}
+				else if (leftHandInLeftZone && !rule.LeftHandReach.Contains(leftReach)) {
+					return false;
+				}
+
+				if (!leftHandInLeftZone && !rule.RightHandReach.Contains(leftReach)) {
+					return false;
+				}
+
+				if (leftHandInLeftZone && !rule.RightHandReach.Contains(rightReach)) {
+					return false;
+				}
+				else if (!leftHandInLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
+					return false;
+				}
+			}
+		}
+
+		if (rule.Waving) {
+			if (!hands.Waving) {
+				return false;
+			}
+			var leftWaving = hands.LeftHandWaving;
+			var rightWaving = hands.RightHandWaving;
+			if (!rule.EitherHand) {
+				if (rule.LeftHandWaving && !leftWaving) {
+					return false;
+				}
+				if (rule.RightHandWaving && !rightWaving) {
+					return false;
+				}
+			}
+			else {
+				/* if neither angles nor reach were required, then check to
+				* determine which zone the left hand is acting in and set it */
+				if (!rule.RequireHandAngles && !rule.RequireHandReach) {
+					if (rule.LeftHandWaving && leftWaving) {
+						leftHandInLeftZone = true;
+					}
+				}
+
+				Debug.Log("making it here");
+				/* perform checks for the left hand */
+				/* if LEFT HAND is acting in the LEFT ZONE:
+				* check if a LEFT ZONE wave is required and if the LEFT HAND is doing it */
+				if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
+					Debug.Log("failing at check 1");
+					return false;
+				}
+				/* if LEFT HAND is acting in the RIGHT ZONE:
+				* check if a RIGHT ZONE wave required and if the LEFT HAND is doing it */
+				else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
+					Debug.Log("failing at check 2");
+					return false;
+				}
+
+				/* perform checks for the right hand */
+				/* if LEFT HAND is acting in the LEFT ZONE:
+				* check if a RIGHT ZONE wave is required, and if the RIGHT HAND is doing it */
+				if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
+					Debug.Log("failing at check 3");
+					return false;
+				}
+				/* if the LEFT HAND is acting in the RIGHT ZONE:
+				* check if a LEFT ZONE wave is required, and if the RIGHT HAND is doing it */
+				else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
+					Debug.Log("failing at check 4");
+					return false;
+				}
+			}
+		}
+
+		return true;
 	}
 }
 
@@ -128,11 +197,15 @@ public class GestureRule {
 	public bool RequireHeadState;
 	public HeadState HeadState;
 	public bool RequireHandAngles;
-	public Vector2 LeftHandAngles;
-	public Vector2 RightHandAngles;
+	public bool EitherHand;
+	public AngleRange LeftHandAngles;
+	public AngleRange RightHandAngles;
 	public bool RequireHandReach;
-	public Vector2 LeftHandReach;
-	public Vector2 RightHandReach;
+	public Range LeftHandReach;
+	public Range RightHandReach;
+	public bool Waving;
+	public bool LeftHandWaving;
+	public bool RightHandWaving;
 
 	public bool HasMaximumDuration;
 	public float MaxDuration;
@@ -141,3 +214,34 @@ public class GestureRule {
 
 	public GestureRule() {}
 }	
+
+[System.Serializable]
+public class Range {
+	public float Max;
+	public float Min;
+
+	public Range(float min, float max) {
+		Max = max;
+		Min = min;
+	}
+
+	public virtual bool Contains(float number) {
+		return Min <= number && number <= Max;
+	}
+}
+
+[System.Serializable]
+public class AngleRange : Range {
+
+	public AngleRange(float min, float max) : base(min, max) {}
+
+	public override bool Contains(float number) {
+		if (number < Min) {
+			number += 360;
+		}
+		else if (number > Max) {
+			number -= 360;
+		}
+		return Min <= number && number <= Max;	
+	}
+}
