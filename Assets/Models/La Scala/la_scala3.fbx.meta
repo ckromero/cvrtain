@@ -225,6 +225,7 @@ ModelImporter:
     100434: transform7
     100436: transform8
     100438: transform9
+    100440: stand_in
     400000: back1
     400002: bezier1
     400004: bezier2
@@ -445,6 +446,7 @@ ModelImporter:
     400434: transform7
     400436: transform8
     400438: transform9
+    400440: stand_in
     2300000: Ceiling
     2300002: chairs_first_row1
     2300004: chairs_first_row10
@@ -565,6 +567,7 @@ ModelImporter:
     2300234: Stage_Floor
     2300236: Stage_Support_Face
     2300238: Theater_Floor
+    2300240: stand_in
     3300000: Ceiling
     3300002: chairs_first_row1
     3300004: chairs_first_row10
@@ -685,6 +688,7 @@ ModelImporter:
     3300234: Stage_Floor
     3300236: Stage_Support_Face
     3300238: Theater_Floor
+    3300240: stand_in
     4300000: nurbsToPoly3
     4300002: nurbsToPoly5
     4300004: nurbsToPoly6
@@ -805,6 +809,7 @@ ModelImporter:
     4300234: pCube20
     4300236: pCylinder1
     4300238: pCube20
+    4300240: stand_in
     7400000: Take 001
     9500000: //RootNode
   materials:
