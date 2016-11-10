@@ -23,7 +23,7 @@ MonoBehaviour:
   Point: 0
   Spot: 1
   Directional: 0
-  SinglePassStereo: 0
+  SinglePassStereo: 1
   FullLast: 0
   LowResLast: 1
   HeightFogLast: 1
@@ -36,4 +36,4 @@ MonoBehaviour:
   PointLast: 0
   SpotLast: 1
   DirectionalLast: 0
-  SinglePassStereoLast: 0
+  SinglePassStereoLast: 1
