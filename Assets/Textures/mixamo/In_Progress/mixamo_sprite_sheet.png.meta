@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 7a06a809d23bd4f0ab2e6b882dd2b6fa
+timeCreated: 1478902088
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: mixamo_sprite_sheet_0
+    21300002: mixamo_sprite_sheet_1
+    21300004: mixamo_sprite_sheet_2
+    21300006: mixamo_sprite_sheet_3
+    21300008: mixamo_sprite_sheet_4
+    21300010: mixamo_sprite_sheet_5
+    21300012: mixamo_sprite_sheet_6
+    21300014: mixamo_sprite_sheet_7
+    21300016: mixamo_sprite_sheet_8
+    21300018: mixamo_sprite_sheet_9
+    21300020: mixamo_sprite_sheet_10
+    21300022: mixamo_sprite_sheet_11
+    21300024: mixamo_sprite_sheet_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1684
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 2526
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 3368
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 4210
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 5052
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 5894
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 6736
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 7578
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 8420
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 9262
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mixamo_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 10104
+        y: 0
+        width: 842
+        height: 698
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

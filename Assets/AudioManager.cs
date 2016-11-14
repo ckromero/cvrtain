@@ -7,7 +7,8 @@ public class AudioManager : MonoBehaviour
 	public GameObject audioObject;
 	public AudioMixer audioMixer;
 	public float timeForTransition;
-	public float playNewSoundPercentage = 0.8f;
+	public float playNewSoundPercentage = 0.9f;
+	public float playNewSoundWait = 1.5f;
 
 	public enum AudienceState
 	{
@@ -93,7 +94,7 @@ public class AudioManager : MonoBehaviour
 				break;
 			}
 
-			yield return new WaitForSeconds (2.0f);	
+			yield return new WaitForSeconds (playNewSoundWait);	
 		}
 	}
 
@@ -150,10 +151,10 @@ public class AudioManager : MonoBehaviour
 			audState = AudienceState.postShowDisappointed;	
 			TransitionAudio ("postShowDisappointed", timeForTransition);
 			break;
-
-
-
-
+		case "allQuiet":
+			audState = AudienceState.postShowDisappointed;	
+			TransitionAudio ("quiet", timeForTransition);
+			break;
 
 		}
 	}
