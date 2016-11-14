@@ -147,7 +147,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5617467
 Transform:
   m_ObjectHideFlags: 0
@@ -707,7 +707,7 @@ MonoBehaviour:
   lockTransforms: 0
   renderWireFrame: 0
   lightType: 0
-  lightMultiplier: 21.48
+  lightMultiplier: 34.89
   spotExponent: 50
   constantAttenuation: 1.45
   linearAttenuation: 113.2
@@ -731,7 +731,7 @@ MonoBehaviour:
   spotAngle: 18.79
   orthoSize: 36.8
   spotEmission: {fileID: 0}
-  spotNoise: {fileID: 0}
+  spotNoise: {fileID: 2800000, guid: e80c3c84ea861404d8a427db8b7abf04, type: 3}
   spotShadow: {fileID: 0}
   pointLightRadius: 1
   pointEmission: {fileID: 0}
@@ -7087,7 +7087,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1898662809
 Transform:
   m_ObjectHideFlags: 0
@@ -8160,7 +8160,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2107548792
 Transform:
   m_ObjectHideFlags: 0
