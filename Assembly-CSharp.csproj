@@ -59,9 +59,9 @@
      <Compile Include="Assets\AVProMovieCapture\Scripts\Components\AVProUnityAudioCapture.cs" />
      <Compile Include="Assets\AVProMovieCapture\Scripts\Internal\AVProMovieCaptureBase.cs" />
      <Compile Include="Assets\AVProMovieCapture\Scripts\Internal\AVProMovieCapturePlugin.cs" />
-     <Compile Include="Assets\AudioManager.cs" />
-     <Compile Include="Assets\ClapControl.cs" />
-     <Compile Include="Assets\ResetTrigger.cs" />
+     <Compile Include="Assets\Scripts\AudioManager.cs" />
+     <Compile Include="Assets\Scripts\ClapControl.cs" />
+     <Compile Include="Assets\Scripts\ExpManager.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\BowGesture.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\ColliderSubscriber.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\FollowTransform.cs" />
@@ -76,6 +76,8 @@
      <Compile Include="Assets\Scripts\Gesture Tracking\HeadTracker.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\IGestureManager.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\OneWayCollider.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
+     <Compile Include="Assets\Scripts\ResetTrigger.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_LaserPointer.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_Teleporter.cs" />

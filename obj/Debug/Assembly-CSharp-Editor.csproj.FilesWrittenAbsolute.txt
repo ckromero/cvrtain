@@ -33,3 +33,8 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-UnityScript.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-CSharp-Editor-firstpass.dll.mdb
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll.mdb
