@@ -8,7 +8,6 @@ using System.Collections.Generic;
 public class GestureManagerEditor : Editor {
 
 	private List<Gesture> _Gestures = new List<Gesture>(0);
-	private Object _Source = null;
 	private List<bool> _GestureVisible = new List<bool>(0);
 
 	private bool _ShowGestures = false;
@@ -21,14 +20,10 @@ public class GestureManagerEditor : Editor {
 
 		var script = (GestureManager)target;
 
-		_Source = EditorGUILayout.ObjectField("Debug Text", _Source, typeof(Text));
-		if (_Source != null) {
-			script.TestOutputText = (Text)_Source;
-		}
-
 		serializedObject.Update();
 		var property = serializedObject.FindProperty("Gestures");
 		var gestureList = new List<Gesture>(script.Gestures);
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
 
 		while (gestureList.Count > _GestureVisible.Count) {
 			_GestureVisible.Add(true);
@@ -173,7 +168,5 @@ public class GestureManagerEditor : Editor {
 
 			gesture.Rules = rulesList.ToArray();
 		}
-
-		EditorGUI.indentLevel--;	
 	}
 }

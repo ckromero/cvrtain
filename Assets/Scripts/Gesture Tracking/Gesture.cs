@@ -59,6 +59,7 @@ public class Gesture {
 		RuleIndex = -1;
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
+    Debug.Log("reseting " + Name);
 	}
 
 	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
