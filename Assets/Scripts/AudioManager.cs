@@ -25,8 +25,6 @@ public class AudioManager : MonoBehaviour
 		quiet}
 	;
 
-
-
 	public AudioSource[] additionalMurmurSounds;
 	public AudioSource[] additionalPoliteSounds;
 	public AudioSource[] additionalMediumSounds;
