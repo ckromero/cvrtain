@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using FRL.IO;
 
 public class GestureManager : MonoBehaviour, IGestureManager {
 
@@ -34,9 +35,6 @@ public class GestureManager : MonoBehaviour, IGestureManager {
     /* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
-
-    //Debug.Log(_HeadTracker.HeadState);
-
     _ClearTextTimer -= Time.deltaTime;
     if (_ClearTextTimer <= 0f) {
       TestOutputText.text = "";
@@ -81,6 +79,7 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 		}
 		return correct;
 	}
+
 }
 
 /* contains the name of the gesture and the time that it was completed */
