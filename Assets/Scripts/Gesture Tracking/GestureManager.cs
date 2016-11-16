@@ -4,7 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using FRL.IO;
 
-public class GestureManager : MonoBehaviour, IGestureManager {
+public class GestureManager : MonoBehaviour, IGestureManager
+{
 
 	public Text TestOutputText;
 	public Gesture[] Gestures;
@@ -15,54 +16,59 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 	private bool _WaitingForReset = false;
 	private List<Gesture> _Gestures;
 
-  private float _ClearTextTimer;
+	private float _ClearTextTimer;
 
 	public CompletedGestureStruct LastGesture { get; private set; }
 
-	void Awake() {
-		LastGesture = new CompletedGestureStruct("", 0f);
+	void Awake ()
+	{
+		LastGesture = new CompletedGestureStruct ("", 0f);
 	}
 
 	// Use this for initialization
-	void Start () {
-		_HeadTracker = GetComponent<HeadTracker>();
-		_HandsTracker = GetComponent<HandsTracker>();
-		_Gestures = new List<Gesture>(Gestures);
+	void Start ()
+	{
+		_HeadTracker = GetComponent<HeadTracker> ();
+		_HandsTracker = GetComponent<HandsTracker> ();
+		_Gestures = new List<Gesture> (Gestures);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-    /* update all gestures and sort them by how completed they are. This
+	void Update ()
+	{
+		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
-    _ClearTextTimer -= Time.deltaTime;
-    if (_ClearTextTimer <= 0f) {
-      TestOutputText.text = "";
-    }
+
+		_ClearTextTimer -= Time.deltaTime;
+		if (_ClearTextTimer <= 0f) {
+			TestOutputText.text = "";
+		}
 
 		var largestCompletion = 0;
-    var name = "";
-    foreach (var gesture in Gestures) {
-      gesture.GestureUpdate(_HeadTracker, _HandsTracker);
+		var name = "";
+		foreach (var gesture in Gestures) {
+			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-        if (largestCompletion < gesture.RuleIndex) {
+				if (largestCompletion < gesture.RuleIndex) {
 					largestCompletion = gesture.RuleIndex;
-          name = gesture.Name;
-          var message = "COMPLETED: " + name;
-          Debug.Log(message);
-        }
-				gesture.Reset();
+					name = gesture.Name;
+					var message = "COMPLETED: " + name;
+					Debug.Log (message);
+				}
+				gesture.Reset ();
 			}
 		}
-    if (largestCompletion > 0) {
-      var message = "COMPLETED: " + name;
-      TestOutputText.text = message;
-      LastGesture = new CompletedGestureStruct(name, Time.time);
-      _ClearTextTimer = 1f;
-    }
+		if (largestCompletion > 0) {
+			var message = "COMPLETED: " + name;
+			TestOutputText.text = message;
+			LastGesture = new CompletedGestureStruct (name, Time.time);
+			_ClearTextTimer = 1f;
+		}
 	}
 
-	public bool CompareGestureNames(string[] names) {
+	public bool CompareGestureNames (string[] names)
+	{
 		var correct = true;
 		foreach (var name in names) {
 			var matchingGesture = false;
@@ -75,7 +81,7 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 			if (!matchingGesture) {
 				correct = false;
 			}
-			Debug.Log("ERROR: " + name + " is not a valid Gesture name!!!!");
+			Debug.Log ("ERROR: " + name + " is not a valid Gesture name!!!!");
 		}
 		return correct;
 	}
@@ -83,11 +89,13 @@ public class GestureManager : MonoBehaviour, IGestureManager {
 }
 
 /* contains the name of the gesture and the time that it was completed */
-public struct CompletedGestureStruct {
+public struct CompletedGestureStruct
+{
 	public readonly string Name;
 	public readonly float Time;
 
-	public CompletedGestureStruct(string name, float time) {
+	public CompletedGestureStruct (string name, float time)
+	{
 		this.Name = name;
 		this.Time = time;
 	}
