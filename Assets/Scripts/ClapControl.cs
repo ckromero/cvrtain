@@ -18,18 +18,21 @@ public class ClapControl : MonoBehaviour
 	}
 
 	void Update ()
-	{ 
+	{
 		if (triggerGoToHigh) { 
 			TriggerGoToHigh ();
+			Debug.Log ("Updating Clap Control: TriggerGoToHigh");
 			triggerGoToHigh = false;
 		}
 		if (triggerRaisedFist) {
 			TriggerRaisedFist ();
+			Debug.Log ("Updating Clap Control: TriggerRaisedFist");
 			triggerRaisedFist = false;
 		}
 
 		if (triggerHighClapping) {
 			TriggerHighClapping ();
+			Debug.Log ("Updating Clap Control: TriggerHighClapping");
 			triggerHighClapping = false;
 		}			
 	}
@@ -37,7 +40,7 @@ public class ClapControl : MonoBehaviour
 	void TriggerGoToHigh ()
 	{
 		if (animator.GetCurrentAnimatorStateInfo (0).IsName ("mild clapping animation")) {
-			animator.SetTrigger("T_mildToHighClap");
+			animator.SetTrigger ("T_mildToHighClap");
 		}
 	}
 
@@ -48,7 +51,8 @@ public class ClapControl : MonoBehaviour
 		}
 	}
 
-	void TriggerHighClapping() { 
+	void TriggerHighClapping ()
+	{ 
 
 		if (animator.GetCurrentAnimatorStateInfo (0).IsName ("fist pump animation")) {
 			animator.SetTrigger ("T_raisedFistToHighClapper");

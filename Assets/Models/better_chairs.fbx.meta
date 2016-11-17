@@ -1,0 +1,308 @@
+fileFormatVersion: 2
+guid: 427bfb18f56ea4fe09e65e36d4474d1a
+timeCreated: 1479328865
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: chair_profile_10
+    100004: chair_profile_10 1
+    100006: chair_profile_11
+    100008: chair_profile_11 1
+    100010: chair_profile_12
+    100012: chair_profile_12 1
+    100014: chair_profile_13
+    100016: chair_profile_13 1
+    100018: chair_profile_14
+    100020: chair_profile_14 1
+    100022: chair_profile_15
+    100024: chair_profile_15 1
+    100026: chair_profile_16
+    100028: chair_profile_16 1
+    100030: chair_profile_17
+    100032: chair_profile_17 1
+    100034: chair_profile_18
+    100036: chair_profile_18 1
+    100038: chair_profile_19
+    100040: chair_profile_19 1
+    100042: chair_profile_2
+    100044: chair_profile_2 1
+    100046: chair_profile_20
+    100048: chair_profile_20 1
+    100050: chair_profile_21
+    100052: chair_profile_21 1
+    100054: chair_profile_22
+    100056: chair_profile_22 1
+    100058: chair_profile_23
+    100060: chair_profile_23 1
+    100062: chair_profile_24
+    100064: chair_profile_24 1
+    100066: chair_profile_3
+    100068: chair_profile_3 1
+    100070: chair_profile_4
+    100072: chair_profile_4 1
+    100074: chair_profile_5
+    100076: chair_profile_5 1
+    100078: chair_profile_6
+    100080: chair_profile_6 1
+    100082: chair_profile_7
+    100084: chair_profile_7 1
+    100086: chair_profile_8
+    100088: chair_profile_8 1
+    100090: chair_profile_9
+    100092: chair_profile_9 1
+    100094: new_chairs
+    100096: new_chairs1
+    400000: //RootNode
+    400002: chair_profile_10
+    400004: chair_profile_10 1
+    400006: chair_profile_11
+    400008: chair_profile_11 1
+    400010: chair_profile_12
+    400012: chair_profile_12 1
+    400014: chair_profile_13
+    400016: chair_profile_13 1
+    400018: chair_profile_14
+    400020: chair_profile_14 1
+    400022: chair_profile_15
+    400024: chair_profile_15 1
+    400026: chair_profile_16
+    400028: chair_profile_16 1
+    400030: chair_profile_17
+    400032: chair_profile_17 1
+    400034: chair_profile_18
+    400036: chair_profile_18 1
+    400038: chair_profile_19
+    400040: chair_profile_19 1
+    400042: chair_profile_2
+    400044: chair_profile_2 1
+    400046: chair_profile_20
+    400048: chair_profile_20 1
+    400050: chair_profile_21
+    400052: chair_profile_21 1
+    400054: chair_profile_22
+    400056: chair_profile_22 1
+    400058: chair_profile_23
+    400060: chair_profile_23 1
+    400062: chair_profile_24
+    400064: chair_profile_24 1
+    400066: chair_profile_3
+    400068: chair_profile_3 1
+    400070: chair_profile_4
+    400072: chair_profile_4 1
+    400074: chair_profile_5
+    400076: chair_profile_5 1
+    400078: chair_profile_6
+    400080: chair_profile_6 1
+    400082: chair_profile_7
+    400084: chair_profile_7 1
+    400086: chair_profile_8
+    400088: chair_profile_8 1
+    400090: chair_profile_9
+    400092: chair_profile_9 1
+    400094: new_chairs
+    400096: new_chairs1
+    2300000: chair_profile_10
+    2300002: chair_profile_10 1
+    2300004: chair_profile_11
+    2300006: chair_profile_11 1
+    2300008: chair_profile_12
+    2300010: chair_profile_12 1
+    2300012: chair_profile_13
+    2300014: chair_profile_13 1
+    2300016: chair_profile_14
+    2300018: chair_profile_14 1
+    2300020: chair_profile_15
+    2300022: chair_profile_15 1
+    2300024: chair_profile_16
+    2300026: chair_profile_16 1
+    2300028: chair_profile_17
+    2300030: chair_profile_17 1
+    2300032: chair_profile_18
+    2300034: chair_profile_18 1
+    2300036: chair_profile_19
+    2300038: chair_profile_19 1
+    2300040: chair_profile_2
+    2300042: chair_profile_2 1
+    2300044: chair_profile_20
+    2300046: chair_profile_20 1
+    2300048: chair_profile_21
+    2300050: chair_profile_21 1
+    2300052: chair_profile_22
+    2300054: chair_profile_22 1
+    2300056: chair_profile_23
+    2300058: chair_profile_23 1
+    2300060: chair_profile_24
+    2300062: chair_profile_24 1
+    2300064: chair_profile_3
+    2300066: chair_profile_3 1
+    2300068: chair_profile_4
+    2300070: chair_profile_4 1
+    2300072: chair_profile_5
+    2300074: chair_profile_5 1
+    2300076: chair_profile_6
+    2300078: chair_profile_6 1
+    2300080: chair_profile_7
+    2300082: chair_profile_7 1
+    2300084: chair_profile_8
+    2300086: chair_profile_8 1
+    2300088: chair_profile_9
+    2300090: chair_profile_9 1
+    3300000: chair_profile_10
+    3300002: chair_profile_10 1
+    3300004: chair_profile_11
+    3300006: chair_profile_11 1
+    3300008: chair_profile_12
+    3300010: chair_profile_12 1
+    3300012: chair_profile_13
+    3300014: chair_profile_13 1
+    3300016: chair_profile_14
+    3300018: chair_profile_14 1
+    3300020: chair_profile_15
+    3300022: chair_profile_15 1
+    3300024: chair_profile_16
+    3300026: chair_profile_16 1
+    3300028: chair_profile_17
+    3300030: chair_profile_17 1
+    3300032: chair_profile_18
+    3300034: chair_profile_18 1
+    3300036: chair_profile_19
+    3300038: chair_profile_19 1
+    3300040: chair_profile_2
+    3300042: chair_profile_2 1
+    3300044: chair_profile_20
+    3300046: chair_profile_20 1
+    3300048: chair_profile_21
+    3300050: chair_profile_21 1
+    3300052: chair_profile_22
+    3300054: chair_profile_22 1
+    3300056: chair_profile_23
+    3300058: chair_profile_23 1
+    3300060: chair_profile_24
+    3300062: chair_profile_24 1
+    3300064: chair_profile_3
+    3300066: chair_profile_3 1
+    3300068: chair_profile_4
+    3300070: chair_profile_4 1
+    3300072: chair_profile_5
+    3300074: chair_profile_5 1
+    3300076: chair_profile_6
+    3300078: chair_profile_6 1
+    3300080: chair_profile_7
+    3300082: chair_profile_7 1
+    3300084: chair_profile_8
+    3300086: chair_profile_8 1
+    3300088: chair_profile_9
+    3300090: chair_profile_9 1
+    4300000: chair_profile_2
+    4300002: chair_profile_3
+    4300004: chair_profile_4
+    4300006: chair_profile_5
+    4300008: chair_profile_6
+    4300010: chair_profile_7
+    4300012: chair_profile_8
+    4300014: chair_profile_9
+    4300016: chair_profile_10
+    4300018: chair_profile_11
+    4300020: chair_profile_12
+    4300022: chair_profile_13
+    4300024: chair_profile_14
+    4300026: chair_profile_15
+    4300028: chair_profile_16
+    4300030: chair_profile_17
+    4300032: chair_profile_18
+    4300034: chair_profile_19
+    4300036: chair_profile_20
+    4300038: chair_profile_21
+    4300040: chair_profile_22
+    4300042: chair_profile_23
+    4300044: chair_profile_24
+    4300046: chair_profile_2
+    4300048: chair_profile_3
+    4300050: chair_profile_4
+    4300052: chair_profile_5
+    4300054: chair_profile_6
+    4300056: chair_profile_7
+    4300058: chair_profile_8
+    4300060: chair_profile_9
+    4300062: chair_profile_10
+    4300064: chair_profile_11
+    4300066: chair_profile_12
+    4300068: chair_profile_13
+    4300070: chair_profile_14
+    4300072: chair_profile_15
+    4300074: chair_profile_16
+    4300076: chair_profile_17
+    4300078: chair_profile_18
+    4300080: chair_profile_19
+    4300082: chair_profile_20
+    4300084: chair_profile_21
+    4300086: chair_profile_22
+    4300088: chair_profile_23
+    4300090: chair_profile_24
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 600
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

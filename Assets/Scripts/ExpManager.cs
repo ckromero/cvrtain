@@ -12,6 +12,7 @@ public class ExpManager : MonoBehaviour
 	public AudioManager audioManager;
 	public LevelsManager levelsManager;
 
+
 	void Update() {
 //		states = new bool[]{ IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsTitles };
 		if (IsIdle) { 

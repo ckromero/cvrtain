@@ -731,7 +731,7 @@ MonoBehaviour:
   spotAngle: 18.79
   orthoSize: 36.8
   spotEmission: {fileID: 0}
-  spotNoise: {fileID: 2800000, guid: e80c3c84ea861404d8a427db8b7abf04, type: 3}
+  spotNoise: {fileID: 0}
   spotShadow: {fileID: 0}
   pointLightRadius: 1
   pointEmission: {fileID: 0}
@@ -869,7 +869,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4293918718
+    m_Bits: 4291821566
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1586,7 +1586,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4293918718
+    m_Bits: 4291821566
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1687,11 +1687,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!4 &307148380 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4000010651802652, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-    type: 2}
-  m_PrefabInternal: {fileID: 1467623924}
 --- !u!1 &313212449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,7 +2579,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4293918718
+    m_Bits: 4291821566
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -5757,7 +5752,7 @@ Prefab:
         type: 2}
       propertyPath: HeadTransform
       value: 
-      objectReference: {fileID: 307148380}
+      objectReference: {fileID: 0}
     - target: {fileID: 1000013379275678, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
       propertyPath: m_IsActive
       value: 0
