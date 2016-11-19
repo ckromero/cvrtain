@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\ExpManager.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\BowGesture.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\ColliderSubscriber.cs" />
+     <Compile Include="Assets\Scripts\Gesture Tracking\DelayedFollowTransform.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\FRL_InputSystems\BindToObject.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\FRL_InputSystems\Vive-Input\BehaviourToggler.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\FRL_InputSystems\Vive-Input\Deprecated\GlobalGrabbable.cs" />
@@ -99,7 +100,9 @@
      <Compile Include="Assets\Scripts\Gesture Tracking\HeadTracker.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\IGestureManager.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\OneWayCollider.cs" />
+     <Compile Include="Assets\Scripts\Gesture Tracking\PositionIndicatorGizmo.cs" />
      <Compile Include="Assets\Scripts\Gesture Tracking\TriggerListener.cs" />
+     <Compile Include="Assets\Scripts\Gesture Tracking\WaveTracker.cs" />
      <Compile Include="Assets\Scripts\LevelsManager.cs" />
      <Compile Include="Assets\Scripts\ResetTrigger.cs" />
      <Compile Include="Assets\SteamVR\Extras\SteamVR_GazeTracker.cs" />

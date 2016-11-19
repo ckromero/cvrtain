@@ -50,6 +50,7 @@
      <Compile Include="Assets\AVProMovieCapture\Scripts\Editor\AVProMovieCaptureFromCameraEditor.cs" />
      <Compile Include="Assets\AVProMovieCapture\Scripts\Editor\AVProMovieCaptureFromSceneEditor.cs" />
      <Compile Include="Assets\Editor\CrossPlatformInput\CrossPlatformInputInitialize.cs" />
+     <Compile Include="Assets\Editor\Gesture Tracking\DelayedFollowTransformEditor.cs" />
      <Compile Include="Assets\Editor\Gesture Tracking\FollowTransformEditor.cs" />
      <Compile Include="Assets\Editor\Gesture Tracking\GestureCallibratorEditor.cs" />
      <Compile Include="Assets\Editor\Gesture Tracking\GestureDrawer.cs" />

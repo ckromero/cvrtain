@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class FollowTransform : MonoBehaviour {
+public class DelayedFollowTransform : MonoBehaviour {
 
+	public float Delay;
 	public Transform[] Transforms;
 
 	[HideInInspector]
@@ -12,18 +13,20 @@ public class FollowTransform : MonoBehaviour {
 	[HideInInspector]
 	public bool ZLock;
 
-	[HideInInspector]
-	public bool XRotationLock;
-	[HideInInspector]
-	public bool YRotationLock;
-	[HideInInspector]
-	public bool ZRotationLock;
-
     private Quaternion _StartingRotation;
+
+    private Vector3[] _TrackedPositions;
+    private int _NewEntryIndex;
 
 	// Use this for initialization
 	void Start () {
         _StartingRotation = transform.rotation;
+        _TrackedPositions = new Vector3[(int)Mathf.Floor(Delay * 60)];
+
+        var position = AveragedPositions();
+        for (var i = 0; i < _TrackedPositions.Length; i++) {
+        	_TrackedPositions[i] = position;
+        }
 	}
 	
 	// Update is called once per frame
@@ -32,10 +35,21 @@ public class FollowTransform : MonoBehaviour {
 			return;
 		}
 
+		var position = AveragedPositions();
+
+		_TrackedPositions[_NewEntryIndex] = position;
+
+		_NewEntryIndex++;
+		if (_NewEntryIndex >= _TrackedPositions.Length) _NewEntryIndex = 0;
+
+		transform.position = _TrackedPositions[_NewEntryIndex];
+	}
+
+	private Vector3 AveragedPositions() {
 		var position = Vector3.zero;
 		foreach(var trans in Transforms) {
 			position += trans.position;
-		}	
+		}
 		position /= Transforms.Length;
 
 		if (XLock) {
@@ -47,21 +61,7 @@ public class FollowTransform : MonoBehaviour {
 		if (ZLock) {
 			position.z = transform.position.z;
 		}
-		transform.position = position;
 
-		/* for rotation, just use the first object because otherwise the 
-		* averaging results in some weird output very quickly */
-		var rotation = Transforms[0].eulerAngles;
-
-		if (XRotationLock) {
-			rotation.x = transform.eulerAngles.x;
-		}
-		if (YRotationLock) {
-			rotation.y = transform.eulerAngles.y;
-		}
-		if (ZRotationLock) {
-			rotation.z = transform.eulerAngles.z;
-		}
-		transform.eulerAngles = _StartingRotation.eulerAngles + rotation;
+		return position;
 	}
 }

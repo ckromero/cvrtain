@@ -51,18 +51,17 @@ public class LevelsManager : MonoBehaviour
 		//"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
 //		completedGestures
 
-		if (lastGesture != gestureManager.LastGesture) {
+		// if (lastGesture != gestureManager.LastGesture) {
 			
-			if (gestureManager.LastGesture.Name == "Bow") {
-				UpdateAV ();
-				lastGesture = gestureManager.LastGesture; 
-			}
-			if (gestureManager.LastGesture.Name == "Hands up bow") {
-				UpdateAV ();
-				lastGesture = gestureManager.LastGesture; 
-			}
-
-		}
+		// 	if (gestureManager.LastGesture.Name == "Bow") {
+		// 		UpdateAV ();
+		// 		lastGesture = gestureManager.LastGesture; 
+		// 	}
+		// 	if (gestureManager.LastGesture.Name == "Hands up bow") {
+		// 		UpdateAV ();
+		// 		lastGesture = gestureManager.LastGesture; 
+		// 	}
+		// }
 
 	}
 
