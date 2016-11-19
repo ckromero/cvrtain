@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 4000010245890746}
   - 114: {fileID: 114000012813506024}
+  - 114: {fileID: 114000012691482104}
   m_Layer: 0
   m_Name: ExpManager
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &114000012691482104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f757cb9894b2f4fcfbc671a117c11364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _TimeBudget: 0.2
 --- !u!114 &114000012813506024
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -61,3 +74,5 @@ MonoBehaviour:
   IsCredits: 0
   state: 
   expState: 0
+  audioManager: {fileID: 0}
+  levelsManager: {fileID: 0}

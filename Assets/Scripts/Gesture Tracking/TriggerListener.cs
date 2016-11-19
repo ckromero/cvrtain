@@ -14,7 +14,8 @@ public class TriggerListener : MonoBehaviour, IGlobalTriggerHandler {
 
 	// Use this for initialization
 	void Start () {
-		LastDoublePress = Mathf.Infinity;	
+		LastDoublePress = Mathf.Infinity;
+        Debug.Log("starting trigger listener");	
 	}
 	
 	// Update is called once per frame
@@ -46,6 +47,7 @@ public class TriggerListener : MonoBehaviour, IGlobalTriggerHandler {
 	}
 
 	void TriggerDown() {
+        Debug.Log("Trigger Down");
 		_TriggersDown++;
 		if (_TriggersDown == 1) {
 			_InputWindowTime = _TimeBudget;
