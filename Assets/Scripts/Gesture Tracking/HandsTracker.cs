@@ -17,6 +17,15 @@ public class HandsTracker : MonoBehaviour {
 	private Vector2[] _TrackedLeftPositions = new Vector2[30];
 	private Vector2[] _TrackedRightPositions = new Vector2[30];
 
+	public float TrackingWindow;
+
+	private Vector3[] _LeftHandPositions;
+	private Vector3[] _RightHandPositions;
+	private float[] _LeftHandAngles;
+	private float[] _RightHandAngles;
+
+	int _CurrentIndex = -1;
+
 	private int _PositionIndex = 0;
 
 	// public int LeftHandZone { get; private set; }
@@ -94,12 +103,30 @@ public class HandsTracker : MonoBehaviour {
 		}
 	}
 
+	void Awake() {
+		var size = (int)Mathf.Floor(TrackingWindow * 60);
+		_LeftHandPositions = new Vector3[size];
+		_RightHandPositions = new Vector3[size];
+		_LeftHandAngles = new float[size];
+		_RightHandAngles = new float[size];
+	}
+
 	void Start () {
-	
+		/* populate the angle arrays */
+		for (var i = 0; i < _LeftHandAngles.Length; i++) {
+			_LeftHandAngles[i] = LeftHandAngle;
+			_RightHandAngles[i] = RightHandAngle;	
+		}
+		// foreach (var angle in _LeftHandAngles) {
+		// 	angle = LeftHandAngle;
+		// }	
+		// foreach (var angle in _RightHandAngles) {
+		// 	angle = RightHandAngle;
+		// }	
 	}
 	
 	void Update () {
-		if (Waving) {
+		if (LeftHandWaving) {
 			Debug.Log("I'm waving!!!");
 		}
 	}
@@ -119,9 +146,72 @@ public class HandsTracker : MonoBehaviour {
 			_PositionIndex = 0;
 		}
 
-		LeftHandWaving = CheckForWave(_TrackedLeftPositions);
-		RightHandWaving = CheckForWave(_TrackedRightPositions);
+		// LeftHandWaving = CheckForWave(_TrackedLeftPositions);
+		// RightHandWaving = CheckForWave(_TrackedRightPositions);
+	}
 
+	void FixedUpdate() {
+		_CurrentIndex++;
+		if (_CurrentIndex >= _LeftHandPositions.Length) {
+			_CurrentIndex = 0;
+		}
+		_LeftHandPositions[_CurrentIndex] = LeftHand.position;
+		_RightHandPositions[_CurrentIndex] = RightHand.position;
+		_LeftHandAngles[_CurrentIndex] = LeftHandAngle;
+		_RightHandAngles[_CurrentIndex] = RightHandAngle;
+
+		LeftHandWaving = CheckForWave(_LeftHandAngles);
+		// RightHandWaving = CheckForWave(_RightHandAngles);
+	}
+
+	private bool CheckForWave(float[] angles) {
+		if (_CurrentIndex < 0) {
+			return false;
+		}
+		var haltPoint = _CurrentIndex + 1;
+		if (haltPoint >= angles.Length) haltPoint = 0;
+		var index = _CurrentIndex - 2;
+		if (index < 0) index = angles.Length - index;
+		var reversalCount = 0;
+		// Debug.Log("current index: " + _CurrentIndex);
+		// while (index > 0) {
+		// var testOutput = "Tracked positions: \n";
+		while (index != haltPoint) {
+			var i = index;
+			var j = (i + 1 >= angles.Length) ? 0 : i + 1;
+			var k = (j + 1 >= angles.Length) ? 0 : j + 1;	
+			var lastDelta = angles[i] - angles[j];
+			var thisDelta = angles[j] - angles[k];
+			// if (k == _CurrentIndex) {
+			// 	Debug.Log("this index offset correctly");
+			// }
+
+			// Debug.Log("last delta: " + lastDelta + " this delta: " + thisDelta);
+
+			var lastDirection = (int)(lastDelta/Mathf.Abs(lastDelta));
+			if (lastDelta.Equals(0f)) {
+				// Debug.Log("fire lastDelta reset");
+				lastDirection = 1;
+			}
+			var thisDirection = (int)(thisDelta/Mathf.Abs(thisDelta));
+			if (thisDelta.Equals(0f)) {
+				// Debug.Log("fire thisDelta reset");
+				thisDirection = 1;
+			}
+			if (lastDirection != thisDirection) {
+				Debug.Log("last: " + lastDirection + " this: " + thisDirection);
+				reversalCount++;
+			}
+
+			// testOutput += testOutput + ", ";
+
+			index = (index - 1 < 0) ? angles.Length - 1: index - 1;	
+			// Debug.Log("current index is: " + index);
+		}
+
+		// Debug.Log(testOutput);
+
+		return reversalCount >= 5;
 	}
 
 	private bool CheckForWave(Vector2[] positions) {
