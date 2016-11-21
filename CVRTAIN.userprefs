@@ -5,9 +5,9 @@
       <File FileName="Assets/Scripts/Gesture Tracking/GestureManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/ExpManager.cs" Line="15" Column="2" />
       <File FileName="Assets/Scripts/AudioManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/LevelsManager.cs" Line="90" Column="54" />
-      <File FileName="Assets/Scripts/ClapManager.cs" Line="17" Column="36" />
-      <File FileName="Assets/Scripts/ClapControl.cs" Line="29" Column="56" />
+      <File FileName="Assets/Scripts/LevelsManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ClapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ClapControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Gesture Tracking/TriggerListener.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

@@ -12,6 +12,8 @@ public class FollowTransform : MonoBehaviour {
 	[HideInInspector]
 	public bool ZLock;
 
+	// public Vector3 RotationOffset;
+
 	[HideInInspector]
 	public bool XRotationLock;
 	[HideInInspector]

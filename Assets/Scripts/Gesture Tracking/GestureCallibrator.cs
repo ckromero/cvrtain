@@ -46,6 +46,10 @@ public class GestureCallibrator : MonoBehaviour {
 	public void Callibrate() {
         Debug.Log("callibrate!");
 		var headPosition = HeadTransform.localPosition;
+		/* this allows callibration if the project is being run with a Vive */
+		if (HeadTransform.parent.gameObject.name == "Camera (head)") {
+			headPosition = HeadTransform.parent.localPosition;
+		}
 		var myPosition = transform.localPosition;
 		var yDiff = headPosition.y / (myPosition.y + HeadOffset);
 		var scale = Vector3.one * yDiff;

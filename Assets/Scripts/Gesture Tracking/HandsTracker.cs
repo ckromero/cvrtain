@@ -6,6 +6,8 @@ public class HandsTracker : MonoBehaviour {
 	public Transform LeftHand;
 	public Transform RightHand;
 
+	public LayerMask WavingLayers;
+
 	public int Divisions = 8;
 	public int Rings = 2;
 	public float RingRadius = 0.65f;
@@ -160,8 +162,76 @@ public class HandsTracker : MonoBehaviour {
 		_LeftHandAngles[_CurrentIndex] = LeftHandAngle;
 		_RightHandAngles[_CurrentIndex] = RightHandAngle;
 
-		LeftHandWaving = CheckForWave(_LeftHandAngles);
+		LeftHandWaving = CheckForWave(LeftHand, _LeftHandPositions);
+		// RightHandWaving = CheckForWave(RightHand, _RightHandPositions);
+		if (Waving) {
+			Debug.Log("waving");
+		}
+		// LeftHandWaving = CheckForWave(_LeftHandAngles);
 		// RightHandWaving = CheckForWave(_RightHandAngles);
+	}
+
+	private bool CheckForWave(Transform handTransform, Vector3[] positions) {
+		/* raycast from the palm of the hand to ensure that the hand is actually
+		* facing the audience when the player waves */
+		RaycastHit hit;
+		var down = handTransform.up * -1;
+		if (Physics.Raycast(handTransform.position, down, out hit, 100f, WavingLayers)) {
+			var hitObject = hit.collider.gameObject;
+			if (hitObject.GetComponent<HeadLookReceiver>()) {
+				var facing = hitObject.GetComponent<HeadLookReceiver>().Facing;
+				if (facing != HeadFacing.Front &&
+						facing != HeadFacing.Left &&
+						facing != HeadFacing.Right) {
+					return false;
+				}
+			}
+			else {
+				return false;
+			}
+		}
+
+		var maxWorldDelta = 0f;
+		var maxLocalDelta = 0f;
+		var totalWorldDistance = 0f;
+		var totalLocalDistance = 0f;
+
+		var localPositions = new Vector2[positions.Length];
+		for (var i = 0; i < positions.Length; i++) {
+			var localPos = transform.InverseTransformPoint(positions[i]);
+			// Debug.Log(localPos.x);
+			localPositions[i] = new Vector2(localPos.x, localPos.y);
+		}
+
+		for (var i = 0; i < positions.Length - 1; i++) {
+			totalWorldDistance += Vector3.Distance(positions[i], positions[i+1]);
+			totalLocalDistance += Vector2.Distance(localPositions[i], localPositions[i+1]);
+			for (var j = i + 1; j < positions.Length; j++) {
+				var delta = Vector3.Distance(positions[i], positions[j]);
+				if (delta > maxWorldDelta) {
+					maxWorldDelta = delta;
+				}
+
+				delta = Vector2.Distance(localPositions[i], localPositions[j]);
+				if (delta > maxLocalDelta) {
+					maxLocalDelta = delta;
+				}
+			}
+		}
+
+		// Debug.Log("maxWorldDelta: " + maxWorldDelta + " totalWorldDistance: " + totalWorldDistance);
+		// Debug.Log("maxLocalDelta: " + maxLocalDelta + " totalLocalDistance: " + totalLocalDistance);
+
+		/* the wave needs to check for movement in both world and local space to
+		* ensure that movement is not being caused simply by rotating the gesture
+		* tracking zone */
+		var returnValue = (maxWorldDelta >= WaveLimits.x &&
+							maxWorldDelta <= WaveLimits.y &&
+							maxLocalDelta >= WaveLimits.x &&
+							maxLocalDelta <= WaveLimits.y &&
+							totalLocalDistance > WaveDistance &&
+							totalWorldDistance > WaveDistance);
+		return returnValue;
 	}
 
 	private bool CheckForWave(float[] angles) {
@@ -246,7 +316,7 @@ public class HandsTracker : MonoBehaviour {
 
 			var target = Vector3.zero;
 			target.y = 5 * Mathf.Cos(angle);
-			target.z = 5 * Mathf.Sin(angle);
+			target.x = 5 * Mathf.Sin(angle);
 
 			var start = transform.position;
 			target = transform.TransformPoint(target);
@@ -263,5 +333,11 @@ public class HandsTracker : MonoBehaviour {
 			Gizmos.DrawWireSphere(Vector3.zero, i * RingRadius + MinimumRadius);
 		}
 		Gizmos.matrix = oldMatrix;
+
+		/* draw rays for the palms of the hands */
+
+		Gizmos.color = Color.red;
+		Gizmos.DrawRay(LeftHand.position, LeftHand.up * -1);
+		Gizmos.DrawRay(RightHand.position, RightHand.up * -1);
 	}
 }
