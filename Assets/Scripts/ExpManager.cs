@@ -11,10 +11,11 @@ public class ExpManager : MonoBehaviour
 
 	public AudioManager audioManager;
 	public LevelsManager levelsManager;
-	private TriggerListener triggerListener = new TriggerListener();
+	private TriggerListener triggerListener;
 	private float lastTriggerTime;
 
-	void Start () { 
+	void Start () {
+        triggerListener = GetComponent<TriggerListener>();
 	}
 
 
