@@ -13,5 +13,7 @@ EditorBuildSettings:
     path: Assets/Scenes/alpha scenes/a1 - audio.unity
   - enabled: 0
     path: Assets/Scenes/sprite tests/mixamo test.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/alpha scenes/a1.1 - adjusted lightswith figure.unity
+  - enabled: 1
+    path: Assets/Scenes/alpha scenes/a1.1 - audio.unity
