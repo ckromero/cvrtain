@@ -54,3 +54,5 @@ MonoBehaviour:
   expManager: {fileID: 0}
   audioManager: {fileID: 0}
   gestureManager: {fileID: 0}
+  clapManager: {fileID: 0}
+  IsIncrementStage: 0

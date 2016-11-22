@@ -45,7 +45,7 @@ public class TriggerListener : MonoBehaviour, IGlobalTriggerHandler {
 
 	public void OnGlobalTriggerTouchUp(ViveControllerModule.EventData e) {
 	}
-
+    //Is this time window short enough to avoid a double click?
 	void TriggerDown() {
         Debug.Log("Trigger Down");
 		_TriggersDown++;
@@ -53,6 +53,7 @@ public class TriggerListener : MonoBehaviour, IGlobalTriggerHandler {
 			_InputWindowTime = _TimeBudget;
 		}
 		else if (_TriggersDown == 2 && _InputWindowTime > 0f) {
+            Debug.Log("double click detected");
 			LastDoublePress = Time.timeSinceLevelLoad;
 			_InputWindowTime = -1f;
 		}
