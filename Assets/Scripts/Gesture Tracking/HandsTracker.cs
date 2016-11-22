@@ -79,7 +79,9 @@ public class HandsTracker : MonoBehaviour {
 
 	public int LeftHandRing {
 		get {
-			var distance = Vector3.Distance(LeftHand.position, transform.position);
+            var localPos = transform.InverseTransformPoint(LeftHand.position);
+            var distance = Vector3.Distance(localPos, Vector3.zero);
+            //var distance = Vector3.Distance(LeftHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
 			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
 			distance = Mathf.Clamp(distance, 0, Rings);
@@ -89,7 +91,9 @@ public class HandsTracker : MonoBehaviour {
 
 	public int RightHandRing {
 		get {
-			var distance = Vector3.Distance(RightHand.position, transform.position);
+            var localPos = transform.InverseTransformPoint(RightHand.position);
+            var distance = Vector3.Distance(localPos, Vector3.zero);
+			//var distance = Vector3.Distance(RightHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
 			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
 			distance = Mathf.Clamp(distance, 0, Rings);
@@ -104,6 +108,8 @@ public class HandsTracker : MonoBehaviour {
 			return LeftHandWaving || RightHandWaving;
 		}
 	}
+
+    public float LastWave { get; private set; }
 
 	void Awake() {
 		var size = (int)Mathf.Floor(TrackingWindow * 60);
@@ -219,13 +225,24 @@ public class HandsTracker : MonoBehaviour {
 
 		/* the wave needs to check for movement in both world and local space to
 		* ensure that movement is not being caused simply by rotating the gesture
-		* tracking zone */
+		* tracking zone.
+        * Local space checking is needed to ensure the controller is
+        * being moved along approximately the same plane as the head rather than
+        * forward and backward.
+        * The total distance check is to make sure that the hand has moved enough
+        * in the window that it can be considered a wave. */
 		var returnValue = (maxWorldDelta >= WaveLimits.x &&
 							maxWorldDelta <= WaveLimits.y &&
 							maxLocalDelta >= WaveLimits.x &&
 							maxLocalDelta <= WaveLimits.y &&
 							totalLocalDistance > WaveDistance &&
 							totalWorldDistance > WaveDistance);
+        if (returnValue) {
+            LastWave = Time.deltaTime;
+            for (var i = 0; i < positions.Length; i++) {
+                positions[i] = handTransform.position;
+            }
+        }
 		return returnValue;
 	}
 
