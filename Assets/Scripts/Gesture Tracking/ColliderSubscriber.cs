@@ -22,11 +22,11 @@ public class ColliderSubscriber : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other){
-	//	OnTriggerEnterDelegate(other);
+		OnTriggerEnterDelegate(other);
 	}
 
 	void OnTriggerExit(Collider other){
-		//OnTriggerExitDelegate(other);
+		OnTriggerExitDelegate(other);
 	}
 
 	public delegate void onColliderEnterDelegate(Collision collision);

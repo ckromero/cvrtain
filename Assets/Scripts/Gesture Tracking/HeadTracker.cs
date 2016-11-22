@@ -48,21 +48,21 @@ public class HeadTracker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-    BowCollider.OnTriggerEnter += OnBowTriggerEnter;
-    BowCollider.OnTriggerExit += OnBowTriggerExit;
-    CurtsyCollider.OnTriggerEnter += OnCurtsyTriggerEnter;
-    CurtsyCollider.OnTriggerExit += OnCurtsyTriggerExit;
-    UprightCollider.OnTriggerEnterDelegate += OnUprightTriggerEnter;
-    UprightCollider.OnTriggerExitDelegate += OnUprightTriggerExit;
-  }
+		BowCollider.OnTriggerEnter += OnBowTriggerEnter;
+		BowCollider.OnTriggerExit += OnBowTriggerExit;
+		CurtsyCollider.OnTriggerEnter += OnCurtsyTriggerEnter;
+		CurtsyCollider.OnTriggerExit += OnCurtsyTriggerExit;
+		UprightCollider.OnTriggerEnterDelegate += OnUprightTriggerEnter;
+		UprightCollider.OnTriggerExitDelegate += OnUprightTriggerExit;
+	}
 	
 	// Update is called once per frame
 	void Update () {
-    var states = "HeadStates: ";
-    foreach (var HeadState in _StateBuffer) {
-      states += HeadState + ", ";
-    }
-//    Debug.Log(states);
+		var states = "HeadStates: ";
+		foreach (var HeadState in _StateBuffer) {
+			states += HeadState + ", ";
+		}
+		Debug.Log(states);
 		RaycastHit hit;
 		if (Physics.Raycast(HeadTransform.position, HeadTransform.forward, out hit, _LookMask)) {
 			// Debug.Log("I am looking at: " + hit.collider.gameObject.name);
@@ -87,6 +87,7 @@ public class HeadTracker : MonoBehaviour {
 	}
 
 	void OnUprightTriggerEnter(Collider other) {
+		Debug.Log("collide?");
 		_StateBuffer.Add(HeadState.Upright);
 	}
 

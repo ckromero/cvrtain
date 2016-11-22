@@ -59,7 +59,7 @@ public class Gesture {
 		RuleIndex = -1;
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
-    Debug.Log("reseting " + Name);
+	    Debug.Log("reseting " + Name);
 	}
 
 	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
@@ -158,18 +158,15 @@ public class Gesture {
 					}
 				}
 
-				Debug.Log("making it here");
 				/* perform checks for the left hand */
 				/* if LEFT HAND is acting in the LEFT ZONE:
 				* check if a LEFT ZONE wave is required and if the LEFT HAND is doing it */
 				if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
-					Debug.Log("failing at check 1");
 					return false;
 				}
 				/* if LEFT HAND is acting in the RIGHT ZONE:
 				* check if a RIGHT ZONE wave required and if the LEFT HAND is doing it */
 				else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
-					Debug.Log("failing at check 2");
 					return false;
 				}
 
@@ -177,13 +174,11 @@ public class Gesture {
 				/* if LEFT HAND is acting in the LEFT ZONE:
 				* check if a RIGHT ZONE wave is required, and if the RIGHT HAND is doing it */
 				if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
-					Debug.Log("failing at check 3");
 					return false;
 				}
 				/* if the LEFT HAND is acting in the RIGHT ZONE:
 				* check if a LEFT ZONE wave is required, and if the RIGHT HAND is doing it */
 				else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
-					Debug.Log("failing at check 4");
 					return false;
 				}
 			}

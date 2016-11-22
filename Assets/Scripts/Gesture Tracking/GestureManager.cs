@@ -20,22 +20,19 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 	public CompletedGestureStruct LastGesture { get; private set; }
 
-	void Awake ()
-	{
+	void Awake () {
 		LastGesture = new CompletedGestureStruct ("", 0f);
 	}
 
 	// Use this for initialization
-	void Start ()
-	{
+	void Start () {
 		_HeadTracker = GetComponent<HeadTracker> ();
 		_HandsTracker = GetComponent<HandsTracker> ();
 		_Gestures = new List<Gesture> (Gestures);
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
+	void Update () {
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
@@ -48,15 +45,17 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var largestCompletion = 0;
 		var name = "";
 		foreach (var gesture in Gestures) {
+			// Debug.Log("updating gesture " + gesture.Name);
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
+				Debug.Log("is something at least completeing?");
 				if (largestCompletion < gesture.RuleIndex) {
 					largestCompletion = gesture.RuleIndex;
 					name = gesture.Name;
 					var message = "COMPLETED: " + name;
 					Debug.Log (message);
 				}
-				gesture.Reset ();
+				gesture.Reset();
 			}
 		}
 		if (largestCompletion > 0) {
@@ -67,8 +66,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 	}
 
-	public bool CompareGestureNames (string[] names)
-	{
+	public bool CompareGestureNames (string[] names) {
 		var correct = true;
 		foreach (var name in names) {
 			var matchingGesture = false;
@@ -89,8 +87,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 }
 
 /* contains the name of the gesture and the time that it was completed */
-public struct CompletedGestureStruct
-{
+public struct CompletedGestureStruct {
 	public readonly string Name;
 	public readonly float Time;
 
