@@ -5515,6 +5515,57 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+  - Name: Wave
+    ForceCompleteKey: 119
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 1
+      LeftHandWaving: 1
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
 --- !u!114 &114000010197186458
 MonoBehaviour:
   m_ObjectHideFlags: 1
