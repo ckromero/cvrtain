@@ -128,9 +128,6 @@ public class HandsTracker : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (LeftHandWaving) {
-			Debug.Log("I'm waving!!!");
-		}
 	}
 
 	void LateUpdate() {
@@ -163,12 +160,7 @@ public class HandsTracker : MonoBehaviour {
 		_RightHandAngles[_CurrentIndex] = RightHandAngle;
 
 		LeftHandWaving = CheckForWave(LeftHand, _LeftHandPositions);
-		// RightHandWaving = CheckForWave(RightHand, _RightHandPositions);
-		if (Waving) {
-			Debug.Log("waving");
-		}
-		// LeftHandWaving = CheckForWave(_LeftHandAngles);
-		// RightHandWaving = CheckForWave(_RightHandAngles);
+		RightHandWaving = CheckForWave(RightHand, _RightHandPositions);
 	}
 
 	private bool CheckForWave(Transform handTransform, Vector3[] positions) {
