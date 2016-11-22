@@ -3551,10 +3551,10 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       RightHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       Waving: 1
       LeftHandWaving: 1
       RightHandWaving: 1
@@ -3574,11 +3574,11 @@ MonoBehaviour:
         Min: 35
       RightHandAngles:
         Max: 180
-        Min: 0
+        Min: 90
       RequireHandReach: 1
       LeftHandReach:
         Max: 2
-        Min: 2
+        Min: 1
       RightHandReach:
         Max: 3
         Min: 0
@@ -3594,11 +3594,11 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 35
+        Max: 45
         Min: 0
       RightHandAngles:
         Max: 180
-        Min: 0
+        Min: 90
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -3626,7 +3626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CallibrationKey: 59
-  HeadOffset: 0.2
+  HeadOffset: 0.25
   HeadTransform: {fileID: 1679308167}
   LeftWand: {fileID: 2054936234}
   RightWand: {fileID: 1805284363}
@@ -3668,8 +3668,8 @@ MonoBehaviour:
     m_Bits: 2048
   Divisions: 8
   Rings: 2
-  RingRadius: 0.25
-  MinimumRadius: 0.25
+  RingRadius: 0.3
+  MinimumRadius: 0.35
   WaveLimits: {x: 0.05, y: 0.3}
   WaveDistance: 0.75
   TrackingWindow: 1.5
@@ -4224,7 +4224,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1202214047}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -0.58, z: 0}
+  m_LocalPosition: {x: 0.19, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:

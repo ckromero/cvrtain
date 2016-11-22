@@ -11,6 +11,8 @@ public class ControllerReadout : MonoBehaviour {
     private Text _AngleText;
     private Text _ReachText;
 
+    private float _WaveTimer = 0f;
+
 	// Use this for initialization
 	void Start () {
 	    foreach (var text in GetComponentsInChildren<Text>()) {
@@ -30,13 +32,29 @@ public class ControllerReadout : MonoBehaviour {
 	    if (LeftRight == Side.Left) {
             angle = Tracker.LeftHandAngle;
             reach = Tracker.LeftHandRing;
+            if (Tracker.LeftHandWaving) {
+                _WaveTimer = 2f;
+            }
         }
         else {
             angle = Tracker.RightHandAngle;
             reach = Tracker.RightHandRing;
+            if (Tracker.RightHandWaving) {
+                _WaveTimer = 2f;
+            }
         }
 
         _AngleText.text = "Angle: " + Mathf.Round(angle);
         _ReachText.text = "Reach: " + reach;
+
+        if (_WaveTimer > 0f) {
+            _WaveTimer -= Time.deltaTime;
+            _AngleText.color = Color.green;
+            _ReachText.color = Color.green;
+        }
+        else {
+            _AngleText.color = Color.white;
+            _ReachText.color = Color.white;
+        }
 	}
 }
