@@ -108,6 +108,7 @@ public class GestureManagerEditor : Editor {
 		// gesture.Name = EditorGUILayout.TextField("Name", name);
 
 		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("Name"));
+		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("ForceCompleteKey"));
 
 		var ruleProperties = gestureProperty.FindPropertyRelative("Rules");
 

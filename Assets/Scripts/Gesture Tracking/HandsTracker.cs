@@ -51,16 +51,16 @@ public class HandsTracker : MonoBehaviour {
 	public float LeftHandAngle {
 		get {
 			var localPosition = transform.InverseTransformPoint(LeftHand.position);
-			var adjustedPosition = new Vector2(localPosition.y, localPosition.z);
-			return CalculateAngle(adjustedPosition);
+			var adjustedPosition = new Vector2(localPosition.y, localPosition.x);
+			return -1 * CalculateAngle(adjustedPosition);
 		}
 	}
 
 	public float RightHandAngle {
 		get {
 			var localPosition = transform.InverseTransformPoint(RightHand.position);
-			var adjustedPosition = new Vector2(localPosition.y, localPosition.z);
-			return -1 * CalculateAngle(adjustedPosition);
+			var adjustedPosition = new Vector2(localPosition.y, localPosition.x);
+			return CalculateAngle(adjustedPosition);
 		}
 	}
 
