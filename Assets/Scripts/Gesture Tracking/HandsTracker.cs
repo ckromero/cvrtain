@@ -128,6 +128,9 @@ public class HandsTracker : MonoBehaviour {
 	}
 	
 	void Update () {
+		if (Waving) {
+			Debug.Log("I'm waving");
+		}
 	}
 
 	void LateUpdate() {
