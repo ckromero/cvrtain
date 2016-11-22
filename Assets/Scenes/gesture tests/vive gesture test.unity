@@ -575,16 +575,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.size
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Rules.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4000010643538032, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -627,36 +617,6 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 338077336}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[4].Rules.Array.data[1].HasMaximumDuration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Name
-      value: Testing bow
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Rules.Array.data[0].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Rules.Array.data[1].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Rules.Array.data[1].HeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
-        type: 2}
-      propertyPath: Gestures.Array.data[5].Rules.Array.data[1].RequireHandAngles
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
   m_IsPrefabParent: 0

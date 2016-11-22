@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class Gesture {
 
 	public string Name;
+	public KeyCode ForceCompleteKey;
 	public GestureRule[] Rules;
 
 	public int RuleIndex { get; private set; }
@@ -25,6 +26,11 @@ public class Gesture {
 	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
 
 		if (Completed) {
+			return;
+		}
+
+		if (Input.GetKeyDown(ForceCompleteKey)) {
+			RuleIndex = Rules.Length;
 			return;
 		}
 

@@ -2492,7 +2492,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013247722384}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7, y: 1.116, z: 0}
+  m_LocalPosition: {x: 0.7, y: 1.116, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -3645,7 +3645,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013379275678}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 1.116, z: 0}
+  m_LocalPosition: {x: -0.7, y: 1.116, z: 0}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -5138,6 +5138,7 @@ MonoBehaviour:
   TestOutputText: {fileID: 114000011921316114}
   Gestures:
   - Name: Hands up bow
+    ForceCompleteKey: 104
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5197,13 +5198,13 @@ MonoBehaviour:
       RightHandAngles:
         Max: 180
         Min: 90
-      RequireHandReach: 0
+      RequireHandReach: 1
       LeftHandReach:
-        Max: 0
-        Min: 0
+        Max: 3
+        Min: 2
       RightHandReach:
-        Max: 0
-        Min: 0
+        Max: 3
+        Min: 2
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
@@ -5212,6 +5213,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
   - Name: One Hand High, One Hand Low
+    ForceCompleteKey: 111
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5262,6 +5264,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
   - Name: Pump it up
+    ForceCompleteKey: 112
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5276,10 +5279,10 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       RightHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
@@ -5300,10 +5303,10 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       RightHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       Waving: 0
       LeftHandWaving: 1
       RightHandWaving: 1
@@ -5324,10 +5327,10 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       RightHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
@@ -5348,10 +5351,10 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       RightHandReach:
         Max: 3
-        Min: 3
+        Min: 2
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
@@ -5360,6 +5363,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
   - Name: Deep bow
+    ForceCompleteKey: 100
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5410,6 +5414,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
   - Name: Bow
+    ForceCompleteKey: 98
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5460,6 +5465,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
   - Name: Testing bow
+    ForceCompleteKey: 116
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -5504,6 +5510,57 @@ MonoBehaviour:
         Min: 0
       Waving: 0
       LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+  - Name: Wave
+    ForceCompleteKey: 119
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 1
+      LeftHandWaving: 1
       RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
