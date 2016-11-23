@@ -21,6 +21,8 @@ GameObject:
   - 4: {fileID: 4000010245890746}
   - 114: {fileID: 114000012813506024}
   - 114: {fileID: 114000012691482104}
+  - 114: {fileID: 114000012860288914}
+  - 114: {fileID: 114000013337724354}
   m_Layer: 0
   m_Name: ExpManager
   m_TagString: Untagged
@@ -76,3 +78,27 @@ MonoBehaviour:
   expState: 0
   audioManager: {fileID: 0}
   levelsManager: {fileID: 0}
+--- !u!114 &114000012860288914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
+--- !u!114 &114000013337724354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
