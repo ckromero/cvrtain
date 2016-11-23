@@ -17,20 +17,16 @@ public class GestureCallibrator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        try
-        {
+        try {
             var leftDevice = SteamVR_Controller.Input((int)LeftWand.index);
             var rightDevice = SteamVR_Controller.Input((int)RightWand.index);
             if (leftDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) ||
-                rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad))
-            {
+                    rightDevice.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad)) {
                 Callibrate();
             }
         }
-        catch (System.IndexOutOfRangeException e)
-        {
-            if (Input.GetKeyDown(CallibrationKey))
-            {
+        catch (System.IndexOutOfRangeException e) {
+            if (Input.GetKeyDown(CallibrationKey)) {
                 Callibrate();
             }
         }
