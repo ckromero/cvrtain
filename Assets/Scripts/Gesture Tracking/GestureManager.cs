@@ -71,15 +71,15 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		foreach (var name in names) {
 			var matchingGesture = false;
 			foreach (var gesture in Gestures) {
-				if (name == gesture.Name) {
+				if (name.ToLower().Trim() == gesture.Name.ToLower().Trim()) {
 					matchingGesture = true;
 					break;
 				}
 			}
 			if (!matchingGesture) {
 				correct = false;
+				Debug.Log ("ERROR: " + name + " is not a valid Gesture name!!!!");
 			}
-			Debug.Log ("ERROR: " + name + " is not a valid Gesture name!!!!");
 		}
 		return correct;
 	}
