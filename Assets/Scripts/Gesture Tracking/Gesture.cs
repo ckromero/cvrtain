@@ -148,10 +148,10 @@ public class Gesture {
 			var leftWaving = hands.LeftHandWaving;
 			var rightWaving = hands.RightHandWaving;
 			if (!rule.EitherHand) {
-				if (rule.LeftHandWaving && !leftWaving) {
+				if (rule.LeftHandWaving != leftWaving) {
 					return false;
 				}
-				if (rule.RightHandWaving && !rightWaving) {
+				if (rule.RightHandWaving != rightWaving) {
 					return false;
 				}
 			}
@@ -164,29 +164,50 @@ public class Gesture {
 					}
 				}
 
+                /* if the left hand is in the left zone, compare the required
+                 * waving state against the appropriate hand */
+                if (leftHandInLeftZone) {
+                    if (rule.LeftHandWaving != leftWaving) {
+                        return false;
+                    }
+                    if (rule.RightHandWaving != rightWaving) {
+                        return false;
+                    }
+                }
+                /* if the left hand is not in the left zone, compare the required
+                 * waving state against the opposite hand */
+                if (!leftHandInLeftZone) {
+                    if (rule.LeftHandWaving != rightWaving) {
+                        return false;
+                    }
+                    if (rule.RightHandWaving != leftWaving) {
+                        return false;
+                    }
+                }
+
 				/* perform checks for the left hand */
 				/* if LEFT HAND is acting in the LEFT ZONE:
 				* check if a LEFT ZONE wave is required and if the LEFT HAND is doing it */
-				if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
-					return false;
-				}
+				//if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
+				//	return false;
+				//}
 				/* if LEFT HAND is acting in the RIGHT ZONE:
 				* check if a RIGHT ZONE wave required and if the LEFT HAND is doing it */
-				else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
-					return false;
-				}
+				//else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
+				//	return false;
+				//}
 
 				/* perform checks for the right hand */
 				/* if LEFT HAND is acting in the LEFT ZONE:
 				* check if a RIGHT ZONE wave is required, and if the RIGHT HAND is doing it */
-				if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
-					return false;
-				}
+				//if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
+				//	return false;
+				//}
 				/* if the LEFT HAND is acting in the RIGHT ZONE:
 				* check if a LEFT ZONE wave is required, and if the RIGHT HAND is doing it */
-				else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
-					return false;
-				}
+				//else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
+				//	return false;
+				//}
 			}
 		}
 

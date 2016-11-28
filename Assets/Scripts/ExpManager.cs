@@ -20,7 +20,8 @@ public class ExpManager : MonoBehaviour
 
 
 	void Update() {
-		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
+
+        if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
 			lastTriggerTime = triggerListener.LastDoublePress;
 			//TODO: AWFUL
 			if (expState == ExpStates.Idle)			
