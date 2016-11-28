@@ -62,7 +62,7 @@ public class HeadTracker : MonoBehaviour {
 		foreach (var HeadState in _StateBuffer) {
 			states += HeadState + ", ";
 		}
-		Debug.Log(states);
+		// Debug.Log(states);
 		RaycastHit hit;
 		if (Physics.Raycast(HeadTransform.position, HeadTransform.forward, out hit, _LookMask)) {
 			// Debug.Log("I am looking at: " + hit.collider.gameObject.name);

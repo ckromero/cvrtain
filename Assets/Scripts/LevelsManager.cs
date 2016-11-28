@@ -54,6 +54,8 @@ public class LevelsManager : MonoBehaviour
 			Assert.IsTrue(gestureManager.CompareGestureNames(level.NeutralGestures), message);
 			Assert.IsTrue(gestureManager.CompareGestureNames(level.NegativeGestures), message);
 		}
+
+		UpdateAV();
 	}
 	
 	// Update is called once per frame
@@ -125,18 +127,18 @@ public class LevelsManager : MonoBehaviour
 	void UpdateAV ()
 	{
 		// stage++;
-		Debug.Log ("updating AV, stage is now" + stage);
+		Debug.Log ("updating AV, stage is now " + stage);
 		if (stage < audioPads.Length) {
 			string newPad = audioPads [stage];
 			audioManager.ChangePad (newPad);
 			switch (stage) {
-			case 1:
+			case 0:
 				clapManager.UpdateClappers("triggerGoToHigh") ;
 				break;
-			case 2:
+			case 1:
 				clapManager.UpdateClappers("triggerRaisedFist");
 				break;
-			case 3:
+			case 2:
 				clapManager.UpdateClappers("triggerHighClapping");
 				break;
 			default:

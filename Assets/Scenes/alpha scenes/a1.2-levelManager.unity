@@ -5763,12 +5763,52 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NeutralGestures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].NeutralGestures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NeutralGestures.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[0].PositiveGestures.Array.size
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NegativeGestures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PositiveGestures.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].NegativeGestures.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NegativeGestures.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4000010472350720, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5836,6 +5876,126 @@ Prefab:
         type: 2}
       propertyPath: Levels.Array.data[0].PositiveGestures.Array.data[0]
       value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].PositiveGestures.Array.data[1]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NeutralGestures.Array.data[0]
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NegativeGestures.Array.data[0]
+      value: Deep bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PositiveGestures.Array.data[0]
+      value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PositiveGestures.Array.data[1]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].NeutralGestures.Array.data[0]
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].NegativeGestures.Array.data[0]
+      value: Jazz Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PromotionReq
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].DemotionReq
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[0]
+      value: Deep Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[1]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NeutralGestures.Array.data[0]
+      value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NegativeGestures.Array.data[0]
+      value: Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PromotionReq
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].DemotionReq
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PositiveGestures.Array.data[2]
+      value: Deep Bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PositiveGestures.Array.data[3]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NegativeGestures.Array.data[1]
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[2]
+      value: One Hand High, One Hand Low
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[3]
+      value: Pump it up
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].NeutralGestures.Array.data[1]
+      value: Jazz Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].NeutralGestures.Array.data[1]
+      value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NegativeGestures.Array.data[1]
+      value: Jazz Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].NeutralGestures.Array.data[1]
+      value: Double Wave
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
