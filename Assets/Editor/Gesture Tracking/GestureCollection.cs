@@ -53,10 +53,17 @@ public class GestureCollection {
 		}
 		set {
 			GestureCollection.Instance._Gestures = value;
-			var path = Application.dataPath+FILEPATH;
-			var collection = new SerializedGestureCollection(value);
-			File.WriteAllText(path, JsonUtility.ToJson(collection, true));
+			// var path = Application.dataPath+FILEPATH;
+			// var collection = new SerializedGestureCollection(value);
+			// File.WriteAllText(path, JsonUtility.ToJson(collection, true));
+			WriteToGestureFile(value);
 		}
+	}
+
+	public static void WriteToGestureFile(Gesture[] gestures) {
+		var path = Application.dataPath+FILEPATH;
+		var collection = new SerializedGestureCollection(gestures);
+		File.WriteAllText(path, JsonUtility.ToJson(collection, true));
 	}
 }
 
