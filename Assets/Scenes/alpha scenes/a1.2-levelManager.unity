@@ -5763,22 +5763,22 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[0].NeutralGestures.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].NeutralGestures.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[2].NeutralGestures.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
@@ -5788,27 +5788,27 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[0].NegativeGestures.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].PositiveGestures.Array.size
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].NegativeGestures.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[2].PositiveGestures.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[2].NegativeGestures.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4000010472350720, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5890,12 +5890,12 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[0].NegativeGestures.Array.data[0]
-      value: Deep bow
+      value: Jazz Hands
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].PositiveGestures.Array.data[0]
-      value: Bow
+      value: Deep bow
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
@@ -5915,12 +5915,12 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].PromotionReq
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[1].DemotionReq
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
@@ -5945,12 +5945,12 @@ Prefab:
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[2].PromotionReq
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: Levels.Array.data[2].DemotionReq
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
@@ -5996,6 +5996,21 @@ Prefab:
         type: 2}
       propertyPath: Levels.Array.data[0].NeutralGestures.Array.data[1]
       value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].PositiveGestures.Array.data[2]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].PositiveGestures.Array.data[3]
+      value: Hands up bow
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010672899312, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[0].PositiveGestures.Array.data[4]
+      value: Hands up bow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
@@ -16912,6 +16927,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Rules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010643538032, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17063,6 +17088,11 @@ Prefab:
     - target: {fileID: 1000013355475358, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Name
+      value: Dummy Gesture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}

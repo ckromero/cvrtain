@@ -27,6 +27,8 @@ public class LevelsManager : MonoBehaviour
 	private int levelIndex = 0;
 	private int levelCompletion;
 
+	public bool MaxLevel { get; private set; }
+
 	//Listen to ExpManager
 
 	//Listen to GestureManager
@@ -78,18 +80,9 @@ public class LevelsManager : MonoBehaviour
 
 		if (lastGesture.Time != gestureManager.LastGesture.Time) {
 			
-			// if (gestureManager.LastGesture.Name == "Bow") {
-			// 	UpdateAV ();
-			// 	lastGesture = gestureManager.LastGesture.Name; 
-			// }
-			// if (gestureManager.LastGesture.Name == "Hands up bow") {
-			// 	UpdateAV ();
-			// 	lastGesture = gestureManager.LastGesture.Name; 
-			// }
-
-			// lastGesture = gestureManager.LastGesture.Name;
 			lastGesture = gestureManager.LastGesture;
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
+			Debug.Log("current first positive gesture: " + Levels[stage].PositiveGestures[0]);
 
 			switch (evaluation) {
 				case 1: 
@@ -109,6 +102,9 @@ public class LevelsManager : MonoBehaviour
 			var promotionReq = Levels[stage].PromotionReq;
 			var demotionReq = Levels[stage].DemotionReq;
 			if (levelCompletion >= promotionReq) {
+				if (stage == Levels.Length - 1) {
+					MaxLevel = true;
+				}
 				stage = Mathf.Clamp(++stage, 0, Levels.Length - 1);
 				UpdateLevel();
 			}

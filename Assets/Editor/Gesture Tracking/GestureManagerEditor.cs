@@ -100,6 +100,13 @@ public class GestureManagerEditor : Editor {
 		}
 
 		script.Gestures = gestureList.ToArray();
+
+		// var names = new string[gestureList.Count];
+		// for(var i = 0; i < names.Length; i++) {
+		// 	names[i] = gestureList[i].Name;
+		// }
+		// GestureNameTracker.Names = names;
+		GestureCollection.Gestures = gestureList.ToArray();	
 	}
 
 	private void DisplayGesture(Gesture gesture, SerializedProperty gestureProperty) {
