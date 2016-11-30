@@ -5374,7 +5374,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 221159070
+  randomSeed: 578565207
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5547,7 +5547,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.68235296, g: 0.68235296, b: 0.5176471, a: 0.12156863}
+      maxColor: {r: 0.88235295, g: 0.4862745, b: 0.05882353, a: 0.12156863}
       minMaxState: 0
     startSize:
       scalar: 0.63
@@ -13104,7 +13104,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.88235295, g: 0.6901961, b: 0.05882353, a: 0.39215687}
+      maxColor: {r: 0.88235295, g: 0.6901961, b: 0.05882353, a: 0.101960786}
       minMaxState: 0
     startSize:
       scalar: 0.8
