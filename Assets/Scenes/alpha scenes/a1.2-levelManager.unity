@@ -16930,7 +16930,7 @@ Prefab:
     - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
         type: 2}
       propertyPath: Gestures.Array.size
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
         type: 2}
@@ -17092,7 +17092,7 @@ Prefab:
     - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
         type: 2}
       propertyPath: Gestures.Array.data[10].Name
-      value: Dummy Gesture
+      value: This is a test
       objectReference: {fileID: 0}
     - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
         type: 2}
@@ -17103,6 +17103,16 @@ Prefab:
         type: 2}
       propertyPath: Gestures.Array.data[7].Rules.Array.data[1].HasTimeLimit
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].ForceCompleteKey
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[4].ForceCompleteKey
+      value: 98
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
