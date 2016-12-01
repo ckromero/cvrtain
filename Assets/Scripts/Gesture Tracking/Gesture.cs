@@ -7,11 +7,13 @@ public class Gesture {
 	public string Name;
 	public KeyCode ForceCompleteKey;
 	public GestureRule[] Rules;
+	public float EvaluationDelay = 0f;
+	private float _DelayRemaining = 0f;
 
 	public int RuleIndex { get; private set; }
 	public bool Completed {
 		get {
-			return RuleIndex >= Rules.Length - 1;
+			return (RuleIndex >= Rules.Length - 1 && _DelayRemaining <= 0f);
 		}
 	}
 
@@ -28,6 +30,9 @@ public class Gesture {
 		if (Completed) {
 			return;
 		}
+		else if (RuleIndex >= Rules.Length - 1) {
+			_DelayRemaining -= Time.deltaTime;
+		}
 
 		if (Input.GetKeyDown(ForceCompleteKey)) {
 			RuleIndex = Rules.Length;
@@ -37,6 +42,9 @@ public class Gesture {
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
 			Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+			if (RuleIndex >= Rules.Length - 1) {
+				_DelayRemaining = EvaluationDelay;
+			}
 			if (!Completed) {
 				var rule = Rules[RuleIndex];
 				var time = (rule.HasMaximumDuration) ? rule.MaxDuration : Mathf.Infinity;

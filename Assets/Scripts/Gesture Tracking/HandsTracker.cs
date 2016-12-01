@@ -50,9 +50,9 @@ public class HandsTracker : MonoBehaviour {
 
 	public float LeftHandAngle {
 		get {
-			var localPosition = transform.InverseTransformPoint(LeftHand.position);
-			var adjustedPosition = new Vector2(localPosition.y, localPosition.x);
-			return -1 * CalculateAngle(adjustedPosition);
+            var localPosition = transform.InverseTransformPoint(LeftHand.position);
+            var adjustedPosition = new Vector2(localPosition.y, localPosition.x);
+            return -1 * CalculateAngle(adjustedPosition);
 		}
 	}
 
@@ -200,24 +200,32 @@ public class HandsTracker : MonoBehaviour {
 		var localPositions = new Vector2[positions.Length];
 		for (var i = 0; i < positions.Length; i++) {
 			var localPos = transform.InverseTransformPoint(positions[i]);
-			// Debug.Log(localPos.x);
 			localPositions[i] = new Vector2(localPos.x, localPos.y);
 		}
 
 		for (var i = 0; i < positions.Length - 1; i++) {
 			totalWorldDistance += Vector3.Distance(positions[i], positions[i+1]);
 			totalLocalDistance += Vector2.Distance(localPositions[i], localPositions[i+1]);
-			for (var j = i + 1; j < positions.Length; j++) {
-				var delta = Vector3.Distance(positions[i], positions[j]);
-				if (delta > maxWorldDelta) {
-					maxWorldDelta = delta;
-				}
-
-				delta = Vector2.Distance(localPositions[i], localPositions[j]);
-				if (delta > maxLocalDelta) {
-					maxLocalDelta = delta;
-				}
+			var delta = Vector3.Distance(positions[0], positions[i]);
+			var localDelta = Vector3.Distance(localPositions[0], localPositions[i]);
+			if (delta > maxWorldDelta) {
+				maxWorldDelta = delta;
 			}
+			if (localDelta > maxLocalDelta) {
+				maxLocalDelta = delta;
+			}
+
+			// for (var j = i + 1; j < positions.Length; j++) {
+			// 	var delta = Vector3.Distance(positions[i], positions[j]);
+			// 	if (delta > maxWorldDelta) {
+			// 		maxWorldDelta = delta;
+			// 	}
+
+			// 	delta = Vector2.Distance(localPositions[i], localPositions[j]);
+			// 	if (delta > maxLocalDelta) {
+			// 		maxLocalDelta = delta;
+			// 	}
+			// }
 		}
 
 		// Debug.Log("maxWorldDelta: " + maxWorldDelta + " totalWorldDistance: " + totalWorldDistance);

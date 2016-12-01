@@ -194,7 +194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000010484714656
 GameObject:
   m_ObjectHideFlags: 1
@@ -436,6 +436,7 @@ GameObject:
   - 135: {fileID: 135000011949432228}
   - 114: {fileID: 114000013579463222}
   - 114: {fileID: 114000014283715520}
+  - 114: {fileID: 114000013475877742}
   m_Layer: 10
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -1168,6 +1169,7 @@ GameObject:
   - 135: {fileID: 135000010235750960}
   - 114: {fileID: 114000011512464178}
   - 114: {fileID: 114000014060380156}
+  - 114: {fileID: 114000013827521288}
   m_Layer: 10
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -1753,7 +1755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012951185660
 GameObject:
   m_ObjectHideFlags: 1
@@ -1940,7 +1942,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013306658184
 GameObject:
   m_ObjectHideFlags: 1
@@ -1990,7 +1992,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000013379275678
 GameObject:
   m_ObjectHideFlags: 1
@@ -2006,7 +2008,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013485243878
 GameObject:
   m_ObjectHideFlags: 1
@@ -2141,7 +2143,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000013631770788
 GameObject:
   m_ObjectHideFlags: 1
@@ -2968,7 +2970,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012903868384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -6.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -4301,8 +4303,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 224000013362763522}
   - {fileID: 4000013941570246}
+  - {fileID: 224000013362763522}
   m_Father: {fileID: 4000012527895318}
   m_RootOrder: 0
 --- !u!4 &4000013534121632
@@ -4457,7 +4459,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000013498765362}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!4 &4000013948023414
 Transform:
   m_ObjectHideFlags: 1
@@ -5338,11 +5340,11 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 0
       LeftHandAngles:
-        Max: 180
+        Max: 240
         Min: 90
       RightHandAngles:
-        Max: 180
-        Min: 90
+        Max: 240
+        Min: 0
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -5357,6 +5359,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: One Hand High, One Hand Low
     ForceCompleteKey: 111
     Rules:
@@ -5408,6 +5411,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Pump it up
     ForceCompleteKey: 112
     Rules:
@@ -5507,6 +5511,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Deep bow
     ForceCompleteKey: 100
     Rules:
@@ -5539,7 +5544,7 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 125
+        Max: 240
         Min: 45
       RightHandAngles:
         Max: 0
@@ -5549,7 +5554,7 @@ MonoBehaviour:
         Max: 3
         Min: 3
       RightHandReach:
-        Max: 2
+        Max: 3
         Min: 0
       Waving: 0
       LeftHandWaving: 0
@@ -5558,6 +5563,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Bow
     ForceCompleteKey: 98
     Rules:
@@ -5609,6 +5615,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Testing bow
     ForceCompleteKey: 116
     Rules:
@@ -5660,6 +5667,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Wave
     ForceCompleteKey: 119
     Rules:
@@ -5711,6 +5719,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Double Wave
     ForceCompleteKey: 99
     Rules:
@@ -5762,6 +5771,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Jazz Hands
     ForceCompleteKey: 106
     Rules:
@@ -5813,6 +5823,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
   - Name: Fist Pump
     ForceCompleteKey: 102
     Rules:
@@ -5822,10 +5833,10 @@ MonoBehaviour:
       EitherHand: 1
       LeftHandAngles:
         Max: 90
-        Min: 35
+        Min: 0
       RightHandAngles:
         Max: 180
-        Min: 90
+        Min: 0
       RequireHandReach: 1
       LeftHandReach:
         Max: 2
@@ -5849,7 +5860,55 @@ MonoBehaviour:
         Min: 0
       RightHandAngles:
         Max: 180
-        Min: 90
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 3
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 1
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 90
+        Min: 0
+      RightHandAngles:
+        Max: 180
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 2
+        Min: 1
+      RightHandReach:
+        Max: 3
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 1
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 45
+        Min: 0
+      RightHandAngles:
+        Max: 180
+        Min: 0
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -5864,6 +5923,7 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
 --- !u!114 &114000010197186458
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6045,7 +6105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CallibrationKey: 59
   HeadOffset: 0.25
-  HeadTransform: {fileID: 4000013498765362}
+  HeadTransform: {fileID: 4000012527895318}
   LeftWand: {fileID: 114000013466958176}
   RightWand: {fileID: 114000012264072272}
 --- !u!114 &114000011512464178
@@ -6172,7 +6232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -6181,18 +6241,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 128
     m_FontStyle: 0
     m_BestFit: 1
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 128
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: debug output
 --- !u!114 &114000011932018018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6764,6 +6824,21 @@ MonoBehaviour:
   index: 3
   origin: {fileID: 0}
   isValid: 1
+--- !u!114 &114000013475877742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010885607756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a115c4625e9d74d38a6c5eec12b00bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testInput: 0
+  testRay: 0
+  interactTag: 
+  interactDistance: 10
 --- !u!114 &114000013579463222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6831,6 +6906,21 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114000013827521288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011978353940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a115c4625e9d74d38a6c5eec12b00bcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testInput: 0
+  testRay: 0
+  interactTag: 
+  interactDistance: 10
 --- !u!114 &114000013906430330
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7377,7 +7467,7 @@ RectTransform:
   m_Children:
   - {fileID: 224000012240839256}
   m_Father: {fileID: 4000013498765362}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
