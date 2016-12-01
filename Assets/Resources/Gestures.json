@@ -749,6 +749,72 @@
                     "TimeLimit": 0.0
                 }
             ]
+        },
+        {
+            "Name": "Dummy Gesture",
+            "ForceCompleteKey": 0,
+            "Rules": [
+                {
+                    "RequireHeadState": false,
+                    "HeadState": 0,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                },
+                {
+                    "RequireHeadState": false,
+                    "HeadState": 0,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                }
+            ]
         }
     ]
 }
