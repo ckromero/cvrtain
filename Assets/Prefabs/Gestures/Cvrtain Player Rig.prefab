@@ -6885,6 +6885,12 @@ MonoBehaviour:
   XRotationLock: 1
   YRotationLock: 0
   ZRotationLock: 1
+  XRotationLockOut:
+    Max: 75
+    Min: -75
+  ZRotationLockOut:
+    Max: 75
+    Min: -75
 --- !u!114 &114000013806012218
 MonoBehaviour:
   m_ObjectHideFlags: 1
