@@ -70,12 +70,12 @@
                     "RequireHandAngles": true,
                     "EitherHand": false,
                     "LeftHandAngles": {
-                        "Max": 180.0,
+                        "Max": 240.0,
                         "Min": 90.0
                     },
                     "RightHandAngles": {
-                        "Max": 180.0,
-                        "Min": 90.0
+                        "Max": 240.0,
+                        "Min": 0.0
                     },
                     "RequireHandReach": true,
                     "LeftHandReach": {
@@ -94,7 +94,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "One Hand High, One Hand Low",
@@ -160,7 +161,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Pump it up",
@@ -286,7 +288,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Deep bow",
@@ -328,7 +331,7 @@
                     "RequireHandAngles": true,
                     "EitherHand": true,
                     "LeftHandAngles": {
-                        "Max": 125.0,
+                        "Max": 240.0,
                         "Min": 45.0
                     },
                     "RightHandAngles": {
@@ -341,7 +344,7 @@
                         "Min": 3.0
                     },
                     "RightHandReach": {
-                        "Max": 2.0,
+                        "Max": 3.0,
                         "Min": 0.0
                     },
                     "Waving": false,
@@ -352,7 +355,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Bow",
@@ -418,7 +422,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Testing bow",
@@ -484,7 +489,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Wave",
@@ -550,7 +556,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Double Wave",
@@ -616,7 +623,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Jazz Hands",
@@ -682,7 +690,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         },
         {
             "Name": "Fist Pump",
@@ -695,11 +704,11 @@
                     "EitherHand": true,
                     "LeftHandAngles": {
                         "Max": 90.0,
-                        "Min": 35.0
+                        "Min": 0.0
                     },
                     "RightHandAngles": {
                         "Max": 180.0,
-                        "Min": 90.0
+                        "Min": 0.0
                     },
                     "RequireHandReach": true,
                     "LeftHandReach": {
@@ -729,7 +738,67 @@
                     },
                     "RightHandAngles": {
                         "Max": 180.0,
-                        "Min": 90.0
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": true,
+                    "LeftHandReach": {
+                        "Max": 3.0,
+                        "Min": 3.0
+                    },
+                    "RightHandReach": {
+                        "Max": 3.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": true,
+                    "TimeLimit": 1.0
+                },
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 0,
+                    "RequireHandAngles": true,
+                    "EitherHand": true,
+                    "LeftHandAngles": {
+                        "Max": 90.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 180.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": true,
+                    "LeftHandReach": {
+                        "Max": 2.0,
+                        "Min": 1.0
+                    },
+                    "RightHandReach": {
+                        "Max": 3.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": true,
+                    "TimeLimit": 1.0
+                },
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 0,
+                    "RequireHandAngles": true,
+                    "EitherHand": true,
+                    "LeftHandAngles": {
+                        "Max": 45.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 180.0,
+                        "Min": 0.0
                     },
                     "RequireHandReach": true,
                     "LeftHandReach": {
@@ -748,7 +817,8 @@
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
-            ]
+            ],
+            "EvaluationDelay": 0.0
         }
     ]
 }

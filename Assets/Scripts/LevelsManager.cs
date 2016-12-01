@@ -58,6 +58,13 @@ public class LevelsManager : MonoBehaviour
 		}
 
 		UpdateAV();
+
+		for (var i = 0; i < Levels.Length; i++) {
+			if (Levels[i].StartingLevel) {
+				levelIndex = i;
+				break;
+			}
+		}
 	}
 	
 	// Update is called once per frame
@@ -163,6 +170,7 @@ public struct Level {
 
 	public int PromotionReq;
 	public int DemotionReq;
+	public bool StartingLevel;
 
 	public int EvaluateGesture(string gesture) {
 		foreach(var name in PositiveGestures) {
