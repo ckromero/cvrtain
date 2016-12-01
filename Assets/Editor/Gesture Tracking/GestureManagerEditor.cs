@@ -29,8 +29,10 @@ public class GestureManagerEditor : Editor {
 			_GestureVisible.Add(true);
 		}
 
-		_ShowGestures = EditorGUILayout.Foldout(_ShowGestures, "Gestures");
-		if (_ShowGestures) {
+		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
+		// _ShowGestures = EditorGUILayout.Foldout(_ShowGestures, "Gestures");
+		// if (_ShowGestures) {
+		if (property.isExpanded) {
 			/* since this updates very very frequently, I only need to save
 			* one value */
 			var toRemove = -1;
@@ -43,7 +45,8 @@ public class GestureManagerEditor : Editor {
 				name = (name == "") ? "New Gesture" : name;
 
 				EditorGUILayout.BeginHorizontal();
-				var visible = _GestureVisible[i];
+				// var visible = _GestureVisible[i];
+				var visible = property.GetArrayElementAtIndex(i).isExpanded;
 				visible = EditorGUILayout.Foldout(visible, name);
 				if (GUILayout.Button("Move Up", GUILayout.MaxWidth(75))) {
 					toMoveUp = i;
@@ -57,8 +60,10 @@ public class GestureManagerEditor : Editor {
 				EditorGUILayout.EndHorizontal();
 
 				if (visible) {
+					// property.GetArrayElementAtIndex(i).isExpanded = visible;
 					DisplayGesture(gestureList[i], property.GetArrayElementAtIndex(i));
 				}
+				property.GetArrayElementAtIndex(i).isExpanded = visible;
 				_GestureVisible[i] = visible;
 			}
 			serializedObject.ApplyModifiedProperties();
@@ -107,6 +112,10 @@ public class GestureManagerEditor : Editor {
 		// }
 		// GestureNameTracker.Names = names;
 		GestureCollection.Gestures = gestureList.ToArray();	
+
+		if (GUILayout.Button("Save Gestures")) {
+			GestureCollection.WriteToGestureFile(gestureList.ToArray());	
+		}
 	}
 
 	private void DisplayGesture(Gesture gesture, SerializedProperty gestureProperty) {

@@ -200,7 +200,6 @@ public class HandsTracker : MonoBehaviour {
 		var localPositions = new Vector2[positions.Length];
 		for (var i = 0; i < positions.Length; i++) {
 			var localPos = transform.InverseTransformPoint(positions[i]);
-			// Debug.Log(localPos.x);
 			localPositions[i] = new Vector2(localPos.x, localPos.y);
 		}
 

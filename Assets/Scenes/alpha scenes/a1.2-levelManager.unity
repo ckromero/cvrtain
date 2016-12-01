@@ -17094,6 +17094,16 @@ Prefab:
       propertyPath: Gestures.Array.data[10].Name
       value: Dummy Gesture
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[8].Name
+      value: Jazz Hands
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010179235948, guid: 2155b6d8a4ee94cc4881185e8b0fc449,
+        type: 2}
+      propertyPath: Gestures.Array.data[7].Rules.Array.data[1].HasTimeLimit
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2155b6d8a4ee94cc4881185e8b0fc449, type: 2}
   m_IsPrefabParent: 0

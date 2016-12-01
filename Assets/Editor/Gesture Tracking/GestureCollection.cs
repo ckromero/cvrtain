@@ -56,7 +56,7 @@ public class GestureCollection {
 			// var path = Application.dataPath+FILEPATH;
 			// var collection = new SerializedGestureCollection(value);
 			// File.WriteAllText(path, JsonUtility.ToJson(collection, true));
-			WriteToGestureFile(value);
+			// WriteToGestureFile(value);
 		}
 	}
 
