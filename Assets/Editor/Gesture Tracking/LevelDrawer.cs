@@ -9,17 +9,8 @@ public class LevelDrawer : PropertyDrawer {
     							SerializedProperty property,
     							GUIContent label) {
 
-    	EditorGUI.indentLevel++;
-    	property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Level");
-    	if (!property.isExpanded) {
-    		EditorGUI.indentLevel--;
-    		return;
-    	}
 
     	label = EditorGUI.BeginProperty(position, label, property);
-    	var layoutOptions = new GUILayoutOption[]{};
-
-    	EditorGUI.indentLevel++;
 
     	var next = property.Next(true);
     	var gestureDispalyCount = 0;
@@ -33,13 +24,10 @@ public class LevelDrawer : PropertyDrawer {
     		next = property.Next(false);
     	}
 
-    	EditorGUI.indentLevel-=2;
     	EditorGUI.EndProperty();
     }
 
     private string[] DisplayGestureGroup(SerializedProperty property) {
-    	// EditorGUI.LabelField(position, property.name);
-    	// EditorGUILayout.LabelField(property.name);
     	property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, property.name);
     	if (!property.isExpanded) {
     		return new string[0];
@@ -55,7 +43,9 @@ public class LevelDrawer : PropertyDrawer {
     	GUILayout.BeginHorizontal();
     	GUILayout.FlexibleSpace();
     	if (GUILayout.Button("+")) {
-			property.InsertArrayElementAtIndex(property.arraySize);    		
+			property.InsertArrayElementAtIndex(property.arraySize);
+            var newProperty = property.GetArrayElementAtIndex(property.arraySize - 1);
+            newProperty.FindPropertyRelative("Limit").intValue = 100;
     		EditorGUI.indentLevel--;
     		return setNames;
     	}
@@ -72,23 +62,25 @@ public class LevelDrawer : PropertyDrawer {
     	EditorGUI.BeginChangeCheck();
     	EditorGUILayout.BeginHorizontal();
     	var gestureNames = GestureCollection.Names;
+        var selectedName = property.FindPropertyRelative("Gesture").stringValue;
     	if (gestureNames.Length == 0) {
-    		gestureNames = new string[1]{property.stringValue};
+    		gestureNames = new string[1]{selectedName};
     	}
     	var selectedIndex = -1;
     	for (var i = 0; i < gestureNames.Length; i++) {
-    		if (property.stringValue == gestureNames[i])	 {
+    		if (selectedName == gestureNames[i]) {
     			selectedIndex = i;
     			break;
     		}
     	}	
     	selectedIndex = EditorGUILayout.Popup(selectedIndex, gestureNames);
+        EditorGUILayout.PropertyField(property.FindPropertyRelative("Limit"));
     	if (GUILayout.Button("-", EditorStyles.miniButtonRight)) {
     		return false;
     	}
     	EditorGUILayout.EndHorizontal();
     	if (EditorGUI.EndChangeCheck() && selectedIndex >= 0) {
-    		property.stringValue = gestureNames[selectedIndex];
+    		property.FindPropertyRelative("Gesture").stringValue = gestureNames[selectedIndex];
     	}
     	return true;
     }

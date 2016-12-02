@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using System;
 using System.Collections;
 
 public class LevelsManager : MonoBehaviour
@@ -50,21 +51,22 @@ public class LevelsManager : MonoBehaviour
 			UpdateLevelsBasedOnGestures ();
 
 		/* double check that all gesture names entered are actually valid gestures */
-		var message = "Invalid gesture";
-		foreach (var level in Levels) {
-			Assert.IsTrue(gestureManager.CompareGestureNames(level.PositiveGestures), message);
-			Assert.IsTrue(gestureManager.CompareGestureNames(level.NeutralGestures), message);
-			Assert.IsTrue(gestureManager.CompareGestureNames(level.NegativeGestures), message);
-		}
+		// var message = "Invalid gesture";
+		// foreach (var level in Levels) {
+		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.PositiveGestures), message);
+		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.NeutralGestures), message);
+		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.NegativeGestures), message);
+		// }
 
 		UpdateAV();
 
 		for (var i = 0; i < Levels.Length; i++) {
 			if (Levels[i].StartingLevel) {
-				levelIndex = i;
+				stage = i;
 				break;
 			}
 		}
+		Levels[stage].Reset();
 	}
 	
 	// Update is called once per frame
@@ -89,7 +91,6 @@ public class LevelsManager : MonoBehaviour
 			
 			lastGesture = gestureManager.LastGesture;
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
-			Debug.Log("current first positive gesture: " + Levels[stage].PositiveGestures[0]);
 
 			switch (evaluation) {
 				case 1: 
@@ -104,18 +105,15 @@ public class LevelsManager : MonoBehaviour
 				default:
 					return;
 			}
-			levelCompletion += evaluation;
 
-			var promotionReq = Levels[stage].PromotionReq;
-			var demotionReq = Levels[stage].DemotionReq;
-			if (levelCompletion >= promotionReq) {
+			if (Levels[stage].Complete) {
 				if (stage == Levels.Length - 1) {
 					MaxLevel = true;
 				}
 				stage = Mathf.Clamp(++stage, 0, Levels.Length - 1);
 				UpdateLevel();
 			}
-			else if (levelCompletion < 0 && Mathf.Abs(levelCompletion) >= demotionReq) {
+			else if (Levels[stage].Failed) {
 				stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
 				UpdateLevel();
 			}
@@ -124,6 +122,7 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateLevel() {
 		levelCompletion = 0;
+		Levels[stage].Reset();
 		UpdateAV();
 	}
 
@@ -163,33 +162,81 @@ public class LevelsManager : MonoBehaviour
 }
 
 [System.Serializable]
-public struct Level {
-	public bool StartingLevel;
-	public string[] PositiveGestures;
-	public string[] NeutralGestures;
-	public string[] NegativeGestures;
+public class Level {
 
-	public int PromotionReq;
-	public int DemotionReq;
+	[System.Serializable]
+	private struct GestureTracker {
+		public string Gesture;
+		public int Limit;
+		public int RemainingLimit;
+	}
+
+	public bool StartingLevel;
+
+	[SerializeField]
+	private GestureTracker[] PositiveGestures;
+	[SerializeField]
+	private GestureTracker[] NeutralGestures;
+	[SerializeField]
+	private GestureTracker[] NegativeGestures;
+
+	public int PromotionRequirment;
+	public int DemotionRequirment;
+
+	private int _LevelStatus = 0;
+	public bool Complete {
+		get {return (_LevelStatus >= PromotionRequirment);}
+	}
+	public bool Failed {
+		get {return (_LevelStatus <= DemotionRequirment * -1);}
+	}
+
+	public Level() {}
 
 	public int EvaluateGesture(string gesture) {
-		foreach(var name in PositiveGestures) {
-			if (name == gesture) {
-				return 1;
+		for (var i = 0; i < PositiveGestures.Length; i++) {
+			if (PositiveGestures[i].Gesture == gesture) {
+				if (PositiveGestures[i].RemainingLimit > 0) {
+					PositiveGestures[i].RemainingLimit--;
+					_LevelStatus++;
+					return 1;
+				}	
+				return -100000;
 			}
 		}
-		foreach(var name in NeutralGestures) {
-			if (name == gesture) {
-				return 0;
+		for (var i = 0; i < NeutralGestures.Length; i++) {
+			if (NeutralGestures[i].Gesture == gesture) {
+				if (NeutralGestures[i].RemainingLimit > 0) {
+					NeutralGestures[i].RemainingLimit--;
+					return 0;
+				}	
+				return -100000;
 			}
 		}
-		foreach(var name in NegativeGestures) {
-			if (name == gesture) {
-				return -1;
+		for (var i = 0; i < NegativeGestures.Length; i++) {
+			if (NegativeGestures[i].Gesture == gesture) {
+				if (NegativeGestures[i].RemainingLimit > 0) {
+					NegativeGestures[i].RemainingLimit--;
+					_LevelStatus--;
+					return -1;
+				}	
+				return -100000;
 			}
 		}
-
 		/* massive negative to indicate the gesture is not available */
 		return -100000;
+	}
+
+	public void Reset() {
+		for (var i = 0; i < PositiveGestures.Length; i++) {
+			PositiveGestures[i].RemainingLimit = PositiveGestures[i].Limit;
+		}
+		for (var i = 0; i < NeutralGestures.Length; i++) {
+			NeutralGestures[i].RemainingLimit = NeutralGestures[i].Limit;
+		}
+		for (var i = 0; i < NegativeGestures.Length; i++) {
+			NegativeGestures[i].RemainingLimit = NegativeGestures[i].Limit;
+		}
+		_LevelStatus = 0;
 	}
 }

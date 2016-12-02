@@ -8,10 +8,6 @@ using System.Collections.Generic;
 public class GestureManagerEditor : Editor {
 
 	private List<Gesture> _Gestures = new List<Gesture>(0);
-	// private List<bool> _GestureVisible = new List<bool>(0);
-
-	// private bool _ShowGestures = false;
-
 	private bool _GesturesUpdated = false;
 
 	public override void OnInspectorGUI() {
@@ -25,13 +21,7 @@ public class GestureManagerEditor : Editor {
 		var gestureList = new List<Gesture>(script.Gestures);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
 
-		// while (gestureList.Count > _GestureVisible.Count) {
-		// 	_GestureVisible.Add(true);
-		// }
-
 		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
-		// _ShowGestures = EditorGUILayout.Foldout(_ShowGestures, "Gestures");
-		// if (_ShowGestures) {
 		if (property.isExpanded) {
 			/* since this updates very very frequently, I only need to save
 			* one value */
@@ -54,7 +44,6 @@ public class GestureManagerEditor : Editor {
 				}
 
 				EditorGUILayout.BeginHorizontal();
-				// var visible = _GestureVisible[i];
 				var visible = property.GetArrayElementAtIndex(i).isExpanded;
 				visible = EditorGUILayout.Foldout(visible, name);
 				if (GUILayout.Button("Move Up", GUILayout.MaxWidth(75))) {
@@ -69,31 +58,22 @@ public class GestureManagerEditor : Editor {
 				EditorGUILayout.EndHorizontal();
 
 				if (visible) {
-					// property.GetArrayElementAtIndex(i).isExpanded = visible;
 					DisplayGesture(gestureList[i], property.GetArrayElementAtIndex(i));
 				}
 				property.GetArrayElementAtIndex(i).isExpanded = visible;
-				// _GestureVisible[i] = visible;
 			}
 			serializedObject.ApplyModifiedProperties();
 
 			/* handle shuffling the gestures around as needed */
 			if (toRemove >= 0) {
-				// _GestureVisible.RemoveAt(toRemove);
 				gestureList.RemoveAt(toRemove);
 			}
 			if (toMoveUp >= 1) {
-				// var visible = _GestureVisible[toMoveUp];
-				// _GestureVisible.RemoveAt(toMoveUp);
-				// _GestureVisible.Insert(toMoveUp - 1, visible);
 				var gesture = gestureList[toMoveUp];
 				gestureList.RemoveAt(toMoveUp);
 				gestureList.Insert(toMoveUp - 1, gesture);				
 			}
 			if (toMoveDown >= 0 && toMoveDown < gestureList.Count - 1) {
-				// var visible = _GestureVisible[toMoveDown];
-				// _GestureVisible.RemoveAt(toMoveDown);
-				// _GestureVisible.Insert(toMoveDown + 1, visible);
 				var gesture = gestureList[toMoveDown];
 				gestureList.RemoveAt(toMoveDown);
 				gestureList.Insert(toMoveDown + 1, gesture);				
@@ -103,13 +83,11 @@ public class GestureManagerEditor : Editor {
 			EditorGUILayout.BeginHorizontal();
 			/* other basic buttons for updating the list */
 			if (GUILayout.Button("Add Gesture")) {
-				// _GestureVisible.Add(true);
 				var gesture = new Gesture();
 				_Gestures.Add(gesture);
 				gestureList.Add(new Gesture());
 			}
 			if (GUILayout.Button("Remove All")) {
-				// _GestureVisible = new List<bool>(0);
 				gestureList.Clear();
 			}
 			if (GUILayout.Button("Save Gestures To File")) {
@@ -125,7 +103,6 @@ public class GestureManagerEditor : Editor {
 	private void DisplayGesture(Gesture gesture, SerializedProperty gestureProperty) {
 
 		var name = (gesture.Name == "") ? "New Gesture" : gesture.Name;
-		// gesture.Name = EditorGUILayout.TextField("Name", name);
 
 		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("Name"));
 		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("ForceCompleteKey"));
