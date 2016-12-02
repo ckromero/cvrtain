@@ -189,7 +189,7 @@ public struct Level {
 			}
 		}
 
-		/* return NaN if the gesture is not contained in this array */
+		/* massive negative to indicate the gesture is not available */
 		return -100000;
 	}
 }

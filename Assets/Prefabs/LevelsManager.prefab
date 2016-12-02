@@ -61,13 +61,10 @@ MonoBehaviour:
     PositiveGestures:
     - Bow
     - Hands up bow
-    - Double Wave
-    NeutralGestures:
-    - Wave
+    NeutralGestures: []
     NegativeGestures:
-    - Jazz Hands
-    - One Hand High, One Hand Low
     - Fist Pump
+    - Pump it up
     PromotionReq: 3
     DemotionReq: 3
   - StartingLevel: 0
@@ -75,27 +72,20 @@ MonoBehaviour:
     - Deep bow
     - Hands up bow
     - Bow
+    NeutralGestures: []
+    NegativeGestures:
     - Fist Pump
-    NeutralGestures:
-    - Double Wave
-    - Jazz Hands
-    - Wave
-    - One Hand High, One Hand Low
-    NegativeGestures: []
+    - Pump it up
     PromotionReq: 5
     DemotionReq: 5
   - StartingLevel: 0
     PositiveGestures:
     - Deep bow
     - Pump it up
-    - Jazz Hands
     - Fist Pump
-    - One Hand High, One Hand Low
-    NeutralGestures:
-    - Bow
     - Hands up bow
+    NeutralGestures: []
     NegativeGestures:
-    - Wave
-    - Double Wave
+    - Bow
     PromotionReq: 3
     DemotionReq: 3
