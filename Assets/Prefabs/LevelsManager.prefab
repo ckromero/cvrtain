@@ -56,3 +56,46 @@ MonoBehaviour:
   gestureManager: {fileID: 0}
   clapManager: {fileID: 0}
   IsIncrementStage: 0
+  Levels:
+  - StartingLevel: 1
+    PositiveGestures:
+    - Bow
+    - Hands up bow
+    - Double Wave
+    NeutralGestures:
+    - Wave
+    NegativeGestures:
+    - Jazz Hands
+    - One Hand High, One Hand Low
+    - Fist Pump
+    PromotionReq: 3
+    DemotionReq: 3
+  - StartingLevel: 0
+    PositiveGestures:
+    - Deep bow
+    - Hands up bow
+    - Bow
+    - Fist Pump
+    NeutralGestures:
+    - Double Wave
+    - Jazz Hands
+    - Wave
+    - One Hand High, One Hand Low
+    NegativeGestures: []
+    PromotionReq: 5
+    DemotionReq: 5
+  - StartingLevel: 0
+    PositiveGestures:
+    - Deep bow
+    - Pump it up
+    - Jazz Hands
+    - Fist Pump
+    - One Hand High, One Hand Low
+    NeutralGestures:
+    - Bow
+    - Hands up bow
+    NegativeGestures:
+    - Wave
+    - Double Wave
+    PromotionReq: 3
+    DemotionReq: 3

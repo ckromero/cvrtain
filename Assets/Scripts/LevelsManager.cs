@@ -164,13 +164,13 @@ public class LevelsManager : MonoBehaviour
 
 [System.Serializable]
 public struct Level {
+	public bool StartingLevel;
 	public string[] PositiveGestures;
 	public string[] NeutralGestures;
 	public string[] NegativeGestures;
 
 	public int PromotionReq;
 	public int DemotionReq;
-	public bool StartingLevel;
 
 	public int EvaluateGesture(string gesture) {
 		foreach(var name in PositiveGestures) {
