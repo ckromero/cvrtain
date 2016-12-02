@@ -135,14 +135,14 @@ MonoBehaviour:
     - Gesture: Hands up bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Wave
-      Limit: 100
-      RemainingLimit: 0
     - Gesture: Double Wave
       Limit: 100
       RemainingLimit: 0
     NegativeGestures:
     - Gesture: Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wave
       Limit: 100
       RemainingLimit: 0
     PromotionRequirment: 3
