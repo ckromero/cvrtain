@@ -109,6 +109,7 @@ public class LevelsManager : MonoBehaviour
 			if (Levels[stage].Complete) {
 				if (stage == Levels.Length - 1) {
 					MaxLevel = true;
+					Debug.Log("EXCEEDED MAX LEVEL");
 				}
 				stage = Mathf.Clamp(++stage, 0, Levels.Length - 1);
 				UpdateLevel();
