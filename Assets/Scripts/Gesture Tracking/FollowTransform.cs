@@ -21,7 +21,9 @@ public class FollowTransform : MonoBehaviour {
 	[HideInInspector]
 	public bool ZRotationLock;
 
+	public bool XLockOut;
 	public Range XRotationLockOut;
+	public bool ZLockOut;
 	public Range ZRotationLockOut;
 
     private Quaternion _StartingRotation;
@@ -58,11 +60,11 @@ public class FollowTransform : MonoBehaviour {
 		* averaging results in some weird output very quickly */
 		var rotation = Transforms[0].eulerAngles;
 
-		if (!XRotationLockOut.Contains(Transforms[0].eulerAngles.x)) {
+		if (XLockOut && !XRotationLockOut.Contains(Transforms[0].eulerAngles.x)) {
 			Debug.Log("X range exceded, locking gesture tracking rotation");
 			return;
 		}
-		if (!ZRotationLockOut.Contains(Transforms[0].eulerAngles.z)) {
+		if (ZLockOut && !ZRotationLockOut.Contains(Transforms[0].eulerAngles.z)) {
 			Debug.Log("Z range exceded, locking gesture tracking rotation");
 			return;
 		}

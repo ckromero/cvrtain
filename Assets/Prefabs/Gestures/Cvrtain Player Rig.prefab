@@ -6885,9 +6885,11 @@ MonoBehaviour:
   XRotationLock: 1
   YRotationLock: 0
   ZRotationLock: 1
+  XLockOut: 1
   XRotationLockOut:
     Max: 75
     Min: -75
+  ZLockOut: 1
   ZRotationLockOut:
     Max: 75
     Min: -75

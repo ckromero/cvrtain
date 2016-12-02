@@ -15438,11 +15438,11 @@ MonoBehaviour:
   YRotationLock: 0
   ZRotationLock: 1
   XRotationLockOut:
-    Max: 80
-    Min: -80
+    Max: 75
+    Min: -75
   ZRotationLockOut:
-    Max: 80
-    Min: -80
+    Max: 75
+    Min: -75
 --- !u!114 &900835318
 MonoBehaviour:
   m_ObjectHideFlags: 0
