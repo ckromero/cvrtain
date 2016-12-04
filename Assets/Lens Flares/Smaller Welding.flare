@@ -49,62 +49,6 @@ Flare:
     m_Rotate: 1
     m_Zoom: 1
     m_Fade: 1
-  - m_ImageIndex: 4
-    m_Position: 2
-    m_Size: -7.17
-    m_Color: {r: 0.2310059, g: 0.2430029, b: 0.46923077, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 2
-    m_Position: 1.75
-    m_Size: -5
-    m_Color: {r: 0.46153843, g: 0.46153843, b: 0.46153843, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 2
-    m_Position: 1.6
-    m_Size: -1.15
-    m_Color: {r: 1, g: 1, b: 1, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 2
-    m_Position: 1.63
-    m_Size: -9.03
-    m_Color: {r: 0.46153843, g: 0.46153843, b: 0.46153843, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 2
-    m_Position: 1.8
-    m_Size: 1.93
-    m_Color: {r: 0.86923075, g: 0.86923075, b: 0.86923075, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 2
-    m_Position: 2.25
-    m_Size: -0.93
-    m_Color: {r: 0.86923075, g: 0.86923075, b: 0.86923075, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
-  - m_ImageIndex: 4
-    m_Position: 1.64
-    m_Size: -8.49
-    m_Color: {r: 0.14426035, g: 0.19100249, b: 0.35384613, a: 1}
-    m_UseLightColor: 0
-    m_Rotate: 1
-    m_Zoom: 1
-    m_Fade: 1
   - m_ImageIndex: 1
     m_Position: 0
     m_Size: 17.4
@@ -116,7 +60,7 @@ Flare:
   - m_ImageIndex: 1
     m_Position: 0.5
     m_Size: 33.2
-    m_Color: {r: 0.36153847, g: 0.36153847, b: 0.36153847, a: 1}
+    m_Color: {r: 0.36078432, g: 0.36078432, b: 0.36078432, a: 1}
     m_UseLightColor: 0
     m_Rotate: 0
     m_Zoom: 1
@@ -132,7 +76,7 @@ Flare:
   - m_ImageIndex: 4
     m_Position: 0.3
     m_Size: 6.03
-    m_Color: {r: 0, g: 0.26618695, b: 1, a: 1}
+    m_Color: {r: 0, g: 0.26666668, b: 1, a: 1}
     m_UseLightColor: 0
     m_Rotate: 1
     m_Zoom: 1
@@ -140,12 +84,12 @@ Flare:
   - m_ImageIndex: 1
     m_Position: -0.5
     m_Size: -10.2
-    m_Color: {r: 0.36153847, g: 0.36153847, b: 0.36153847, a: 1}
+    m_Color: {r: 0.36078432, g: 0.36078432, b: 0.36078432, a: 1}
     m_UseLightColor: 0
     m_Rotate: 0
     m_Zoom: 1
     m_Fade: 1
-  m_UseFog: 1
+  m_UseFog: 0
 --- !u!1002 &12100001
 EditorExtensionImpl:
   serializedVersion: 6
