@@ -24064,6 +24064,11 @@ Prefab:
       propertyPath: IsIdle
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012813506024, guid: c6966eeaa9ec44ec6addc9d89a4a4467,
+        type: 2}
+      propertyPath: IsCurtainOpen
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6966eeaa9ec44ec6addc9d89a4a4467, type: 2}
   m_IsPrefabParent: 0
