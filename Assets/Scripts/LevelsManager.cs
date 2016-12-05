@@ -23,6 +23,8 @@ public class LevelsManager : MonoBehaviour
 	private int stage = 0;
 	private string[] audioPads = { "polite", "medium", "large", "huge" };
 
+    public int LevelStage { get { return stage; } }
+
 	[SerializeField]
 	private Level[] Levels;
 	private int levelIndex = 0;
