@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum HeadState {Upright, Bow, Curtsy, None};
-public enum HeadFacing {Left, Front, Right, Floor, Back};
+public enum HeadFacing {Left, Front, Right, Floor, Back, Ceiling};
 public class HeadTracker : MonoBehaviour {
 
     public HeadState HeadState {
@@ -62,11 +62,17 @@ public class HeadTracker : MonoBehaviour {
 		foreach (var HeadState in _StateBuffer) {
 			states += HeadState + ", ";
 		}
-		// Debug.Log(states);
 		RaycastHit hit;
-		if (Physics.Raycast(HeadTransform.position, HeadTransform.forward, out hit, _LookMask)) {
-			// Debug.Log("I am looking at: " + hit.collider.gameObject.name);
-		//	Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+		var position = HeadTransform.position;
+		var direction = HeadTransform.forward;
+		if (Physics.Raycast(position, direction, out hit, _LookMask)) {
+			Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+			if (Facing == HeadFacing.Floor) {
+				direction = HeadTransform.up;
+				if (Physics.Raycast(position, direction, out hit, _LookMask)) {
+					Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+				}
+			}
 		}
 	}
 

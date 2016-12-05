@@ -2287,6 +2287,12 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &161671404 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+    type: 2}
+  m_PrefabInternal: {fileID: 321101720}
+  m_Script: {fileID: 11500000, guid: 8230d651b1a814a5e936233aceaf1c95, type: 3}
 --- !u!1 &171545939
 GameObject:
   m_ObjectHideFlags: 0
@@ -5069,10 +5075,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1000013602881052, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
-      propertyPath: m_Name
-      value: Cvrtain Player Rig
-      objectReference: {fileID: 0}
     - target: {fileID: 33000010757155156, guid: 0be389b891a504e7fb5db7014a411e7f,
         type: 2}
       propertyPath: m_Mesh
@@ -5083,6 +5085,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 285849277}
+    - target: {fileID: 1000013602881052, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+      propertyPath: m_Name
+      value: Cvrtain Player Rig
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
   m_IsPrefabParent: 0
@@ -9783,6 +9789,12 @@ Transform:
   m_Father: {fileID: 1427614133}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1060941698 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011226102008, guid: 0be389b891a504e7fb5db7014a411e7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 395170793}
+  m_Script: {fileID: 11500000, guid: 9c165398aa3ff40248d3c5324a159c33, type: 3}
 --- !u!1 &1085506182
 GameObject:
   m_ObjectHideFlags: 0
@@ -10889,6 +10901,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &1272341900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1820178067533014, guid: 0be389b891a504e7fb5db7014a411e7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 395170793}
+--- !u!114 &1272341905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272341900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d070cfb464233ab520e6f19a0d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 161671404}
 --- !u!114 &1296157349 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000010288270000, guid: 0be389b891a504e7fb5db7014a411e7f,
@@ -15660,6 +15689,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!1 &2020915277 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1067993495912772, guid: 0be389b891a504e7fb5db7014a411e7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 395170793}
+--- !u!114 &2020915282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2020915277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d359a3dc9338d4dbeba35affe348f387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadTracker: {fileID: 1060941698}
 --- !u!1 &2032189989
 GameObject:
   m_ObjectHideFlags: 0
