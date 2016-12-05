@@ -2545,6 +2545,7 @@ GameObject:
   - component: {fileID: 222845510679909864}
   - component: {fileID: 114036870142745594}
   - component: {fileID: 114589307325942254}
+  - component: {fileID: 114313475487918978}
   m_Layer: 9
   m_Name: Head Facing
   m_TagString: Untagged
@@ -2649,6 +2650,7 @@ GameObject:
   - component: {fileID: 222309870729173860}
   - component: {fileID: 114304889429136760}
   - component: {fileID: 114962246895695764}
+  - component: {fileID: 114993601246531204}
   m_Layer: 9
   m_Name: Current Level
   m_TagString: Untagged
@@ -7511,6 +7513,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Current Level
+--- !u!114 &114313475487918978
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067993495912772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d359a3dc9338d4dbeba35affe348f387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HeadTracker: {fileID: 114000011226102008}
 --- !u!114 &114410065330227134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7674,6 +7688,18 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &114993601246531204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1820178067533014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d02d070cfb464233ab520e6f19a0d14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LevelManager: {fileID: 0}
 --- !u!124 &124000014198226700
 Behaviour:
   m_ObjectHideFlags: 1
