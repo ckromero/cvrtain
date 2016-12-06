@@ -4,10 +4,6 @@ using System.Collections;
 public class ClapManager: MonoBehaviour {
 	public ClapControl[] clapControls;
 
-
-
-
-
 	public void UpdateClappers(string update) { 
 		foreach (ClapControl clapper in clapControls) {
 			if (update=="triggerGoToHigh")
@@ -17,7 +13,17 @@ public class ClapManager: MonoBehaviour {
 			if (update=="triggerHighClapping")
 				clapper.triggerHighClapping = true;
 		}
+	}
 
+	public void UpdateClappers(ClapTrigger trigger) {
+		foreach (var clapper in clapControls) {
+			if (trigger == ClapTrigger.GoToHigh)
+				clapper.triggerGoToHigh = true;
+			if (trigger == ClapTrigger.RaisedFist)
+				clapper.triggerRaisedFist= true;
+			if (trigger == ClapTrigger.HighClapping)
+				clapper.triggerHighClapping = true;
+		}
 	}
 	// Use this for initialization
 	void Start () {
@@ -28,4 +34,11 @@ public class ClapManager: MonoBehaviour {
 	void Update () {
 	
 	}
+}
+
+public enum ClapTrigger {
+	PoliteClapping,
+	GoToHigh,
+	RaisedFist,
+	HighClapping
 }

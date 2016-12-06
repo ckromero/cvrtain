@@ -5048,6 +5048,16 @@ Prefab:
       propertyPath: clapManager
       value: 
       objectReference: {fileID: 1427614134}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: DelayBeforeDecayStarts
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[1].PromotionRequirment
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
   m_IsPrefabParent: 0
@@ -6116,6 +6126,16 @@ Prefab:
     - target: {fileID: 1000013602881052, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_Name
       value: Cvrtain Player Rig
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010280744130, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: WaveLimits.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010280744130, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: WaveLimits.y
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}

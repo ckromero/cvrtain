@@ -56,8 +56,29 @@ MonoBehaviour:
   gestureManager: {fileID: 0}
   clapManager: {fileID: 0}
   IsIncrementStage: 0
+  DelayBeforeDecayStarts: 8
+  DecayGap: 1
   Levels:
+  - StartingLevel: 0
+    ClapLevel: 0
+    Advancement: 2
+    PositiveGestures:
+    - Gesture: Bow
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Double Wave
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures: []
+    NegativeGestures: []
+    PromotionRequirment: 1
+    DemotionRequirment: 0
   - StartingLevel: 1
+    ClapLevel: 0
+    Advancement: 1
     PositiveGestures:
     - Gesture: Bow
       Limit: 10
@@ -88,6 +109,8 @@ MonoBehaviour:
     PromotionRequirment: 3
     DemotionRequirment: 3
   - StartingLevel: 0
+    ClapLevel: 1
+    Advancement: 1
     PositiveGestures:
     - Gesture: Deep bow
       Limit: 10
@@ -95,10 +118,10 @@ MonoBehaviour:
     - Gesture: Hands up bow
       Limit: 10
       RemainingLimit: 0
-    NeutralGestures:
     - Gesture: Bow
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
+    NeutralGestures:
     - Gesture: Wave
       Limit: 10
       RemainingLimit: 0
@@ -112,9 +135,49 @@ MonoBehaviour:
     - Gesture: Fist Pump
       Limit: 10
       RemainingLimit: 0
+    - Gesture: One Hand High, One Hand Low
+      Limit: 100
+      RemainingLimit: 0
     PromotionRequirment: 3
     DemotionRequirment: 3
   - StartingLevel: 0
+    ClapLevel: 2
+    Advancement: 1
+    PositiveGestures:
+    - Gesture: Deep bow
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Hands up bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures:
+    - Gesture: Double Wave
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 100
+      RemainingLimit: 0
+    NegativeGestures:
+    - Gesture: Fist Pump
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Jazz Hands
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Hand High, One Hand Low
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 100
+      RemainingLimit: 0
+    PromotionRequirment: 3
+    DemotionRequirment: 3
+  - StartingLevel: 0
+    ClapLevel: 3
+    Advancement: 1
     PositiveGestures:
     - Gesture: Pump it up
       Limit: 10
