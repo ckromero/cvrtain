@@ -21,9 +21,15 @@ public class LevelsManager : MonoBehaviour
 	// private  string lastGesture;
 	private CompletedGestureStruct lastGesture;
 	private int stage = 0;
-	private string[] audioPads = { "polite", "medium", "large", "huge" };
+	private int _HeighestStage;
+	private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
 
 	public int CurrentLevel { get{ return stage; }}
+
+	public float DelayBeforeDecayStarts = 10f;
+	public float DecayGap = 2f;
+
+	private float _TimeSinceLastGesture = 0f;
 
 	[SerializeField]
 	private Level[] Levels;
@@ -52,23 +58,16 @@ public class LevelsManager : MonoBehaviour
 		if (listenToGestures)
 			UpdateLevelsBasedOnGestures ();
 
-		/* double check that all gesture names entered are actually valid gestures */
-		// var message = "Invalid gesture";
-		// foreach (var level in Levels) {
-		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.PositiveGestures), message);
-		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.NeutralGestures), message);
-		// 	Assert.IsTrue(gestureManager.CompareGestureNames(level.NegativeGestures), message);
-		// }
-
-		UpdateAV();
-
 		for (var i = 0; i < Levels.Length; i++) {
 			if (Levels[i].StartingLevel) {
 				stage = i;
+				_HeighestStage = stage;
 				break;
 			}
 		}
 		Levels[stage].Reset();
+
+		UpdateAV();
 	}
 	
 	// Update is called once per frame
@@ -90,65 +89,97 @@ public class LevelsManager : MonoBehaviour
 		//completedGestures
 
 		if (lastGesture.Time != gestureManager.LastGesture.Time) {
+
+			_TimeSinceLastGesture = 0f;
 			
 			lastGesture = gestureManager.LastGesture;
+
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
-
-			switch (evaluation) {
-				case 1: 
-					Debug.Log("a good thing");
-					break;
-				case 0:
-					Debug.Log("a neutral thing");
-					break;
-				case -1:
-					Debug.Log("a bad thing");
-					break;
-				default:
+			if (_HeighestStage == Levels.Length - 1 && _HeighestStage != stage) {
+				var highEvaluation = Levels[_HeighestStage].EvaluateGesture(lastGesture.Name);
+				if (highEvaluation > -1) {
+					SetLevelTo(_HeighestStage);
 					return;
+				}
 			}
 
-			if (Levels[stage].Complete) {
-				if (stage == Levels.Length - 1) {
-					MaxLevel = true;
-					Debug.Log("EXCEEDED MAX LEVEL");
+
+			// switch (evaluation) {
+			// 	case 1: 
+			// 		Debug.Log("a good thing");
+			// 		break;
+			// 	case 0:
+			// 		Debug.Log("a neutral thing");
+			// 		break;
+			// 	case -1:
+			// 		Debug.Log("a bad thing");
+			// 		break;
+			// 	default:
+			// 		return;
+			// }
+
+		}
+		else {
+			_TimeSinceLastGesture += Time.deltaTime;
+			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
+				var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
+				if (decayTime > DecayGap) {
+					_TimeSinceLastGesture -= DecayGap;
+					Levels[stage].Decrement();
 				}
-				stage = Mathf.Clamp(++stage, 0, Levels.Length - 1);
-				UpdateLevel();
-			}
-			else if (Levels[stage].Failed) {
-				stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
-				UpdateLevel();
 			}
 		}
+
+		if (Levels[stage].Complete) {
+
+			// stage += Levels[stage].Advancement;
+			// stage = Mathf.Clamp(stage, 0, Levels.Length - 1);
+			// UpdateLevel();
+			UpdateLevel(Levels[stage].Advancement);
+		}
+		else if (Levels[stage].Failed) {
+			// stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
+			// UpdateLevel();
+
+			UpdateLevel(-1);
+		}
+
 	}
 
-	void UpdateLevel() {
-		levelCompletion = 0;
+	void UpdateLevel(int increment) {
+		if (stage + increment >= Levels.Length) {
+			MaxLevel = true;
+			Debug.Log("EXCEEDED MAX LEVEL");
+			return;
+		}
+
+		SetLevelTo(Mathf.Clamp(stage + increment, 0, Levels.Length - 1));
+	}
+
+	void SetLevelTo(int level) {
+		if (_HeighestStage <= level) {
+			_HeighestStage = level;
+			stage = level;
+		}
+		else if (level < _HeighestStage && level > stage) {
+			stage = _HeighestStage;
+		}
+		else {
+			stage = level;
+		}
+
 		Levels[stage].Reset();
 		UpdateAV();
 	}
 
 	void UpdateAV ()
 	{
-		// stage++;
 		Debug.Log ("updating AV, stage is now " + stage);
 		if (stage < audioPads.Length) {
 			string newPad = audioPads [stage];
 			audioManager.ChangePad (newPad);
-			switch (stage) {
-			case 0:
-				clapManager.UpdateClappers("triggerGoToHigh") ;
-				break;
-			case 1:
-				clapManager.UpdateClappers("triggerRaisedFist");
-				break;
-			case 2:
-				clapManager.UpdateClappers("triggerHighClapping");
-				break;
-			default:
-				break;
-			}
+
+			clapManager.UpdateClappers(Levels[stage].ClapLevel);
 
 //			animatorManager.changeAnimationState (newState);
 //			lightsManager.changeLightState(newState);
@@ -175,6 +206,8 @@ public class Level {
 	}
 
 	public bool StartingLevel;
+	public ClapTrigger ClapLevel;
+	public int Advancement = 1;
 
 	[SerializeField]
 	private GestureTracker[] PositiveGestures;
@@ -228,6 +261,14 @@ public class Level {
 		}
 		/* massive negative to indicate the gesture is not available */
 		return -100000;
+	}
+
+	public void Decrement() {
+		_LevelStatus--;
+	}
+
+	public void Incrememnt() {
+		_LevelStatus++;
 	}
 
 	public void Reset() {

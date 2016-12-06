@@ -81,9 +81,7 @@ public class HandsTracker : MonoBehaviour {
 		get {
             var localPos = transform.InverseTransformPoint(LeftHand.position);
             var distance = Vector3.Distance(localPos, Vector3.zero);
-            //var distance = Vector3.Distance(LeftHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
-			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
 			distance = Mathf.Clamp(distance, 0, Rings);
 			return (int)distance + 1;
 		}
@@ -93,9 +91,7 @@ public class HandsTracker : MonoBehaviour {
 		get {
             var localPos = transform.InverseTransformPoint(RightHand.position);
             var distance = Vector3.Distance(localPos, Vector3.zero);
-			//var distance = Vector3.Distance(RightHand.position, transform.position);
 			distance = Mathf.Ceil((distance-MinimumRadius)/RingRadius);
-			// distance = Mathf.Clamp((distance-MinimumRadius)/RingRadius, 0, Rings + 1);
 			distance = Mathf.Clamp(distance, 0, Rings);
 			return (int)distance + 1;
 		}
@@ -177,7 +173,8 @@ public class HandsTracker : MonoBehaviour {
 		* facing the audience when the player waves */
 		RaycastHit hit;
 		var down = handTransform.up * -1;
-		if (Physics.Raycast(handTransform.position, down, out hit, 100f, WavingLayers)) {
+		var position = handTransform.position;
+		if (Physics.Raycast(position, down, out hit, 100f, WavingLayers)) {
 			var hitObject = hit.collider.gameObject;
 			if (hitObject.GetComponent<HeadLookReceiver>()) {
 				var facing = hitObject.GetComponent<HeadLookReceiver>().Facing;
@@ -197,39 +194,85 @@ public class HandsTracker : MonoBehaviour {
 		var totalWorldDistance = 0f;
 		var totalLocalDistance = 0f;
 
+		/* convert the positions to 2D local space. Local positions are tracked
+		* in 2D to ensure that the hand movements are not triggering off of Z
+		* axis movement. */
 		var localPositions = new Vector2[positions.Length];
 		for (var i = 0; i < positions.Length; i++) {
 			var localPos = transform.InverseTransformPoint(positions[i]);
 			localPositions[i] = new Vector2(localPos.x, localPos.y);
 		}
 
-		for (var i = 0; i < positions.Length - 1; i++) {
-			totalWorldDistance += Vector3.Distance(positions[i], positions[i+1]);
-			totalLocalDistance += Vector2.Distance(localPositions[i], localPositions[i+1]);
-			var delta = Vector3.Distance(positions[0], positions[i]);
-			var localDelta = Vector3.Distance(localPositions[0], localPositions[i]);
-			if (delta > maxWorldDelta) {
-				maxWorldDelta = delta;
-			}
-			if (localDelta > maxLocalDelta) {
-				maxLocalDelta = delta;
-			}
 
-			// for (var j = i + 1; j < positions.Length; j++) {
-			// 	var delta = Vector3.Distance(positions[i], positions[j]);
-			// 	if (delta > maxWorldDelta) {
-			// 		maxWorldDelta = delta;
-			// 	}
+		/* the wave check takes the first point and looks for another point
+		* sufficiently far away. It then checks to see if there is a third
+		* point after that that is also far enough away and also closer to
+		* the first point */
 
-			// 	delta = Vector2.Distance(localPositions[i], localPositions[j]);
-			// 	if (delta > maxLocalDelta) {
-			// 		maxLocalDelta = delta;
-			// 	}
-			// }
+		var firstIndex = 0;
+		var secondIndex = -1;
+		var thirdIndex = -1;
+
+		/* get the averaged scaling of the player so you can adjust the
+		* value of the movement */
+		var localAdjust = 0f;
+		for (var i = 0; i < 3; i++) {
+			localAdjust += transform.lossyScale[i];
 		}
+		localAdjust /= 3;
 
-		// Debug.Log("maxWorldDelta: " + maxWorldDelta + " totalWorldDistance: " + totalWorldDistance);
-		// Debug.Log("maxLocalDelta: " + maxLocalDelta + " totalLocalDistance: " + totalLocalDistance);
+		for (var i = 0; i < positions.Length; i++) {
+			var index = i + _CurrentIndex;
+			if (index >= positions.Length) index -= positions.Length;
+			totalWorldDistance += Vector3.Distance(
+													positions[index],
+													positions[index+1]
+												);
+			totalLocalDistance += Vector2.Distance(
+													localPositions[index],
+													localPositions[index+1]
+												);
+
+			if (secondIndex < 0) {
+				var delta = Vector3.Distance(
+												positions[firstIndex],
+												positions[index]
+											);
+				var localDelta = Vector3.Distance(
+													localPositions[firstIndex],
+													localPositions[index]
+												);
+				localDelta *= localAdjust;
+				if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
+					// Debug.Log("found a second index");
+					secondIndex = index;
+				}
+			}
+			else {
+				var delta = Vector3.Distance(
+												positions[secondIndex],
+												positions[index]
+											);
+				var localDelta = Vector3.Distance(
+													localPositions[secondIndex],
+													localPositions[index]
+												);
+				localDelta *= localAdjust;
+				if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
+					// Debug.Log("attempting third point check");
+					var firstDelta = Vector3.Distance(
+														positions[firstIndex],
+														positions[index]
+													);
+					Debug.Log("first delta: " + firstDelta.ToString("F4"));
+					// Debug.Log("first delta: " + firstDelta + " second delta: " + delta);
+					if (firstDelta < delta) {
+						// Debug.Log("succesful third point check");
+						thirdIndex = index;
+					}
+				}
+			}
+		}
 
 		/* the wave needs to check for movement in both world and local space to
 		* ensure that movement is not being caused simply by rotating the gesture
@@ -239,13 +282,18 @@ public class HandsTracker : MonoBehaviour {
         * forward and backward.
         * The total distance check is to make sure that the hand has moved enough
         * in the window that it can be considered a wave. */
-		var returnValue = (maxWorldDelta >= WaveLimits.x &&
-							maxWorldDelta <= WaveLimits.y &&
-							maxLocalDelta >= WaveLimits.x &&
-							maxLocalDelta <= WaveLimits.y &&
-							totalLocalDistance > WaveDistance &&
-							totalWorldDistance > WaveDistance);
+		// var returnValue = (maxWorldDelta >= WaveLimits.x &&
+		// 					maxWorldDelta <= WaveLimits.y &&
+		// 					maxLocalDelta >= WaveLimits.x &&
+		// 					maxLocalDelta <= WaveLimits.y &&
+		// 					totalLocalDistance > WaveDistance &&
+		// 					totalWorldDistance > WaveDistance);
+		// var returnValue = (thirdIndex >= 0 &&
+		// 					totalLocalDistance > WaveDistance &&
+		// 					totalWorldDistance > WaveDistance);
+		var returnValue = (thirdIndex >= 0);
         if (returnValue) {
+        	Debug.Log("this should be a wave");
             LastWave = Time.deltaTime;
             for (var i = 0; i < positions.Length; i++) {
                 positions[i] = handTransform.position;
@@ -345,7 +393,11 @@ public class HandsTracker : MonoBehaviour {
 		}
 
 		var oldMatrix = Gizmos.matrix;
-		var cubeMatrix = Matrix4x4.TRS(transform.position, transform.rotation, transform.lossyScale);
+		var cubeMatrix = Matrix4x4.TRS(
+											transform.position,
+											transform.rotation,
+											transform.lossyScale
+										);
 		Gizmos.matrix = oldMatrix * cubeMatrix;
 		for (var i = 0; i < Rings; i++) {
 			var color = Color.Lerp(Color.yellow, Color.magenta, i/(Rings - 1f));
