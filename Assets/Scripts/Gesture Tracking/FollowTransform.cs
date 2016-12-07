@@ -61,11 +61,11 @@ public class FollowTransform : MonoBehaviour {
 		var rotation = Transforms[0].eulerAngles;
 
 		if (XLockOut && !XRotationLockOut.Contains(Transforms[0].eulerAngles.x)) {
-			Debug.Log("X range exceded, locking gesture tracking rotation");
+			//Debug.Log("X range exceded, locking gesture tracking rotation");
 			return;
 		}
 		if (ZLockOut && !ZRotationLockOut.Contains(Transforms[0].eulerAngles.z)) {
-			Debug.Log("Z range exceded, locking gesture tracking rotation");
+			//Debug.Log("Z range exceded, locking gesture tracking rotation");
 			return;
 		}
 

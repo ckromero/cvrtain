@@ -2551,7 +2551,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 50.000004, y: -167.292, z: 0}
 --- !u!1 &136286329
 GameObject:
@@ -7687,11 +7687,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
-      propertyPath: gestureManager
-      value: 
-      objectReference: {fileID: 358204622}
-    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
-        type: 2}
       propertyPath: expManager
       value: 
       objectReference: {fileID: 834434231}
@@ -7700,6 +7695,11 @@ Prefab:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1532527923}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: gestureManager
+      value: 
+      objectReference: {fileID: 358204622}
     - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
         type: 2}
       propertyPath: clapManager
@@ -21641,7 +21641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &958427410
 Transform:
   m_ObjectHideFlags: 0
@@ -21860,7 +21860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &990505073
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23625,7 +23625,7 @@ Transform:
   m_LocalScale: {x: 6.2450585, y: 3.414644, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173548175
 GameObject:
@@ -29150,7 +29150,7 @@ Transform:
   m_LocalScale: {x: 30.39543, y: 18.385128, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487838050
 GameObject:
@@ -33029,7 +33029,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000010762949752, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1665112137398468, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
@@ -33038,6 +33038,21 @@ Prefab:
     - target: {fileID: 1000013602881052, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010280744130, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: WaveLimits.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010280744130, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: WaveLimits.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010280744130, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: TrackingWindow
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
@@ -33824,7 +33839,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1797236025
 AudioSource:
   m_ObjectHideFlags: 0
@@ -33917,7 +33932,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1797341773
 GameObject:
@@ -35520,7 +35535,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1942326060
 Transform:
   m_ObjectHideFlags: 0

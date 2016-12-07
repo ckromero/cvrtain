@@ -106,7 +106,7 @@ MonoBehaviour:
     - Gesture: Pump it up
       Limit: 10
       RemainingLimit: 0
-    PromotionRequirment: 3
+    PromotionRequirment: 1
     DemotionRequirment: 3
   - StartingLevel: 0
     ClapLevel: 1

@@ -209,7 +209,7 @@ public class HandsTracker : MonoBehaviour {
 		* point after that that is also far enough away and also closer to
 		* the first point */
 
-		var firstIndex = 0;
+		var firstIndex = _CurrentIndex;
 		var secondIndex = -1;
 		var thirdIndex = -1;
 
@@ -224,49 +224,61 @@ public class HandsTracker : MonoBehaviour {
 		for (var i = 0; i < positions.Length; i++) {
 			var index = i + _CurrentIndex;
 			if (index >= positions.Length) index -= positions.Length;
+            var index2 = (index + 1 >= positions.Length) ? 0 : index + 1;
 			totalWorldDistance += Vector3.Distance(
 													positions[index],
-													positions[index+1]
+													positions[index2]
 												);
 			totalLocalDistance += Vector2.Distance(
 													localPositions[index],
-													localPositions[index+1]
+													localPositions[index2]
 												);
 
 			if (secondIndex < 0) {
-				var delta = Vector3.Distance(
-												positions[firstIndex],
-												positions[index]
-											);
-				var localDelta = Vector3.Distance(
-													localPositions[firstIndex],
-													localPositions[index]
-												);
-				localDelta *= localAdjust;
-				if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
+                var delta = Vector3.Distance(
+                                                positions[firstIndex],
+                                                positions[index]
+                                            );
+                //var delta = Mathf.Abs(positions[firstIndex].x - positions[index].y);
+				//var localDelta = Vector3.Distance(
+				//									localPositions[firstIndex],
+				//									localPositions[index]
+				//								);
+                var localDelta = Mathf.Abs(localPositions[firstIndex].x - localPositions[index].y);
+                localDelta *= localAdjust;
+                var worldBounded = WaveLimits.x <= delta && delta <= WaveLimits.y;
+                var localBounded = WaveLimits.x <= localDelta && localDelta <= WaveLimits.y;
+                if (worldBounded && localBounded) {
+				//if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
 					// Debug.Log("found a second index");
 					secondIndex = index;
 				}
 			}
 			else {
-				var delta = Vector3.Distance(
-												positions[secondIndex],
-												positions[index]
-											);
-				var localDelta = Vector3.Distance(
-													localPositions[secondIndex],
-													localPositions[index]
-												);
+                var delta = Vector3.Distance(
+                                                positions[secondIndex],
+                                                positions[index]
+                                            );
+                //var localDelta = Vector3.Distance(
+                //									localPositions[secondIndex],
+                //									localPositions[index]
+                //								);
+                //var delta = Mathf.Abs(positions[secondIndex].x - positions[index].y);
+                var localDelta = Mathf.Abs(localPositions[secondIndex].x - localPositions[index].y);
 				localDelta *= localAdjust;
-				if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
+                var worldBounded = WaveLimits.x <= delta && delta <= WaveLimits.y;
+                var localBounded = WaveLimits.x <= localDelta && localDelta <= WaveLimits.y;
+                if (worldBounded && localBounded)
+                {
+                    //if (delta > maxWorldDelta && localDelta > maxLocalDelta) {
 					// Debug.Log("attempting third point check");
 					var firstDelta = Vector3.Distance(
 														positions[firstIndex],
 														positions[index]
 													);
-					Debug.Log("first delta: " + firstDelta.ToString("F4"));
+					//Debug.Log("first delta: " + firstDelta.ToString("F4"));
 					// Debug.Log("first delta: " + firstDelta + " second delta: " + delta);
-					if (firstDelta < delta) {
+					if (firstDelta < delta && Mathf.Abs(firstDelta - delta) >= WaveLimits.x / 2) {
 						// Debug.Log("succesful third point check");
 						thirdIndex = index;
 					}

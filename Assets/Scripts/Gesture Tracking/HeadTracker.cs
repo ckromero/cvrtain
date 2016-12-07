@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -66,13 +67,21 @@ public class HeadTracker : MonoBehaviour {
 		var position = HeadTransform.position;
 		var direction = HeadTransform.forward;
 		if (Physics.Raycast(position, direction, out hit, _LookMask)) {
-			Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-			if (Facing == HeadFacing.Floor) {
-				direction = HeadTransform.up;
-				if (Physics.Raycast(position, direction, out hit, _LookMask)) {
-					Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-				}
-			}
+            try
+            {
+                Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+                if (Facing == HeadFacing.Floor)
+                {
+                    direction = HeadTransform.up;
+                    if (Physics.Raycast(position, direction, out hit, _LookMask))
+                    {
+                        Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+                    }
+                }
+            } catch (NullReferenceException e)
+            {
+
+            }
 		}
 	}
 

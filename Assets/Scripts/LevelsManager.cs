@@ -132,9 +132,10 @@ public class LevelsManager : MonoBehaviour
 
 		if (Levels[stage].Complete) {
 
-			// stage += Levels[stage].Advancement;
-			// stage = Mathf.Clamp(stage, 0, Levels.Length - 1);
-			// UpdateLevel();
+            // stage += Levels[stage].Advancement;
+            // stage = Mathf.Clamp(stage, 0, Levels.Length - 1);
+            // UpdateLevel();
+            Debug.Log("advance stage");
 			UpdateLevel(Levels[stage].Advancement);
 		}
 		else if (Levels[stage].Failed) {
