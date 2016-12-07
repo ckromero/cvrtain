@@ -5955,7 +5955,7 @@ MonoBehaviour:
   Rings: 2
   RingRadius: 0.3
   MinimumRadius: 0.35
-  WaveLimits: {x: 0.06, y: 0.2}
+  WaveLimits: {x: 0.15, y: 0.4}
   WaveDistance: 0.75
   TrackingWindow: 0.5
 --- !u!114 &114000010288270000
