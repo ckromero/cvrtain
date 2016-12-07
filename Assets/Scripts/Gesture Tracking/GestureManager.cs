@@ -63,6 +63,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 		if (largestCompletion > 0) {
 			var message = "COMPLETED: " + name;
+			Debug.Log(message);
 			TestOutputText.text = message;
 			LastGesture = new CompletedGestureStruct (name, Time.time);
 			_ClearTextTimer = 1f;
