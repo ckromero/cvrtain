@@ -2516,7 +2516,7 @@ Light:
   serializedVersion: 7
   m_Type: 1
   m_Color: {r: 0.14705884, g: 0.14705884, b: 0.14705884, a: 1}
-  m_Intensity: 2.16
+  m_Intensity: 1.35
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -4099,7 +4099,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     startSpeed:
-      scalar: 0.5
+      scalar: 0.17
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5609,14 +5609,14 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     separateAxes: 0
-    frequency: 0.09
+    frequency: 0.03
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
     quality: 2
     scrollSpeed:
-      scalar: 0.5
+      scalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -7953,7 +7953,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1680903934
+  randomSeed: -1946997742
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9390,7 +9390,7 @@ ParticleSystem:
   NoiseModule:
     enabled: 1
     strength:
-      scalar: 0.05
+      scalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -9507,14 +9507,14 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     separateAxes: 0
-    frequency: 0.09
+    frequency: 0.03
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
     quality: 2
     scrollSpeed:
-      scalar: 0.5
+      scalar: 0.38
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -12140,12 +12140,12 @@ GameObject:
   m_Component:
   - component: {fileID: 366684326}
   m_Layer: 0
-  m_Name: side lights
+  m_Name: back lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &366684326
 Transform:
   m_ObjectHideFlags: 0
@@ -16534,7 +16534,7 @@ ParticleSystem:
   NoiseModule:
     enabled: 1
     strength:
-      scalar: 0.05
+      scalar: 0.02
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -16651,14 +16651,14 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     separateAxes: 0
-    frequency: 0.32
+    frequency: 0.03
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
     octaveScale: 2
     quality: 2
     scrollSpeed:
-      scalar: 0.5
+      scalar: 0.29
       maxCurve:
         serializedVersion: 2
         m_Curve:
