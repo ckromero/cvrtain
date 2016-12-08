@@ -2624,6 +2624,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1445909312429022
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224177181279546118}
+  - component: {fileID: 222860415927105630}
+  - component: {fileID: 114452533262733560}
+  m_Layer: 9
+  m_Name: Level Completion Output (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1559044076738678
 GameObject:
   m_ObjectHideFlags: 1
@@ -6236,6 +6253,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: One Hand High, One Hand Low
     ForceCompleteKey: 111
     Rules:
@@ -6288,6 +6306,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Pump it up
     ForceCompleteKey: 112
     Rules:
@@ -6388,6 +6407,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Deep bow
     ForceCompleteKey: 100
     Rules:
@@ -6440,6 +6460,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Bow
     ForceCompleteKey: 98
     Rules:
@@ -6492,6 +6513,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Testing bow
     ForceCompleteKey: 116
     Rules:
@@ -6544,6 +6566,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 1
   - Name: Wave
     ForceCompleteKey: 119
     Rules:
@@ -6596,6 +6619,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Double Wave
     ForceCompleteKey: 99
     Rules:
@@ -6648,6 +6672,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Jazz Hands
     ForceCompleteKey: 106
     Rules:
@@ -6700,6 +6725,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 0
   - Name: Fist Pump
     ForceCompleteKey: 102
     Rules:
@@ -6800,6 +6826,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
+    Disabled: 1
   GestureLockoutDuration: 0.5
 --- !u!114 &114000010971698834
 MonoBehaviour:
@@ -7608,6 +7635,39 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Reach: X'
+--- !u!114 &114452533262733560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445909312429022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 128
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: CVRTAIN
 --- !u!114 &114578594665842802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -7756,7 +7816,7 @@ Behaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010441808770}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!135 &135000011604577378
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -7958,6 +8018,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067993495912772}
+--- !u!222 &222860415927105630
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445909312429022}
 --- !u!222 &222985529977086678
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -8036,6 +8102,7 @@ RectTransform:
   - {fileID: 224683235492216706}
   - {fileID: 224266930776434980}
   - {fileID: 224815644243571762}
+  - {fileID: 224177181279546118}
   - {fileID: 224524989917828608}
   m_Father: {fileID: 4000010627465446}
   m_RootOrder: 1
@@ -8175,6 +8242,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.056}
   m_SizeDelta: {x: 661, y: 299}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224177181279546118
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1445909312429022}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000011920929}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 224000010142809882}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 66.80011}
+  m_SizeDelta: {x: 200, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224266930776434980
 RectTransform:
   m_ObjectHideFlags: 1
@@ -8240,7 +8325,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224000010142809882}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

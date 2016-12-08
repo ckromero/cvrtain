@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum HeadState {Upright, Bow, Curtsy, None};
-public enum HeadFacing {Left, Front, Right, Floor, Back, Ceiling};
+public enum HeadFacing {Left, Front, Right, Floor, Back, Ceiling, None};
 public class HeadTracker : MonoBehaviour {
 
     public HeadState HeadState {
@@ -14,6 +14,12 @@ public class HeadTracker : MonoBehaviour {
             }
             return HeadState.None;
         }
+    }
+
+    public bool Working {
+    	get {
+    		return (HeadTransform != null);
+    	}
     }
 
     public HeadFacing Facing { get; private set; }
@@ -41,10 +47,7 @@ public class HeadTracker : MonoBehaviour {
 	private LayerMask _LookMask;
 
 	void Awake() {
-
 		_StateBuffer = new List<HeadState>();
-
-		// _StateBuffer.Add(HeadState.Upright);
 	}
 
 	// Use this for initialization
@@ -59,33 +62,34 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var states = "HeadStates: ";
-		foreach (var HeadState in _StateBuffer) {
-			states += HeadState + ", ";
-		}
 		RaycastHit hit;
 		var position = HeadTransform.position;
 		var direction = HeadTransform.forward;
 		if (Physics.Raycast(position, direction, out hit, _LookMask)) {
-            try
-            {
+            try {
                 Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-                if (Facing == HeadFacing.Floor)
-                {
+                if (Facing == HeadFacing.Floor) {
                     direction = HeadTransform.up;
-                    if (Physics.Raycast(position, direction, out hit, _LookMask))
-                    {
+                    if (Physics.Raycast(position, direction, out hit, _LookMask)) {
                         Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
                     }
                 }
-            } catch (NullReferenceException e)
-            {
-
+            }
+            catch (NullReferenceException e) {
+            	Facing = HeadFacing.None;
             }
 		}
+        //Debug.Log("Current head state: " + HeadState);
+        var bufferState = "headstates: ";
+        foreach(var state in _StateBuffer)
+        {
+            bufferState += state + ", ";
+        }
+        Debug.Log(bufferState);
 	}
 
 	void OnBowTriggerEnter(Collider other) {
+        Debug.Log("bow trigger");
 		_StateBuffer.Add(HeadState.Bow);
 	}
 
@@ -94,6 +98,7 @@ public class HeadTracker : MonoBehaviour {
 	}
 
 	void OnCurtsyTriggerEnter(Collider other) {
+        Debug.Log("curtsy trigger");
 		_StateBuffer.Add(HeadState.Curtsy);
 	}
 
@@ -109,4 +114,9 @@ public class HeadTracker : MonoBehaviour {
 	void OnUprightTriggerExit(Collider other) {
 		_StateBuffer.Remove(HeadState.Upright);
 	}
+
+    public void Clear()
+    {
+        _StateBuffer.Clear();
+    }
 }

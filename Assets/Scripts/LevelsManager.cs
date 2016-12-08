@@ -175,7 +175,7 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateAV ()
 	{
-		Debug.Log ("updating AV, stage is now " + stage);
+		//Debug.Log ("updating AV, stage is now " + stage);
 		if (stage < audioPads.Length) {
 			string newPad = audioPads [stage];
 			audioManager.ChangePad (newPad);

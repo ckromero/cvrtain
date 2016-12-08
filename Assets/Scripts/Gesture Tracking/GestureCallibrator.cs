@@ -52,5 +52,7 @@ public class GestureCallibrator : MonoBehaviour {
 		transform.localScale = scale;
 		myPosition.y *= yDiff;
 		transform.localPosition = myPosition;
+
+        GetComponent<HeadTracker>().Clear();
 	}
 }
