@@ -221,10 +221,20 @@ public class HandsTracker : MonoBehaviour {
 		}
 		localAdjust /= 3;
 
-		for (var i = 0; i < positions.Length; i++) {
-			var index = i + _CurrentIndex;
-			if (index >= positions.Length) index -= positions.Length;
-            var index2 = (index + 1 >= positions.Length) ? 0 : index + 1;
+		for (var i = _CurrentIndex - 1; i != _CurrentIndex; i--) {
+            if (i < 0)
+            {
+                i = positions.Length - 1;
+                if (i == _CurrentIndex)
+                {
+                    break;
+                }
+            }
+            var index = i;
+            var index2 = (index == 0) ? positions.Length - 1 : index - 1;
+			//var index = i - _CurrentIndex;
+			//if (index >= positions.Length) index -= positions.Length;
+   //         var index2 = (index + 1 >= positions.Length) ? 0 : index + 1;
 			totalWorldDistance += Vector3.Distance(
 													positions[index],
 													positions[index2]
@@ -244,7 +254,7 @@ public class HandsTracker : MonoBehaviour {
 				//									localPositions[firstIndex],
 				//									localPositions[index]
 				//								);
-                var localDelta = Mathf.Abs(localPositions[firstIndex].x - localPositions[index].y);
+                var localDelta = Mathf.Abs(localPositions[firstIndex].x - localPositions[index].x);
                 localDelta *= localAdjust;
                 var worldBounded = WaveLimits.x <= delta && delta <= WaveLimits.y;
                 var localBounded = WaveLimits.x <= localDelta && localDelta <= WaveLimits.y;
@@ -264,7 +274,7 @@ public class HandsTracker : MonoBehaviour {
                 //									localPositions[index]
                 //								);
                 //var delta = Mathf.Abs(positions[secondIndex].x - positions[index].y);
-                var localDelta = Mathf.Abs(localPositions[secondIndex].x - localPositions[index].y);
+                var localDelta = Mathf.Abs(localPositions[secondIndex].x - localPositions[index].x);
 				localDelta *= localAdjust;
                 var worldBounded = WaveLimits.x <= delta && delta <= WaveLimits.y;
                 var localBounded = WaveLimits.x <= localDelta && localDelta <= WaveLimits.y;
@@ -276,11 +286,15 @@ public class HandsTracker : MonoBehaviour {
 														positions[firstIndex],
 														positions[index]
 													);
-					//Debug.Log("first delta: " + firstDelta.ToString("F4"));
-					// Debug.Log("first delta: " + firstDelta + " second delta: " + delta);
-					if (firstDelta < delta && Mathf.Abs(firstDelta - delta) >= WaveLimits.x / 2) {
-						// Debug.Log("succesful third point check");
-						thirdIndex = index;
+
+                    //Debug.Log("first delta: " + firstDelta.ToString("F4"));
+                    var firstLocalDelta = Mathf.Abs(localPositions[firstIndex].x - localPositions[index].x);
+                    firstLocalDelta *= localAdjust;
+                    // Debug.Log("first delta: " + firstDelta + " second delta: " + delta);
+                    if ((firstDelta < delta && Mathf.Abs(firstDelta - delta) >= delta / 2) && 
+                        (firstLocalDelta < localDelta && Mathf.Abs(firstLocalDelta - localDelta) >= localDelta / 2)) {
+                        thirdIndex = index;
+                        break;
 					}
 				}
 			}

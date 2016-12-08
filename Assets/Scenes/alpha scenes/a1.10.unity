@@ -28180,7 +28180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioObject: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 4fe66b5f75e3941868477d7062eddfcd, type: 2}
-  timeForTransition: 0.2
+  timeForTransition: 2
   playNewSoundPercentage: 0.8
   playNewSoundWait: 1.5
   additionalMurmurSounds:
@@ -28544,7 +28544,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1562170158
 AudioListener:
   m_ObjectHideFlags: 0
@@ -31396,7 +31396,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013602881052, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224524989917828608, guid: 0be389b891a504e7fb5db7014a411e7f,
         type: 2}
@@ -32188,7 +32188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &1797236025
 AudioSource:
   m_ObjectHideFlags: 0
