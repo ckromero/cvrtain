@@ -20,31 +20,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 1
-=======
         time: 0
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 2
-=======
         time: 1.3333334
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 3
-=======
         time: 2.55
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -52,11 +40,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_02_Mesh
-=======
     attribute: blendShape.Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -64,31 +48,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 3
-=======
         time: 0.71666664
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 2
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 5
-=======
         time: 3.4166667
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -96,11 +68,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_04_Mesh
-=======
     attribute: blendShape.blend_02_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -108,11 +76,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 2
-=======
         time: 1.65
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -124,11 +88,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 4.0333333
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -144,21 +104,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 2.65
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 5
-=======
         time: 4.0333333
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
@@ -166,11 +118,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_05_Mesh
-=======
     attribute: blendShape.blend_04_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -178,36 +126,15 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 1
-        value: 100
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 2
-        value: 0
-=======
         time: 4.0333333
         value: 0.33898306
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.Mesh
-=======
     attribute: blendShape.blend_05_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -220,21 +147,13 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - path: 0
-<<<<<<< HEAD
-      attribute: 338437887
-=======
       attribute: 1096652136
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
       script: {fileID: 0}
       classID: 137
       customType: 20
       isPPtrCurve: 0
     - path: 0
-<<<<<<< HEAD
-      attribute: 3262498274
-=======
       attribute: 338437887
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
       script: {fileID: 0}
       classID: 137
       customType: 20
@@ -246,21 +165,13 @@ AnimationClip:
       customType: 20
       isPPtrCurve: 0
     - path: 0
-<<<<<<< HEAD
-      attribute: 153687623
-=======
       attribute: 3262498274
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
       script: {fileID: 0}
       classID: 137
       customType: 20
       isPPtrCurve: 0
     - path: 0
-<<<<<<< HEAD
-      attribute: 1096652136
-=======
       attribute: 153687623
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
       script: {fileID: 0}
       classID: 137
       customType: 20
@@ -271,11 +182,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-<<<<<<< HEAD
-    m_StopTime: 5
-=======
     m_StopTime: 4.0333333
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -295,31 +202,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 1
-=======
         time: 0
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 2
-=======
         time: 1.3333334
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 3
-=======
         time: 2.55
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -327,11 +222,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_02_Mesh
-=======
     attribute: blendShape.Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -339,31 +230,19 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 3
-=======
         time: 0.71666664
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 2
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 5
-=======
         time: 3.4166667
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -371,11 +250,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_04_Mesh
-=======
     attribute: blendShape.blend_02_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -383,11 +258,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 2
-=======
         time: 1.65
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -399,11 +270,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 4.0333333
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
@@ -419,21 +286,13 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 4
-=======
         time: 2.65
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 5
-=======
         time: 4.0333333
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         value: 100
         inSlope: 0
         outSlope: 0
@@ -441,11 +300,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.blend_05_Mesh
-=======
     attribute: blendShape.blend_04_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
@@ -453,36 +308,15 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-<<<<<<< HEAD
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 1
-        value: 100
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 2
-        value: 0
-=======
         time: 4.0333333
         value: 0.33898306
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-<<<<<<< HEAD
-    attribute: blendShape.Mesh
-=======
     attribute: blendShape.blend_05_Mesh
->>>>>>> 23ea219a19f1149778c212cf11f38a4a0ffd2d83
     path: 
     classID: 137
     script: {fileID: 0}
