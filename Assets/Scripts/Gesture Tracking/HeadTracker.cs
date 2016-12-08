@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public enum HeadState {Upright, Bow, Curtsy, None};
-public enum HeadFacing {Left, Front, Right, Floor, Back, Ceiling};
+public enum HeadFacing {Left, Front, Right, Floor, Back, Ceiling, None};
 public class HeadTracker : MonoBehaviour {
 
     public HeadState HeadState {
@@ -59,28 +59,25 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		var states = "HeadStates: ";
-		foreach (var HeadState in _StateBuffer) {
-			states += HeadState + ", ";
-		}
+		// var states = "HeadStates: ";
+		// foreach (var HeadState in _StateBuffer) {
+		// 	states += HeadState + ", ";
+		// }
 		RaycastHit hit;
 		var position = HeadTransform.position;
 		var direction = HeadTransform.forward;
 		if (Physics.Raycast(position, direction, out hit, _LookMask)) {
-            try
-            {
+            try {
                 Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-                if (Facing == HeadFacing.Floor)
-                {
+                if (Facing == HeadFacing.Floor) {
                     direction = HeadTransform.up;
-                    if (Physics.Raycast(position, direction, out hit, _LookMask))
-                    {
+                    if (Physics.Raycast(position, direction, out hit, _LookMask)) {
                         Facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
                     }
                 }
-            } catch (NullReferenceException e)
-            {
-
+            }
+            catch (NullReferenceException e) {
+            	Facing = HeadFacing.None;
             }
 		}
 	}
