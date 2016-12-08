@@ -105,6 +105,12 @@ public class HandsTracker : MonoBehaviour {
 		}
 	}
 
+	public bool Working {
+		get {
+			return (LeftHand != null && RightHand != null);
+		}
+	}
+
     public float LastWave { get; private set; }
 
 	void Awake() {

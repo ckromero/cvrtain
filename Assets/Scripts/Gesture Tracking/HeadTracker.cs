@@ -16,6 +16,12 @@ public class HeadTracker : MonoBehaviour {
         }
     }
 
+    public bool Working {
+    	get {
+    		return (HeadTransform != null);
+    	}
+    }
+
     public HeadFacing Facing { get; private set; }
 
     public List<HeadState> HeadStateList
@@ -41,10 +47,7 @@ public class HeadTracker : MonoBehaviour {
 	private LayerMask _LookMask;
 
 	void Awake() {
-
 		_StateBuffer = new List<HeadState>();
-
-		// _StateBuffer.Add(HeadState.Upright);
 	}
 
 	// Use this for initialization
@@ -59,10 +62,6 @@ public class HeadTracker : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		// var states = "HeadStates: ";
-		// foreach (var HeadState in _StateBuffer) {
-		// 	states += HeadState + ", ";
-		// }
 		RaycastHit hit;
 		var position = HeadTransform.position;
 		var direction = HeadTransform.forward;

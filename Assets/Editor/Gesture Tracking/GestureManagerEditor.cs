@@ -106,6 +106,8 @@ public class GestureManagerEditor : Editor {
 
 		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("Name"));
 		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("ForceCompleteKey"));
+		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("EvaluationDelay"));
+		EditorGUILayout.PropertyField(gestureProperty.FindPropertyRelative("Disabled"));
 
 		var ruleProperties = gestureProperty.FindPropertyRelative("Rules");
 

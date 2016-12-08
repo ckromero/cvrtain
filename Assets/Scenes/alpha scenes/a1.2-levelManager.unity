@@ -5184,6 +5184,21 @@ Prefab:
       propertyPath: HeadTransform
       value: 
       objectReference: {fileID: 1896288769}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[6].Disabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[6].EvaluationDelay
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[9].Disabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
   m_IsPrefabParent: 0

@@ -10,6 +10,8 @@ public class Gesture {
 	public float EvaluationDelay = 0f;
 	private float _DelayRemaining = 0f;
 
+	public bool Disabled = false;
+
 	public int RuleIndex { get; private set; }
 	public bool Completed {
 		get {
@@ -27,7 +29,7 @@ public class Gesture {
 
 	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
 
-		if (Completed) {
+		if (Completed || Disabled) {
 			return;
 		}
 		else if (RuleIndex >= Rules.Length - 1) {
