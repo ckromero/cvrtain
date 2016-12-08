@@ -175,6 +175,13 @@ public class AudioManager : MonoBehaviour
 		case "Coughs2":
 			TriggerAudio ("Coughs2");
 			break;
+		case "Tympani":
+			TriggerAudio ("12082016123444_DN-700R");
+			break;
+
+		case "SWITCH_1":
+			TriggerAudio ("SWITCH_1");
+			break;
 		}
 	}
 
@@ -184,10 +191,12 @@ public class AudioManager : MonoBehaviour
 		
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
-//		Vector3 playbackPosition = goAudio.GetComponentInParent<Transform> ().position;
+		Debug.Log ("audiotoplay: " + audioToPlay);
 		audioToPlay.Play ();
 
 
+
+//		Vector3 playbackPosition = goAudio.GetComponentInParent<Transform> ().position;
 //		Vector3 pos = Vector3.zero;
 //		if (location != "") { 
 //			GameObject goLocation = GameObject.Find (location);
