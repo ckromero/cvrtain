@@ -114,7 +114,7 @@ public class AudioManager : MonoBehaviour
 
 	public void ChangePad (string pad)
 	{ 
-		Debug.Log ("ChangePad Received: " + pad);
+		//Debug.Log ("ChangePad Received: " + pad);
 		
 		switch (pad) {
 		case "murmurs":
@@ -213,7 +213,7 @@ public class AudioManager : MonoBehaviour
 
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
-		Debug.Log ("TransitionAudio received " + amsToName);
+		//Debug.Log ("TransitionAudio received " + amsToName);
 		AudioMixerSnapshot ams = audioMixer.FindSnapshot (amsToName);
 		AudioMixerSnapshot[] amsArray = new AudioMixerSnapshot[]{ ams };
 		float[] weightArray = new float[]{ weight };

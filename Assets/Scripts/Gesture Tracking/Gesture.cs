@@ -10,6 +10,8 @@ public class Gesture {
 	public float EvaluationDelay = 0f;
 	private float _DelayRemaining = 0f;
 
+	public bool Disabled = false;
+
 	public int RuleIndex { get; private set; }
 	public bool Completed {
 		get {
@@ -27,7 +29,7 @@ public class Gesture {
 
 	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
 
-		if (Completed) {
+		if (Completed || Disabled) {
 			return;
 		}
 		else if (RuleIndex >= Rules.Length - 1) {
@@ -41,7 +43,7 @@ public class Gesture {
 
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
-			Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+			//Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
 			if (RuleIndex >= Rules.Length - 1) {
 				_DelayRemaining = EvaluationDelay;
 			}
@@ -56,14 +58,14 @@ public class Gesture {
 		else if (RuleIndex >= 0 && CheckRule(head, hands, Rules[RuleIndex])) {
 			_TimeLeftOnRule -= Time.deltaTime;
 			if (_TimeLeftOnRule <= 0f) {
-				Debug.Log(Name + " -- timed out on rule " + RuleIndex);
+				//Debug.Log(Name + " -- timed out on rule " + RuleIndex);
 				Reset();
 			}
 		}
 		else {
 			_TimeToNextRule -= Time.deltaTime;
 			if (_TimeToNextRule <= 0f) {
-				Debug.Log(Name + " -- timed out getting to rule " + RuleIndex);
+				//Debug.Log(Name + " -- timed out getting to rule " + RuleIndex);
 				Reset();
 			}
 		}

@@ -105,6 +105,12 @@ public class HandsTracker : MonoBehaviour {
 		}
 	}
 
+	public bool Working {
+		get {
+			return (LeftHand != null && RightHand != null);
+		}
+	}
+
     public float LastWave { get; private set; }
 
 	void Awake() {
@@ -222,11 +228,9 @@ public class HandsTracker : MonoBehaviour {
 		localAdjust /= 3;
 
 		for (var i = _CurrentIndex - 1; i != _CurrentIndex; i--) {
-            if (i < 0)
-            {
+            if (i < 0) {
                 i = positions.Length - 1;
-                if (i == _CurrentIndex)
-                {
+                if (i == _CurrentIndex) {
                     break;
                 }
             }
@@ -321,9 +325,9 @@ public class HandsTracker : MonoBehaviour {
         if (returnValue) {
         	Debug.Log("this should be a wave");
             LastWave = Time.deltaTime;
-            for (var i = 0; i < positions.Length; i++) {
-                positions[i] = handTransform.position;
-            }
+            // for (var i = 0; i < positions.Length; i++) {
+            //     positions[i] = handTransform.position;
+            // }
         }
 		return returnValue;
 	}

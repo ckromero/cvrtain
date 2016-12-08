@@ -39,6 +39,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
 
+		if (!_HandsTracker.Working || !_HeadTracker.Working) {
+			return;
+		}
+
 		_ClearTextTimer -= Time.deltaTime;
 		if (_ClearTextTimer <= 0f) {
 			TestOutputText.text = "";
