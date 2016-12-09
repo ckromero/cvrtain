@@ -188,7 +188,7 @@ public class AudioManager : MonoBehaviour
 
 	private void TriggerAudio (string audioName)
 	{ 
-		
+		// TODO: ignore playing a sound file if said file is already playing	
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
 		Debug.Log ("audiotoplay: " + audioToPlay);
