@@ -123,30 +123,32 @@ public class HeadTracker : MonoBehaviour {
 	}
 
 	void OnBowTriggerEnter(Collider other) {
-        Debug.Log("bow trigger");
+        // Debug.Log("bow trigger");
 		_StateBuffer.Add(HeadState.Bow);
 	}
 
 	void OnBowTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Bow);
+		while (_StateBuffer.Remove(HeadState.Bow)) {}
+		// _StateBuffer.Remove(HeadState.Bow);
 	}
 
 	void OnCurtsyTriggerEnter(Collider other) {
-        Debug.Log("curtsy trigger");
+        // Debug.Log("curtsy trigger");
 		_StateBuffer.Add(HeadState.Curtsy);
 	}
 
 	void OnCurtsyTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Curtsy);
+		while (_StateBuffer.Remove(HeadState.Curtsy)) {}
 	}
 
 	void OnUprightTriggerEnter(Collider other) {
-		Debug.Log("collide?");
+		// Debug.Log("collide?");
 		_StateBuffer.Add(HeadState.Upright);
 	}
 
 	void OnUprightTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Upright);
+		while (_StateBuffer.Remove(HeadState.Upright)) {}
+		// _StateBuffer.Remove(HeadState.Upright);
 	}
 
     public void Clear() {

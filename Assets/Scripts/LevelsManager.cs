@@ -115,21 +115,6 @@ public class LevelsManager : MonoBehaviour
 				}
 			}
 
-
-			// switch (evaluation) {
-			// 	case 1: 
-			// 		Debug.Log("a good thing");
-			// 		break;
-			// 	case 0:
-			// 		Debug.Log("a neutral thing");
-			// 		break;
-			// 	case -1:
-			// 		Debug.Log("a bad thing");
-			// 		break;
-			// 	default:
-			// 		return;
-			// }
-
 		}
 		else {
 			_TimeSinceLastGesture += Time.deltaTime;
