@@ -123,32 +123,44 @@ public class HeadTracker : MonoBehaviour {
 	}
 
 	void OnBowTriggerEnter(Collider other) {
-        // Debug.Log("bow trigger");
-		_StateBuffer.Add(HeadState.Bow);
+		InsertState(HeadState.Bow);
 	}
 
 	void OnBowTriggerExit(Collider other) {
-		while (_StateBuffer.Remove(HeadState.Bow)) {}
-		// _StateBuffer.Remove(HeadState.Bow);
+		RemoveState(HeadState.Bow);
 	}
 
 	void OnCurtsyTriggerEnter(Collider other) {
-        // Debug.Log("curtsy trigger");
-		_StateBuffer.Add(HeadState.Curtsy);
+		InsertState(HeadState.Curtsy);
 	}
 
 	void OnCurtsyTriggerExit(Collider other) {
-		while (_StateBuffer.Remove(HeadState.Curtsy)) {}
+		RemoveState(HeadState.Curtsy);
 	}
 
 	void OnUprightTriggerEnter(Collider other) {
-		// Debug.Log("collide?");
-		_StateBuffer.Add(HeadState.Upright);
+		InsertState(HeadState.Upright);
 	}
 
 	void OnUprightTriggerExit(Collider other) {
-		while (_StateBuffer.Remove(HeadState.Upright)) {}
-		// _StateBuffer.Remove(HeadState.Upright);
+		RemoveState(HeadState.Upright);
+	}
+
+	void InsertState(HeadState state) {
+        var index = 0;
+        if (!_StateBuffer.Contains(state)) {
+			_StateBuffer.Add(state);
+			index = _StateBuffer.Count - 1;
+        }
+        else {
+        	index = _StateBuffer.IndexOf(state);
+        }
+        _StateBuffer.RemoveAt(index);
+        _StateBuffer.Insert(0, state);
+	}
+
+	void RemoveState(HeadState state) {
+		while (_StateBuffer.Remove(state)) {}
 	}
 
     public void Clear() {
