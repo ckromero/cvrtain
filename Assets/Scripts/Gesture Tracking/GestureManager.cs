@@ -126,7 +126,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 			TestOutputText.text = message;
 			LastGesture = new CompletedGestureStruct (name, Time.time);
 			_ClearTextTimer = 1f;
-			_RemainingLockout = GestureLockoutDuration;
+			/* unknown gestures should not trigger a lockout in case setting up
+			* for another gestures was what triggered the unknwon one. */
 		}
 	}
 
