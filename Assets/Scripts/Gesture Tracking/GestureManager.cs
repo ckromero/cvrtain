@@ -19,6 +19,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	}
 
 	public bool Tracking { get; set; }
+	public bool HighMovement { get; private set; }
 
 	public float UnknownGestureLimit;
 	public float UnknownGestureWindow;
@@ -124,14 +125,18 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 
 		if (totalDistance >= UnknownGestureLimit && _RemainingLockout <= 0f) {
-			var name = "I don't know";
-			var message = "COMPLETED: " + name;
-			Debug.Log(message);
-			TestOutputText.text = message;
-			LastGesture = new CompletedGestureStruct (name, Time.time);
-			_ClearTextTimer = 1f;
+			// var name = "I don't know";
+			// var message = "COMPLETED: " + name;
+			// Debug.Log(message);
+			// TestOutputText.text = message;
+			// LastGesture = new CompletedGestureStruct (name, Time.time);
+			// _ClearTextTimer = 1f;
+
 			/* unknown gestures should not trigger a lockout in case setting up
 			* for another gestures was what triggered the unknwon one. */
+			HighMovement = true;
+		} else {
+			HighMovement = false;
 		}
 	}
 
