@@ -131,7 +131,7 @@ public class LevelsManager : MonoBehaviour
 			}
 
 		}
-		else {
+		else if (!gestureManager.HighMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
 				var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
