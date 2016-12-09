@@ -153,7 +153,7 @@ public class AudioManager : MonoBehaviour
 			audState = AudienceState.postShowDisappointed;	
 			TransitionAudio ("quiet", timeForTransition);
 			break;
-
+	
 		}
 	}
 
@@ -178,7 +178,9 @@ public class AudioManager : MonoBehaviour
 		case "Tympani":
 			TriggerAudio ("12082016123444_DN-700R");
 			break;
-
+		case "laugh":
+			TriggerAudio ("laugh");
+			break;
 		case "SWITCH_1":
 			TriggerAudio ("SWITCH_1");
 			break;
