@@ -35,6 +35,7 @@ public class LevelsManager : MonoBehaviour
 	private Level[] Levels;
 	private int levelIndex = 0;
 	private int levelCompletion;
+	private int stateLevelIndex = 0;
 
 	public bool MaxLevel { get; private set; }
 
@@ -61,6 +62,7 @@ public class LevelsManager : MonoBehaviour
 		for (var i = 0; i < Levels.Length; i++) {
 			if (Levels[i].StartingLevel) {
 				stage = i;
+				stateLevelIndex = i;
 				_HeighestStage = stage;
 				break;
 			}
@@ -88,11 +90,21 @@ public class LevelsManager : MonoBehaviour
 		//"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
 		//completedGestures
 
-		if (lastGesture.Time != gestureManager.LastGesture.Time) {
+		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
 			_TimeSinceLastGesture = 0f;
-			
 			lastGesture = gestureManager.LastGesture;
+
+			if (gestureManager.Facing == HeadFacing.Back) {
+				/* only trigger a response if the player is past the starting
+				* state */
+				if (stage <= stateLevelIndex) {
+					return;
+				}
+				Debug.Log("the player is being inappropriate");
+				audioManager.TriggerSound("MildLaugh");
+				return;
+			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
 			if (_HeighestStage == Levels.Length - 1 && _HeighestStage != stage) {

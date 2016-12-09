@@ -153,7 +153,7 @@ public class AudioManager : MonoBehaviour
 			audState = AudienceState.postShowDisappointed;	
 			TransitionAudio ("quiet", timeForTransition);
 			break;
-
+	
 		}
 	}
 
@@ -178,7 +178,9 @@ public class AudioManager : MonoBehaviour
 		case "Tympani":
 			TriggerAudio ("12082016123444_DN-700R");
 			break;
-
+		case "laugh":
+			TriggerAudio ("laugh");
+			break;
 		case "SWITCH_1":
 			TriggerAudio ("SWITCH_1");
 			break;
@@ -188,7 +190,7 @@ public class AudioManager : MonoBehaviour
 
 	private void TriggerAudio (string audioName)
 	{ 
-		
+		// TODO: ignore playing a sound file if said file is already playing	
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
 		Debug.Log ("audiotoplay: " + audioToPlay);

@@ -20,6 +20,8 @@ public class GestureManagerEditor : Editor {
 		var property = serializedObject.FindProperty("Gestures");
 		var gestureList = new List<Gesture>(script.Gestures);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("UnknownGestureLimit"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("UnknownGestureWindow"));
 
 		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
 		if (property.isExpanded) {
@@ -98,6 +100,8 @@ public class GestureManagerEditor : Editor {
 
 		script.Gestures = gestureList.ToArray();
 		GestureCollection.Gestures = gestureList.ToArray();	
+
+		serializedObject.ApplyModifiedProperties();
 	}
 
 	private void DisplayGesture(Gesture gesture, SerializedProperty gestureProperty) {
