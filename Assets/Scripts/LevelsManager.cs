@@ -102,7 +102,7 @@ public class LevelsManager : MonoBehaviour
 					return;
 				}
 				Debug.Log("the player is being inappropriate");
-				audioManager.TriggerSound("MildLaugh");
+				audioManager.TriggerSound("laugh");
 				return;
 			}
 
