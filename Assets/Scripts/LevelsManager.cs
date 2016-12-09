@@ -69,7 +69,15 @@ public class LevelsManager : MonoBehaviour
 		}
 		Levels[stage].Reset();
 
-		UpdateAV();
+		// UpdateAV();
+
+		audioManager.ChangePad("murmur");
+	}
+
+	public void BeginPerforming() {
+		Debug.Log("BEGIN THE PERFORMANCE!!!!!");
+		UpdateAV();		
+		gestureManager.Tracking = true;
 	}
 	
 	// Update is called once per frame

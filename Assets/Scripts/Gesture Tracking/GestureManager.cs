@@ -18,6 +18,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 	}
 
+	public bool Tracking { get; set; }
+
 	public float UnknownGestureLimit;
 	public float UnknownGestureWindow;
 
@@ -40,6 +42,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var handMoveCount = UnknownGestureWindow * 60 * 2;
 		_TrackedHandPositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
+
+		Tracking = false;
 	}
 
 	// Use this for initialization
@@ -55,7 +59,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		* means that more complex, partially completed rules are evaluated
 		* first to ensure that simpler rules do not override them. */
 
-		if (!_HandsTracker.Working || !_HeadTracker.Working) {
+		if (!_HandsTracker.Working || !_HeadTracker.Working || !Tracking) {
 			return;
 		}
 

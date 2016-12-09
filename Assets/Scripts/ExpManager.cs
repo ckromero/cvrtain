@@ -114,6 +114,8 @@ Credits}
 			lightsController.TurnThemOn ();
 
 			IsCurtainNotificationSent = true;
+
+			levelsManager.BeginPerforming();
 			
 		}
 
