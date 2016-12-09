@@ -88,11 +88,15 @@ public class LevelsManager : MonoBehaviour
 		//"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
 		//completedGestures
 
-		if (lastGesture.Time != gestureManager.LastGesture.Time) {
+		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
 			_TimeSinceLastGesture = 0f;
-			
 			lastGesture = gestureManager.LastGesture;
+
+			if (gestureManager.Facing == HeadFacing.Back) {
+				Debug.Log("the player is being inappropriate");
+				return;
+			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
 			if (_HeighestStage == Levels.Length - 1 && _HeighestStage != stage) {

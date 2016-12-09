@@ -12,6 +12,18 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
 
+	public HeadFacing Facing {
+		get {
+			return _HeadTracker.Facing;
+		}
+	}
+
+	public float UnknownGestureLimit;
+	public float UnknownGestureWindow;
+
+	private Vector3[] _TrackedHandPositions;
+	private int _HandIndex;
+
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
 
@@ -24,6 +36,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 	void Awake () {
 		LastGesture = new CompletedGestureStruct ("", 0f);
+
+		var handMoveCount = UnknownGestureWindow * 60 * 2;
+		_TrackedHandPositions = new Vector3[(int)handMoveCount];
+		_HandIndex = 0;
 	}
 
 	// Use this for initialization
@@ -66,6 +82,45 @@ public class GestureManager : MonoBehaviour, IGestureManager
 			}
 		}
 		if (largestCompletion > 0) {
+			var message = "COMPLETED: " + name;
+			Debug.Log(message);
+			TestOutputText.text = message;
+			LastGesture = new CompletedGestureStruct (name, Time.time);
+			_ClearTextTimer = 1f;
+			_RemainingLockout = GestureLockoutDuration;
+		}
+	}
+
+	void FixedUpdate() {
+		var leftPos = _HandsTracker.LeftHand.position;
+		var rightPos = _HandsTracker.RightHand.position;
+
+		_TrackedHandPositions[_HandIndex] = leftPos;
+		_TrackedHandPositions[_HandIndex+1] = rightPos;
+
+		_HandIndex += 2;
+		if (_HandIndex >= _TrackedHandPositions.Length) {
+			_HandIndex = 0;
+		}
+
+		var totalDistance = 0f;
+		var length = _TrackedHandPositions.Length;
+		for (var i = _HandIndex - 1; i != _HandIndex; i--) {
+            if (i < 0) {
+                i = length - 1;
+                if (i == _HandIndex) {
+                    break;
+                }
+            }
+            var index = i;
+            var index2 = (index <= 1) ? length - 1 - index : index - 2;
+            var pos1 = _TrackedHandPositions[index];
+            var pos2 = _TrackedHandPositions[index2];
+            totalDistance += Vector3.Distance(pos1, pos2);
+		}
+
+		if (totalDistance >= UnknownGestureLimit && _RemainingLockout <= 0f) {
+			var name = "I don't know";
 			var message = "COMPLETED: " + name;
 			Debug.Log(message);
 			TestOutputText.text = message;
