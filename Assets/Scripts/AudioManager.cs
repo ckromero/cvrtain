@@ -47,10 +47,11 @@ public class AudioManager : MonoBehaviour
 		GameObject goc1 = GameObject.Find ("Coughs1");
 		GameObject goc2 = GameObject.Find ("Coughs2");
 
-		AudioSource c1 = goc1.GetComponent<AudioSource> ();
-		AudioSource c2 = goc2.GetComponent<AudioSource> ();
+//		AudioSource c1 = goc1.GetComponent<AudioSource> ();
+//		AudioSource c2 = goc2.GetComponent<AudioSource> ();
 
-		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
+//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
+//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
 
 		StartCoroutine (AdditionalSoundsBasedOnPads ());
 	}

@@ -25,9 +25,19 @@ Credits}
 	public LevelsManager levelsManager;
 	public LightsController lightsController;
 
+	public GameObject leftCurtainController;
+	public GameObject rightCurtainController;
 
 	private TriggerListener triggerListener;
 	private float lastTriggerTime;
+
+	public bool IsRestartAnimation = false;
+
+	public void restartAnimation(){
+		leftCurtainController.SendMessage ("StartAnimation");
+		rightCurtainController.SendMessage ("StartAnimation");
+		audioManager.TriggerSound ("Tympani");	
+	}
 
 	void Start ()
 	{
@@ -37,6 +47,10 @@ Credits}
 
 	void Update ()
 	{
+		if (IsRestartAnimation) {
+			restartAnimation ();
+			IsRestartAnimation = false;
+		}
 
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
 			lastTriggerTime = triggerListener.LastDoublePress;
@@ -126,7 +140,7 @@ Credits}
 		if (!IsStartShowNotificationSent) {
 			IsStartShowNotificationSent = true;
 			Debug.Log ("Experience Manager: Start the show!");
-			audioManager.TriggerSound ("Tympani");
+//			audioManager.TriggerSound ("Tympani");
 
 		}
 

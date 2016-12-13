@@ -38,3 +38,12 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Common.dll.mdb
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.dll.mdb
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.PlaymodeTestsRunner.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.Analytics.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.HoloLens.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.VR.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.VR.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.WindowsStandalone.Extensions.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml

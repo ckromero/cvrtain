@@ -18,3 +18,6 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/ckromero/code/CVRTAIN/obj/Debug/Assembly-CSharp.dll
 /Users/ckromero/code/CVRTAIN/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.VR.dll
