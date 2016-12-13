@@ -51,7 +51,6 @@ Credits}
 			restartAnimation ();
 			IsRestartAnimation = false;
 		}
-
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
 			lastTriggerTime = triggerListener.LastDoublePress;
 			//TODO: AWFUL
@@ -128,6 +127,8 @@ Credits}
 			lightsController.TurnThemOn ();
 
 			IsCurtainNotificationSent = true;
+
+			levelsManager.BeginPerforming();
 			
 		}
 

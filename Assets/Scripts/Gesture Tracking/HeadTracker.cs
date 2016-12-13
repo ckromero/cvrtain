@@ -99,19 +99,29 @@ public class HeadTracker : MonoBehaviour {
             }
 		}
 		if (Physics.Raycast(position, forward, out hit, _LookMask)) {
-			var facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-			if (facing == HeadFacing.Floor) {
-				FacingFloor = true;
-			}
-			else {
-				FacingFloor = false;
-			}
-			if (facing == HeadFacing.Ceiling) {
-				FacingCeiling = true;
-			}
-			else {
-				FacingCeiling = false;
-			}
+            try
+            {
+                var facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+                if (facing == HeadFacing.Floor)
+                {
+                    FacingFloor = true;
+                }
+                else
+                {
+                    FacingFloor = false;
+                }
+                if (facing == HeadFacing.Ceiling)
+                {
+                    FacingCeiling = true;
+                }
+                else
+                {
+                    FacingCeiling = false;
+                }
+            } catch (NullReferenceException e)
+            {
+                //Debug.Log("I SHOULD NOT BE CAST AGAINST: " + hit.collider.gameObject.name);
+            }
 		}
         //Debug.Log("Current head state: " + HeadState);
         var bufferState = "headstates: ";
@@ -123,30 +133,44 @@ public class HeadTracker : MonoBehaviour {
 	}
 
 	void OnBowTriggerEnter(Collider other) {
-        Debug.Log("bow trigger");
-		_StateBuffer.Add(HeadState.Bow);
+		InsertState(HeadState.Bow);
 	}
 
 	void OnBowTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Bow);
+		RemoveState(HeadState.Bow);
 	}
 
 	void OnCurtsyTriggerEnter(Collider other) {
-        Debug.Log("curtsy trigger");
-		_StateBuffer.Add(HeadState.Curtsy);
+		InsertState(HeadState.Curtsy);
 	}
 
 	void OnCurtsyTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Curtsy);
+		RemoveState(HeadState.Curtsy);
 	}
 
 	void OnUprightTriggerEnter(Collider other) {
-		Debug.Log("collide?");
-		_StateBuffer.Add(HeadState.Upright);
+		InsertState(HeadState.Upright);
 	}
 
 	void OnUprightTriggerExit(Collider other) {
-		_StateBuffer.Remove(HeadState.Upright);
+		RemoveState(HeadState.Upright);
+	}
+
+	void InsertState(HeadState state) {
+        var index = 0;
+        if (!_StateBuffer.Contains(state)) {
+			_StateBuffer.Add(state);
+			index = _StateBuffer.Count - 1;
+        }
+        else {
+        	index = _StateBuffer.IndexOf(state);
+        }
+        _StateBuffer.RemoveAt(index);
+        _StateBuffer.Insert(0, state);
+	}
+
+	void RemoveState(HeadState state) {
+		while (_StateBuffer.Remove(state)) {}
 	}
 
     public void Clear() {

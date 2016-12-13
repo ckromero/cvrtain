@@ -26,6 +26,8 @@ public class LevelsManager : MonoBehaviour
 
 	public int CurrentLevel { get{ return stage; }}
 
+	public bool Performing { get; set; }
+
 	public float DelayBeforeDecayStarts = 10f;
 	public float DecayGap = 2f;
 
@@ -54,6 +56,10 @@ public class LevelsManager : MonoBehaviour
 	//Update ExpManager
 
 	// Use this for initialization
+	void Awake() {
+		Performing = false;
+	}
+
 	void Start ()
 	{
 		if (listenToGestures)
@@ -69,13 +75,22 @@ public class LevelsManager : MonoBehaviour
 		}
 		Levels[stage].Reset();
 
-		UpdateAV();
+		// UpdateAV();
+
+		audioManager.ChangePad("murmur");
+	}
+
+	public void BeginPerforming() {
+		Debug.Log("BEGIN THE PERFORMANCE!!!!!");
+		UpdateAV();		
+		gestureManager.Tracking = true;
+		Performing = true;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if (listenToGestures) {
+		if (listenToGestures && Performing) {
 			UpdateLevelsBasedOnGestures ();
 		}
 		if (IsIncrementStage) { 
@@ -115,23 +130,8 @@ public class LevelsManager : MonoBehaviour
 				}
 			}
 
-
-			// switch (evaluation) {
-			// 	case 1: 
-			// 		Debug.Log("a good thing");
-			// 		break;
-			// 	case 0:
-			// 		Debug.Log("a neutral thing");
-			// 		break;
-			// 	case -1:
-			// 		Debug.Log("a bad thing");
-			// 		break;
-			// 	default:
-			// 		return;
-			// }
-
 		}
-		else {
+		else if (!gestureManager.HighMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
 				var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
