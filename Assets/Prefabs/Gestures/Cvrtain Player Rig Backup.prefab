@@ -6178,7 +6178,7 @@ MonoBehaviour:
   TestOutputText: {fileID: 114000011345512698}
   Gestures:
   - Name: Hands up bow
-    ForceCompleteKey: 104
+    ForceCompleteKey: 117
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -6620,7 +6620,166 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: Double Wave
+  - Name: Hand Sweep
+    ForceCompleteKey: 115
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 2
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: One arm bow
+    ForceCompleteKey: 97
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 2
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: Arms out, basking
+    ForceCompleteKey: 103
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 2
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: Curtsy
     ForceCompleteKey: 99
     Rules:
     - RequireHeadState: 1
@@ -6648,9 +6807,9 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     - RequireHeadState: 1
-      HeadState: 0
+      HeadState: 2
       RequireHandAngles: 0
-      EitherHand: 1
+      EitherHand: 0
       LeftHandAngles:
         Max: 0
         Min: 0
@@ -6664,17 +6823,17 @@ MonoBehaviour:
       RightHandReach:
         Max: 0
         Min: 0
-      Waving: 1
-      LeftHandWaving: 1
-      RightHandWaving: 1
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: Jazz Hands
-    ForceCompleteKey: 106
+  - Name: Hand to heart bow
+    ForceCompleteKey: 104
     Rules:
     - RequireHeadState: 1
       HeadState: 0
@@ -6701,132 +6860,31 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
+      HeadState: 2
+      RequireHandAngles: 0
       EitherHand: 0
       LeftHandAngles:
-        Max: 125
-        Min: 75
+        Max: 0
+        Min: 0
       RightHandAngles:
-        Max: 125
-        Min: 75
-      RequireHandReach: 1
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
       LeftHandReach:
-        Max: 3
-        Min: 2
+        Max: 0
+        Min: 0
       RightHandReach:
-        Max: 3
-        Min: 2
-      Waving: 1
-      LeftHandWaving: 1
-      RightHandWaving: 1
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: Fist Pump
-    ForceCompleteKey: 102
-    Rules:
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 90
-        Min: 0
-      RightHandAngles:
-        Max: 180
-        Min: 0
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 2
-        Min: 1
-      RightHandReach:
-        Max: 3
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 1
-      TimeLimit: 1
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 45
-        Min: 0
-      RightHandAngles:
-        Max: 180
-        Min: 0
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 3
-        Min: 3
-      RightHandReach:
-        Max: 3
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 1
-      TimeLimit: 1
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 90
-        Min: 0
-      RightHandAngles:
-        Max: 180
-        Min: 0
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 2
-        Min: 1
-      RightHandReach:
-        Max: 3
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 1
-      TimeLimit: 1
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 45
-        Min: 0
-      RightHandAngles:
-        Max: 180
-        Min: 0
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 3
-        Min: 3
-      RightHandReach:
-        Max: 3
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 1
   GestureLockoutDuration: 0.5
   UnknownGestureLimit: 7
   UnknownGestureWindow: 2

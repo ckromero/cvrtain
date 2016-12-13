@@ -2,7 +2,7 @@
     "Gestures": [
         {
             "Name": "Hands up bow",
-            "ForceCompleteKey": 104,
+            "ForceCompleteKey": 117,
             "Rules": [
                 {
                     "RequireHeadState": true,
@@ -95,7 +95,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
             "Name": "One Hand High, One Hand Low",
@@ -162,7 +163,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
             "Name": "Pump it up",
@@ -289,7 +291,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
             "Name": "Deep bow",
@@ -356,7 +359,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
             "Name": "Bow",
@@ -423,7 +427,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
             "Name": "Testing bow",
@@ -490,7 +495,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": true
         },
         {
             "Name": "Wave",
@@ -557,10 +563,215 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
-            "Name": "Double Wave",
+            "Name": "Hand Sweep",
+            "ForceCompleteKey": 115,
+            "Rules": [
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 0,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                },
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 2,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                }
+            ],
+            "EvaluationDelay": 0.0,
+            "Disabled": false
+        },
+        {
+            "Name": "One arm bow",
+            "ForceCompleteKey": 97,
+            "Rules": [
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 0,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                },
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 2,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                }
+            ],
+            "EvaluationDelay": 0.0,
+            "Disabled": false
+        },
+        {
+            "Name": "Arms out, basking",
+            "ForceCompleteKey": 103,
+            "Rules": [
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 0,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                },
+                {
+                    "RequireHeadState": true,
+                    "HeadState": 2,
+                    "RequireHandAngles": false,
+                    "EitherHand": false,
+                    "LeftHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandAngles": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RequireHandReach": false,
+                    "LeftHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "RightHandReach": {
+                        "Max": 0.0,
+                        "Min": 0.0
+                    },
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
+                    "HasMaximumDuration": false,
+                    "MaxDuration": 0.0,
+                    "HasTimeLimit": false,
+                    "TimeLimit": 0.0
+                }
+            ],
+            "EvaluationDelay": 0.0,
+            "Disabled": false
+        },
+        {
+            "Name": "Curtsy",
             "ForceCompleteKey": 99,
             "Rules": [
                 {
@@ -595,9 +806,9 @@
                 },
                 {
                     "RequireHeadState": true,
-                    "HeadState": 0,
+                    "HeadState": 2,
                     "RequireHandAngles": false,
-                    "EitherHand": true,
+                    "EitherHand": false,
                     "LeftHandAngles": {
                         "Max": 0.0,
                         "Min": 0.0
@@ -615,20 +826,21 @@
                         "Max": 0.0,
                         "Min": 0.0
                     },
-                    "Waving": true,
-                    "LeftHandWaving": true,
-                    "RightHandWaving": true,
+                    "Waving": false,
+                    "LeftHandWaving": false,
+                    "RightHandWaving": false,
                     "HasMaximumDuration": false,
                     "MaxDuration": 0.0,
                     "HasTimeLimit": false,
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         },
         {
-            "Name": "Jazz Hands",
-            "ForceCompleteKey": 106,
+            "Name": "Hand to heart bow",
+            "ForceCompleteKey": 104,
             "Rules": [
                 {
                     "RequireHeadState": true,
@@ -662,151 +874,24 @@
                 },
                 {
                     "RequireHeadState": true,
-                    "HeadState": 0,
-                    "RequireHandAngles": true,
+                    "HeadState": 2,
+                    "RequireHandAngles": false,
                     "EitherHand": false,
                     "LeftHandAngles": {
-                        "Max": 125.0,
-                        "Min": 75.0
-                    },
-                    "RightHandAngles": {
-                        "Max": 125.0,
-                        "Min": 75.0
-                    },
-                    "RequireHandReach": true,
-                    "LeftHandReach": {
-                        "Max": 3.0,
-                        "Min": 2.0
-                    },
-                    "RightHandReach": {
-                        "Max": 3.0,
-                        "Min": 2.0
-                    },
-                    "Waving": true,
-                    "LeftHandWaving": true,
-                    "RightHandWaving": true,
-                    "HasMaximumDuration": false,
-                    "MaxDuration": 0.0,
-                    "HasTimeLimit": false,
-                    "TimeLimit": 0.0
-                }
-            ],
-            "EvaluationDelay": 0.0
-        },
-        {
-            "Name": "Fist Pump",
-            "ForceCompleteKey": 102,
-            "Rules": [
-                {
-                    "RequireHeadState": true,
-                    "HeadState": 0,
-                    "RequireHandAngles": true,
-                    "EitherHand": true,
-                    "LeftHandAngles": {
-                        "Max": 90.0,
+                        "Max": 0.0,
                         "Min": 0.0
                     },
                     "RightHandAngles": {
-                        "Max": 180.0,
+                        "Max": 0.0,
                         "Min": 0.0
                     },
-                    "RequireHandReach": true,
+                    "RequireHandReach": false,
                     "LeftHandReach": {
-                        "Max": 2.0,
-                        "Min": 1.0
+                        "Max": 0.0,
+                        "Min": 0.0
                     },
                     "RightHandReach": {
-                        "Max": 3.0,
-                        "Min": 0.0
-                    },
-                    "Waving": false,
-                    "LeftHandWaving": false,
-                    "RightHandWaving": false,
-                    "HasMaximumDuration": false,
-                    "MaxDuration": 0.0,
-                    "HasTimeLimit": true,
-                    "TimeLimit": 1.0
-                },
-                {
-                    "RequireHeadState": true,
-                    "HeadState": 0,
-                    "RequireHandAngles": true,
-                    "EitherHand": true,
-                    "LeftHandAngles": {
-                        "Max": 45.0,
-                        "Min": 0.0
-                    },
-                    "RightHandAngles": {
-                        "Max": 180.0,
-                        "Min": 0.0
-                    },
-                    "RequireHandReach": true,
-                    "LeftHandReach": {
-                        "Max": 3.0,
-                        "Min": 3.0
-                    },
-                    "RightHandReach": {
-                        "Max": 3.0,
-                        "Min": 0.0
-                    },
-                    "Waving": false,
-                    "LeftHandWaving": false,
-                    "RightHandWaving": false,
-                    "HasMaximumDuration": false,
-                    "MaxDuration": 0.0,
-                    "HasTimeLimit": true,
-                    "TimeLimit": 1.0
-                },
-                {
-                    "RequireHeadState": true,
-                    "HeadState": 0,
-                    "RequireHandAngles": true,
-                    "EitherHand": true,
-                    "LeftHandAngles": {
-                        "Max": 90.0,
-                        "Min": 0.0
-                    },
-                    "RightHandAngles": {
-                        "Max": 180.0,
-                        "Min": 0.0
-                    },
-                    "RequireHandReach": true,
-                    "LeftHandReach": {
-                        "Max": 2.0,
-                        "Min": 1.0
-                    },
-                    "RightHandReach": {
-                        "Max": 3.0,
-                        "Min": 0.0
-                    },
-                    "Waving": false,
-                    "LeftHandWaving": false,
-                    "RightHandWaving": false,
-                    "HasMaximumDuration": false,
-                    "MaxDuration": 0.0,
-                    "HasTimeLimit": true,
-                    "TimeLimit": 1.0
-                },
-                {
-                    "RequireHeadState": true,
-                    "HeadState": 0,
-                    "RequireHandAngles": true,
-                    "EitherHand": true,
-                    "LeftHandAngles": {
-                        "Max": 45.0,
-                        "Min": 0.0
-                    },
-                    "RightHandAngles": {
-                        "Max": 180.0,
-                        "Min": 0.0
-                    },
-                    "RequireHandReach": true,
-                    "LeftHandReach": {
-                        "Max": 3.0,
-                        "Min": 3.0
-                    },
-                    "RightHandReach": {
-                        "Max": 3.0,
+                        "Max": 0.0,
                         "Min": 0.0
                     },
                     "Waving": false,
@@ -818,7 +903,8 @@
                     "TimeLimit": 0.0
                 }
             ],
-            "EvaluationDelay": 0.0
+            "EvaluationDelay": 0.0,
+            "Disabled": false
         }
     ]
 }
