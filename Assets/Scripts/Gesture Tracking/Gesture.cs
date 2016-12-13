@@ -22,6 +22,9 @@ public class Gesture {
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
 
+	private bool _LeftHandZoneSet = false;
+	private bool _LeftHandInLeftZone = false;
+
 	public Gesture() {
 		RuleIndex = -1;
 		Rules = new GestureRule[2];
@@ -99,13 +102,21 @@ public class Gesture {
 	        	}
 	        }
 	        else {
-	        	if (rule.LeftHandAngles.Contains(leftAngle)) {
-	        		leftHandInLeftZone = true;
+	        	if (!_LeftHandZoneSet) {
+	        		_LeftHandZoneSet = true;
+		        	if (rule.LeftHandAngles.Contains(leftAngle)) {
+		        		leftHandInLeftZone = true;
+		        	}
 	        	}
-	        	/* if the leftHand is in neither zone, then the rule is false */
-	        	else if (!rule.RightHandAngles.Contains(leftAngle)) {
-	  				return false;
-	  			}
+	        	else {
+		        	if (leftHandInLeftZone && !rule.LeftHandAngles.Contains(leftAngle)) {
+		        		return false;
+		        	}
+		        	/* if the leftHand is in neither zone, then the rule is false */
+		        	else if (!leftHandInLeftZone && !rule.RightHandAngles.Contains(leftAngle)) {
+		  				return false;
+		  			}
+		  		}
 
 	  			/* check if right hand is in the zone the left hand is not */
 	  			if (leftHandInLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
@@ -129,7 +140,8 @@ public class Gesture {
 				}
 			}
 			else {
-				if (!rule.RequireHandAngles) {
+				if (!_LeftHandZoneSet) {
+					_LeftHandZoneSet = true;
 					if (rule.LeftHandReach.Contains(leftReach)) {
 						leftHandInLeftZone = true;
 					}
@@ -168,7 +180,8 @@ public class Gesture {
 			else {
 				/* if neither angles nor reach were required, then check to
 				* determine which zone the left hand is acting in and set it */
-				if (!rule.RequireHandAngles && !rule.RequireHandReach) {
+				if (!_LeftHandZoneSet) {
+					_LeftHandZoneSet = true;
 					if (rule.LeftHandWaving && leftWaving) {
 						leftHandInLeftZone = true;
 					}
