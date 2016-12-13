@@ -99,19 +99,29 @@ public class HeadTracker : MonoBehaviour {
             }
 		}
 		if (Physics.Raycast(position, forward, out hit, _LookMask)) {
-			var facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
-			if (facing == HeadFacing.Floor) {
-				FacingFloor = true;
-			}
-			else {
-				FacingFloor = false;
-			}
-			if (facing == HeadFacing.Ceiling) {
-				FacingCeiling = true;
-			}
-			else {
-				FacingCeiling = false;
-			}
+            try
+            {
+                var facing = hit.collider.GetComponent<HeadLookReceiver>().Facing;
+                if (facing == HeadFacing.Floor)
+                {
+                    FacingFloor = true;
+                }
+                else
+                {
+                    FacingFloor = false;
+                }
+                if (facing == HeadFacing.Ceiling)
+                {
+                    FacingCeiling = true;
+                }
+                else
+                {
+                    FacingCeiling = false;
+                }
+            } catch (NullReferenceException e)
+            {
+                //Debug.Log("I SHOULD NOT BE CAST AGAINST: " + hit.collider.gameObject.name);
+            }
 		}
         //Debug.Log("Current head state: " + HeadState);
         var bufferState = "headstates: ";

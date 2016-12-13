@@ -4881,12 +4881,12 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 951188166
+  randomSeed: 538152870
   InitialModule:
     serializedVersion: 3
     enabled: 1
     startLifetime:
-      scalar: 20
+      scalar: 14
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -8848,6 +8848,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[3].PositiveGestures.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[4].PositiveGestures.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010472350720, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -8909,6 +8924,66 @@ Prefab:
         type: 2}
       propertyPath: DelayBeforeDecayStarts
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[3].Gesture
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[3].Limit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[4].Gesture
+      value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[2].PositiveGestures.Array.data[4].Limit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[3].PositiveGestures.Array.data[3].Gesture
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[3].PositiveGestures.Array.data[3].Limit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[3].PositiveGestures.Array.data[4].Gesture
+      value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[3].PositiveGestures.Array.data[4].Limit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[4].PositiveGestures.Array.data[5].Gesture
+      value: Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[4].PositiveGestures.Array.data[5].Limit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[4].PositiveGestures.Array.data[6].Gesture
+      value: Double Wave
+      objectReference: {fileID: 0}
+    - target: {fileID: 114096538503256196, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab,
+        type: 2}
+      propertyPath: Levels.Array.data[4].PositiveGestures.Array.data[6].Limit
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d9a718a9ff994c7ca10bf26a9bac8ab, type: 2}
@@ -41637,22 +41712,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114993601246531204, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: LevelManager
-      value: 
-      objectReference: {fileID: 116056597}
-    - target: {fileID: 1000010762949752, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+    - target: {fileID: 1000011439305190, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1820178067533014, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+    - target: {fileID: 1000010391876738, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1067993495912772, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+    - target: {fileID: 1000013627303772, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010297655186, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000010705459950, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
