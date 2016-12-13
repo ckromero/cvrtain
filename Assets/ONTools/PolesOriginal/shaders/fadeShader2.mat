@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: fadeShader
-  m_Shader: {fileID: 4800000, guid: 8367040c734bd443387f0156a325e92d, type: 3}
+  m_Name: fadeShader2
+  m_Shader: {fileID: 4800000, guid: 0af51ff9fdfcd490aa9a30dfc80b74b8, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
