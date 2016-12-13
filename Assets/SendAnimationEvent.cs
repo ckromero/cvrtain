@@ -5,17 +5,17 @@ using UnityEngine;
 public class SendAnimationEvent : MonoBehaviour {
 	public ExpManager expManager;
 	private Animator animator;
-	public bool IsStartAnimation=false;
+//	public bool IsStartAnimation=false;
 
 	public void Start() {
-		animator = GetComponent<Animator> ();
+//		animator = GetComponent<Animator> ();
 
 	}
 	public void Update() {
-		if (IsStartAnimation) {
-			StartAnimation ();
-			IsStartAnimation = false;
-		}
+//		if (IsStartAnimation) {
+//			StartAnimation ();
+//			IsStartAnimation = false;
+//		}
 
 	}
 	public void CurtainOpened(){ 
@@ -24,13 +24,14 @@ public class SendAnimationEvent : MonoBehaviour {
 	public void StartShow(){
 			expManager.StartShow ();
 	}
+
 	public void StopAnimation() { 
 		Debug.Log ("stopping animation");
-		animator.enabled=false;
+//		animator.enabled=false;
 	}
 	public void StartAnimation() { 
 		Debug.Log ("starting animation");
-		animator.enabled = true;
+//		animator.enabled = true;
 
 	}
 

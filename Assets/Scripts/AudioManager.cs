@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 //		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
 //		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
 
-		StartCoroutine (AdditionalSoundsBasedOnPads ());
+//		StartCoroutine (AdditionalSoundsBasedOnPads ());
 	}
 
 	void Update ()

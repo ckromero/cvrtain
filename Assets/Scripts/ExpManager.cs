@@ -42,6 +42,8 @@ Credits}
 	void Start ()
 	{
 		triggerListener = GetComponent<TriggerListener> ();
+		//TODO: need an in game trigger to restart the animation
+		IsRestartAnimation = true;
 	}
 
 

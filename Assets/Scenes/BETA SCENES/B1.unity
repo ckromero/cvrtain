@@ -25818,6 +25818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expManager: {fileID: 834434231}
+  IsStartAnimation: 0
 --- !u!1 &934745319
 GameObject:
   m_ObjectHideFlags: 0
@@ -26971,6 +26972,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   expManager: {fileID: 834434231}
+  IsStartAnimation: 0
 --- !u!1 &1006042870
 GameObject:
   m_ObjectHideFlags: 0
@@ -31582,6 +31584,16 @@ Prefab:
       propertyPath: lightsController
       value: 
       objectReference: {fileID: 34594563}
+    - target: {fileID: 114000012813506024, guid: c6966eeaa9ec44ec6addc9d89a4a4467,
+        type: 2}
+      propertyPath: rightCurtainController
+      value: 
+      objectReference: {fileID: 929617824}
+    - target: {fileID: 114000012813506024, guid: c6966eeaa9ec44ec6addc9d89a4a4467,
+        type: 2}
+      propertyPath: leftCurtainController
+      value: 
+      objectReference: {fileID: 1005253003}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c6966eeaa9ec44ec6addc9d89a4a4467, type: 2}
   m_IsPrefabParent: 0
