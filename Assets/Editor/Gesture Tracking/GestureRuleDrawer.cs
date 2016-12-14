@@ -87,6 +87,17 @@ public class GestureRuleDrawer : PropertyDrawer {
 		}
 
 		EditorGUIUtility.labelWidth = labelWidth;
+		var requireProperty = property.FindPropertyRelative("RequireHandDistance");
+		EditorGUILayout.PropertyField(requireProperty, layoutOptions);
+		EditorGUIUtility.labelWidth = 0f;
+		if (requireProperty.boolValue) {
+			EditorGUI.indentLevel++;
+			var distanceProperty = property.FindPropertyRelative("DistanceBetweenHands");
+			MaxMinFloat(distanceProperty, "Distance between hands");
+			EditorGUI.indentLevel--;
+		}
+
+		EditorGUIUtility.labelWidth = labelWidth;
 		EditorGUILayout.PropertyField(property.FindPropertyRelative("HasMaximumDuration"), layoutOptions);
 		EditorGUIUtility.labelWidth = 0f;
 		var hasMaxDuration = property.FindPropertyRelative("HasMaximumDuration").boolValue;
@@ -129,6 +140,20 @@ public class GestureRuleDrawer : PropertyDrawer {
 		min = EditorGUILayout.IntField(min);
 		EditorGUILayout.LabelField("<= " + name + " <=");
 		max = EditorGUILayout.IntField(max);
+		EditorGUILayout.EndHorizontal();
+
+		maxMinProperty.FindPropertyRelative("Max").floatValue = max;
+		maxMinProperty.FindPropertyRelative("Min").floatValue = min;
+	}
+
+	private void MaxMinFloat(SerializedProperty maxMinProperty, string name) {
+		var max = maxMinProperty.FindPropertyRelative("Max").floatValue;
+		var min = maxMinProperty.FindPropertyRelative("Min").floatValue;
+
+		EditorGUILayout.BeginHorizontal();
+		min = EditorGUILayout.FloatField(min);
+		EditorGUILayout.LabelField("<= " + name + " <=");
+		max = EditorGUILayout.FloatField(max);
 		EditorGUILayout.EndHorizontal();
 
 		maxMinProperty.FindPropertyRelative("Max").floatValue = max;

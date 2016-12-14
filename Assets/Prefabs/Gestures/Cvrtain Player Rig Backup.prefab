@@ -2133,7 +2133,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1000013645374370
 GameObject:
   m_ObjectHideFlags: 1
@@ -2656,7 +2656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1665112137398468
 GameObject:
   m_ObjectHideFlags: 1
@@ -2672,7 +2672,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1820178067533014
 GameObject:
   m_ObjectHideFlags: 1
@@ -6200,6 +6200,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 1
@@ -6224,6 +6228,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 1
@@ -6248,6 +6256,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6277,6 +6289,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6298,9 +6314,13 @@ MonoBehaviour:
       RightHandReach:
         Max: 3
         Min: 2
-      Waving: 1
+      Waving: 0
       LeftHandWaving: 1
       RightHandWaving: 1
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6330,6 +6350,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6354,6 +6378,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 1
       RightHandWaving: 1
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6378,6 +6406,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6402,6 +6434,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6431,6 +6467,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 1
@@ -6455,6 +6495,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6484,6 +6528,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 1
@@ -6508,6 +6556,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6537,6 +6589,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6561,6 +6617,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6590,6 +6650,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6614,6 +6678,10 @@ MonoBehaviour:
       Waving: 1
       LeftHandWaving: 1
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6625,48 +6693,56 @@ MonoBehaviour:
     Rules:
     - RequireHeadState: 1
       HeadState: 0
-      RequireHandAngles: 0
-      EitherHand: 0
+      RequireHandAngles: 1
+      EitherHand: 1
       LeftHandAngles:
         Max: 0
-        Min: 0
+        Min: -100
       RightHandAngles:
-        Max: 0
+        Max: 360
         Min: 0
-      RequireHandReach: 0
+      RequireHandReach: 1
       LeftHandReach:
-        Max: 0
-        Min: 0
+        Max: 2
+        Min: 1
       RightHandReach:
-        Max: 0
+        Max: 3
         Min: 0
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
     - RequireHeadState: 1
-      HeadState: 2
-      RequireHandAngles: 0
-      EitherHand: 0
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
       LeftHandAngles:
-        Max: 0
+        Max: 90
         Min: 0
       RightHandAngles:
-        Max: 0
+        Max: 360
         Min: 0
-      RequireHandReach: 0
+      RequireHandReach: 1
       LeftHandReach:
-        Max: 0
-        Min: 0
+        Max: 3
+        Min: 3
       RightHandReach:
-        Max: 0
+        Max: 3
         Min: 0
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6696,20 +6772,52 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
-      TimeLimit: 0
+      TimeLimit: 2
     - RequireHeadState: 1
-      HeadState: 2
-      RequireHandAngles: 0
-      EitherHand: 0
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
       LeftHandAngles:
-        Max: 0
+        Max: 45
         Min: 0
       RightHandAngles:
+        Max: 270
+        Min: 90
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 3
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
         Max: 0
         Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 1
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 270
+        Min: 90
+      RightHandAngles:
+        Max: 270
+        Min: 90
       RequireHandReach: 0
       LeftHandReach:
         Max: 0
@@ -6720,6 +6828,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6749,30 +6861,38 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
     - RequireHeadState: 1
-      HeadState: 2
-      RequireHandAngles: 0
-      EitherHand: 0
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
       LeftHandAngles:
-        Max: 0
-        Min: 0
+        Max: 100
+        Min: 70
       RightHandAngles:
-        Max: 0
-        Min: 0
-      RequireHandReach: 0
+        Max: 100
+        Min: 70
+      RequireHandReach: 1
       LeftHandReach:
-        Max: 0
-        Min: 0
+        Max: 3
+        Min: 3
       RightHandReach:
-        Max: 0
-        Min: 0
+        Max: 3
+        Min: 3
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6802,6 +6922,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6826,6 +6950,10 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
@@ -6855,12 +6983,138 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 360
+        Min: 0
+      RightHandAngles:
+        Max: 360
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 3
+        Min: 2
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 270
+        Min: 90
+      RightHandAngles:
+        Max: 270
+        Min: 90
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 3
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: Hands Together
+    ForceCompleteKey: 49
+    Rules:
     - RequireHeadState: 1
-      HeadState: 2
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 90
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: -90
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.2
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 1
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: -90
+      RightHandAngles:
+        Max: 90
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.2
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: Wai
+    ForceCompleteKey: 50
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
       RequireHandAngles: 0
       EitherHand: 0
       LeftHandAngles:
@@ -6879,6 +7133,66 @@ MonoBehaviour:
       Waving: 0
       LeftHandWaving: 0
       RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 1
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.2
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 1
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.2
+        Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
       HasTimeLimit: 0

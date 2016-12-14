@@ -95,7 +95,6 @@ public class HeadTracker : MonoBehaviour {
                 // }
             }
             catch (NullReferenceException e) {
-				//TODO:@OwenBell, compiler warns that 'e' is never used, same below, consider logging?
             	Facing = HeadFacing.None;
             }
 		}

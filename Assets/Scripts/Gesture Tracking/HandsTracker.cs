@@ -175,25 +175,43 @@ public class HandsTracker : MonoBehaviour {
 	}
 
 	private bool CheckForWave(Transform handTransform, Vector3[] positions) {
-		/* raycast from the palm of the hand to ensure that the hand is actually
-		* facing the audience when the player waves */
 		RaycastHit hit;
-		var down = handTransform.up * -1;
+		/* raycast around the center of the hand. If none of the casts hit the
+		* ceiling or the floor, then the hand is being held upright and we
+		* can assume that's good enough for waving */			
+		var directions = new Vector3[4] {
+											handTransform.up,
+											handTransform.up * -1,
+											handTransform.right,
+											handTransform.right * -1
+										};
 		var position = handTransform.position;
-		if (Physics.Raycast(position, down, out hit, 100f, WavingLayers)) {
-			var hitObject = hit.collider.gameObject;
-			if (hitObject.GetComponent<HeadLookReceiver>()) {
+		foreach (var direction in directions) {
+			if (Physics.Raycast(position, direction, out hit, 100f, WavingLayers)) {
+				var hitObject = hit.collider.gameObject;
 				var facing = hitObject.GetComponent<HeadLookReceiver>().Facing;
-				if (facing != HeadFacing.Front &&
-						facing != HeadFacing.Left &&
-						facing != HeadFacing.Right) {
+				if (facing == HeadFacing.Floor || facing == HeadFacing.Ceiling) {
 					return false;
 				}
 			}
-			else {
-				return false;
-			}
 		}
+		/* raycast from the palm of the hand to ensure that the hand is actually
+		* facing the audience when the player waves */
+		// var down = handTransform.up * -1;
+		// if (Physics.Raycast(position, down, out hit, 100f, WavingLayers)) {
+		// 	var hitObject = hit.collider.gameObject;
+		// 	if (hitObject.GetComponent<HeadLookReceiver>()) {
+		// 		var facing = hitObject.GetComponent<HeadLookReceiver>().Facing;
+		// 		if (facing != HeadFacing.Front &&
+		// 				facing != HeadFacing.Left &&
+		// 				facing != HeadFacing.Right) {
+		// 			return false;
+		// 		}
+		// 	}
+		// 	else {
+		// 		return false;
+		// 	}
+		// }
 
 		var maxWorldDelta = 0f;
 		var maxLocalDelta = 0f;

@@ -22,6 +22,9 @@ public class Gesture {
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
 
+	private bool _LeftHandZoneSet = false;
+	private bool _LeftHandInLeftZone = false;
+
 	public Gesture() {
 		RuleIndex = -1;
 		Rules = new GestureRule[2];
@@ -43,8 +46,8 @@ public class Gesture {
 
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
-			//Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
-			if (RuleIndex >= Rules.Length - 1) {
+            Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+            if (RuleIndex >= Rules.Length - 1) {
 				_DelayRemaining = EvaluationDelay;
 			}
 			if (!Completed) {
@@ -75,6 +78,7 @@ public class Gesture {
 		RuleIndex = -1;
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
+        _LeftHandZoneSet = false;
 	    Debug.Log("reseting " + Name);
 	}
 
@@ -85,8 +89,6 @@ public class Gesture {
 			}
 		}	
 
-
-		var leftHandInLeftZone = false;
         if (rule.RequireHandAngles) {
         	var leftAngle = hands.LeftHandAngle;
         	var rightAngle = hands.RightHandAngle;
@@ -99,19 +101,31 @@ public class Gesture {
 	        	}
 	        }
 	        else {
-	        	if (rule.LeftHandAngles.Contains(leftAngle)) {
-	        		leftHandInLeftZone = true;
+	        	if (!_LeftHandZoneSet) {
+		        	if (rule.LeftHandAngles.Contains(leftAngle)) {
+		        		_LeftHandInLeftZone = true;
+		        	}
+                    else if (rule.LeftHandAngles.Contains(rightAngle)) {
+                        _LeftHandInLeftZone = false;
+                    }
+                    else {
+                    	return false;
+                    }
+                    _LeftHandZoneSet = true;
 	        	}
-	        	/* if the leftHand is in neither zone, then the rule is false */
-	        	else if (!rule.RightHandAngles.Contains(leftAngle)) {
+		        if (_LeftHandInLeftZone && !rule.LeftHandAngles.Contains(leftAngle)) {
+		       		return false;
+		       	}
+		       	/* if the leftHand is in neither zone, then the rule is false */
+		       	else if (!_LeftHandInLeftZone && !rule.RightHandAngles.Contains(leftAngle)) {
 	  				return false;
 	  			}
 
 	  			/* check if right hand is in the zone the left hand is not */
-	  			if (leftHandInLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
+	  			if (_LeftHandInLeftZone && !rule.RightHandAngles.Contains(rightAngle)) {
 	  				return false;	
 	  			}
-	  			else if (!leftHandInLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
+	  			else if (!_LeftHandInLeftZone && !rule.LeftHandAngles.Contains(rightAngle)) {
 	  				return false;
 	  			}
 	        }
@@ -129,23 +143,29 @@ public class Gesture {
 				}
 			}
 			else {
-				if (!rule.RequireHandAngles) {
+				if (!_LeftHandZoneSet) {
 					if (rule.LeftHandReach.Contains(leftReach)) {
-						leftHandInLeftZone = true;
+						_LeftHandInLeftZone = true;
 					}
+                    else if (rule.LeftHandReach.Contains(rightReach)) {
+                        _LeftHandInLeftZone = false;
+                    }
+                    else {
+                    	return false;
+                    }
+					_LeftHandZoneSet = true;
 				}
-				else if (leftHandInLeftZone && !rule.LeftHandReach.Contains(leftReach)) {
+				if (_LeftHandInLeftZone && !rule.LeftHandReach.Contains(leftReach)) {
+					return false;
+				}
+				else if (!_LeftHandInLeftZone && !rule.RightHandReach.Contains(leftReach)) {
 					return false;
 				}
 
-				if (!leftHandInLeftZone && !rule.RightHandReach.Contains(leftReach)) {
+				if (_LeftHandInLeftZone && !rule.RightHandReach.Contains(rightReach)) {
 					return false;
 				}
-
-				if (leftHandInLeftZone && !rule.RightHandReach.Contains(rightReach)) {
-					return false;
-				}
-				else if (!leftHandInLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
+				else if (!_LeftHandInLeftZone && !rule.LeftHandReach.Contains(rightReach)) {
 					return false;
 				}
 			}
@@ -168,15 +188,22 @@ public class Gesture {
 			else {
 				/* if neither angles nor reach were required, then check to
 				* determine which zone the left hand is acting in and set it */
-				if (!rule.RequireHandAngles && !rule.RequireHandReach) {
+				if (!_LeftHandZoneSet) {
 					if (rule.LeftHandWaving && leftWaving) {
-						leftHandInLeftZone = true;
+						_LeftHandInLeftZone = true;
 					}
+                    else if (rule.LeftHandWaving && rightWaving) {
+                        _LeftHandInLeftZone = false;
+                    }
+                    else {
+                    	return false;
+                    }
+                    _LeftHandZoneSet = true;
 				}
 
                 /* if the left hand is in the left zone, compare the required
                  * waving state against the appropriate hand */
-                if (leftHandInLeftZone) {
+                if (_LeftHandInLeftZone) {
                     if (rule.LeftHandWaving != leftWaving) {
                         return false;
                     }
@@ -186,7 +213,7 @@ public class Gesture {
                 }
                 /* if the left hand is not in the left zone, compare the required
                  * waving state against the opposite hand */
-                if (!leftHandInLeftZone) {
+                if (!_LeftHandInLeftZone) {
                     if (rule.LeftHandWaving != rightWaving) {
                         return false;
                     }
@@ -194,30 +221,16 @@ public class Gesture {
                         return false;
                     }
                 }
+			}
+		}
 
-				/* perform checks for the left hand */
-				/* if LEFT HAND is acting in the LEFT ZONE:
-				* check if a LEFT ZONE wave is required and if the LEFT HAND is doing it */
-				//if (leftHandInLeftZone && rule.LeftHandWaving && !leftWaving) {
-				//	return false;
-				//}
-				/* if LEFT HAND is acting in the RIGHT ZONE:
-				* check if a RIGHT ZONE wave required and if the LEFT HAND is doing it */
-				//else if (!leftHandInLeftZone && rule.RightHandWaving && !leftWaving) {
-				//	return false;
-				//}
+		if (rule.RequireHandDistance) {
+			var leftLocal = hands.LeftHand.localPosition;
+			var rightLocal = hands.RightHand.localPosition;
+			var distance = Vector3.Distance(leftLocal, rightLocal);
 
-				/* perform checks for the right hand */
-				/* if LEFT HAND is acting in the LEFT ZONE:
-				* check if a RIGHT ZONE wave is required, and if the RIGHT HAND is doing it */
-				//if (leftHandInLeftZone && rule.RightHandWaving && !rightWaving) {
-				//	return false;
-				//}
-				/* if the LEFT HAND is acting in the RIGHT ZONE:
-				* check if a LEFT ZONE wave is required, and if the RIGHT HAND is doing it */
-				//else if (!leftHandInLeftZone && rule.LeftHandWaving && !rightWaving) {
-				//	return false;
-				//}
+			if (!rule.DistanceBetweenHands.Contains(distance)) {
+				return false;
 			}
 		}
 
@@ -239,6 +252,8 @@ public class GestureRule {
 	public bool Waving;
 	public bool LeftHandWaving;
 	public bool RightHandWaving;
+	public bool RequireHandDistance;
+	public Range DistanceBetweenHands;
 
 	public bool HasMaximumDuration;
 	public float MaxDuration;
