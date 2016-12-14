@@ -7110,6 +7110,95 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
+  - Name: Wai
+    ForceCompleteKey: 50
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 1
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.1
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 1
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 1
+      DistanceBetweenHands:
+        Max: 0.1
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
   GestureLockoutDuration: 0.5
   UnknownGestureLimit: 7
   UnknownGestureWindow: 2
