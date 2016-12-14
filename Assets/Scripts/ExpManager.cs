@@ -5,14 +5,14 @@ public class ExpManager : MonoBehaviour
 {
 	public enum ExpStates
 	{
-Idle,
-Intro,
-Instructions,
-CurtainOpen,
-Levels,
-CurtainClose,
-Outro,
-Credits}
+		Idle,
+		Intro,
+		Instructions,
+		CurtainOpen,
+		Levels,
+		CurtainClose,
+		Outro,
+		Credits}
 
 	;
 
@@ -27,17 +27,18 @@ Credits}
 
 	public GameObject leftCurtainController;
 	public GameObject rightCurtainController;
+	public GameObject afterCurtainOpen;
+	public float showTime;
 
 	private TriggerListener triggerListener;
 	private float lastTriggerTime;
 
 	public bool IsRestartAnimation = false;
 
-	public void restartAnimation(){
-		leftCurtainController.SendMessage ("StartAnimation");
-		rightCurtainController.SendMessage ("StartAnimation");
-		audioManager.TriggerSound ("Tympani");	
-	}
+	private bool IsStartShowNotificationSent = false;
+	private bool IsStartTimer = false;
+	private float startTrackingTime;
+	private bool IsCheckTimer=false;
 
 	void Start ()
 	{
@@ -49,10 +50,27 @@ Credits}
 
 	void Update ()
 	{
-		if (IsRestartAnimation) {
-			restartAnimation ();
-			IsRestartAnimation = false;
+		if (IsStartTimer) { 
+			startTrackingTime = Time.time;
+			IsStartTimer = false;
+			IsCheckTimer = true;
 		}
+		//how do we handle this on reset?
+
+		if (IsCheckTimer && (Time.time - startTrackingTime> showTime ) ) { 
+			SendCue ("ShowsOver");
+			IsCheckTimer = false;
+		}
+
+//		if (IsRestartAnimation) {
+//			RestartAnimation ();
+//			IsRestartAnimation = false;
+//		}
+		if (Input.GetKeyDown ("space")) {
+			print ("space key was pressed");
+			RestartAnimation ();
+		}
+		
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
 			lastTriggerTime = triggerListener.LastDoublePress;
 			//TODO: AWFUL
@@ -107,7 +125,7 @@ Credits}
 		}
 		if (IsOutro) { 
 			expState = ExpStates.Outro;
-			audioManager.ChangePad ("murmurs");
+			SendCue ("ShowsOver");
 			IsOutro = false;
 		}
 		if (IsCredits) { 
@@ -118,38 +136,80 @@ Credits}
 		state = expState.ToString ();
 
 	}
-	private bool IsCurtainNotificationSent=false;
 
-	public void CurtainOpened ()
+	private bool IsCurtainNotificationSent = false;
+
+	private void CurtainOpened ()
 	{ 
 		if (!IsCurtainNotificationSent) { 
 			Debug.Log ("Experience Manager: Curtain is open");
 			audioManager.TriggerSound ("SWITCH_1");
 
-			lightsController.TurnThemOn ();
+			lightsController.TurnOnMains ();
 
 			IsCurtainNotificationSent = true;
 
-			levelsManager.BeginPerforming();
-			
+			levelsManager.BeginPerforming ();
+
+			afterCurtainOpen.SendMessage("StartAnimation");
+
+			IsStartTimer = true;
 		}
 
 	}
+	private void ResetShow() { 
+		Debug.Log ("resetting show");
+		lightsController.TurnOffMains ();
 
-	private bool IsStartShowNotificationSent = false;
+		IsCheckTimer = false;
+	}
 
-	public void StartShow ()
+	public void RestartAnimation ()
 	{
-		if (!IsStartShowNotificationSent) {
-			IsStartShowNotificationSent = true;
-			Debug.Log ("Experience Manager: Start the show!");
-//			audioManager.TriggerSound ("Tympani");
-
-		}
-
-
+		leftCurtainController.SendMessage ("StartAnimation");
+		rightCurtainController.SendMessage ("StartAnimation");
+		audioManager.TriggerSound ("tympani");	
+		audioManager.ChangePad ("quiet",19.0f);
 	}
 
+	//	public void StartShow ()
+	//	{
+	//		if (!IsStartShowNotificationSent) {
+	//			IsStartShowNotificationSent = true;
+	//			Debug.Log ("Experience Manager: Start the show!");
+	////			audioManager.TriggerSound ("tympani");
+	//		}
+	//	}
 
+	public void SendCue (string cueName)
+	{
+		Debug.Log ("ExpManager.SendCue received: " + cueName);
+		switch (cueName) 
+		{
+		case "CurtainOpened":
+			CurtainOpened ();
+			break;
+		case "FirstCough":
+			audioManager.TriggerSound ("single cough");
+			break;
+		case "AnotherCough":
+			audioManager.TriggerSound ("coupla coughs");
+			break;
+		case "Whistle":
+			audioManager.TriggerSound ("loud whistle");
+			break;
+		case "TakeABow":
+			audioManager.TriggerSound ("take a bow");
+			break;
+		case "ShowsOver":
+			audioManager.TriggerSound ("Aww1");
+			audioManager.ChangePad ("murmurs");
+			leftCurtainController.SendMessage ("StartAnimation");
+			rightCurtainController.SendMessage ("StartAnimation");
+			ResetShow ();
+			break;
+		}
+
+	}
 }
 
