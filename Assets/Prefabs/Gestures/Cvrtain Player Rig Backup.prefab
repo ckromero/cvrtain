@@ -6298,7 +6298,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: One Hand High, One Hand Low
     ForceCompleteKey: 111
     Rules:
@@ -6381,7 +6381,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Pump it up
     ForceCompleteKey: 112
     Rules:
@@ -6542,7 +6542,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Deep bow
     ForceCompleteKey: 100
     Rules:
@@ -6625,7 +6625,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Bow
     ForceCompleteKey: 98
     Rules:
@@ -6708,7 +6708,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Testing bow
     ForceCompleteKey: 116
     Rules:
@@ -6874,7 +6874,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Hand Sweep
     ForceCompleteKey: 115
     Rules:
@@ -6884,7 +6884,7 @@ MonoBehaviour:
       EitherHand: 1
       LeftHandAngles:
         Max: 0
-        Min: -180
+        Min: -100
       RightHandAngles:
         Max: 360
         Min: 0
@@ -6915,8 +6915,8 @@ MonoBehaviour:
         Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 1
@@ -7162,7 +7162,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 1
+    Disabled: 0
   - Name: Curtsy
     ForceCompleteKey: 99
     Rules:
@@ -7393,7 +7393,7 @@ MonoBehaviour:
       RightHandWaving: 0
       RequireHandDistance: 1
       DistanceBetweenHands:
-        Max: 0.1
+        Max: 0.2
         Min: 0
       RequireHandToHeadDistance: 0
       LeftHandHeadDistance:
@@ -7413,7 +7413,7 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 1
-      EitherHand: 0
+      EitherHand: 1
       LeftHandAngles:
         Max: 0
         Min: -90
@@ -7432,7 +7432,7 @@ MonoBehaviour:
       RightHandWaving: 0
       RequireHandDistance: 1
       DistanceBetweenHands:
-        Max: 0.1
+        Max: 0.2
         Min: 0
       RequireHandToHeadDistance: 0
       LeftHandHeadDistance:
@@ -7515,7 +7515,7 @@ MonoBehaviour:
       RightHandWaving: 0
       RequireHandDistance: 1
       DistanceBetweenHands:
-        Max: 0.1
+        Max: 0.2
         Min: 0
       RequireHandToHeadDistance: 0
       LeftHandHeadDistance:
@@ -7554,7 +7554,7 @@ MonoBehaviour:
       RightHandWaving: 0
       RequireHandDistance: 1
       DistanceBetweenHands:
-        Max: 0.1
+        Max: 0.2
         Min: 0
       RequireHandToHeadDistance: 0
       LeftHandHeadDistance:

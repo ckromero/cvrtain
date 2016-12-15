@@ -19,9 +19,7 @@ public class AudioManager : MonoBehaviour
 		large,
 		huge,
 		showClose,
-		postShowPleased,
-		postShowNeutral,
-		postShowDisappointed,
+		postShow,
 		quiet}
 	;
 
@@ -30,9 +28,7 @@ public class AudioManager : MonoBehaviour
 	public AudioSource[] additionalMediumSounds;
 	public AudioSource[] additionalLargeSounds;
 	public AudioSource[] additionalHugeSounds;
-	public AudioSource[] additionalPostShowPleasedSounds;
-	public AudioSource[] additionalPostShowNeutralSounds;
-	public AudioSource[] additionalPostShowDisappointedSounds;
+	public AudioSource[] additionalPostShowSounds;
 
 	private AudienceState audState;
 	private  string currentAudioMixerSnapshot;
@@ -44,8 +40,8 @@ public class AudioManager : MonoBehaviour
 
 	void Start ()
 	{ 
-		GameObject goc1 = GameObject.Find ("Coughs1");
-		GameObject goc2 = GameObject.Find ("Coughs2");
+//		GameObject goc1 = GameObject.Find ("Coughs1");
+//		GameObject goc2 = GameObject.Find ("Coughs2");
 
 //		AudioSource c1 = goc1.GetComponent<AudioSource> ();
 //		AudioSource c2 = goc2.GetComponent<AudioSource> ();
@@ -82,14 +78,8 @@ public class AudioManager : MonoBehaviour
 			case AudienceState.huge:
 				PickSoundToPlay (additionalHugeSounds);
 				break;
-			case AudienceState.postShowPleased:
-				PickSoundToPlay (additionalPostShowPleasedSounds);
-				break;
-			case AudienceState.postShowNeutral:
-				PickSoundToPlay (additionalPostShowNeutralSounds);
-				break;
-			case AudienceState.postShowDisappointed:
-				PickSoundToPlay (additionalPostShowDisappointedSounds);
+			case AudienceState.postShow:
+				PickSoundToPlay (additionalPostShowSounds);
 				break;
 			}
 
@@ -113,79 +103,50 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void ChangePad (string pad)
+	public void ChangePad (string pad, float transitionTime=0)
 	{ 
 		//Debug.Log ("ChangePad Received: " + pad);
-		
+		if (transitionTime == 0) {
+			transitionTime = timeForTransition;
+		}
 		switch (pad) {
-		case "murmurs":
+		case "quiet":
 			audState = AudienceState.murmur;	
-			TransitionAudio ("murmur", timeForTransition);
+			TransitionAudio ("quiet", transitionTime);
+			break;
+		case "murmur":
+			audState = AudienceState.murmur;	
+			TransitionAudio ("murmur", transitionTime);
 			break;
 		case "polite":
 			audState = AudienceState.polite;	
-			TransitionAudio ("polite", timeForTransition);
+			TransitionAudio ("polite", transitionTime);
 			break;
 		case "medium":
 			audState = AudienceState.medium;	
-			TransitionAudio ("medium", timeForTransition);
+			TransitionAudio ("medium", transitionTime);
 			break;
 		case "large":
 			audState = AudienceState.large;	
-			TransitionAudio ("large", timeForTransition);
+			TransitionAudio ("large", transitionTime);
 			break;
 		case "huge":
 			audState = AudienceState.huge;	
-			TransitionAudio ("huge", timeForTransition);
+			TransitionAudio ("huge", transitionTime);
 			break;
 		case "postShowNeutral":
-			audState = AudienceState.postShowPleased;	
-			TransitionAudio ("postShowPleased", timeForTransition);
+			audState = AudienceState.postShow;	
+			TransitionAudio ("postShowPleased", transitionTime);
 			break;
-		case "postShowPleased":
-			audState = AudienceState.postShowNeutral;	
-			TransitionAudio ("postShowNeutral", timeForTransition);
-			break;
-		case "postShowDisappointed":
-			audState = AudienceState.postShowDisappointed;	
-			TransitionAudio ("postShowDisappointed", timeForTransition);
-			break;
-		case "allQuiet":
-			audState = AudienceState.postShowDisappointed;	
-			TransitionAudio ("quiet", timeForTransition);
-			break;
-	
 		}
 	}
 
 
 	public void TriggerSound (string soundName)
 	{ 
-
 		Debug.Log ("Trigger Sound received: " + soundName);
-		switch (soundName) { 
-		case "AhhClap":
-			TriggerAudio ("AhhClap");
-			break;
-		case "MildLaugh":
-			TriggerAudio ("MildLaugh");
-			break;
-		case "Coughs1":
-			TriggerAudio ("Coughs1");
-			break;
-		case "Coughs2":
-			TriggerAudio ("Coughs2");
-			break;
-		case "Tympani":
-			TriggerAudio ("12082016123444_DN-700R");
-			break;
-		case "laugh":
-			TriggerAudio ("laugh");
-			break;
-		case "SWITCH_1":
-			TriggerAudio ("SWITCH_1");
-			break;
-		}
+
+		TriggerAudio (soundName);
 	}
 
 
@@ -197,31 +158,7 @@ public class AudioManager : MonoBehaviour
 		Debug.Log ("audiotoplay: " + audioToPlay);
 		audioToPlay.Play ();
 
-
-
-//		Vector3 playbackPosition = goAudio.GetComponentInParent<Transform> ().position;
-//		Vector3 pos = Vector3.zero;
-//		if (location != "") { 
-//			GameObject goLocation = GameObject.Find (location);
-//			pos = goLocation.transform.position;
-//		}
-
-
-
-//		//TODO: Optimize
-//		foreach (AudioSource a in audios) { 
-//			if (a.clip.name == audioName) {
-//				audioToPlay = a;
-//				break;
-//			}
-//		}
-//		
-//		if (audioToPlay != null) {
-//			audioToPlay.Play ();
-//		}
 	}
-
-
 
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 

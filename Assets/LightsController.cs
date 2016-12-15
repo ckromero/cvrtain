@@ -2,30 +2,38 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LightsController : MonoBehaviour {
+public class LightsController : MonoBehaviour
+{
 
 	public GameObject[] turnTheseOn;
 
-
-
-	public void TurnThemOn(){
+	public void TurnOnMains ()
+	{
 		foreach (GameObject go in turnTheseOn) { 
 
 			go.SetActive (true);
 		}
 
-
 	}
 
 
+	public void TurnOffMains ()
+	{
+		foreach (GameObject go in turnTheseOn) { 
 
-	// Use this for initialization
-	void Start () {
-		
+			go.SetActive (false);
+		}
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+//	// Use this for initialization
+//	void Start ()
+//	{
+//		
+//	}
+//	
+//	// Update is called once per frame
+//	void Update ()
+//	{
+//		
+//	}
 }

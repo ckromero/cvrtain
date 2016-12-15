@@ -5,55 +5,37 @@ using System.Collections;
 
 public class LevelsManager : MonoBehaviour
 {
-
 	public ExpManager expManager;
-
 	public AudioManager audioManager;
-
 	public GestureManager gestureManager;
-
 	public ClapManager clapManager;
-	public bool IsIncrementStage = false;
-
-	private bool listenToGestures = true;
-
-	private  CompletedGestureStruct[] completedGestures;
-	// private  string lastGesture;
-	private CompletedGestureStruct lastGesture;
-	private int stage = 0;
-	private int _HeighestStage;
-	private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
-
-	public int CurrentLevel { get{ return stage; }}
-
-	public bool Performing { get; set; }
 
 	public float DelayBeforeDecayStarts = 10f;
 	public float DecayGap = 2f;
+	public int CurrentLevel { get{ return stage; }}
+	//TODO: @owenbell not sure if this needs public, get/set or if we even really need it all?
+	public bool Performing { get; set; }
+	public bool IsIncrementStage = false;
+	public bool MaxLevel { get; private set; }
 
-	private float _TimeSinceLastGesture = 0f;
+	// private  string lastGesture;
+	private CompletedGestureStruct lastGesture;
+	private CompletedGestureStruct[] completedGestures;
 
 	[SerializeField]
 	private Level[] Levels;
+
+	//TODO: @ckromero brittle here, needs a shared enumeration
+	private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
+	private float _TimeSinceLastGesture = 0f;
+	private int stage = 0;
+	private int _HeighestStage;
+
 	private int levelIndex = 0;
 	private int levelCompletion;
 	private int stateLevelIndex = 0;
+	private bool listenToGestures = true;
 
-	public bool MaxLevel { get; private set; }
-
-	//Listen to ExpManager
-
-	//Listen to GestureManager
-
-	//Manage LevelController
-
-	//Update AnimatorController
-
-	//Update AudioController
-
-	//Update LightsController
-
-	//Update ExpManager
 
 	// Use this for initialization
 	void Awake() {
@@ -86,7 +68,9 @@ public class LevelsManager : MonoBehaviour
 		gestureManager.Tracking = true;
 		Performing = true;
 	}
-	
+	public void StopPerforming () { 
+		gestureManager.Tracking = false;
+	}
 	// Update is called once per frame
 	void Update ()
 	{
@@ -156,7 +140,6 @@ public class LevelsManager : MonoBehaviour
 
 			UpdateLevel(-1);
 		}
-
 	}
 
 	void UpdateLevel(int increment) {
@@ -188,6 +171,9 @@ public class LevelsManager : MonoBehaviour
 	void UpdateAV ()
 	{
 		//Debug.Log ("updating AV, stage is now " + stage);
+		//TODO: @ckromero move this to ExpManager. 
+		//LevelsManager should be concerned with level accumulation.
+
 		if (stage < audioPads.Length) {
 			string newPad = audioPads [stage];
 			audioManager.ChangePad (newPad);
@@ -198,6 +184,7 @@ public class LevelsManager : MonoBehaviour
 //			lightsManager.changeLightState(newState);
 		} else { 
 			expManager.expState = ExpManager.ExpStates.Outro;
+			listenToGestures = false;	
 		}
 	}
 
@@ -205,7 +192,11 @@ public class LevelsManager : MonoBehaviour
 	{ 
 		listenToGestures = true;
 	}
-
+	public void StopLevels ()
+	{ 
+		listenToGestures = false;
+		Performing = false;
+	}
 }
 
 [System.Serializable]
