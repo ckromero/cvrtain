@@ -254,6 +254,9 @@ public class GestureRule {
 	public bool RightHandWaving;
 	public bool RequireHandDistance;
 	public Range DistanceBetweenHands;
+	public bool RequireHandToHeadDistance;
+	public Range LeftHandHeadDistance;
+	public Range RightHandHeadDistance;
 
 	public bool HasMaximumDuration;
 	public float MaxDuration;
