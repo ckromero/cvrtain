@@ -41967,6 +41967,46 @@ Prefab:
       propertyPath: GestureLockoutDuration
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].RightHandReach.Min
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].RightHandAngles.Min
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Disabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[8].Disabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[7].Disabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[11].Disabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[12].Disabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[13].Disabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
   m_IsPrefabParent: 0

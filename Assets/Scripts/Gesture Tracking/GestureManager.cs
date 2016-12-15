@@ -34,7 +34,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
 
-	private bool _WaitingForReset = false;
 	private List<Gesture> _Gestures;
 
 	private float _ClearTextTimer;
