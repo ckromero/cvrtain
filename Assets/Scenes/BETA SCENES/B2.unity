@@ -41680,6 +41680,21 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.size
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4000011491614022, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.12
@@ -41711,6 +41726,246 @@ Prefab:
     - target: {fileID: 4000011491614022, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].HeadState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].RequireHeadMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].HeadMovement.Max
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Name
+      value: Blow a Kiss
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].ForceCompleteKey
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHeadState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHeadState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandToHeadDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].EitherHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandAngles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].HasMaximumDuration
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHeadMovement
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandReach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RightHandHeadDistance.Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].LeftHandHeadDistance.Max
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].LeftHandReach.Max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RightHandReach.Max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHandReach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandReach.Max
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].EitherHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RightHandReach.Max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHandToHeadDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandHeadDistance.Min
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandHeadDistance.Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RightHandHeadDistance.Max
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].HasTimeLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].TimeLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: HoldStateRequirement
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: WeirdDanceRequirement
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: MovementTrackingWindow
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Name
+      value: Hand Slice
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].ForceCompleteKey
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RequireHeadState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHeadState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RequireHandReach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].EitherHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].LeftHandReach.Max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RightHandReach.Max
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].HasTimeLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].TimeLimit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHandDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHandReach
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].EitherHand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].LeftHandReach.Max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RightHandReach.Min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].LeftHandReach.Min
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RightHandReach.Max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: GestureLockoutDuration
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}

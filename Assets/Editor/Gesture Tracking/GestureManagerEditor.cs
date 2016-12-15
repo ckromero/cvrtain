@@ -20,8 +20,11 @@ public class GestureManagerEditor : Editor {
 		var property = serializedObject.FindProperty("Gestures");
 		var gestureList = new List<Gesture>(script.Gestures);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("UnknownGestureLimit"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("UnknownGestureWindow"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("GestureLockoutDuration"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("HoldStateRequirement"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("WeirdDanceRequirement"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("MovementTrackingWindow"));
+
 
 		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
 		if (property.isExpanded) {

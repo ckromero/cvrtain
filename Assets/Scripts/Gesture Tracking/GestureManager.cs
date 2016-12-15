@@ -24,8 +24,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public bool InMotion { get; private set; }
 	public bool DancingWeird { get; private set; }
 
-	public float HoldStateMovementRequirement;
-	public float WeirdDanceMovementRequirement;
+	public float HoldStateRequirement;
+	public float WeirdDanceRequirement;
 	public float MovementTrackingWindow;
 
 	private Vector3[] _TrackedHandPositions;
@@ -126,9 +126,9 @@ public class GestureManager : MonoBehaviour, IGestureManager
             totalDistance += Vector3.Distance(pos1, pos2);
 		}
 
-		InMotion = (totalDistance >= HoldStateMovementRequirement);
+		InMotion = (totalDistance >= HoldStateRequirement);
 
-		if (totalDistance >= WeirdDanceMovementRequirement && _RemainingLockout <= 0f) {
+		if (totalDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
 			var time = Time.timeSinceLevelLoad;
 			LastGesture = new CompletedGestureStruct("Weird dance", time);
 		}
