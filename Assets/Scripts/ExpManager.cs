@@ -166,6 +166,7 @@ public class ExpManager : MonoBehaviour
 
 	public void RestartAnimation ()
 	{
+        Debug.Log("RestartAnimation() called");
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
 		audioManager.TriggerSound ("tympani");	
