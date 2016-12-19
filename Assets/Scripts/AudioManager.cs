@@ -162,7 +162,7 @@ public class AudioManager : MonoBehaviour
 
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
-		//Debug.Log ("TransitionAudio received " + amsToName);
+		Debug.Log ("TransitionAudio received " + amsToName);
 		AudioMixerSnapshot ams = audioMixer.FindSnapshot (amsToName);
 		AudioMixerSnapshot[] amsArray = new AudioMixerSnapshot[]{ ams };
 		float[] weightArray = new float[]{ weight };
