@@ -25,6 +25,8 @@ public class Gesture {
 	private bool _LeftHandZoneSet = false;
 	private bool _LeftHandInLeftZone = false;
 
+	private Vector3 LastHeadPosition;
+
 	public Gesture() {
 		RuleIndex = -1;
 		Rules = new GestureRule[2];
@@ -47,6 +49,7 @@ public class Gesture {
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
             Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+            LastHeadPosition = head.HeadTransform.localPosition;
             if (RuleIndex >= Rules.Length - 1) {
 				_DelayRemaining = EvaluationDelay;
 			}
@@ -234,6 +237,59 @@ public class Gesture {
 			}
 		}
 
+		if (rule.RequireHandToHeadDistance) {
+			var leftLocal = hands.LeftHand.localPosition;
+			var rightLocal = hands.RightHand.localPosition;
+			var headLocal = head.HeadTransform.localPosition;
+			var leftDistance = Vector3.Distance(leftLocal, headLocal);
+			var rightDistance = Vector3.Distance(rightLocal, headLocal);
+
+			if (!rule.EitherHand) {
+				if (!rule.LeftHandHeadDistance.Contains(leftDistance)) {
+					return false;
+				}
+				if (!rule.RightHandHeadDistance.Contains(rightDistance)) {
+					return false;
+				}
+			}
+			else {
+				if (!_LeftHandZoneSet) {
+					if (rule.LeftHandHeadDistance.Contains(leftDistance)) {
+						_LeftHandInLeftZone = true;
+					}
+                    else if (rule.LeftHandHeadDistance.Contains(rightDistance)) {
+                        _LeftHandInLeftZone = false;
+                    }
+                    else {
+                    	return false;
+                    }
+					_LeftHandZoneSet = true;
+				}
+				if (_LeftHandInLeftZone && !rule.LeftHandHeadDistance.Contains(leftDistance)) {
+					return false;
+				}
+				else if (!_LeftHandInLeftZone && !rule.RightHandHeadDistance.Contains(leftDistance)) {
+					return false;
+				}
+
+				if (_LeftHandInLeftZone && !rule.RightHandHeadDistance.Contains(rightDistance)) {
+					return false;
+				}
+				else if (!_LeftHandInLeftZone && !rule.LeftHandHeadDistance.Contains(rightDistance)) {
+					return false;
+				}
+			}
+		}
+
+		if (rule.RequireHeadMovement) {
+			var headPosition = head.HeadTransform.localPosition;
+			var distance = Vector3.Distance(headPosition, LastHeadPosition);
+
+			if (!rule.HeadMovement.Contains(distance)) {
+				return false;	
+			}
+		}
+
 		return true;
 	}
 }
@@ -254,6 +310,11 @@ public class GestureRule {
 	public bool RightHandWaving;
 	public bool RequireHandDistance;
 	public Range DistanceBetweenHands;
+	public bool RequireHandToHeadDistance;
+	public Range LeftHandHeadDistance;
+	public Range RightHandHeadDistance;
+	public bool RequireHeadMovement;
+	public Range HeadMovement;
 
 	public bool HasMaximumDuration;
 	public float MaxDuration;

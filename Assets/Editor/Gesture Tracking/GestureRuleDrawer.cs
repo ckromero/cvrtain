@@ -44,8 +44,8 @@ public class GestureRuleDrawer : PropertyDrawer {
 		EditorGUIUtility.labelWidth = labelWidth;
 		EditorGUILayout.PropertyField(property.FindPropertyRelative("RequireHandReach"), layoutOptions);
 		EditorGUIUtility.labelWidth = 0f;
-		var requireReach = property.FindPropertyRelative("RequireHandReach").boolValue;
-		if (requireReach) {
+		// var requireReach = property.FindPropertyRelative("RequireHandReach").boolValue;
+		if (property.FindPropertyRelative("RequireHandReach").boolValue) {
 			EditorGUI.indentLevel++;
 			var content = new GUIContent("Use Either Hand");
 			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHand"), content, layoutOptions);
@@ -94,6 +94,42 @@ public class GestureRuleDrawer : PropertyDrawer {
 			EditorGUI.indentLevel++;
 			var distanceProperty = property.FindPropertyRelative("DistanceBetweenHands");
 			MaxMinFloat(distanceProperty, "Distance between hands");
+			EditorGUI.indentLevel--;
+		}
+
+		EditorGUIUtility.labelWidth = labelWidth;
+		EditorGUILayout.PropertyField(property.FindPropertyRelative("RequireHandToHeadDistance"), layoutOptions);
+		EditorGUIUtility.labelWidth = 0f;
+		if (property.FindPropertyRelative("RequireHandToHeadDistance").boolValue) {
+			EditorGUI.indentLevel++;
+			var content = new GUIContent("Use Either Hand");
+			EditorGUILayout.PropertyField(property.FindPropertyRelative("EitherHand"), content, layoutOptions);
+			var useEither = property.FindPropertyRelative("EitherHand").boolValue;
+			var message1 = "Left Hand";
+			var message2 = "Right Hand";
+			if (useEither) {
+				message1 = "One Hand";
+				message2 = "Other Hand";
+			}
+			var maxMinProperty = property.FindPropertyRelative("LeftHandHeadDistance");
+			MaxMinFloat(maxMinProperty, message1);
+			maxMinProperty = property.FindPropertyRelative("RightHandHeadDistance");
+			MaxMinFloat(maxMinProperty, message2);
+			// content = new GUIContent(message1);
+			// EditorGUILayout.PropertyField(property.FindPropertyRelative("LeftHandHeadDistance"), content);
+			// content = new GUIContent(message2);
+			// EditorGUILayout.PropertyField(property.FindPropertyRelative("RightHandHeadDistance"), content);
+			EditorGUI.indentLevel--;
+		}
+
+		EditorGUIUtility.labelWidth = labelWidth;
+		requireProperty = property.FindPropertyRelative("RequireHeadMovement");
+		EditorGUILayout.PropertyField(requireProperty, layoutOptions);
+		EditorGUIUtility.labelWidth = 0f;
+		if (requireProperty.boolValue) {
+			EditorGUI.indentLevel++;
+			var distanceProperty = property.FindPropertyRelative("HeadMovement");
+			MaxMinFloat(distanceProperty, "Head Movement");
 			EditorGUI.indentLevel--;
 		}
 

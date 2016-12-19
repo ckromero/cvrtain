@@ -21,8 +21,12 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public bool Tracking { get; set; }
 	public bool HighMovement { get; private set; }
 
-	public float UnknownGestureLimit;
-	public float UnknownGestureWindow;
+	public bool InMotion { get; private set; }
+	public bool DancingWeird { get; private set; }
+
+	public float HoldStateRequirement;
+	public float WeirdDanceRequirement;
+	public float MovementTrackingWindow;
 
 	private Vector3[] _TrackedHandPositions;
 	private int _HandIndex;
@@ -30,7 +34,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
 
-	private bool _WaitingForReset = false;
 	private List<Gesture> _Gestures;
 
 	private float _ClearTextTimer;
@@ -39,11 +42,9 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 	void Awake () {
 		LastGesture = new CompletedGestureStruct ("", 0f);
-
-		var handMoveCount = UnknownGestureWindow * 60 * 2;
+		var handMoveCount = MovementTrackingWindow * 60 * 2;
 		_TrackedHandPositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
-
 		Tracking = false;
 	}
 
@@ -124,19 +125,11 @@ public class GestureManager : MonoBehaviour, IGestureManager
             totalDistance += Vector3.Distance(pos1, pos2);
 		}
 
-		if (totalDistance >= UnknownGestureLimit && _RemainingLockout <= 0f) {
-			// var name = "I don't know";
-			// var message = "COMPLETED: " + name;
-			// Debug.Log(message);
-			// TestOutputText.text = message;
-			// LastGesture = new CompletedGestureStruct (name, Time.time);
-			// _ClearTextTimer = 1f;
+		InMotion = (totalDistance >= HoldStateRequirement);
 
-			/* unknown gestures should not trigger a lockout in case setting up
-			* for another gestures was what triggered the unknwon one. */
-			HighMovement = true;
-		} else {
-			HighMovement = false;
+		if (totalDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
+			var time = Time.timeSinceLevelLoad;
+			LastGesture = new CompletedGestureStruct("Weird dance", time);
 		}
 	}
 
@@ -157,7 +150,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 		return correct;
 	}
-
 }
 
 /* contains the name of the gesture and the time that it was completed */
