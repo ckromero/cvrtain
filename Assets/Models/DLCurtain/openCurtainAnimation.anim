@@ -84,6 +84,12 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
+        time: 13.616667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
         time: 15.5
         value: 0
         inSlope: 0
@@ -119,6 +125,12 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 13.366667
+        value: 100
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 13.6
         value: 100
         inSlope: 0
         outSlope: 0
@@ -270,6 +282,12 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
+        time: 13.616667
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
         time: 15.5
         value: 0
         inSlope: 0
@@ -305,6 +323,12 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 13.366667
+        value: 100
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 13.6
         value: 100
         inSlope: 0
         outSlope: 0
@@ -353,14 +377,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 14.333333
+  - time: 13.466666
     functionName: SendCue
     data: CurtainOpened
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 14.483334
+  - time: 13.533334
     functionName: StopAnimation
     data: 
     objectReferenceParameter: {fileID: 0}

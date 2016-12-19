@@ -101,7 +101,9 @@ public class AudioManager : MonoBehaviour
 			}	
 		}
 	}
-
+	public void ChangePadSimple(string newPad){
+		ChangePad (newPad);
+	}
 
 	public void ChangePad (string pad, float transitionTime=0)
 	{ 
@@ -125,10 +127,12 @@ public class AudioManager : MonoBehaviour
 		case "medium":
 			audState = AudienceState.medium;	
 			TransitionAudio ("medium", transitionTime);
+			TriggerSound ("Into Medium_EDIT");
 			break;
 		case "large":
 			audState = AudienceState.large;	
 			TransitionAudio ("large", transitionTime);
+			TriggerSound ("Into Large_EDIT");
 			break;
 		case "huge":
 			audState = AudienceState.huge;	
