@@ -170,13 +170,16 @@ public class ExpManager : MonoBehaviour
 		Debug.Log ("Level Changed:" + levelNum);
 		switch (levelNum) {
 		case 1:
-			//			audioManager.ChangePad ();
+			audioManager.ChangePad ("polite");
 			break;
 		case 2:
-			//			audioManager.ChangePad ();
+			audioManager.ChangePad ("medium");
 			break;
 		case 3:
-			//			audioManager.ChangePad ();
+			audioManager.ChangePad ("large");
+			break;
+		case 4:
+			audioManager.ChangePad ("huge");
 			break;
 		}
 
