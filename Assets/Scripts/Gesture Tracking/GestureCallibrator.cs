@@ -6,6 +6,8 @@ public class GestureCallibrator : MonoBehaviour {
 	public KeyCode CallibrationKey;
 	public float HeadOffset;
 	public Transform HeadTransform;
+	public bool Callibrated { get; private set; }
+	public bool Disabled;
 
 	public SteamVR_TrackedObject LeftWand;
 	public SteamVR_TrackedObject RightWand;
@@ -16,6 +18,10 @@ public class GestureCallibrator : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (Disabled) {
+			return;	
+		}
 
         try {
             var leftDevice = SteamVR_Controller.Input((int)LeftWand.index);
@@ -40,7 +46,12 @@ public class GestureCallibrator : MonoBehaviour {
 	}
 
 	public void Callibrate() {
+		if (Disabled) {
+			return;
+		}
+		
         Debug.Log("callibrate!");
+        Callibrated = true;
 		var headPosition = HeadTransform.localPosition;
 		/* this allows callibration if the project is being run with a Vive */
 		if (HeadTransform.parent.gameObject.name == "Camera (head)") {
@@ -54,5 +65,10 @@ public class GestureCallibrator : MonoBehaviour {
 		transform.localPosition = myPosition;
 
         GetComponent<HeadTracker>().Clear();
+	}
+
+	public void Reset() {
+		Disabled = false;
+		Callibrated = false;
 	}
 }

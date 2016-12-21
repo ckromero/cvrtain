@@ -12,13 +12,31 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
 
+
 	public HeadFacing Facing {
 		get {
 			return _HeadTracker.Facing;
 		}
 	}
 
-	public bool Tracking { get; set; }
+	private bool _Tracking;
+	public bool Tracking {
+		get {
+			return _Tracking;
+		}
+		set {
+			if (_Tracking != value) {
+				if (!value) {
+					_Callibrator.Reset();
+				}
+				else {
+					Debug.Log("I should be disabling the callibrator");
+					_Callibrator.Disabled = true;
+				}
+			}
+			_Tracking = value;
+		}
+	}
 	public bool WeirdRandomMovement { get; private set; }
 
 	public float HoldStateRequirement;
@@ -30,6 +48,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
+	private GestureCallibrator _Callibrator;
 
 	private float _ClearTextTimer;
 
@@ -43,6 +62,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	void Start () {
 		_HeadTracker = GetComponent<HeadTracker> ();
 		_HandsTracker = GetComponent<HandsTracker> ();
+		_Callibrator = GetComponent<GestureCallibrator>();
 	}
 	
 	// Update is called once per frame
@@ -154,7 +174,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		foreach (var gesture in Gestures) {
 			gesture.Reset();
 		}
-		LastGesture = new CompletedGestureStruct ("", 0f);
+		LastGesture = new CompletedGestureStruct("", 0f);
 		var handMoveCount = MovementTrackingWindow * 60 * 2;
 		_TrackedHandPositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
