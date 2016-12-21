@@ -47,3 +47,5 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.VR.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.WindowsStandalone.Extensions.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEditor.iOS.Extensions.Xcode.xml
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/AmplifyBloom.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/AmplifyBloomEditor.dll

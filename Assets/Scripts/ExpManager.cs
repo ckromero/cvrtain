@@ -3,6 +3,15 @@ using System.Collections;
 
 public class ExpManager : MonoBehaviour
 {
+	public AudioManager audioManager;
+	public LevelsManager levelsManager;
+	public LightsController lightsController;
+	public ClapperManager clapperManager;
+
+	public GameObject leftCurtainController;
+	public GameObject rightCurtainController;
+	public GameObject afterCurtainOpen;
+
 	public enum ExpStates
 	{
 		Idle,
@@ -13,32 +22,23 @@ public class ExpManager : MonoBehaviour
 		CurtainClose,
 		Outro,
 		Credits}
-
 	;
 
-	public bool IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsCredits;
-	private bool[] states;
-	public string state = "";
 	public ExpStates expState;
 
-	public AudioManager audioManager;
-	public LevelsManager levelsManager;
-	public LightsController lightsController;
-
-	public GameObject leftCurtainController;
-	public GameObject rightCurtainController;
-	public GameObject afterCurtainOpen;
 	public float showTime;
-
-	private TriggerListener triggerListener;
-	private float lastTriggerTime;
-
+	public string state = "";
+	public bool IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsCredits;
 	public bool IsRestartAnimation = false;
 
+	private TriggerListener triggerListener;
+
+	private float lastTriggerTime;
+	private float startTrackingTime;
+	private bool[] states;
 	private bool IsStartShowNotificationSent = false;
 	private bool IsStartTimer = false;
-	private float startTrackingTime;
-	private bool IsCheckTimer=false;
+	private bool IsCheckTimer = false;
 	private bool IsCurtainNotificationSent = false;
 
 	void Start ()
@@ -58,19 +58,15 @@ public class ExpManager : MonoBehaviour
 		}
 		//how do we handle this on reset?
 
-		if (IsCheckTimer && (Time.time - startTrackingTime> showTime ) ) { 
+		if (IsCheckTimer && (Time.time - startTrackingTime > showTime)) { 
 			SendCue ("ShowsOver");
 			IsCheckTimer = false;
 		}
 
-//		if (IsRestartAnimation) {
-//			RestartAnimation ();
-//			IsRestartAnimation = false;
-//		}
 		if (Input.GetKeyDown ("space")) {
 			//TODO: add calibration check after reset 
 			print ("space key was pressed");
-			RestartAnimation ();
+			RestartCurtainAnimation ();
 		}
 		
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
@@ -142,8 +138,7 @@ public class ExpManager : MonoBehaviour
 	public void SendCue (string cueName)
 	{
 		Debug.Log ("ExpManager.SendCue received: " + cueName);
-		switch (cueName) 
-		{
+		switch (cueName) {
 		case "CurtainOpened":
 			CurtainOpened ();
 			break;
@@ -163,32 +158,37 @@ public class ExpManager : MonoBehaviour
 			audioManager.TriggerSound ("TakeABow_EDIT");
 			break;
 		case "ShowsOver":
-			audioManager.TriggerSound ("Aww1");
-			audioManager.ChangePad ("murmur");
-			leftCurtainController.SendMessage ("StartAnimation");
-			rightCurtainController.SendMessage ("StartAnimation");
-			ResetShow ();
+			ShowsOver ();
 			break;
 		}
 
 	}
-	public void LevelChanged(int levelNum) { 
+
+	public void LevelChanged (int levelNum)
+	{ 
 		//
-		Debug.Log("Level Changed:" + levelNum);
-		ClapManager ();
+		Debug.Log ("Level Changed:" + levelNum);
+		switch (levelNum) {
+		case 1:
+			//			audioManager.ChangePad ();
+			break;
+		case 2:
+			//			audioManager.ChangePad ();
+			break;
+		case 3:
+			//			audioManager.ChangePad ();
+			break;
+		}
+
+		clapperManager.ChangeLevel (levelNum);
 
 	}
-	public void ClapManager() { 
-		Debug.Log ("Clap Manager called");
 
-	}
-
-	private void StopIntro() { 
+	private void StopIntro ()
+	{ 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
 	}
-
-
 
 	private void CurtainOpened ()
 	{ 
@@ -204,13 +204,25 @@ public class ExpManager : MonoBehaviour
 
 			levelsManager.BeginPerforming ();
 
-			afterCurtainOpen.SendMessage("StartAnimation");
+			afterCurtainOpen.SendMessage ("StartAnimation");
 
 			IsStartTimer = true;
 		}
 	}
 
-	private void ResetShow() { 
+	private void ShowsOver ()
+	{
+		Debug.Log ("Shows Over");
+		audioManager.TriggerSound ("Aww1");
+		audioManager.ChangePad ("murmur");
+		leftCurtainController.SendMessage ("StartAnimation");
+		rightCurtainController.SendMessage ("StartAnimation");
+		ResetShow ();
+
+	}
+
+	private void ResetShow ()
+	{ 
 		Debug.Log ("resetting show");
 		lightsController.TurnOffMains ();
 		levelsManager.StopLevels ();
@@ -219,13 +231,13 @@ public class ExpManager : MonoBehaviour
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 	}
 
-	public void RestartAnimation ()
+	public void RestartCurtainAnimation ()
 	{
-        Debug.Log("RestartAnimation() called");
+		Debug.Log ("RestartAnimation() called");
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
 		audioManager.TriggerSound ("tympani");	
-		audioManager.ChangePad ("quiet",10.0f);
+		audioManager.ChangePad ("quiet", 10.0f);
 	}
 
 	//	public void StartShow ()
