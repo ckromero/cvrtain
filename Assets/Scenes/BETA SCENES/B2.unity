@@ -185,7 +185,11 @@ MonoBehaviour:
   quadraticAttenuation: 99.1
   aspect: 1
   slices: 20
-  colorTint: {r: 0.99716026, g: 1, b: 0.9485294, a: 1}
+  colorTint:
+    r: 0.99716026
+    g: 1
+    b: 0.9485294
+    a: 1
   noiseSpeed: {x: 0.73, y: 0.72, z: 4.1}
   useDithering: 0
   ditherAmount: 0
@@ -214,60 +218,25 @@ MonoBehaviour:
   volumeTextureOffset: {x: 0, y: 0, z: 0}
   volumeTextureScale: 0.5
   lightGradient:
-    key0:
-      serializedVersion: 2
-      rgba: 4294967295
-    key1:
-      serializedVersion: 2
-      rgba: 4278190080
-    key2:
-      serializedVersion: 2
-      rgba: 0
-    key3:
-      serializedVersion: 2
-      rgba: 0
-    key4:
-      serializedVersion: 2
-      rgba: 0
-    key5:
-      serializedVersion: 2
-      rgba: 0
-    key6:
-      serializedVersion: 2
-      rgba: 0
-    key7:
-      serializedVersion: 2
-      rgba: 0
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0: {}
+    key1: {}
+    key2: {}
+    key3: {}
+    key4: {}
+    key5: {}
+    key6: {}
+    key7: {}
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fallOffCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -283,6 +252,200 @@ MonoBehaviour:
   orthoMaterial: {fileID: 2100000, guid: 5c70705a1fd5647609ad8326ef5e2024, type: 2}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
+  _idColorTint: 0
+  _idLightMultiplier: 0
+  _idSpotExponent: 0
+  _idConstantAttenuation: 0
+  _idLinearAttenuation: 0
+  _idQuadraticAttenuation: 0
+  _idLightParams: 0
+  _idMinBounds: 0
+  _idMaxBounds: 0
+  _idViewWorldLight: 0
+  _idRotation: 0
+  _idLocalRotation: 0
+  _idProjection: 0
+  _idNoiseOffset: 0
+  _idJitterAmount: 0
+  _idFallOffTex: 0
+  _idDitherTex: 0
+  _idVolumeParams: 0
+  _idVolumeOffset: 0
+  _prevLightType: 0
+  _prevShadowMode: 0
+  _prevRenderFullShadows: 0
+  _prevSlices: 0
+  _frustrumSwitch: 0
+  _prevIsOrtho: 0
+  _prevNear: 0
+  _prevFar: 0
+  _prevFov: 0
+  _prevOrthoSize: 0
+  _prevPointLightRadius: 0
+  _prevOrtho: 0
+  _prevOrthoAspect: 0
+  _prevBoundsCentreOffset: {x: 0, y: 0, z: 0}
+  _worldToCamera:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _projectionMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldToCameraMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewCameraToWorldMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _rotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localRotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldLight:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _frustrumPoints: []
+  _angle: {x: 0, y: 0, z: 0}
+  _minBounds: {x: 0, y: 0, z: 0}
+  _maxBounds: {x: 0, y: 0, z: 0}
+  _cameraHasBeenUpdated: 0
+  _meshFilter: {fileID: 0}
+  _depthTexture: {fileID: 0}
+  _builtMesh: 0
+  _maxSlices: 0
+  _postMaterial: {fileID: 0}
+  _renderer: {fileID: 0}
+  _camera: {fileID: 0}
+  _cachedTransform: {fileID: 0}
+  _pointsViewSpace:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _waterLayer: -1
+  _vlightLayer: -1
+  _queueRenderShadowMap: 0
 --- !u!23 &5617469
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2396,7 +2559,11 @@ MonoBehaviour:
   quadraticAttenuation: 5.93
   aspect: 1
   slices: 50
-  colorTint: {r: 0.99716026, g: 1, b: 0.9485294, a: 1}
+  colorTint:
+    r: 0.99716026
+    g: 1
+    b: 0.9485294
+    a: 1
   noiseSpeed: {x: 0.73, y: 0.72, z: 4.1}
   useDithering: 0
   ditherAmount: 0
@@ -2425,60 +2592,25 @@ MonoBehaviour:
   volumeTextureOffset: {x: 0, y: 0, z: 0}
   volumeTextureScale: 0.5
   lightGradient:
-    key0:
-      serializedVersion: 2
-      rgba: 4294967295
-    key1:
-      serializedVersion: 2
-      rgba: 4278190080
-    key2:
-      serializedVersion: 2
-      rgba: 0
-    key3:
-      serializedVersion: 2
-      rgba: 0
-    key4:
-      serializedVersion: 2
-      rgba: 0
-    key5:
-      serializedVersion: 2
-      rgba: 0
-    key6:
-      serializedVersion: 2
-      rgba: 0
-    key7:
-      serializedVersion: 2
-      rgba: 0
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0: {}
+    key1: {}
+    key2: {}
+    key3: {}
+    key4: {}
+    key5: {}
+    key6: {}
+    key7: {}
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fallOffCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -2494,6 +2626,200 @@ MonoBehaviour:
   orthoMaterial: {fileID: 2100000, guid: 5c70705a1fd5647609ad8326ef5e2024, type: 2}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
+  _idColorTint: 0
+  _idLightMultiplier: 0
+  _idSpotExponent: 0
+  _idConstantAttenuation: 0
+  _idLinearAttenuation: 0
+  _idQuadraticAttenuation: 0
+  _idLightParams: 0
+  _idMinBounds: 0
+  _idMaxBounds: 0
+  _idViewWorldLight: 0
+  _idRotation: 0
+  _idLocalRotation: 0
+  _idProjection: 0
+  _idNoiseOffset: 0
+  _idJitterAmount: 0
+  _idFallOffTex: 0
+  _idDitherTex: 0
+  _idVolumeParams: 0
+  _idVolumeOffset: 0
+  _prevLightType: 0
+  _prevShadowMode: 0
+  _prevRenderFullShadows: 0
+  _prevSlices: 0
+  _frustrumSwitch: 0
+  _prevIsOrtho: 0
+  _prevNear: 0
+  _prevFar: 0
+  _prevFov: 0
+  _prevOrthoSize: 0
+  _prevPointLightRadius: 0
+  _prevOrtho: 0
+  _prevOrthoAspect: 0
+  _prevBoundsCentreOffset: {x: 0, y: 0, z: 0}
+  _worldToCamera:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _projectionMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldToCameraMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewCameraToWorldMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _rotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localRotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldLight:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _frustrumPoints: []
+  _angle: {x: 0, y: 0, z: 0}
+  _minBounds: {x: 0, y: 0, z: 0}
+  _maxBounds: {x: 0, y: 0, z: 0}
+  _cameraHasBeenUpdated: 0
+  _meshFilter: {fileID: 0}
+  _depthTexture: {fileID: 0}
+  _builtMesh: 0
+  _maxSlices: 0
+  _postMaterial: {fileID: 0}
+  _renderer: {fileID: 0}
+  _camera: {fileID: 0}
+  _cachedTransform: {fileID: 0}
+  _pointsViewSpace:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _waterLayer: -1
+  _vlightLayer: -1
+  _queueRenderShadowMap: 0
 --- !u!23 &130880463
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4589,7 +4915,11 @@ MonoBehaviour:
   quadraticAttenuation: 99.1
   aspect: 1
   slices: 50
-  colorTint: {r: 0.99716026, g: 1, b: 0.9485294, a: 1}
+  colorTint:
+    r: 0.99716026
+    g: 1
+    b: 0.9485294
+    a: 1
   noiseSpeed: {x: 0.73, y: 0.72, z: 4.1}
   useDithering: 0
   ditherAmount: 0
@@ -4618,60 +4948,25 @@ MonoBehaviour:
   volumeTextureOffset: {x: 0, y: 0, z: 0}
   volumeTextureScale: 0.5
   lightGradient:
-    key0:
-      serializedVersion: 2
-      rgba: 4294967295
-    key1:
-      serializedVersion: 2
-      rgba: 4278190080
-    key2:
-      serializedVersion: 2
-      rgba: 0
-    key3:
-      serializedVersion: 2
-      rgba: 0
-    key4:
-      serializedVersion: 2
-      rgba: 0
-    key5:
-      serializedVersion: 2
-      rgba: 0
-    key6:
-      serializedVersion: 2
-      rgba: 0
-    key7:
-      serializedVersion: 2
-      rgba: 0
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0: {}
+    key1: {}
+    key2: {}
+    key3: {}
+    key4: {}
+    key5: {}
+    key6: {}
+    key7: {}
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fallOffCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -4687,6 +4982,200 @@ MonoBehaviour:
   orthoMaterial: {fileID: 2100000, guid: 5c70705a1fd5647609ad8326ef5e2024, type: 2}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
+  _idColorTint: 0
+  _idLightMultiplier: 0
+  _idSpotExponent: 0
+  _idConstantAttenuation: 0
+  _idLinearAttenuation: 0
+  _idQuadraticAttenuation: 0
+  _idLightParams: 0
+  _idMinBounds: 0
+  _idMaxBounds: 0
+  _idViewWorldLight: 0
+  _idRotation: 0
+  _idLocalRotation: 0
+  _idProjection: 0
+  _idNoiseOffset: 0
+  _idJitterAmount: 0
+  _idFallOffTex: 0
+  _idDitherTex: 0
+  _idVolumeParams: 0
+  _idVolumeOffset: 0
+  _prevLightType: 0
+  _prevShadowMode: 0
+  _prevRenderFullShadows: 0
+  _prevSlices: 0
+  _frustrumSwitch: 0
+  _prevIsOrtho: 0
+  _prevNear: 0
+  _prevFar: 0
+  _prevFov: 0
+  _prevOrthoSize: 0
+  _prevPointLightRadius: 0
+  _prevOrtho: 0
+  _prevOrthoAspect: 0
+  _prevBoundsCentreOffset: {x: 0, y: 0, z: 0}
+  _worldToCamera:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _projectionMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldToCameraMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewCameraToWorldMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _rotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localRotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldLight:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _frustrumPoints: []
+  _angle: {x: 0, y: 0, z: 0}
+  _minBounds: {x: 0, y: 0, z: 0}
+  _maxBounds: {x: 0, y: 0, z: 0}
+  _cameraHasBeenUpdated: 0
+  _meshFilter: {fileID: 0}
+  _depthTexture: {fileID: 0}
+  _builtMesh: 0
+  _maxSlices: 0
+  _postMaterial: {fileID: 0}
+  _renderer: {fileID: 0}
+  _camera: {fileID: 0}
+  _cachedTransform: {fileID: 0}
+  _pointsViewSpace:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _waterLayer: -1
+  _vlightLayer: -1
+  _queueRenderShadowMap: 0
 --- !u!23 &263536873
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14543,7 +15032,11 @@ MonoBehaviour:
   quadraticAttenuation: 99.1
   aspect: 1
   slices: 50
-  colorTint: {r: 0.99716026, g: 1, b: 0.9485294, a: 1}
+  colorTint:
+    r: 0.99716026
+    g: 1
+    b: 0.9485294
+    a: 1
   noiseSpeed: {x: 3, y: 0.72, z: 4.1}
   useDithering: 0
   ditherAmount: 0
@@ -14572,60 +15065,25 @@ MonoBehaviour:
   volumeTextureOffset: {x: 0, y: 0, z: 0}
   volumeTextureScale: 0.5
   lightGradient:
-    key0:
-      serializedVersion: 2
-      rgba: 4294967295
-    key1:
-      serializedVersion: 2
-      rgba: 4278190080
-    key2:
-      serializedVersion: 2
-      rgba: 0
-    key3:
-      serializedVersion: 2
-      rgba: 0
-    key4:
-      serializedVersion: 2
-      rgba: 0
-    key5:
-      serializedVersion: 2
-      rgba: 0
-    key6:
-      serializedVersion: 2
-      rgba: 0
-    key7:
-      serializedVersion: 2
-      rgba: 0
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0: {}
+    key1: {}
+    key2: {}
+    key3: {}
+    key4: {}
+    key5: {}
+    key6: {}
+    key7: {}
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fallOffCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -14641,6 +15099,200 @@ MonoBehaviour:
   orthoMaterial: {fileID: 2100000, guid: 5c70705a1fd5647609ad8326ef5e2024, type: 2}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
+  _idColorTint: 0
+  _idLightMultiplier: 0
+  _idSpotExponent: 0
+  _idConstantAttenuation: 0
+  _idLinearAttenuation: 0
+  _idQuadraticAttenuation: 0
+  _idLightParams: 0
+  _idMinBounds: 0
+  _idMaxBounds: 0
+  _idViewWorldLight: 0
+  _idRotation: 0
+  _idLocalRotation: 0
+  _idProjection: 0
+  _idNoiseOffset: 0
+  _idJitterAmount: 0
+  _idFallOffTex: 0
+  _idDitherTex: 0
+  _idVolumeParams: 0
+  _idVolumeOffset: 0
+  _prevLightType: 0
+  _prevShadowMode: 0
+  _prevRenderFullShadows: 0
+  _prevSlices: 0
+  _frustrumSwitch: 0
+  _prevIsOrtho: 0
+  _prevNear: 0
+  _prevFar: 0
+  _prevFov: 0
+  _prevOrthoSize: 0
+  _prevPointLightRadius: 0
+  _prevOrtho: 0
+  _prevOrthoAspect: 0
+  _prevBoundsCentreOffset: {x: 0, y: 0, z: 0}
+  _worldToCamera:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _projectionMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldToCameraMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewCameraToWorldMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _rotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localRotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldLight:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _frustrumPoints: []
+  _angle: {x: 0, y: 0, z: 0}
+  _minBounds: {x: 0, y: 0, z: 0}
+  _maxBounds: {x: 0, y: 0, z: 0}
+  _cameraHasBeenUpdated: 0
+  _meshFilter: {fileID: 0}
+  _depthTexture: {fileID: 0}
+  _builtMesh: 0
+  _maxSlices: 0
+  _postMaterial: {fileID: 0}
+  _renderer: {fileID: 0}
+  _camera: {fileID: 0}
+  _cachedTransform: {fileID: 0}
+  _pointsViewSpace:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _waterLayer: -1
+  _vlightLayer: -1
+  _queueRenderShadowMap: 0
 --- !u!23 &426365301
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37586,9 +38238,7 @@ MonoBehaviour:
   - {fileID: 44459502}
   - {fileID: 1884866330}
   - {fileID: 80405606}
-  additionalPostShowPleasedSounds: []
-  additionalPostShowNeutralSounds: []
-  additionalPostShowDisappointedSounds: []
+  additionalPostShowSounds: []
 --- !u!1 &1535588202
 GameObject:
   m_ObjectHideFlags: 0
@@ -41680,21 +42330,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4000011491614022, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1.12
@@ -41726,286 +42361,6 @@ Prefab:
     - target: {fileID: 4000011491614022, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
       propertyPath: m_RootOrder
       value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].HeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].RequireHeadMovement
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[10].Rules.Array.data[1].HeadMovement.Max
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Name
-      value: Blow a Kiss
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].ForceCompleteKey
-      value: 51
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandToHeadDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].EitherHand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandAngles
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].HasMaximumDuration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHeadMovement
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RequireHandReach
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RightHandHeadDistance.Max
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].LeftHandHeadDistance.Max
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].LeftHandReach.Max
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].RightHandReach.Max
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHandReach
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandReach.Max
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].EitherHand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RightHandReach.Max
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RequireHandToHeadDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandHeadDistance.Min
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].LeftHandHeadDistance.Max
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[1].RightHandHeadDistance.Max
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].HasTimeLimit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[14].Rules.Array.data[0].TimeLimit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: HoldStateRequirement
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: WeirdDanceRequirement
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: MovementTrackingWindow
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Name
-      value: Hand Slice
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].ForceCompleteKey
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHeadState
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RequireHandReach
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].EitherHand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].LeftHandReach.Max
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].RightHandReach.Max
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].HasTimeLimit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[0].TimeLimit
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHandDistance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RequireHandReach
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].EitherHand
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].LeftHandReach.Max
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RightHandReach.Min
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].LeftHandReach.Min
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[15].Rules.Array.data[1].RightHandReach.Max
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: GestureLockoutDuration
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].RightHandReach.Min
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[1].Rules.Array.data[1].RightHandAngles.Min
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[10].Disabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[8].Disabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[7].Disabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[11].Disabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[12].Disabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
-        type: 2}
-      propertyPath: Gestures.Array.data[13].Disabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
@@ -49335,7 +49690,11 @@ MonoBehaviour:
   quadraticAttenuation: 99.1
   aspect: 1
   slices: 20
-  colorTint: {r: 0.99716026, g: 1, b: 0.9485294, a: 1}
+  colorTint:
+    r: 0.99716026
+    g: 1
+    b: 0.9485294
+    a: 1
   noiseSpeed: {x: 0.73, y: 0.72, z: 4.1}
   useDithering: 0
   ditherAmount: 0
@@ -49364,60 +49723,25 @@ MonoBehaviour:
   volumeTextureOffset: {x: 0, y: 0, z: 0}
   volumeTextureScale: 0.5
   lightGradient:
-    key0:
-      serializedVersion: 2
-      rgba: 4294967295
-    key1:
-      serializedVersion: 2
-      rgba: 4278190080
-    key2:
-      serializedVersion: 2
-      rgba: 0
-    key3:
-      serializedVersion: 2
-      rgba: 0
-    key4:
-      serializedVersion: 2
-      rgba: 0
-    key5:
-      serializedVersion: 2
-      rgba: 0
-    key6:
-      serializedVersion: 2
-      rgba: 0
-    key7:
-      serializedVersion: 2
-      rgba: 0
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
+    key0: {}
+    key1: {}
+    key2: {}
+    key3: {}
+    key4: {}
+    key5: {}
+    key6: {}
+    key7: {}
     m_Mode: 0
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   fallOffCurve:
-    serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
-      time: 0
+    - time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
-      time: 1
+    - time: 1
       value: 1
       inSlope: 0
       outSlope: 0
@@ -49433,6 +49757,200 @@ MonoBehaviour:
   orthoMaterial: {fileID: 2100000, guid: 5c70705a1fd5647609ad8326ef5e2024, type: 2}
   renderDepthShader: {fileID: 4800000, guid: 26c171c785261784f8909aae5f3697e4, type: 3}
   meshContainer: {fileID: 0}
+  _idColorTint: 0
+  _idLightMultiplier: 0
+  _idSpotExponent: 0
+  _idConstantAttenuation: 0
+  _idLinearAttenuation: 0
+  _idQuadraticAttenuation: 0
+  _idLightParams: 0
+  _idMinBounds: 0
+  _idMaxBounds: 0
+  _idViewWorldLight: 0
+  _idRotation: 0
+  _idLocalRotation: 0
+  _idProjection: 0
+  _idNoiseOffset: 0
+  _idJitterAmount: 0
+  _idFallOffTex: 0
+  _idDitherTex: 0
+  _idVolumeParams: 0
+  _idVolumeOffset: 0
+  _prevLightType: 0
+  _prevShadowMode: 0
+  _prevRenderFullShadows: 0
+  _prevSlices: 0
+  _frustrumSwitch: 0
+  _prevIsOrtho: 0
+  _prevNear: 0
+  _prevFar: 0
+  _prevFov: 0
+  _prevOrthoSize: 0
+  _prevPointLightRadius: 0
+  _prevOrtho: 0
+  _prevOrthoAspect: 0
+  _prevBoundsCentreOffset: {x: 0, y: 0, z: 0}
+  _worldToCamera:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _projectionMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldToCameraMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewCameraToWorldMatrixCached:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localToWorldMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _rotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _localRotation:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _viewWorldLight:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  _frustrumPoints: []
+  _angle: {x: 0, y: 0, z: 0}
+  _minBounds: {x: 0, y: 0, z: 0}
+  _maxBounds: {x: 0, y: 0, z: 0}
+  _cameraHasBeenUpdated: 0
+  _meshFilter: {fileID: 0}
+  _depthTexture: {fileID: 0}
+  _builtMesh: 0
+  _maxSlices: 0
+  _postMaterial: {fileID: 0}
+  _renderer: {fileID: 0}
+  _camera: {fileID: 0}
+  _cachedTransform: {fileID: 0}
+  _pointsViewSpace:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  _waterLayer: -1
+  _vlightLayer: -1
+  _queueRenderShadowMap: 0
 --- !u!23 &2107548794
 MeshRenderer:
   m_ObjectHideFlags: 0
