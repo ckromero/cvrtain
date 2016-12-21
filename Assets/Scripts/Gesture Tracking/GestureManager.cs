@@ -19,7 +19,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 	}
 
-	private bool _Tracking;
+    private bool _Tracking = false;
 	public bool Tracking {
 		get {
 			return _Tracking;
@@ -31,7 +31,12 @@ public class GestureManager : MonoBehaviour, IGestureManager
 				}
 				else {
 					Debug.Log("I should be disabling the callibrator");
+                    if(_Callibrator == null)
+                    {
+                        Debug.Log("I don't have a callibrator attached");
+                    }
 					_Callibrator.Disabled = true;
+                   Reset();
 				}
 			}
 			_Tracking = value;
@@ -55,7 +60,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public CompletedGestureStruct LastGesture { get; private set; }
 
 	void Awake () {
-		Reset();
 	}
 
 	// Use this for initialization
@@ -178,7 +182,9 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var handMoveCount = MovementTrackingWindow * 60 * 2;
 		_TrackedHandPositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
-		Tracking = false;
+
+        /* this is a hack to fix the bug requiring a double bow to start performance */
+        //_HeadTracker.ForceUpright();
 	}
 }
 

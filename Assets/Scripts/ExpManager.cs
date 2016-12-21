@@ -217,6 +217,7 @@ public class ExpManager : MonoBehaviour
 		audioManager.ChangePad ("murmur");
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
+        levelsManager.StopPerforming();
 		ResetShow ();
 
 	}

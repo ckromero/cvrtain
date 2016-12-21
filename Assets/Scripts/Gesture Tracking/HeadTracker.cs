@@ -177,6 +177,11 @@ public class HeadTracker : MonoBehaviour {
         _StateBuffer.Clear();
     }
 
+    public void ForceUpright()
+    {
+        InsertState(HeadState.Upright);
+    }
+
     void OnDrawGizmos() {
 		var position = HeadTransform.position;
 

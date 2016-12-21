@@ -72,7 +72,8 @@ public class LevelsManager : MonoBehaviour
 		//TODO: expManager should be queued to audience start state	
 	}
 	public void StopPerforming () { 
-		gestureManager.Reset();
+		//gestureManager.Reset();
+        gestureManager.Tracking = false;
 		Performing = false;
 	}
 

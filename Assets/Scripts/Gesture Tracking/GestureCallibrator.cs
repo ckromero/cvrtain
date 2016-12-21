@@ -7,7 +7,7 @@ public class GestureCallibrator : MonoBehaviour {
 	public float HeadOffset;
 	public Transform HeadTransform;
 	public bool Callibrated { get; private set; }
-	public bool Disabled;
+    public bool Disabled = false;
 
 	public SteamVR_TrackedObject LeftWand;
 	public SteamVR_TrackedObject RightWand;
@@ -49,6 +49,8 @@ public class GestureCallibrator : MonoBehaviour {
 		if (Disabled) {
 			return;
 		}
+
+        GetComponent<HeadTracker>().Clear();
 		
         Debug.Log("callibrate!");
         Callibrated = true;
@@ -64,7 +66,13 @@ public class GestureCallibrator : MonoBehaviour {
 		myPosition.y *= yDiff;
 		transform.localPosition = myPosition;
 
-        GetComponent<HeadTracker>().Clear();
+        if (GetComponent<HeadTracker>().HeadState == HeadState.None)
+        {
+            GetComponent<HeadTracker>().ForceUpright();
+        }
+
+        //GetComponent<HeadTracker>().Clear();
+        //GetComponent<HeadTracker>().ForceUpright();
 	}
 
 	public void Reset() {
