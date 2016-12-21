@@ -94,13 +94,13 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Hand Sweep", "HandSweepUpL_EDIT");
 		gestureToAudioList.Add ("Hand to heart bow", "HandToHeart_EDIT");
 		gestureToAudioList.Add ("no moving", "NotMoving_EDIT");
-		gestureToAudioList.Add ("One arm bow", "OneArmUp_EDIT.wav");
-		gestureToAudioList.Add ("One Hand High, One Hand Low", "OneHandHighOneLow_EDIT.wav");
-		gestureToAudioList.Add ("Pump it up", "PumpItUp_EDIT.wav");
-		gestureToAudioList.Add ("Wai", "TwoHandsTogether_EDIT.wav");
-		gestureToAudioList.Add ("Wave", "Wave_EDIT.wav");	
-		gestureToAudioList.Add ("Weird dance", "WierdDance_EDIT.wav");
-		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT.wav");
+		gestureToAudioList.Add ("One arm bow", "OneArmUp_EDIT");
+		gestureToAudioList.Add ("One Hand High, One Hand Low", "OneHandHighOneLow_EDIT");
+		gestureToAudioList.Add ("Pump it up", "PumpItUp_EDIT");
+		gestureToAudioList.Add ("Wai", "TwoHandsTogether_EDIT");
+		gestureToAudioList.Add ("Wave", "Wave_EDIT");	
+		gestureToAudioList.Add ("Weird dance", "WierdDance_EDIT");
+		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT");
 
 		//gestureToAudioList.Add ("Testing bow", "ssob-2.wav");
 		//gestureToAudioList.Add ("Curtsy", "cheer yip swell 6.wav");

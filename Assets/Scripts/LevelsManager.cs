@@ -45,7 +45,7 @@ public class LevelsManager : MonoBehaviour
 	{
 		if (listenToGestures)
 			UpdateLevelsBasedOnGestures ();
-
+		//TODO: make this a function that is called at start AND at reset.
 		for (var i = 0; i < Levels.Length; i++) {
 			if (Levels[i].StartingLevel) {
 				stage = i;
@@ -57,7 +57,7 @@ public class LevelsManager : MonoBehaviour
 		Levels[stage].Reset();
 
 		// UpdateAV();
-
+		//TODO: make this a cue in experience manager
 		audioManager.ChangePad("murmur");
 	}
 
@@ -76,6 +76,7 @@ public class LevelsManager : MonoBehaviour
 		if (listenToGestures && Performing) {
 			UpdateLevelsBasedOnGestures ();
 		}
+		//TODO: remove?
 		if (IsIncrementStage) { 
 			stage++;
 			UpdateAV ();
@@ -100,6 +101,7 @@ public class LevelsManager : MonoBehaviour
 					return;
 				}
 				Debug.Log("the player is being inappropriate");
+				//TODO: sendcue on experience manager
 				audioManager.TriggerSound("laugh");
 				return;
 			}
@@ -114,6 +116,7 @@ public class LevelsManager : MonoBehaviour
 			}
 
 		}
+		//TODO: change to weird dance or weird random gesture.
 		else if (!gestureManager.HighMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
@@ -126,7 +129,7 @@ public class LevelsManager : MonoBehaviour
 		}
 
 		if (Levels[stage].Complete) {
-
+			//TODO: nothing below polite applause
             // stage += Levels[stage].Advancement;
             // stage = Mathf.Clamp(stage, 0, Levels.Length - 1);
             // UpdateLevel();
