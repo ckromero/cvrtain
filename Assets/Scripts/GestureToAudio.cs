@@ -72,7 +72,7 @@ public class GestureToAudio : MonoBehaviour
 		if (gestureToAudioList.ContainsKey (lastGesture)) {
 			string soundToPlay = gestureToAudioList [lastGesture];
 			Debug.Log ("ready to trigger " + soundToPlay );
-//			audiomanager.TriggerSound ("missing sound");
+			audiomanager.TriggerSound (soundToPlay);
 		} else {
 			Debug.LogWarning ("no sound for " + lastGesture);
 		}
