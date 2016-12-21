@@ -82,40 +82,30 @@ public class GestureToAudio : MonoBehaviour
 	{
 		gestureToAudioList = new Dictionary<string, string> ();
 
-		gestureToAudioList.Add ("Hands up bow", "missing sound.wav");
-		gestureToAudioList.Add ("One Hand High, One Hand Low", "missing sound.wav");
-		gestureToAudioList.Add ("Pump it up", "cheer yip swell_5.wav");
-		gestureToAudioList.Add ("Deep bow", "SSO5.wav");
-		gestureToAudioList.Add ("Bow", "ssob-2.wav");
-		gestureToAudioList.Add ("Testing bow", "ssob-2.wav");
-		gestureToAudioList.Add ("Wave", "missing sound.wav");	
-		//agnostic, right or left
-		gestureToAudioList.Add ("Hand Sweep", "bravo.wav");
-		gestureToAudioList.Add ("One arm bow", "large applause 3.wav");
-		gestureToAudioList.Add ("Arms out, basking", "cheer yip swell 2.wav");
-		gestureToAudioList.Add ("Curtsy", "cheer yip swell 6.wav");
+		gestureToAudioList.Add ("Arms out, basking", "ArmsToSide_EDIT");
+		gestureToAudioList.Add ("gesture facing away", "Aww booo booo_EDITED");
+		gestureToAudioList.Add ("Blow Kisses", "BlowKisses_EDIT");
+		gestureToAudioList.Add ("Bow", "Bow_EDIT");
+		gestureToAudioList.Add ("Deep bow", "DeepBow_EDIT");
+		gestureToAudioList.Add ("Hand Slice", "HandSlice_EDIT");
+		gestureToAudioList.Add ("Hands Together", "HandsTogetherShaking_EDIT");
+		gestureToAudioList.Add ("Hands up bow", "HandsUpBow_EDIT");
+		//*********** TODO: @ckromero: Lets break this up into left and right!
+		gestureToAudioList.Add ("Hand Sweep", "HandSweepUpL_EDIT");
 		gestureToAudioList.Add ("Hand to heart bow", "HandToHeart_EDIT");
-		gestureToAudioList.Add ("Wai", "missing sound.wav");
-		gestureToAudioList.Add ("Hands Together", "Cheer yip swell_4.wav");
+		gestureToAudioList.Add ("no moving", "NotMoving_EDIT");
+		gestureToAudioList.Add ("One arm bow", "OneArmUp_EDIT.wav");
+		gestureToAudioList.Add ("One Hand High, One Hand Low", "OneHandHighOneLow_EDIT.wav");
+		gestureToAudioList.Add ("Pump it up", "PumpItUp_EDIT.wav");
+		gestureToAudioList.Add ("Wai", "TwoHandsTogether_EDIT.wav");
+		gestureToAudioList.Add ("Wave", "Wave_EDIT.wav");	
+		gestureToAudioList.Add ("Weird dance", "WierdDance_EDIT.wav");
+		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT.wav");
 
-
-
-
-		gestureToAudioList.Add ("gesture facing away", "Aww boo boo.wav");
+		//gestureToAudioList.Add ("Testing bow", "ssob-2.wav");
+		//gestureToAudioList.Add ("Curtsy", "cheer yip swell 6.wav");
 
 //		gestureToAudioList.Add ("Hand sweep upper right", "Whistle clean highpass.wav");
-
-		gestureToAudioList.Add ("no moving", "Medium audience clapping, good natural taper.wav");
-
-		gestureToAudioList.Add ("Weird dance", "Laughter3.wav");
-		gestureToAudioList.Add ("Weird random", "Laughter 2.wav");
-
-		gestureToAudioList.Add ("Hand Slice", "missing sound.wav");
-		gestureToAudioList.Add ("Blow Kisses", "foot stomping (fireworks).wav");
-
-
-
-
 
 //		Bow		ssob-2.wav
 //		Deep bow		SSO5.wav
