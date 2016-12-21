@@ -129,7 +129,6 @@ public class HeadTracker : MonoBehaviour {
         {
             bufferState += state + ", ";
         }
-        Debug.Log(bufferState);
 	}
 
 	void OnBowTriggerEnter(Collider other) {

@@ -55,13 +55,13 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   gestureManager: {fileID: 0}
   clapManager: {fileID: 0}
-  IsIncrementStage: 0
-  DelayBeforeDecayStarts: 8
+  DelayBeforeDecayStarts: 20
   DecayGap: 1
+  IsIncrementStage: 0
   Levels:
-  - StartingLevel: 0
+  - StartingLevel: 1
     ClapLevel: 0
-    Advancement: 2
+    Advancement: 1
     PositiveGestures:
     - Gesture: Bow
       Limit: 10
@@ -69,14 +69,14 @@ MonoBehaviour:
     - Gesture: Wave
       Limit: 10
       RemainingLimit: 0
-    - Gesture: Double Wave
+    - Gesture: Deep bow
       Limit: 100
       RemainingLimit: 0
     NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 1
     DemotionRequirment: 0
-  - StartingLevel: 1
+  - StartingLevel: 0
     ClapLevel: 0
     Advancement: 1
     PositiveGestures:
@@ -106,7 +106,7 @@ MonoBehaviour:
     - Gesture: Pump it up
       Limit: 10
       RemainingLimit: 0
-    PromotionRequirment: 1
+    PromotionRequirment: 3
     DemotionRequirment: 3
   - StartingLevel: 0
     ClapLevel: 1
@@ -120,6 +120,12 @@ MonoBehaviour:
       RemainingLimit: 0
     - Gesture: Bow
       Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 2
+      RemainingLimit: 0
+    - Gesture: Wai
+      Limit: 2
       RemainingLimit: 0
     NeutralGestures:
     - Gesture: Wave
@@ -153,6 +159,12 @@ MonoBehaviour:
     - Gesture: Bow
       Limit: 100
       RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 2
+      RemainingLimit: 0
+    - Gesture: Double Wave
+      Limit: 2
+      RemainingLimit: 0
     NeutralGestures:
     - Gesture: Double Wave
       Limit: 100
@@ -171,41 +183,6 @@ MonoBehaviour:
       Limit: 100
       RemainingLimit: 0
     - Gesture: Pump it up
-      Limit: 100
-      RemainingLimit: 0
-    PromotionRequirment: 3
-    DemotionRequirment: 3
-  - StartingLevel: 0
-    ClapLevel: 3
-    Advancement: 1
-    PositiveGestures:
-    - Gesture: Pump it up
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Deep bow
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: One Hand High, One Hand Low
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Fist Pump
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Jazz Hands
-      Limit: 100
-      RemainingLimit: 0
-    NeutralGestures:
-    - Gesture: Hands up bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Double Wave
-      Limit: 100
-      RemainingLimit: 0
-    NegativeGestures:
-    - Gesture: Bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Wave
       Limit: 100
       RemainingLimit: 0
     PromotionRequirment: 3

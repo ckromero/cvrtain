@@ -116,8 +116,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var leftPos = _HandsTracker.LeftHand.position;
 		var rightPos = _HandsTracker.RightHand.position;
 
-		_TrackedHandPositions[_HandIndex] = leftPos;
-		_TrackedHandPositions[_HandIndex+1] = rightPos;
+		_TrackedHandPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
+		_TrackedHandPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
 
 		_HandIndex += 2;
 		if (_HandIndex >= _TrackedHandPositions.Length) {

@@ -26,7 +26,7 @@ public class LevelsManager : MonoBehaviour
 	private Level[] Levels;
 
 	//TODO: @ckromero brittle here, needs a shared enumeration
-	private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
+	//private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
 	private float _TimeSinceLastGesture = 0f;
 	private int stage = 0;
 	private int _HighestStage;
@@ -69,6 +69,7 @@ public class LevelsManager : MonoBehaviour
 		gestureManager.Tracking = true;
 		Performing = true;
 		Reset();
+        listenToGestures = true;
 		//TODO: expManager should be queued to audience start state	
 	}
 	public void StopPerforming () { 
@@ -105,8 +106,10 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateLevelsBasedOnGestures ()
 	{
-		//"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
-		//completedGestures
+        //"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
+        //completedGestures
+
+        Debug.Log("I'm trying to update the level");
 
 		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
@@ -126,6 +129,7 @@ public class LevelsManager : MonoBehaviour
 			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
+            Debug.Log(lastGesture.Name + " evaluation for level " + stage + ": " + evaluation);
 			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {
 				var highEvaluation = Levels[_HighestStage].EvaluateGesture(lastGesture.Name);
 				if (highEvaluation > -1) {
@@ -195,8 +199,7 @@ public class LevelsManager : MonoBehaviour
 		//TODO: @ckromero move this to ExpManager. 
 		//LevelsManager should be concerned with level accumulation.
 
-		if (stage < audioPads.Length && stage != 0 && stage!=1) {
-			string newPad = audioPads [stage];
+		if (stage < Levels.Length && stage != 0) {
 			// audioManager.ChangePad (newPad);
 
 			// clapManager.UpdateClappers(Levels[stage].ClapLevel);
@@ -204,9 +207,6 @@ public class LevelsManager : MonoBehaviour
 
 //			animatorManager.changeAnimationState (newState);
 //			lightsManager.changeLightState(newState);
-		} else { 
-			expManager.expState = ExpManager.ExpStates.Outro;
-			listenToGestures = false;	
 		}
 	}
 

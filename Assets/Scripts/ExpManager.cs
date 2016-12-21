@@ -226,7 +226,7 @@ public class ExpManager : MonoBehaviour
 	{ 
 		Debug.Log ("resetting show");
 		lightsController.TurnOffMains ();
-		levelsManager.StopLevels ();
+		levelsManager.StopPerforming();
 		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
