@@ -29,7 +29,7 @@ public class LevelsManager : MonoBehaviour
 	private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
 	private float _TimeSinceLastGesture = 0f;
 	private int stage = 0;
-	private int _HeighestStage;
+	private int _HighestStage;
 
 	private int levelIndex = 0;
 	private int levelCompletion;
@@ -37,7 +37,6 @@ public class LevelsManager : MonoBehaviour
 	private bool listenToGestures = true;
 
 
-	// Use this for initialization
 	void Awake() {
 		Performing = false;
 	}
@@ -51,7 +50,7 @@ public class LevelsManager : MonoBehaviour
 			if (Levels[i].StartingLevel) {
 				stage = i;
 				stateLevelIndex = i;
-				_HeighestStage = stage;
+				_HighestStage = stage;
 				break;
 			}
 		}
@@ -106,10 +105,10 @@ public class LevelsManager : MonoBehaviour
 			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
-			if (_HeighestStage == Levels.Length - 1 && _HeighestStage != stage) {
-				var highEvaluation = Levels[_HeighestStage].EvaluateGesture(lastGesture.Name);
+			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {
+				var highEvaluation = Levels[_HighestStage].EvaluateGesture(lastGesture.Name);
 				if (highEvaluation > -1) {
-					SetLevelTo(_HeighestStage);
+					SetLevelTo(_HighestStage);
 					return;
 				}
 			}
@@ -153,12 +152,12 @@ public class LevelsManager : MonoBehaviour
 	}
 
 	void SetLevelTo(int level) {
-		if (_HeighestStage <= level) {
-			_HeighestStage = level;
+		if (_HighestStage <= level) {
+			_HighestStage = level;
 			stage = level;
 		}
-		else if (level < _HeighestStage && level > stage) {
-			stage = _HeighestStage;
+		else if (level < _HighestStage && level > stage) {
+			stage = _HighestStage;
 		}
 		else {
 			stage = level;
@@ -170,11 +169,11 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateAV ()
 	{
-		//Debug.Log ("updating AV, stage is now " + stage);
+		Debug.Log ("updating AV, stage is now " + stage);
 		//TODO: @ckromero move this to ExpManager. 
 		//LevelsManager should be concerned with level accumulation.
 
-		if (stage < audioPads.Length) {
+		if (stage < audioPads.Length && stage != 0 && stage!=1) {
 			string newPad = audioPads [stage];
 			audioManager.ChangePad (newPad);
 
@@ -196,6 +195,7 @@ public class LevelsManager : MonoBehaviour
 	{ 
 		listenToGestures = false;
 		Performing = false;
+		stage = 0;
 	}
 }
 

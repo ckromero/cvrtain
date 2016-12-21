@@ -107,7 +107,7 @@ public class AudioManager : MonoBehaviour
 
 	public void ChangePad (string pad, float transitionTime=0)
 	{ 
-		//Debug.Log ("ChangePad Received: " + pad);
+		Debug.Log ("ChangePad Received: " + pad);
 		if (transitionTime == 0) {
 			transitionTime = timeForTransition;
 		}
@@ -123,6 +123,7 @@ public class AudioManager : MonoBehaviour
 		case "polite":
 			audState = AudienceState.polite;	
 			TransitionAudio ("polite", transitionTime);
+			TriggerSound ("IntoSmall_EDIT");
 			break;
 		case "medium":
 			audState = AudienceState.medium;	
@@ -148,22 +149,31 @@ public class AudioManager : MonoBehaviour
 
 	public void TriggerSound (string soundName)
 	{ 
-		Debug.Log ("Trigger Sound received: " + soundName);
+//		Debug.Log ("Trigger Sound received: " + soundName);
 
 		TriggerAudio (soundName);
 	}
 
+	public void StopSound(string soundName) { 
+		StopAudio (soundName);
+	}
 
 	private void TriggerAudio (string audioName)
 	{ 
 		// TODO: ignore playing a sound file if said file is already playing	
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
-		Debug.Log ("audiotoplay: " + audioToPlay);
+		Debug.Log ("audioToPlay: " + audioToPlay);
 		audioToPlay.Play ();
 
 	}
+	private void StopAudio(string audioName) { 
+		GameObject goAudio = GameObject.Find (audioName);
+		AudioSource audioToStop = goAudio.GetComponent<AudioSource> ();
+		Debug.Log ("audioToStop: " + audioToStop);
+		audioToStop.Stop ();
 
+	}
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
 		Debug.Log ("TransitionAudio received " + amsToName);
