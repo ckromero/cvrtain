@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 2a8f0c29e08a9476c9aeb794758d17a4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -104,11 +104,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
       propertyPath: m_LocalRotation.w
@@ -126,6 +126,38 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6ec45fc68b6bd4cf0997e9be4a4db6f0, type: 2}
+    - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400106, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400106, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400106, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400106, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400106, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e23cf0b9186fd41c6a14b904201eb736, type: 3}
   m_IsPrefabParent: 0
@@ -240,7 +272,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830649472}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.174, y: 1.129, z: 0.438}
+  m_LocalPosition: {x: 0.2075, y: 1.178, z: 0.4733}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1724126132}
@@ -282,7 +314,7 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 0.38
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
   m_LengthScale: 2
@@ -351,7 +383,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: 952809636
+  randomSeed: -2133620226
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -524,7 +556,7 @@ ParticleSystem:
         m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.13725491, g: 0.14117648, b: 0.6901961, a: 0.58431375}
+      maxColor: {r: 0.2509804, g: 0.44705883, b: 0.7137255, a: 0.32156864}
       minMaxState: 0
     startSize:
       scalar: 0.03
@@ -808,7 +840,7 @@ ParticleSystem:
     enabled: 1
     type: 4
     radius: 0.04222536
-    angle: 25
+    angle: 25.72
     length: 5
     boxX: 1
     boxY: 1
@@ -823,14 +855,14 @@ ParticleSystem:
     m_MeshScale: 1
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
   EmissionModule:
     enabled: 1
     serializedVersion: 3
     rateOverTime:
-      scalar: 18.54
+      scalar: 24.59
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1350,7 +1382,7 @@ ParticleSystem:
         m_RotationOrder: 4
       minMaxState: 0
     y:
-      scalar: -0.06
+      scalar: 0.009
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1427,7 +1459,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
       minMaxState: 0
-    inWorldSpace: 0
+    inWorldSpace: 1
   InheritVelocityModule:
     enabled: 0
     m_Mode: 0
