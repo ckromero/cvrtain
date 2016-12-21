@@ -59,6 +59,7 @@ public class ClapperManager : MonoBehaviour
 
 		switch (levelNum) {
 		case 0:
+			//TODO: idle here?
 			targetTrigger = "triggerMildClapping";	
 			break;	
 		case 1:
@@ -73,9 +74,9 @@ public class ClapperManager : MonoBehaviour
 		case 4:
 			targetTrigger = "triggerRaisedFist";	
 			break;
-		case 5:
-			targetTrigger = "triggerRaisedFist";	
-			break;
+//		case 5:
+//			targetTrigger = "triggerRaisedFist";	
+//			break;
 		}
 		
 		foreach (ClapControl clapControl in clapControls) {

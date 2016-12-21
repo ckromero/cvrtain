@@ -16,13 +16,15 @@ GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
+  serializedVersion: 5
   m_Component:
-  - 4: {fileID: 4000010245890746}
-  - 114: {fileID: 114000012813506024}
-  - 114: {fileID: 114000012691482104}
-  - 114: {fileID: 114000012860288914}
-  - 114: {fileID: 114000013337724354}
+  - component: {fileID: 4000010245890746}
+  - component: {fileID: 114000012813506024}
+  - component: {fileID: 114000012691482104}
+  - component: {fileID: 114000012860288914}
+  - component: {fileID: 114000013337724354}
+  - component: {fileID: 114933576424254004}
+  - component: {fileID: 114999015899079026}
   m_Layer: 0
   m_Name: ExpManager
   m_TagString: Untagged
@@ -39,10 +41,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 0.89560544, z: -0.0034221578}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &114000012691482104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,18 +68,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2039ffd28cd1749b598082e40b430042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsIdle: 1
+  audioManager: {fileID: 0}
+  levelsManager: {fileID: 0}
+  lightsController: {fileID: 0}
+  clapperManager: {fileID: 0}
+  leftCurtainController: {fileID: 0}
+  rightCurtainController: {fileID: 0}
+  afterCurtainOpen: {fileID: 0}
+  expState: 0
+  showTime: 150
+  state: 
+  IsIdle: 0
   IsIntroScreen: 0
   IsInstructionScreen: 0
   IsCurtainOpen: 0
-  IsLevels: 0
+  IsLevels: 1
   IsCurtainClose: 0
   IsOutro: 0
   IsCredits: 0
-  state: 
-  expState: 0
-  audioManager: {fileID: 0}
-  levelsManager: {fileID: 0}
+  IsRestartAnimation: 0
 --- !u!114 &114000012860288914
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,6 +100,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   module: {fileID: 0}
 --- !u!114 &114000013337724354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
+--- !u!114 &114933576424254004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
+--- !u!114 &114999015899079026
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
