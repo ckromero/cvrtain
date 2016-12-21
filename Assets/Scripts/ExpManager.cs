@@ -39,6 +39,7 @@ public class ExpManager : MonoBehaviour
 	private bool IsStartTimer = false;
 	private float startTrackingTime;
 	private bool IsCheckTimer=false;
+	private bool IsCurtainNotificationSent = false;
 
 	void Start ()
 	{
@@ -137,13 +138,53 @@ public class ExpManager : MonoBehaviour
 
 	}
 
-	private bool IsCurtainNotificationSent = false;
+	public void SendCue (string cueName)
+	{
+		Debug.Log ("ExpManager.SendCue received: " + cueName);
+		switch (cueName) 
+		{
+		case "CurtainOpened":
+			CurtainOpened ();
+			break;
+		case "StopIntro":
+			StopIntro ();
+			break;
+		case "FirstCough":
+			audioManager.TriggerSound ("single cough");
+			break;
+		case "AnotherCough":
+			audioManager.TriggerSound ("coupla coughs");
+			break;
+		case "Whistle":
+			audioManager.TriggerSound ("WhistleVerb_EDIT");
+			break;
+		case "TakeABow":
+			audioManager.TriggerSound ("TakeABow_EDIT");
+			break;
+		case "ShowsOver":
+			audioManager.TriggerSound ("Aww1");
+			audioManager.ChangePad ("murmur");
+			leftCurtainController.SendMessage ("StartAnimation");
+			rightCurtainController.SendMessage ("StartAnimation");
+			ResetShow ();
+			break;
+		}
+
+	}
+	private void StopIntro() { 
+		afterCurtainOpen.SendMessage ("ResetAnimation");
+		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
+	}
+
+
 
 	private void CurtainOpened ()
 	{ 
+//		Debug.Log ("CurtainOpened called.");
 		if (!IsCurtainNotificationSent) { 
 			Debug.Log ("Experience Manager: Curtain is open");
 			audioManager.TriggerSound ("SWITCH_1");
+			audioManager.TriggerSound ("RoomToneCoughv2_EDIT");
 
 			lightsController.TurnOnMains ();
 
@@ -155,13 +196,15 @@ public class ExpManager : MonoBehaviour
 
 			IsStartTimer = true;
 		}
-
 	}
+
 	private void ResetShow() { 
 		Debug.Log ("resetting show");
 		lightsController.TurnOffMains ();
-
+		levelsManager.StopLevels ();
+		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
+		afterCurtainOpen.SendMessage ("ResetAnimation");
 	}
 
 	public void RestartAnimation ()
@@ -170,7 +213,7 @@ public class ExpManager : MonoBehaviour
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
 		audioManager.TriggerSound ("tympani");	
-		audioManager.ChangePad ("quiet",19.0f);
+		audioManager.ChangePad ("quiet",10.0f);
 	}
 
 	//	public void StartShow ()
@@ -182,35 +225,6 @@ public class ExpManager : MonoBehaviour
 	//		}
 	//	}
 
-	public void SendCue (string cueName)
-	{
-		Debug.Log ("ExpManager.SendCue received: " + cueName);
-		switch (cueName) 
-		{
-		case "CurtainOpened":
-			CurtainOpened ();
-			break;
-		case "FirstCough":
-			audioManager.TriggerSound ("single cough");
-			break;
-		case "AnotherCough":
-			audioManager.TriggerSound ("coupla coughs");
-			break;
-		case "Whistle":
-			audioManager.TriggerSound ("loud whistle");
-			break;
-		case "TakeABow":
-			audioManager.TriggerSound ("take a bow");
-			break;
-		case "ShowsOver":
-			audioManager.TriggerSound ("Aww1");
-			audioManager.ChangePad ("murmurs");
-			leftCurtainController.SendMessage ("StartAnimation");
-			rightCurtainController.SendMessage ("StartAnimation");
-			ResetShow ();
-			break;
-		}
 
-	}
 }
 
