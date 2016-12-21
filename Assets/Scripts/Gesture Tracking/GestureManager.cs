@@ -12,17 +12,32 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
 
+
 	public HeadFacing Facing {
 		get {
 			return _HeadTracker.Facing;
 		}
 	}
 
-	public bool Tracking { get; set; }
-	public bool HighMovement { get; private set; }
-
-	public bool InMotion { get; private set; }
-	public bool DancingWeird { get; private set; }
+	private bool _Tracking;
+	public bool Tracking {
+		get {
+			return _Tracking;
+		}
+		set {
+			if (_Tracking != value) {
+				if (!value) {
+					_Callibrator.Reset();
+				}
+				else {
+					Debug.Log("I should be disabling the callibrator");
+					_Callibrator.Disabled = true;
+				}
+			}
+			_Tracking = value;
+		}
+	}
+	public bool WeirdRandomMovement { get; private set; }
 
 	public float HoldStateRequirement;
 	public float WeirdDanceRequirement;
@@ -33,26 +48,21 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
-
-	private List<Gesture> _Gestures;
+	private GestureCallibrator _Callibrator;
 
 	private float _ClearTextTimer;
 
 	public CompletedGestureStruct LastGesture { get; private set; }
 
 	void Awake () {
-		LastGesture = new CompletedGestureStruct ("", 0f);
-		var handMoveCount = MovementTrackingWindow * 60 * 2;
-		_TrackedHandPositions = new Vector3[(int)handMoveCount];
-		_HandIndex = 0;
-		Tracking = false;
+		Reset();
 	}
 
 	// Use this for initialization
 	void Start () {
 		_HeadTracker = GetComponent<HeadTracker> ();
 		_HandsTracker = GetComponent<HandsTracker> ();
-		_Gestures = new List<Gesture> (Gestures);
+		_Callibrator = GetComponent<GestureCallibrator>();
 	}
 	
 	// Update is called once per frame
@@ -73,31 +83,32 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		if (_RemainingLockout > 0f) _RemainingLockout -= Time.deltaTime;
 
 		var largestCompletion = 0;
-		var name = "";
+		var name = string.Empty;
 		foreach (var gesture in Gestures) {
-			// Debug.Log("updating gesture " + gesture.Name);
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
 				if (_RemainingLockout <= 0f) {
-					if (largestCompletion < gesture.RuleIndex) {
-						largestCompletion = gesture.RuleIndex;
+					if (name == string.Empty) {
+					// if (largestCompletion < gesture.RuleIndex) {
+					// 	largestCompletion = gesture.RuleIndex;
 						name = gesture.Name;
+					// }
 					}
 				}
 				gesture.Reset();
 			}
 		}
-		if (largestCompletion > 0) {
-			var message = "COMPLETED: " + name;
-			Debug.Log(message);
-			TestOutputText.text = message;
-			LastGesture = new CompletedGestureStruct (name, Time.time);
-			_ClearTextTimer = 1f;
-			_RemainingLockout = GestureLockoutDuration;
+		if (name != string.Empty) {
+		// if (largestCompletion > 0) {
+			DetectedGesture(name);
 		}
 	}
 
 	void FixedUpdate() {
+		if (!_HandsTracker.Working || !_HeadTracker.Working || !Tracking) {
+			return;
+		}
+
 		var leftPos = _HandsTracker.LeftHand.position;
 		var rightPos = _HandsTracker.RightHand.position;
 
@@ -125,12 +136,20 @@ public class GestureManager : MonoBehaviour, IGestureManager
             totalDistance += Vector3.Distance(pos1, pos2);
 		}
 
-		InMotion = (totalDistance >= HoldStateRequirement);
+		WeirdRandomMovement = (totalDistance >= HoldStateRequirement);
 
 		if (totalDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
-			var time = Time.timeSinceLevelLoad;
-			LastGesture = new CompletedGestureStruct("Weird dance", time);
+			DetectedGesture("Weird dance");
 		}
+	}
+
+	public void DetectedGesture(string name) {
+		var message = "COMPLETED: " + name;
+		Debug.Log(message);
+		TestOutputText.text = message;
+		LastGesture = new CompletedGestureStruct (name, Time.time);
+		_ClearTextTimer = 1f;
+		_RemainingLockout = GestureLockoutDuration;
 	}
 
 	public bool CompareGestureNames (string[] names) {
@@ -149,6 +168,17 @@ public class GestureManager : MonoBehaviour, IGestureManager
 			}
 		}
 		return correct;
+	}
+
+	public void Reset() {
+		foreach (var gesture in Gestures) {
+			gesture.Reset();
+		}
+		LastGesture = new CompletedGestureStruct("", 0f);
+		var handMoveCount = MovementTrackingWindow * 60 * 2;
+		_TrackedHandPositions = new Vector3[(int)handMoveCount];
+		_HandIndex = 0;
+		Tracking = false;
 	}
 }
 

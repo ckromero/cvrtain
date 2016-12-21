@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Assertions;
 using System;
 using System.Collections;
@@ -43,9 +43,40 @@ public class LevelsManager : MonoBehaviour
 
 	void Start ()
 	{
-		if (listenToGestures)
-			UpdateLevelsBasedOnGestures ();
+		// if (listenToGestures)
+		// 	UpdateLevelsBasedOnGestures ();
 		//TODO: make this a function that is called at start AND at reset.
+		// for (var i = 0; i < Levels.Length; i++) {
+		// 	if (Levels[i].StartingLevel) {
+		// 		stage = i;
+		// 		stateLevelIndex = i;
+		// 		_HighestStage = stage;
+		// 		break;
+		// 	}
+		// }
+		// Levels[stage].Reset();
+
+		// Reset();
+
+		// UpdateAV();
+		//TODO: make this a cue in experience manager
+		// audioManager.ChangePad("murmur");
+	}
+
+	public void BeginPerforming() {
+		Debug.Log("BEGIN THE PERFORMANCE!!!!!");
+		UpdateAV();		
+		gestureManager.Tracking = true;
+		Performing = true;
+		Reset();
+		//TODO: expManager should be queued to audience start state	
+	}
+	public void StopPerforming () { 
+		gestureManager.Reset();
+		Performing = false;
+	}
+
+	public void Reset() {
 		for (var i = 0; i < Levels.Length; i++) {
 			if (Levels[i].StartingLevel) {
 				stage = i;
@@ -55,21 +86,8 @@ public class LevelsManager : MonoBehaviour
 			}
 		}
 		Levels[stage].Reset();
-
-		// UpdateAV();
-		//TODO: make this a cue in experience manager
-		audioManager.ChangePad("murmur");
 	}
 
-	public void BeginPerforming() {
-		Debug.Log("BEGIN THE PERFORMANCE!!!!!");
-		UpdateAV();		
-		gestureManager.Tracking = true;
-		Performing = true;
-	}
-	public void StopPerforming () { 
-		gestureManager.Tracking = false;
-	}
 	// Update is called once per frame
 	void Update ()
 	{
@@ -117,7 +135,7 @@ public class LevelsManager : MonoBehaviour
 
 		}
 		//TODO: change to weird dance or weird random gesture.
-		else if (!gestureManager.HighMovement) {
+		else if (!gestureManager.WeirdRandomMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
 				var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
@@ -178,9 +196,10 @@ public class LevelsManager : MonoBehaviour
 
 		if (stage < audioPads.Length && stage != 0 && stage!=1) {
 			string newPad = audioPads [stage];
-			audioManager.ChangePad (newPad);
+			// audioManager.ChangePad (newPad);
 
-			clapManager.UpdateClappers(Levels[stage].ClapLevel);
+			// clapManager.UpdateClappers(Levels[stage].ClapLevel);
+			expManager.LevelChanged(stage);
 
 //			animatorManager.changeAnimationState (newState);
 //			lightsManager.changeLightState(newState);
