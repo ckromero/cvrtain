@@ -6299,89 +6299,6 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: One Hand High, One Hand Low
-    ForceCompleteKey: 111
-    Rules:
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 0
-      EitherHand: 0
-      LeftHandAngles:
-        Max: 0
-        Min: 0
-      RightHandAngles:
-        Max: 0
-        Min: 0
-      RequireHandReach: 0
-      LeftHandReach:
-        Max: 0
-        Min: 0
-      RightHandReach:
-        Max: 0
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 45
-        Min: 0
-      RightHandAngles:
-        Max: 180
-        Min: 90
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 3
-        Min: 3
-      RightHandReach:
-        Max: 3
-        Min: 1
-      Waving: 0
-      LeftHandWaving: 1
-      RightHandWaving: 1
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 0
   - Name: Pump it up
     ForceCompleteKey: 112
     Rules:
@@ -7163,211 +7080,6 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: Curtsy
-    ForceCompleteKey: 99
-    Rules:
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 0
-      EitherHand: 0
-      LeftHandAngles:
-        Max: 0
-        Min: 0
-      RightHandAngles:
-        Max: 0
-        Min: 0
-      RequireHandReach: 0
-      LeftHandReach:
-        Max: 0
-        Min: 0
-      RightHandReach:
-        Max: 0
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    - RequireHeadState: 1
-      HeadState: 1
-      RequireHandAngles: 0
-      EitherHand: 0
-      LeftHandAngles:
-        Max: 0
-        Min: 0
-      RightHandAngles:
-        Max: 0
-        Min: 0
-      RequireHandReach: 0
-      LeftHandReach:
-        Max: 0
-        Min: 0
-      RightHandReach:
-        Max: 0
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 1
-      HeadMovement:
-        Max: 0.3
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 0
-  - Name: Hand to heart bow
-    ForceCompleteKey: 104
-    Rules:
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 0
-      EitherHand: 0
-      LeftHandAngles:
-        Max: 0
-        Min: 0
-      RightHandAngles:
-        Max: 0
-        Min: 0
-      RequireHandReach: 0
-      LeftHandReach:
-        Max: 0
-        Min: 0
-      RightHandReach:
-        Max: 0
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 2
-    - RequireHeadState: 1
-      HeadState: 0
-      RequireHandAngles: 0
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 360
-        Min: 0
-      RightHandAngles:
-        Max: 360
-        Min: 0
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 1
-        Min: 0
-      RightHandReach:
-        Max: 3
-        Min: 2
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 1
-      TimeLimit: 2
-    - RequireHeadState: 1
-      HeadState: 1
-      RequireHandAngles: 1
-      EitherHand: 1
-      LeftHandAngles:
-        Max: 270
-        Min: 90
-      RightHandAngles:
-        Max: 270
-        Min: 90
-      RequireHandReach: 1
-      LeftHandReach:
-        Max: 1
-        Min: 0
-      RightHandReach:
-        Max: 3
-        Min: 0
-      Waving: 0
-      LeftHandWaving: 0
-      RightHandWaving: 0
-      RequireHandDistance: 0
-      DistanceBetweenHands:
-        Max: 0
-        Min: 0
-      RequireHandToHeadDistance: 0
-      LeftHandHeadDistance:
-        Max: 0
-        Min: 0
-      RightHandHeadDistance:
-        Max: 0
-        Min: 0
-      RequireHeadMovement: 0
-      HeadMovement:
-        Max: 0
-        Min: 0
-      HasMaximumDuration: 0
-      MaxDuration: 0
-      HasTimeLimit: 0
-      TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 1
   - Name: Hands Together
     ForceCompleteKey: 49
     Rules:
@@ -7451,6 +7163,89 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 1
+  - Name: One Hand High, One Hand Low
+    ForceCompleteKey: 111
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 45
+        Min: 0
+      RightHandAngles:
+        Max: 270
+        Min: 90
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 3
+        Min: 1
+      Waving: 0
+      LeftHandWaving: 1
+      RightHandWaving: 1
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
   - Name: Wai
     ForceCompleteKey: 50
     Rules:
@@ -7555,6 +7350,128 @@ MonoBehaviour:
       RequireHandDistance: 1
       DistanceBetweenHands:
         Max: 0.2
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 1
+  - Name: Hand to heart bow
+    ForceCompleteKey: 104
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 360
+        Min: 0
+      RightHandAngles:
+        Max: 360
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 3
+        Min: 2
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 1
+      TimeLimit: 2
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 1
+      EitherHand: 1
+      LeftHandAngles:
+        Max: 270
+        Min: 90
+      RightHandAngles:
+        Max: 270
+        Min: 90
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 1
+        Min: 0
+      RightHandReach:
+        Max: 3
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
         Min: 0
       RequireHandToHeadDistance: 0
       LeftHandHeadDistance:
@@ -7732,6 +7649,89 @@ MonoBehaviour:
       RequireHeadMovement: 0
       HeadMovement:
         Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 0
+    Disabled: 0
+  - Name: Curtsy
+    ForceCompleteKey: 99
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 1
+      RequireHandAngles: 0
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 0
+        Min: 0
+      RightHandAngles:
+        Max: 0
+        Min: 0
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 0
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 1
+      HeadMovement:
+        Max: 0.3
         Min: 0
       HasMaximumDuration: 0
       MaxDuration: 0
