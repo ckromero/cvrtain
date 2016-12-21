@@ -109,8 +109,6 @@ public class LevelsManager : MonoBehaviour
         //"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
         //completedGestures
 
-        Debug.Log("I'm trying to update the level");
-
 		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
 			_TimeSinceLastGesture = 0f;
@@ -129,7 +127,6 @@ public class LevelsManager : MonoBehaviour
 			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
-            Debug.Log(lastGesture.Name + " evaluation for level " + stage + ": " + evaluation);
 			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {
 				var highEvaluation = Levels[_HighestStage].EvaluateGesture(lastGesture.Name);
 				if (highEvaluation > -1) {
