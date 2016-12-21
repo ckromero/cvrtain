@@ -34,8 +34,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	private HeadTracker _HeadTracker;
 	private HandsTracker _HandsTracker;
 
-	private List<Gesture> _Gestures;
-
 	private float _ClearTextTimer;
 
 	public CompletedGestureStruct LastGesture { get; private set; }
@@ -52,7 +50,6 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	void Start () {
 		_HeadTracker = GetComponent<HeadTracker> ();
 		_HandsTracker = GetComponent<HandsTracker> ();
-		_Gestures = new List<Gesture> (Gestures);
 	}
 	
 	// Update is called once per frame
@@ -73,21 +70,23 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		if (_RemainingLockout > 0f) _RemainingLockout -= Time.deltaTime;
 
 		var largestCompletion = 0;
-		var name = "";
+		var name = string.Empty;
 		foreach (var gesture in Gestures) {
-			// Debug.Log("updating gesture " + gesture.Name);
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
 				if (_RemainingLockout <= 0f) {
-					if (largestCompletion < gesture.RuleIndex) {
-						largestCompletion = gesture.RuleIndex;
+					if (name == string.Empty) {
+					// if (largestCompletion < gesture.RuleIndex) {
+					// 	largestCompletion = gesture.RuleIndex;
 						name = gesture.Name;
+					// }
 					}
 				}
 				gesture.Reset();
 			}
 		}
-		if (largestCompletion > 0) {
+		if (name != string.Empty) {
+		// if (largestCompletion > 0) {
 			var message = "COMPLETED: " + name;
 			Debug.Log(message);
 			TestOutputText.text = message;
@@ -149,6 +148,12 @@ public class GestureManager : MonoBehaviour, IGestureManager
 			}
 		}
 		return correct;
+	}
+
+	public bool Reset() {
+		foreach (var gesture in Gestures) {
+			gesture.Reset();
+		}
 	}
 }
 
