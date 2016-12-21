@@ -68,6 +68,7 @@ public class ExpManager : MonoBehaviour
 //			IsRestartAnimation = false;
 //		}
 		if (Input.GetKeyDown ("space")) {
+			//TODO: add calibration check after reset 
 			print ("space key was pressed");
 			RestartAnimation ();
 		}
@@ -171,6 +172,17 @@ public class ExpManager : MonoBehaviour
 		}
 
 	}
+	public void LevelChanged(int levelNum) { 
+		//
+		Debug.Log("Level Changed:" + levelNum);
+		ClapManager ();
+
+	}
+	public void ClapManager() { 
+		Debug.Log ("Clap Manager called");
+
+	}
+
 	private void StopIntro() { 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
