@@ -19,10 +19,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	}
 
 	public bool Tracking { get; set; }
-	public bool HighMovement { get; private set; }
-
-	public bool InMotion { get; private set; }
-	public bool DancingWeird { get; private set; }
+	public bool WeirdRandomMovement { get; private set; }
 
 	public float HoldStateRequirement;
 	public float WeirdDanceRequirement;
@@ -39,11 +36,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public CompletedGestureStruct LastGesture { get; private set; }
 
 	void Awake () {
-		LastGesture = new CompletedGestureStruct ("", 0f);
-		var handMoveCount = MovementTrackingWindow * 60 * 2;
-		_TrackedHandPositions = new Vector3[(int)handMoveCount];
-		_HandIndex = 0;
-		Tracking = false;
+		Reset();
 	}
 
 	// Use this for initialization
@@ -87,16 +80,15 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 		if (name != string.Empty) {
 		// if (largestCompletion > 0) {
-			var message = "COMPLETED: " + name;
-			Debug.Log(message);
-			TestOutputText.text = message;
-			LastGesture = new CompletedGestureStruct (name, Time.time);
-			_ClearTextTimer = 1f;
-			_RemainingLockout = GestureLockoutDuration;
+			DetectedGesture(name);
 		}
 	}
 
 	void FixedUpdate() {
+		if (!_HandsTracker.Working || !_HeadTracker.Working || !Tracking) {
+			return;
+		}
+
 		var leftPos = _HandsTracker.LeftHand.position;
 		var rightPos = _HandsTracker.RightHand.position;
 
@@ -124,12 +116,20 @@ public class GestureManager : MonoBehaviour, IGestureManager
             totalDistance += Vector3.Distance(pos1, pos2);
 		}
 
-		InMotion = (totalDistance >= HoldStateRequirement);
+		WeirdRandomMovement = (totalDistance >= HoldStateRequirement);
 
 		if (totalDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
-			var time = Time.timeSinceLevelLoad;
-			LastGesture = new CompletedGestureStruct("Weird dance", time);
+			DetectedGesture("Weird dance");
 		}
+	}
+
+	public void DetectedGesture(string name) {
+		var message = "COMPLETED: " + name;
+		Debug.Log(message);
+		TestOutputText.text = message;
+		LastGesture = new CompletedGestureStruct (name, Time.time);
+		_ClearTextTimer = 1f;
+		_RemainingLockout = GestureLockoutDuration;
 	}
 
 	public bool CompareGestureNames (string[] names) {
@@ -150,10 +150,15 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		return correct;
 	}
 
-	public bool Reset() {
+	public void Reset() {
 		foreach (var gesture in Gestures) {
 			gesture.Reset();
 		}
+		LastGesture = new CompletedGestureStruct ("", 0f);
+		var handMoveCount = MovementTrackingWindow * 60 * 2;
+		_TrackedHandPositions = new Vector3[(int)handMoveCount];
+		_HandIndex = 0;
+		Tracking = false;
 	}
 }
 
