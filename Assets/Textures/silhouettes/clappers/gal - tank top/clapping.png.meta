@@ -1,0 +1,1030 @@
+fileFormatVersion: 2
+guid: 10f367a1732c4456298a4188539acbe5
+timeCreated: 1482641659
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: clapping_0
+    21300002: clapping_1
+    21300004: clapping_2
+    21300006: clapping_3
+    21300008: clapping_4
+    21300010: clapping_5
+    21300012: clapping_6
+    21300014: clapping_7
+    21300016: clapping_8
+    21300018: clapping_9
+    21300020: clapping_10
+    21300022: clapping_11
+    21300024: clapping_12
+    21300026: clapping_13
+    21300028: clapping_14
+    21300030: clapping_15
+    21300032: clapping_16
+    21300034: clapping_17
+    21300036: clapping_18
+    21300038: clapping_19
+    21300040: clapping_20
+    21300042: clapping_21
+    21300044: clapping_22
+    21300046: clapping_23
+    21300048: clapping_24
+    21300050: clapping_25
+    21300052: clapping_26
+    21300054: clapping_27
+    21300056: clapping_28
+    21300058: clapping_29
+    21300060: clapping_30
+    21300062: clapping_31
+    21300064: clapping_32
+    21300066: clapping_33
+    21300068: clapping_34
+    21300070: clapping_35
+    21300072: clapping_36
+    21300074: clapping_37
+    21300076: clapping_38
+    21300078: clapping_39
+    21300080: clapping_40
+    21300082: clapping_41
+    21300084: clapping_42
+    21300086: clapping_43
+    21300088: clapping_44
+    21300090: clapping_45
+    21300092: clapping_46
+    21300094: clapping_47
+    21300096: clapping_48
+    21300098: clapping_49
+    21300100: clapping_50
+    21300102: clapping_51
+    21300104: clapping_52
+    21300106: clapping_53
+    21300108: clapping_54
+    21300110: clapping_55
+    21300112: clapping_56
+    21300114: clapping_57
+    21300116: clapping_58
+    21300118: clapping_59
+    21300120: clapping_60
+    21300122: clapping_61
+    21300124: clapping_62
+    21300126: clapping_63
+    21300128: clapping_64
+    21300130: clapping_65
+    21300132: clapping_66
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: clapping_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_2
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_3
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_4
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_5
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_6
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_7
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_8
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 2170
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_10
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_11
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_12
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_13
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_14
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_15
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_16
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_17
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 1860
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_19
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_20
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_21
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_22
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_23
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_24
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_25
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_26
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 1550
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_28
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_29
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_30
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_31
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_32
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_33
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_34
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_35
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 1240
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_37
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_38
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_39
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_40
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_41
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_42
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_43
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_44
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 930
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_46
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_47
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_48
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_49
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_50
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_51
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_52
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_53
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 620
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_55
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_56
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_57
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_58
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_59
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_60
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_61
+      rect:
+        serializedVersion: 2
+        x: 2954
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_62
+      rect:
+        serializedVersion: 2
+        x: 3376
+        y: 310
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_64
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 0
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_65
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 0
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: clapping_66
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 0
+        width: 422
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

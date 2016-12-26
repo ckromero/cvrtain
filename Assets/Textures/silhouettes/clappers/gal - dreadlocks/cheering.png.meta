@@ -1,0 +1,2402 @@
+fileFormatVersion: 2
+guid: 1018368e2bf484c39bbd6e51b7ff6739
+timeCreated: 1482640810
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cheering_0
+    21300002: cheering_1
+    21300004: cheering_2
+    21300006: cheering_3
+    21300008: cheering_4
+    21300010: cheering_5
+    21300012: cheering_6
+    21300014: cheering_7
+    21300016: cheering_8
+    21300018: cheering_9
+    21300020: cheering_10
+    21300022: cheering_11
+    21300024: cheering_12
+    21300026: cheering_13
+    21300028: cheering_14
+    21300030: cheering_15
+    21300032: cheering_16
+    21300034: cheering_17
+    21300036: cheering_18
+    21300038: cheering_19
+    21300040: cheering_20
+    21300042: cheering_21
+    21300044: cheering_22
+    21300046: cheering_23
+    21300048: cheering_24
+    21300050: cheering_25
+    21300052: cheering_26
+    21300054: cheering_27
+    21300056: cheering_28
+    21300058: cheering_29
+    21300060: cheering_30
+    21300062: cheering_31
+    21300064: cheering_32
+    21300066: cheering_33
+    21300068: cheering_34
+    21300070: cheering_35
+    21300072: cheering_36
+    21300074: cheering_37
+    21300076: cheering_38
+    21300078: cheering_39
+    21300080: cheering_40
+    21300082: cheering_41
+    21300084: cheering_42
+    21300086: cheering_43
+    21300088: cheering_44
+    21300090: cheering_45
+    21300092: cheering_46
+    21300094: cheering_47
+    21300096: cheering_48
+    21300098: cheering_49
+    21300100: cheering_50
+    21300102: cheering_51
+    21300104: cheering_52
+    21300106: cheering_53
+    21300108: cheering_54
+    21300110: cheering_55
+    21300112: cheering_56
+    21300114: cheering_57
+    21300116: cheering_58
+    21300118: cheering_59
+    21300120: cheering_60
+    21300122: cheering_61
+    21300124: cheering_62
+    21300126: cheering_63
+    21300128: cheering_64
+    21300130: cheering_65
+    21300132: cheering_66
+    21300134: cheering_67
+    21300136: cheering_68
+    21300138: cheering_69
+    21300140: cheering_70
+    21300142: cheering_71
+    21300144: cheering_72
+    21300146: cheering_73
+    21300148: cheering_74
+    21300150: cheering_75
+    21300152: cheering_76
+    21300154: cheering_77
+    21300156: cheering_78
+    21300158: cheering_79
+    21300160: cheering_80
+    21300162: cheering_81
+    21300164: cheering_82
+    21300166: cheering_83
+    21300168: cheering_84
+    21300170: cheering_85
+    21300172: cheering_86
+    21300174: cheering_87
+    21300176: cheering_88
+    21300178: cheering_89
+    21300180: cheering_90
+    21300182: cheering_91
+    21300184: cheering_92
+    21300186: cheering_93
+    21300188: cheering_94
+    21300190: cheering_95
+    21300192: cheering_96
+    21300194: cheering_97
+    21300196: cheering_98
+    21300198: cheering_99
+    21300200: cheering_100
+    21300202: cheering_101
+    21300204: cheering_102
+    21300206: cheering_103
+    21300208: cheering_104
+    21300210: cheering_105
+    21300212: cheering_106
+    21300214: cheering_107
+    21300216: cheering_108
+    21300218: cheering_109
+    21300220: cheering_110
+    21300222: cheering_111
+    21300224: cheering_112
+    21300226: cheering_113
+    21300228: cheering_114
+    21300230: cheering_115
+    21300232: cheering_116
+    21300234: cheering_117
+    21300236: cheering_118
+    21300238: cheering_119
+    21300240: cheering_120
+    21300242: cheering_121
+    21300244: cheering_122
+    21300246: cheering_123
+    21300248: cheering_124
+    21300250: cheering_125
+    21300252: cheering_126
+    21300254: cheering_127
+    21300256: cheering_128
+    21300258: cheering_129
+    21300260: cheering_130
+    21300262: cheering_131
+    21300264: cheering_132
+    21300266: cheering_133
+    21300268: cheering_134
+    21300270: cheering_135
+    21300272: cheering_136
+    21300274: cheering_137
+    21300276: cheering_138
+    21300278: cheering_139
+    21300280: cheering_140
+    21300282: cheering_141
+    21300284: cheering_142
+    21300286: cheering_143
+    21300288: cheering_144
+    21300290: cheering_145
+    21300292: cheering_146
+    21300294: cheering_147
+    21300296: cheering_148
+    21300298: cheering_149
+    21300300: cheering_150
+    21300302: cheering_151
+    21300304: cheering_152
+    21300306: cheering_153
+    21300308: cheering_154
+    21300310: cheering_155
+    21300312: cheering_156
+    21300314: cheering_157
+    21300316: cheering_158
+    21300318: cheering_159
+    21300320: cheering_160
+    21300322: cheering_161
+    21300324: cheering_162
+    21300326: cheering_163
+    21300328: cheering_164
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cheering_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_1
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_2
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_3
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_4
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_5
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_6
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_7
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_8
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_9
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 5236
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_11
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_12
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_14
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_15
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_16
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_17
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_18
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_19
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 4928
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_21
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_22
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_23
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_24
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_25
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_26
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_27
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_28
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_29
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 4620
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_31
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_32
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_33
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_34
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_35
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_36
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_37
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_38
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_39
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 4312
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_41
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_42
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_43
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_44
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_45
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_46
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_47
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_48
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_49
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 4004
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_51
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_52
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_53
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_54
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_55
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_56
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_57
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_58
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_59
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 3696
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_61
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_62
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_63
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_64
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_65
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_66
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_67
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_68
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_69
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 3388
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_71
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_72
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_73
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_74
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_75
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_76
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_77
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_78
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_79
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 3080
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_81
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_82
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_83
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_84
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_85
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_86
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_87
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_88
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_89
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 2772
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_91
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_92
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_93
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_94
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_95
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_96
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_97
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_98
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_99
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 2464
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_101
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_102
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_103
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_104
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_105
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_106
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_107
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_108
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_109
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 2156
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_111
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_112
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_113
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_114
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_115
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_116
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_117
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_118
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_119
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1848
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_121
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_122
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_123
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_124
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_125
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_126
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_127
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_128
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_129
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1540
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_131
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_132
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_133
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_134
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_135
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_136
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_137
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_138
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_139
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 1232
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_141
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_142
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_143
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_144
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_145
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_146
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_147
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_148
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_149
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 924
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_151
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_152
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_153
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_154
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_155
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_156
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_157
+      rect:
+        serializedVersion: 2
+        x: 2912
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_158
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_159
+      rect:
+        serializedVersion: 2
+        x: 3744
+        y: 616
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 308
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_161
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 308
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_162
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 308
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_163
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 308
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: cheering_164
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 308
+        width: 416
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

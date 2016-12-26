@@ -3,7 +3,7 @@ using System.Collections;
 
 public class ClapControl : MonoBehaviour
 {
-
+	public bool triggerIdle=false;
 	public bool triggerGoToHigh = false;
 	public bool triggerRaisedFist = false;
 	public bool triggerHighClapping = false;
@@ -11,7 +11,6 @@ public class ClapControl : MonoBehaviour
 	public float lowerSpeedRange = 0.8f;
 	public float upperSpeedRange = 1.2f;
 	private Animator animator;
-
 
 	// Use this for initialization
 	void Start ()
@@ -21,6 +20,10 @@ public class ClapControl : MonoBehaviour
 
 	void Update ()
 	{
+		if (triggerIdle) {
+			TriggerIdle ();
+			triggerIdle=false;
+		}
 		if (triggerGoToHigh) { 
 			TriggerGoToHigh ();
 //			Debug.Log ("Updating Clap Control: TriggerGoToHigh");
@@ -48,6 +51,9 @@ public class ClapControl : MonoBehaviour
 	{
 		Debug.Log ("WhichTrigger called with: " + triggerName);
 		switch (triggerName) { 
+		case "triggerIdle":
+			triggerIdle = true;
+			break;
 		case "triggerRaisedFist":
 			triggerRaisedFist = true;
 			break;
@@ -66,6 +72,14 @@ public class ClapControl : MonoBehaviour
 		}
 	}
 
+	//TRIGGERS: T_idle, T_highClapperToRaisedFist, T_highClapper, T_GoToMild 
+
+
+
+	void TriggerIdle() { 
+		animator.SetTrigger ("T_idle");
+		animator.speed = Random.Range (lowerSpeedRange, upperSpeedRange);
+	}
 	void TriggerGoToHigh ()
 	{
 //		if (animator.GetCurrentAnimatorStateInfo (0).IsName ("mild clapping animation")) {
