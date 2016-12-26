@@ -171,15 +171,19 @@ public class ExpManager : MonoBehaviour
 		switch (levelNum) {
 		case 1:
 			audioManager.ChangePad ("polite");
+			clapperManager.ChangeLevel (2);
 			break;
 		case 2:
 			audioManager.ChangePad ("medium");
+			clapperManager.ChangeLevel (3);
 			break;
 		case 3:
 			audioManager.ChangePad ("large");
+			clapperManager.ChangeLevel (4);
 			break;
 		case 4:
 			audioManager.ChangePad ("huge");
+			clapperManager.ChangeLevel (5);
 			break;
 		}
 
