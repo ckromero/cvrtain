@@ -204,7 +204,7 @@ public class ExpManager : MonoBehaviour
 			Debug.Log ("Experience Manager: Curtain is open");
 			audioManager.TriggerSound ("SWITCH_1");
 			audioManager.TriggerSound ("RoomToneCoughv2_EDIT");
-
+			audioManager.TriggerSound ("SideTone");
 			lightsController.TurnOnMains ();
 
 			IsCurtainNotificationSent = true;
@@ -237,6 +237,7 @@ public class ExpManager : MonoBehaviour
 		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
+		audioManager.StopSound ("SideTone");
 	}
 
 	public void RestartCurtainAnimation ()
