@@ -55,7 +55,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 25
+    m_StopTime: 66.95
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -150,37 +150,30 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9.983334
-    functionName: SendCue
-    data: FirstCough
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 14.683333
+  - time: 29.983334
     functionName: SendCue
     data: Whistle
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 15.1
-    functionName: SendCue
-    data: AnotherCough
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 20.016666
-    functionName: SendCue
-    data: TakeABow
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 25
+  - time: 60.016666
     functionName: SendCue
     data: ShowsOver
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 65.38333
+    functionName: SendCue
+    data: FirstCough
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 66.95
+    functionName: SendCue
+    data: AnotherCough
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
