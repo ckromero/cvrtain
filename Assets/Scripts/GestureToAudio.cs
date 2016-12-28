@@ -18,9 +18,12 @@ public class GestureToAudio : MonoBehaviour
 	private float lastGestureTime = 0.0f;
 	private bool IsFirstGesture=true;
 	private CompletedGestureStruct checkLastGesture;
+	private List<string> weirdRandoms;
+
 	void Awake ()
 	{
 		SetUpGestureToAudioList ();
+		SetUpWeirdRandoms ();
 	}
 	// Use this for initialization
 	void Start ()
@@ -103,5 +106,25 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT");
 
 	}
+	private void SetUpWeirdRandoms() {
+//		weirdRandoms={"WierdRandom1.wav",
+//			"WierdRandom10.wav",
+//			"WierdRandom11.wav",
+//			"WierdRandom12.wav",
+//			"WierdRandom13.wav",
+//			"WierdRandom2.wav",
+//			"WierdRandom3.wav",
+//			"WierdRandom4.wav",
+//			"WierdRandom5.wav",
+//			"WierdRandom6.wav",
+//			"WierdRandom7.wav",
+//			"WierdRandom8.wav",
+//			"WierdRandom9.wav"
+//		}
 
+
+
+
+
+	}
 }
