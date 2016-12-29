@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -31,6 +32,22 @@ public class AudioManager : MonoBehaviour
 	public AudioSource[] additionalPostShowSounds;
 
 	private AudienceState audState;
+
+	private string[] wierdAudioList = new string[] { "WierdRandom1",
+		"WierdRandom2",
+		"WierdRandom3",
+		"WierdRandom4",
+		"WierdRandom5",
+		"WierdRandom6",
+		"WierdRandom7",
+		"WierdRandom8",
+		"WierdRandom9",
+		"WierdRandom10",
+		"WierdRandom11",
+		"WierdRandom12",
+		"WierdRandom13"
+	};
+
 	private  string currentAudioMixerSnapshot;
 
 	void Awake ()
@@ -167,11 +184,23 @@ public class AudioManager : MonoBehaviour
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
 		if (audioToPlay.isPlaying) { 
-			Debug.Log (audioToPlay.ToString () + " is already playing!");
+			string wierdSound = PickWierdAudio ();
+			Debug.Log (audioToPlay.ToString () + " is already playing, so playing " + wierdSound + " instead.");
+			GameObject goWierdAudio = GameObject.Find (wierdSound);
+			AudioSource wierdAudioToPlay = goAudio.GetComponent<AudioSource> ();
+			wierdAudioToPlay.Play ();
 		} else {
 			Debug.Log ("audioToPlay: " + audioToPlay);
 			audioToPlay.Play ();
 		}
+	}
+
+	private string PickWierdAudio ()
+	{ 
+		int length = wierdAudioList.Length;
+		int whichWierd = Random.Range (0, length - 1);
+		string wierdSoundToPlay = wierdAudioList [whichWierd];
+		return wierdSoundToPlay;
 	}
 
 	private void StopAudio (string audioName)
