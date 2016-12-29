@@ -48,6 +48,29 @@ public class AudioManager : MonoBehaviour
 		"WierdRandom13"
 	};
 
+	private string lastGestureAltTriggered = "";
+	private string[] gestureAlts = new string[]{ "BowAlt_01", 
+		"BowAlt_02", 
+		"BowAlt_03", 
+		"BowAlt_04", 
+		"BowAlt_05",
+		"BowAlt_06", 
+		"BowAlt_07", 
+		"BowAlt_08", 
+		"BowAlt_09", 
+		"BowAlt_10",
+		"BowAlt_11",
+		"BowAlt_12",
+		"BowAlt_13",
+		"BowAlt_14",
+		"BowAlt_15",
+		"BowAlt_16",
+		"BowAlt_17",
+		"BowAlt_18",
+		"BowAlt_19",
+		"BowAlt_20",
+		"BowAlt_21"};
+
 	private  string currentAudioMixerSnapshot;
 
 	void Awake ()
@@ -205,8 +228,6 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	private string lastGestureAltTriggered = "";
-	private string[] gestureAlts = new string[]{ "BowAlt_01", "BowAlt_02", "BowAlt_03", "BowAlt_04" };
 
 
 	private string PickAlt ()
@@ -229,7 +250,7 @@ public class AudioManager : MonoBehaviour
 			} else {
 				//not the last alt
 				string pack = "";
-				if (altNumber + 1 < 9) {
+				if (altNumber + 1 <= 9) {
 					pack = "0";
 				}
 				//alts root with underscore, packing zero if needed, increment the altNumber.	
