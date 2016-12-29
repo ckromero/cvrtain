@@ -33,7 +33,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011233391044}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: 0.89560544, z: -0.0034221578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -57,6 +57,7 @@ MonoBehaviour:
   clapManager: {fileID: 0}
   DelayBeforeDecayStarts: 15
   DecayGap: 3
+  InactionTimeout: 20
   IsIncrementStage: 0
   Levels:
   - StartingLevel: 1
