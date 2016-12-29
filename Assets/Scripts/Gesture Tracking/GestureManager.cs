@@ -48,7 +48,9 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public float WeirdDanceRequirement;
 	public float MovementTrackingWindow;
 
-	private Vector3[] _TrackedHandPositions;
+	// private Vector3[] _TrackedHandPositions;
+	private Vector3[] _TrackedRandomPositions;
+	private Vector3[] _TrackedDancePositions;
 	private int _HandIndex;
 
 	private HeadTracker _HeadTracker;
@@ -116,16 +118,22 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var leftPos = _HandsTracker.LeftHand.position;
 		var rightPos = _HandsTracker.RightHand.position;
 
-		_TrackedHandPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
-		_TrackedHandPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
+		// _TrackedHandPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
+		// _TrackedHandPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
+
+		_TrackedRandomPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
+		_TrackedRandomPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
 
 		_HandIndex += 2;
-		if (_HandIndex >= _TrackedHandPositions.Length) {
+		var length = _TrackedRandomPositions.Length;
+		// if (_HandIndex >= _TrackedHandPositions.Length) {
+		if (_HandIndex >= _TrackedRandomPositions.Length) {
 			_HandIndex = 0;
 		}
 
-		var totalDistance = 0f;
-		var length = _TrackedHandPositions.Length;
+		var randomDistance = 0f;
+		var danceDistance = 0f;
+		// var length = _TrackedHandPositions.Length;
 		for (var i = _HandIndex - 1; i != _HandIndex; i--) {
             if (i < 0) {
                 i = length - 1;
@@ -135,15 +143,30 @@ public class GestureManager : MonoBehaviour, IGestureManager
             }
             var index = i;
             var index2 = (index <= 1) ? length - 1 - index : index - 2;
-            var pos1 = _TrackedHandPositions[index];
-            var pos2 = _TrackedHandPositions[index2];
-            totalDistance += Vector3.Distance(pos1, pos2);
+            // var pos1 = _TrackedHandPositions[index];
+            // var pos2 = _TrackedHandPositions[index2];
+            var pos1 = _TrackedRandomPositions[index];
+            var pos2 = _TrackedRandomPositions[index2];
+            randomDistance += Vector3.Distance(pos1, pos2);
+
+            pos1 = _TrackedDancePositions[index];
+            pos2 = _TrackedDancePositions[index2];
+            danceDistance += Vector3.Distance(pos1, pos2);
 		}
 
-		WeirdRandomMovement = (totalDistance >= HoldStateRequirement);
+		// WeirdRandomMovement = (randomDistance >= HoldStateRequirement);
 
-		if (totalDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
+		if (randomDistance >= HoldStateRequirement && _RemainingLockout <= 0f) {
+			DetectedGesture("Weird random");
+			for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
+				_TrackedRandomPositions[i] = Vector3.zero;
+			}
+		}
+		else if (randomDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
 			DetectedGesture("Weird dance");
+			for (var i = 0; i < _TrackedDancePositions.Length; i++) {
+				_TrackedDancePositions[i] = Vector3.zero;
+			}
 		}
 	}
 
@@ -180,7 +203,9 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 		LastGesture = new CompletedGestureStruct("", 0f);
 		var handMoveCount = MovementTrackingWindow * 60 * 2;
-		_TrackedHandPositions = new Vector3[(int)handMoveCount];
+		// _TrackedHandPositions = new Vector3[(int)handMoveCount];
+		_TrackedRandomPositions = new Vector3[(int)handMoveCount];
+		_TrackedDancePositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
 
         /* this is a hack to fix the bug requiring a double bow to start performance */
