@@ -86,7 +86,7 @@ public class GestureToAudio : MonoBehaviour
 
 		gestureToAudioList.Add ("Arms out, basking", "1226_ArmsToSide");
 		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
-		gestureToAudioList.Add ("Blow Kisses", "BlowKisses_EDIT");
+		gestureToAudioList.Add ("Blow a Kiss", "BlowKisses_EDIT");
 		gestureToAudioList.Add ("Bow", "1226_Bow");
 		gestureToAudioList.Add ("Deep bow", "1226_DeepBow");
 		gestureToAudioList.Add ("Hand Slice", "1226_HandUpLeft");
