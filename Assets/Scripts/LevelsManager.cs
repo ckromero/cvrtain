@@ -19,6 +19,8 @@ public class LevelsManager : MonoBehaviour
 	public bool Performing { get; set; }
 	public bool IsIncrementStage = false;
 	public bool MaxLevel { get; private set; }
+    public bool Failing { get; private set; }
+    public bool Failed { get; private set; }
 
 	// private  string lastGesture;
 	private CompletedGestureStruct lastGesture;
@@ -90,6 +92,8 @@ public class LevelsManager : MonoBehaviour
 			}
 		}
 		Levels[stage].Reset();
+        Failed = false;
+        Failing = false;
 	}
 
 	// Update is called once per frame
@@ -115,6 +119,8 @@ public class LevelsManager : MonoBehaviour
 
 			_TimeSinceLastGesture = 0f;
 			lastGesture = gestureManager.LastGesture;
+
+            Failing = false;
 
 			if (gestureManager.Facing == HeadFacing.Back) {
 				/* only trigger a response if the player is past the starting
@@ -154,6 +160,7 @@ public class LevelsManager : MonoBehaviour
 					_TimeToFailure -= Time.deltaTime;
 					if (_TimeToFailure <= 0f) {
 						Debug.Log("TIME OUT THE PERFORMER");
+                        Failed = true;
 					}
 				}
 			}
@@ -168,11 +175,14 @@ public class LevelsManager : MonoBehaviour
 			UpdateLevel(Levels[stage].Advancement);
 		}
 		else if (Levels[stage].Failed) {
-			// stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
-			// UpdateLevel();
+            // stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
+            // UpdateLevel();
 
+            var lastStage = stage;
 			UpdateLevel(-1);
-			if (stage == 0) {
+			if (stage == 0 && lastStage != stage) {
+                Debug.Log("I'VE DETECTED A FAILURE");
+                Failing = true;
 				_TimeToFailure = InactionTimeout;
 			}
 		}
@@ -206,7 +216,7 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateAV ()
 	{
-		Debug.Log ("updating AV, stage is now " + stage);
+		//Debug.Log ("updating AV, stage is now " + stage);
 		//TODO: @ckromero move this to ExpManager. 
 		//LevelsManager should be concerned with level accumulation.
 

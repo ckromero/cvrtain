@@ -118,6 +118,12 @@ public class GestureManager : MonoBehaviour, IGestureManager
 				}
 				gesture.Reset();
 			}
+            /* if a gesture is waiting on its delay, but another gesture has been completed
+             * go ahead and reset the waiting gesture */
+            else if (gesture.DelayedComplete && name != string.Empty)
+            {
+                gesture.Reset();
+            }
 		}
 		if (name != string.Empty) {
 		// if (largestCompletion > 0) {
@@ -171,17 +177,17 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 		// WeirdRandomMovement = (randomDistance >= HoldStateRequirement);
 
-		if (randomDistance >= HoldStateRequirement && _RemainingLockout <= 0f) {
-			DetectedGesture("Weird random");
-			for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
-				_TrackedRandomPositions[i] = Vector3.zero;
-			}
-		}
-		else if (randomDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
+		if (randomDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
 			DetectedGesture("Weird dance");
-			for (var i = 0; i < _TrackedDancePositions.Length; i++) {
-				_TrackedDancePositions[i] = Vector3.zero;
-			}
+			//for (var i = 0; i < _TrackedDancePositions.Length; i++) {
+			//	_TrackedDancePositions[i] = Vector3.zero;
+			//}
+		}
+		else if (randomDistance >= HoldStateRequirement && _RemainingLockout <= 0f) {
+			DetectedGesture("Weird random");
+			//for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
+			//	_TrackedRandomPositions[i] = Vector3.zero;
+			//}
 		}
 	}
 
@@ -194,6 +200,15 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		_RemainingLockout = GestureLockoutDuration;
 
 		PerformedGestures.Add(LastGesture);
+
+        /* clear the random trackers */
+
+		for (var i = 0; i < _TrackedDancePositions.Length; i++) {
+			_TrackedDancePositions[i] = Vector3.zero;
+		}
+		for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
+			_TrackedRandomPositions[i] = Vector3.zero;
+		}
 	}
 
 	public bool CompareGestureNames (string[] names) {

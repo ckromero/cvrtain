@@ -19,7 +19,7 @@ public class HeadStateDebugScript : MonoBehaviour {
         {
             bufferState += state + ", ";
         }
-        Debug.Log(bufferState);
+        //Debug.Log(bufferState);
         GetComponent<Text>().text = bufferState;
 	}
 }

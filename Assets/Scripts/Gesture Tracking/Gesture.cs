@@ -18,6 +18,13 @@ public class Gesture {
 			return (RuleIndex >= Rules.Length - 1 && _DelayRemaining <= 0f);
 		}
 	}
+    public bool DelayedComplete
+    {
+        get
+        {
+            return (RuleIndex >= Rules.Length);
+        }
+    }
 
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
@@ -37,13 +44,15 @@ public class Gesture {
 		if (Completed || Disabled) {
 			return;
 		}
-		else if (RuleIndex >= Rules.Length - 1) {
-			_DelayRemaining -= Time.deltaTime;
-		}
 
 		if (Input.GetKeyDown(ForceCompleteKey)) {
 			RuleIndex = Rules.Length;
 			return;
+		}
+
+		if (RuleIndex >= Rules.Length - 1) {
+			_DelayRemaining -= Time.deltaTime;
+            return;
 		}
 
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {

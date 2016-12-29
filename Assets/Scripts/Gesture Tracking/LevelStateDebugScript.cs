@@ -14,6 +14,14 @@ public class LevelStateDebugScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Text>().text = "Current Level: " + LevelManager.CurrentLevel;
+        var text = "Current Level: " + LevelManager.CurrentLevel;
+        if (LevelManager.Failed)
+        {
+            text = "FAILED";
+        }
+        else if (LevelManager.Failing) {
+            text = "Failing";
+        }
+		GetComponent<Text>().text = text;
 	}
 }
