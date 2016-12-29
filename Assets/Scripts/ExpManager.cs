@@ -195,7 +195,8 @@ public class ExpManager : MonoBehaviour
 	private void StopIntro ()
 	{ 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
-		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
+//		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
+		audioManager.SetSoundToFade ("RoomToneCoughv2_EDIT");
 	}
 
 	private void CurtainOpened ()

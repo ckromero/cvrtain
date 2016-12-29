@@ -32,6 +32,8 @@ public class AudioManager : MonoBehaviour
 	public AudioSource[] additionalPostShowSounds;
 
 	private AudienceState audState;
+	private string soundToFade="";
+	private float soundToFadeAudioLevel=1.0f;
 
 	private string[] wierdAudioList = new string[] { "WierdRandom1",
 		"WierdRandom2",
@@ -94,8 +96,7 @@ public class AudioManager : MonoBehaviour
 
 	void Update ()
 	{
-
-
+		FadeOut ();
 
 	}
 
@@ -228,6 +229,26 @@ public class AudioManager : MonoBehaviour
 	}
 
 
+	public void SetSoundToFade(string _soundToFade){
+		Debug.Log ("SetSoundToFade received: " + _soundToFade);
+		soundToFade = _soundToFade;
+	}
+
+	private void FadeOut(){
+		if (soundToFade != "") {
+			GameObject fadingAudioGO = GameObject.Find (soundToFade);
+			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
+			if (soundToFadeAudioLevel > 0.1) {
+				soundToFadeAudioLevel -= 0.1f * Time.deltaTime;
+
+				fadingAudioSource.volume = soundToFadeAudioLevel;
+				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
+			} else {
+				fadingAudioSource.Stop ();
+				soundToFade = "";
+			}
+		}			
+	}
 
 
 	private string PickAlt ()
