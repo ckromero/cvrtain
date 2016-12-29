@@ -23,7 +23,6 @@ public class GestureToAudio : MonoBehaviour
 	void Awake ()
 	{
 		SetUpGestureToAudioList ();
-		SetUpWeirdRandoms ();
 	}
 	// Use this for initialization
 	void Start ()
@@ -75,7 +74,7 @@ public class GestureToAudio : MonoBehaviour
 		if (gestureToAudioList.ContainsKey (lastGesture)) {
 			string soundToPlay = gestureToAudioList [lastGesture];
 			Debug.Log ("ready to trigger " + soundToPlay );
-			audiomanager.TriggerSound (soundToPlay);
+			audiomanager.TriggerSound (soundToPlay,"gesture");
 		} else {
 			Debug.LogWarning ("no sound for " + lastGesture);
 		}
@@ -93,38 +92,16 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Hand Slice", "1226_HandUpLeft");
 		gestureToAudioList.Add ("Hands Together", "1226_HandsTogetherShake");
 		gestureToAudioList.Add ("Hands up bow", "1226_HandsUp");
-		//*********** TODO: @ckromero: Lets break this up into left and right!
-		gestureToAudioList.Add ("Hand Sweep", "1226_HandUpLeft");
+		gestureToAudioList.Add ("One arm sweep left", "1226_HandUpLeft");
+		gestureToAudioList.Add ("One arm sweep right", "1226_HandUpRight");
 		gestureToAudioList.Add ("Hand to heart bow", "1226_RHandToHeart");
-		gestureToAudioList.Add ("no moving", "1226_NotMoving");
+//		gestureToAudioList.Add ("no moving", "1226_NotMoving");
 		gestureToAudioList.Add ("One arm bow", "1226_OneArmUp");
 		gestureToAudioList.Add ("One Hand High, One Hand Low", "1226_OneHighOneLow");
 		gestureToAudioList.Add ("Pump it up", "1226_PumpItUp");
 		gestureToAudioList.Add ("Wai", "1226_TwoHandsTogether");
 		gestureToAudioList.Add ("Wave", "1226_Wave");	
 		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");
-		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT");
-
 	}
-	private void SetUpWeirdRandoms() {
-//		weirdRandoms={"WierdRandom1.wav",
-//			"WierdRandom10.wav",
-//			"WierdRandom11.wav",
-//			"WierdRandom12.wav",
-//			"WierdRandom13.wav",
-//			"WierdRandom2.wav",
-//			"WierdRandom3.wav",
-//			"WierdRandom4.wav",
-//			"WierdRandom5.wav",
-//			"WierdRandom6.wav",
-//			"WierdRandom7.wav",
-//			"WierdRandom8.wav",
-//			"WierdRandom9.wav"
-//		}
 
-
-
-
-
-	}
 }

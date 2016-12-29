@@ -166,11 +166,11 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void TriggerSound (string soundName)
+	public void TriggerSound (string soundName,string gesturePassthrough="")
 	{ 
 //		Debug.Log ("Trigger Sound received: " + soundName);
 
-		TriggerAudio (soundName);
+		TriggerAudio (soundName,gesturePassthrough);
 	}
 
 	public void StopSound (string soundName)
@@ -178,21 +178,72 @@ public class AudioManager : MonoBehaviour
 		StopAudio (soundName);
 	}
 
-	private void TriggerAudio (string audioName)
+	private void TriggerAudio (string audioName, string triggeredGesture = "")
 	{ 
 		// TODO: ignore playing a sound file if said file is already playing	
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
 		if (audioToPlay.isPlaying) { 
-			string wierdSound = PickWierdAudio ();
-			Debug.Log (audioToPlay.ToString () + " is already playing, so playing " + wierdSound + " instead.");
-			GameObject goWierdAudio = GameObject.Find (wierdSound);
-			AudioSource wierdAudioToPlay = goAudio.GetComponent<AudioSource> ();
-			wierdAudioToPlay.Play ();
+			if (triggeredGesture == "gesture") {
+				string pickedAlt = PickAlt ();
+				GameObject pickedAltAudio = GameObject.Find (pickedAlt);
+				AudioSource pickedAltAudioToPlay = pickedAltAudio.GetComponent<AudioSource> ();
+				pickedAltAudioToPlay.Play ();
+
+			} else {
+			
+				string wierdSound = PickWierdAudio ();
+				Debug.Log (audioToPlay.ToString () + " is already playing, so playing " + wierdSound + " instead.");
+				GameObject goWierdAudio = GameObject.Find (wierdSound);
+				AudioSource wierdAudioToPlay = goWierdAudio.GetComponent<AudioSource> ();
+				wierdAudioToPlay.Play ();
+			}
 		} else {
 			Debug.Log ("audioToPlay: " + audioToPlay);
 			audioToPlay.Play ();
 		}
+	}
+
+
+	private string lastGestureAltTriggered = "";
+	private string[] gestureAlts = new string[]{ "BowAlt_01", "BowAlt_02", "BowAlt_03", "BowAlt_04" };
+
+
+	private string PickAlt ()
+	{ 
+		string pickedAlt = "";
+
+		int length = gestureAlts.Length;
+		int altIndex;
+
+		if (lastGestureAltTriggered == "") {
+			pickedAlt = gestureAlts [0];
+		} else {
+			int underscoreIdx = lastGestureAltTriggered.IndexOf ("_");
+			string intSuffix = lastGestureAltTriggered.Substring (underscoreIdx + 1);
+			int altNumber = int.Parse (intSuffix);
+
+
+			if (altNumber == length) {
+				pickedAlt = gestureAlts [0];
+			} else {
+				//not the last alt
+				string pack = "";
+				if (altNumber + 1 < 9) {
+					pack = "0";
+				}
+				//alts root with underscore, packing zero if needed, increment the altNumber.	
+				altNumber++;
+				pickedAlt = lastGestureAltTriggered.Substring (0, underscoreIdx + 1) + pack + altNumber.ToString ();
+
+			}
+		}
+
+		Debug.Log ("PickedAlt: " + pickedAlt);
+		lastGestureAltTriggered=pickedAlt;
+
+		return pickedAlt;
+
 	}
 
 	private string PickWierdAudio ()
@@ -202,6 +253,7 @@ public class AudioManager : MonoBehaviour
 		string wierdSoundToPlay = wierdAudioList [whichWierd];
 		return wierdSoundToPlay;
 	}
+
 
 	private void StopAudio (string audioName)
 	{ 
