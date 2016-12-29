@@ -194,9 +194,8 @@ GameObject:
   - component: {fileID: 135000012197663314}
   - component: {fileID: 114000012945332610}
   - component: {fileID: 114334361558351540}
-  - component: {fileID: 114742865790063922}
-  - component: {fileID: 114645010541745774}
   - component: {fileID: 114525145858866868}
+  - component: {fileID: 114825880462984746}
   m_Layer: 9
   m_Name: Camera (eye)
   m_TagString: MainCamera
@@ -2620,6 +2619,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!1 &1085491033447006
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224045782848312430}
+  - component: {fileID: 222704344772979328}
+  - component: {fileID: 114634271263622282}
+  - component: {fileID: 114728577744813908}
+  m_Layer: 5
+  m_Name: Reach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1105020468703670
 GameObject:
   m_ObjectHideFlags: 1
@@ -2819,6 +2836,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1779154208981200
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224461691669057126}
+  - component: {fileID: 222847556978173444}
+  - component: {fileID: 114391640853233498}
+  - component: {fileID: 114807563015595784}
+  m_Layer: 5
+  m_Name: Head distance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1820178067533014
 GameObject:
   m_ObjectHideFlags: 1
@@ -2867,7 +2902,7 @@ GameObject:
   - component: {fileID: 114855679855413102}
   - component: {fileID: 114654054003227492}
   m_Layer: 5
-  m_Name: Reach
+  m_Name: Head distance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3124,7 +3159,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012414727302}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.19, y: -0.3, z: 0}
+  m_LocalPosition: {x: 0.19, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000011790721524}
@@ -6385,9 +6420,9 @@ MonoBehaviour:
     m_Bits: 2048
   Divisions: 8
   Rings: 2
-  RingRadius: 0.3
-  MinimumRadius: 0.35
-  WaveLimits: {x: 0.15, y: 0.4}
+  RingRadius: 0.35
+  MinimumRadius: 0.3
+  WaveLimits: {x: 0.15, y: 0.3}
   WaveDistance: 0.75
   TrackingWindow: 0.5
 --- !u!114 &114000010288270000
@@ -6530,7 +6565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Center: {x: 0, y: 0, z: 0}
-  Size: {x: 3, y: 0.2, z: 3}
+  Size: {x: 3, y: 0.4, z: 3}
 --- !u!114 &114000010811874250
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6744,12 +6779,12 @@ MonoBehaviour:
     - RequireHeadState: 1
       HeadState: 0
       RequireHandAngles: 1
-      EitherHand: 0
+      EitherHand: 1
       LeftHandAngles:
-        Max: 45
+        Max: 60
         Min: 0
       RightHandAngles:
-        Max: 45
+        Max: 60
         Min: 0
       RequireHandReach: 1
       LeftHandReach:
@@ -6782,15 +6817,15 @@ MonoBehaviour:
       TimeLimit: 1
     - RequireHeadState: 1
       HeadState: 1
-      RequireHandAngles: 1
+      RequireHandAngles: 0
       EitherHand: 0
       LeftHandAngles:
         Max: 240
-        Min: 90
+        Min: 75
       RightHandAngles:
         Max: 240
-        Min: 0
-      RequireHandReach: 1
+        Min: 75
+      RequireHandReach: 0
       LeftHandReach:
         Max: 3
         Min: 2
@@ -6904,7 +6939,7 @@ MonoBehaviour:
       TimeLimit: 2
     - RequireHeadState: 1
       HeadState: 1
-      RequireHandAngles: 1
+      RequireHandAngles: 0
       EitherHand: 1
       LeftHandAngles:
         Max: 270
@@ -6990,10 +7025,10 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 75
+        Max: 65
         Min: 0
       RightHandAngles:
-        Max: 75
+        Max: 65
         Min: 0
       RequireHandReach: 1
       LeftHandReach:
@@ -7068,10 +7103,10 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 0
       LeftHandAngles:
-        Max: 75
+        Max: 65
         Min: 0
       RightHandAngles:
-        Max: 75
+        Max: 65
         Min: 0
       RequireHandReach: 1
       LeftHandReach:
@@ -7151,12 +7186,12 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 240
-        Min: 45
+        Max: -45
+        Min: -165
       RightHandAngles:
-        Max: 0
-        Min: -180
-      RequireHandReach: 1
+        Max: 360
+        Min: 0
+      RequireHandReach: 0
       LeftHandReach:
         Max: 3
         Min: 3
@@ -7465,10 +7500,10 @@ MonoBehaviour:
         Min: 0
       RequireHandToHeadDistance: 1
       LeftHandHeadDistance:
-        Max: 0.2
+        Max: 0.22
         Min: 0
       RightHandHeadDistance:
-        Max: 5
+        Max: 2
         Min: 0
       RequireHeadMovement: 0
       HeadMovement:
@@ -7504,10 +7539,10 @@ MonoBehaviour:
         Min: 0
       RequireHandToHeadDistance: 1
       LeftHandHeadDistance:
-        Max: 5
+        Max: 2
         Min: 0.3
       RightHandHeadDistance:
-        Max: 5
+        Max: 2
         Min: 0
       RequireHeadMovement: 0
       HeadMovement:
@@ -7563,14 +7598,14 @@ MonoBehaviour:
       TimeLimit: 1
     - RequireHeadState: 1
       HeadState: 0
-      RequireHandAngles: 0
+      RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 0
-        Min: 0
+        Max: 110
+        Min: 60
       RightHandAngles:
-        Max: 0
-        Min: 0
+        Max: 110
+        Min: 60
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -7657,7 +7692,7 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 0
+        Min: 2
       RightHandReach:
         Max: 3
         Min: 0
@@ -7740,7 +7775,7 @@ MonoBehaviour:
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
-        Min: 0
+        Min: 2
       RightHandReach:
         Max: 3
         Min: 3
@@ -7851,7 +7886,7 @@ MonoBehaviour:
       TimeLimit: 2
     - RequireHeadState: 1
       HeadState: 1
-      RequireHandAngles: 1
+      RequireHandAngles: 0
       EitherHand: 1
       LeftHandAngles:
         Max: 285
@@ -8186,10 +8221,10 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 0
       LeftHandAngles:
-        Max: 270
+        Max: 190
         Min: 90
       RightHandAngles:
-        Max: 270
+        Max: 190
         Min: 90
       RequireHandReach: 0
       LeftHandReach:
@@ -8305,10 +8340,10 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 1
-  GestureLockoutDuration: 0.2
+  GestureLockoutDuration: 2
   HoldStateRequirement: 16
-  WeirdDanceRequirement: 12
-  MovementTrackingWindow: 4
+  WeirdDanceRequirement: 16
+  MovementTrackingWindow: 5
 --- !u!114 &114000010971698834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8490,6 +8525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftRight: 1
   Tracker: {fileID: 114000010280744130}
+  HeadTracker: {fileID: 0}
 --- !u!114 &114000012027507490
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8559,6 +8595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftRight: 0
   Tracker: {fileID: 114000010280744130}
+  HeadTracker: {fileID: 0}
 --- !u!114 &114000012604076300
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -8771,7 +8808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CallibrationKey: 59
-  HeadOffset: 0.25
+  HeadOffset: 0.33
   HeadTransform: {fileID: 4000010627465446}
   Disabled: 0
   LeftWand: {fileID: 114000010557993372}
@@ -9065,6 +9102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftRight: 0
   Tracker: {fileID: 114000010280744130}
+  HeadTracker: {fileID: 114000011226102008}
 --- !u!114 &114304889429136760
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9313,6 +9351,39 @@ MonoBehaviour:
   m_featuresSourceId: 0
   m_upscaleQuality: 0
   m_mainThresholdSize: 0
+--- !u!114 &114391640853233498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779154208981200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Head distance
 --- !u!114 &114401463828305648
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9643,21 +9714,39 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
---- !u!114 &114645010541745774
+--- !u!114 &114634271263622282
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010441808770}
+  m_GameObject: {fileID: 1085491033447006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 4000013739583200}
-  _ears: {fileID: 4000010669417306}
-  wireframe: 0
-  flip: {fileID: 0}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Reach: X'
 --- !u!114 &114654054003227492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9672,21 +9761,20 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
---- !u!114 &114742865790063922
+--- !u!114 &114728577744813908
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010441808770}
+  m_GameObject: {fileID: 1085491033447006}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _head: {fileID: 4000013739583200}
-  _ears: {fileID: 4000010669417306}
-  wireframe: 0
-  flip: {fileID: 0}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114795690047680802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9699,6 +9787,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gestureManager: {fileID: 114000010963121732}
+--- !u!114 &114807563015595784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779154208981200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -900027084, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!114 &114808941474508182
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9727,6 +9829,21 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &114825880462984746
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010441808770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bca9ccf900ccc84c887d783321d27e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _head: {fileID: 4000013739583200}
+  _ears: {fileID: 4000010669417306}
+  wireframe: 0
+  flip: {fileID: 0}
 --- !u!114 &114855679855413102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9759,7 +9876,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Reach: X'
+  m_Text: Head distance
 --- !u!114 &114858191922690724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9806,6 +9923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeftRight: 1
   Tracker: {fileID: 114000010280744130}
+  HeadTracker: {fileID: 114000011226102008}
 --- !u!114 &114936974948888476
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -15362,12 +15480,24 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856100303614208}
+--- !u!222 &222704344772979328
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085491033447006}
 --- !u!222 &222845510679909864
 CanvasRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1067993495912772}
+--- !u!222 &222847556978173444
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779154208981200}
 --- !u!222 &222860415927105630
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -15594,6 +15724,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0.056}
   m_SizeDelta: {x: 661, y: 299}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224045782848312430
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1085491033447006}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_Children: []
+  m_Father: {fileID: 224945361796945120}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1.4}
+  m_SizeDelta: {x: 300, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224144825495339844
 RectTransform:
   m_ObjectHideFlags: 1
@@ -15684,6 +15832,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -43}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &224461691669057126
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1779154208981200}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.000011920929}
+  m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
+  m_Children: []
+  m_Father: {fileID: 224945361796945120}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.0010817051, y: -17.3}
+  m_SizeDelta: {x: 300, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224515478759304336
 RectTransform:
   m_ObjectHideFlags: 1
@@ -15732,6 +15898,7 @@ RectTransform:
   m_Children:
   - {fileID: 224000012198504874}
   - {fileID: 224000010207030156}
+  - {fileID: 224747747331302418}
   m_Father: {fileID: 224000010142809882}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15746,16 +15913,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1856100303614208}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.19999999, y: 0.19999999, z: 0.19999999}
   m_Children: []
-  m_Father: {fileID: 224945361796945120}
-  m_RootOrder: 0
+  m_Father: {fileID: 224683235492216706}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1.4}
+  m_AnchoredPosition: {x: 0, y: -26.5}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224815644243571762
@@ -15804,8 +15971,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224747747331302418}
+  - {fileID: 224045782848312430}
   - {fileID: 224515478759304336}
+  - {fileID: 224461691669057126}
   m_Father: {fileID: 224000010142809882}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

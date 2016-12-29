@@ -33,7 +33,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011233391044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.5, y: 0.89560544, z: -0.0034221578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -85,6 +85,24 @@ MonoBehaviour:
     - Gesture: Wai
       Limit: 100
       RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand Sweep
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep left
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep right
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
     NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 1
@@ -94,13 +112,13 @@ MonoBehaviour:
     Advancement: 1
     PositiveGestures:
     - Gesture: Bow
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Hands up bow
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Deep bow
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Hand to heart bow
       Limit: 100
@@ -109,6 +127,12 @@ MonoBehaviour:
       Limit: 100
       RemainingLimit: 0
     - Gesture: Wai
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep left
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
     NeutralGestures:
@@ -116,26 +140,20 @@ MonoBehaviour:
       Limit: 10
       RemainingLimit: 0
     NegativeGestures: []
-    PromotionRequirment: 5
+    PromotionRequirment: 3
     DemotionRequirment: 3
   - StartingLevel: 0
     ClapLevel: 1
     Advancement: 1
     PositiveGestures:
     - Gesture: Deep bow
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Hands up bow
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One Hand High, One Hand Low
-      Limit: 10
+    - Gesture: Hands up bow
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Pump it up
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Blow a Kiss
       Limit: 100
@@ -143,16 +161,16 @@ MonoBehaviour:
     - Gesture: Hands Together
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One arm bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hand Sweep
-      Limit: 100
-      RemainingLimit: 0
     - Gesture: Wai
       Limit: 100
       RemainingLimit: 0
     - Gesture: Hand to heart bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep left
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
     NeutralGestures:
@@ -167,19 +185,16 @@ MonoBehaviour:
     Advancement: 1
     PositiveGestures:
     - Gesture: Deep bow
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Hands up bow
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Bow
       Limit: 100
       RemainingLimit: 0
     - Gesture: One Hand High, One Hand Low
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Pump it up
-      Limit: 10
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Blow a Kiss
       Limit: 100
@@ -187,16 +202,16 @@ MonoBehaviour:
     - Gesture: Hands Together
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One arm bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hand Sweep
-      Limit: 100
-      RemainingLimit: 0
     - Gesture: Wai
       Limit: 100
       RemainingLimit: 0
     - Gesture: Hand to heart bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep left
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
     NeutralGestures:
