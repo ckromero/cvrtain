@@ -26,8 +26,9 @@ public class ExpManager : MonoBehaviour
 
 	public ExpStates expState;
 
-	public float showTime;
-	public string state = "";
+    public float showTime;
+
+    public string state = "";
 	public bool IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsCredits;
 	public bool IsRestartAnimation = false;
 
@@ -225,6 +226,7 @@ public class ExpManager : MonoBehaviour
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
         levelsManager.StopPerforming();
+        levelsManager.StopLevels();
 		ResetShow ();
 
 	}

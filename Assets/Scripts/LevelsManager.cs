@@ -212,7 +212,8 @@ public class LevelsManager : MonoBehaviour
 		listenToGestures = true;
 	}
 	public void StopLevels ()
-	{ 
+	{
+        Debug.Log("StopLevels called");
 		listenToGestures = false;
 		Performing = false;
 		stage = 0;
