@@ -12,6 +12,21 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
 
+	public List<CompletedGestureStruct> PerformedGestures { get; private set; }
+	public Dictionary<string, int> GestureCounts {
+		get {
+			var dictionary = new Dictionary<string, int>();
+			foreach (var gesture in PerformedGestures) {
+				if (dictionary.ContainsKey(gesture.Name)) {
+					dictionary[gesture.Name]++;
+				}
+				else {
+					dictionary.Add(gesture.Name, 1);
+				}
+			}
+			return dictionary;
+		}
+	}
 
 	public HeadFacing Facing {
 		get {
@@ -177,6 +192,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		LastGesture = new CompletedGestureStruct (name, Time.time);
 		_ClearTextTimer = 1f;
 		_RemainingLockout = GestureLockoutDuration;
+
+		PerformedGestures.Add(LastGesture);
 	}
 
 	public bool CompareGestureNames (string[] names) {
@@ -207,6 +224,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		_TrackedRandomPositions = new Vector3[(int)handMoveCount];
 		_TrackedDancePositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
+
+		PerformedGestures = new List<CompletedGestureStruct>();
 
         /* this is a hack to fix the bug requiring a double bow to start performance */
         //_HeadTracker.ForceUpright();

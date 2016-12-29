@@ -26,8 +26,9 @@ public class ExpManager : MonoBehaviour
 
 	public ExpStates expState;
 
-	public float showTime;
-	public string state = "";
+    public float showTime;
+
+    public string state = "";
 	public bool IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsCredits;
 	public bool IsRestartAnimation = false;
 
@@ -171,15 +172,19 @@ public class ExpManager : MonoBehaviour
 		switch (levelNum) {
 		case 1:
 			audioManager.ChangePad ("polite");
+			clapperManager.ChangeLevel (2);
 			break;
 		case 2:
 			audioManager.ChangePad ("medium");
+			clapperManager.ChangeLevel (3);
 			break;
 		case 3:
 			audioManager.ChangePad ("large");
+			clapperManager.ChangeLevel (4);
 			break;
 		case 4:
 			audioManager.ChangePad ("huge");
+			clapperManager.ChangeLevel (5);
 			break;
 		}
 
@@ -200,7 +205,7 @@ public class ExpManager : MonoBehaviour
 			Debug.Log ("Experience Manager: Curtain is open");
 			audioManager.TriggerSound ("SWITCH_1");
 			audioManager.TriggerSound ("RoomToneCoughv2_EDIT");
-
+			audioManager.TriggerSound ("SideTone");
 			lightsController.TurnOnMains ();
 
 			IsCurtainNotificationSent = true;
@@ -221,6 +226,7 @@ public class ExpManager : MonoBehaviour
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
         levelsManager.StopPerforming();
+        levelsManager.StopLevels();
 		ResetShow ();
 
 	}
@@ -233,6 +239,7 @@ public class ExpManager : MonoBehaviour
 		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
+		audioManager.StopSound ("SideTone");
 	}
 
 	public void RestartCurtainAnimation ()

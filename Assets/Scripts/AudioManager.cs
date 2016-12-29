@@ -101,11 +101,13 @@ public class AudioManager : MonoBehaviour
 			}	
 		}
 	}
-	public void ChangePadSimple(string newPad){
+
+	public void ChangePadSimple (string newPad)
+	{
 		ChangePad (newPad);
 	}
 
-	public void ChangePad (string pad, float transitionTime=0)
+	public void ChangePad (string pad, float transitionTime = 0)
 	{ 
 		Debug.Log ("ChangePad Received: " + pad);
 		if (transitionTime == 0) {
@@ -154,7 +156,8 @@ public class AudioManager : MonoBehaviour
 		TriggerAudio (soundName);
 	}
 
-	public void StopSound(string soundName) { 
+	public void StopSound (string soundName)
+	{ 
 		StopAudio (soundName);
 	}
 
@@ -163,17 +166,23 @@ public class AudioManager : MonoBehaviour
 		// TODO: ignore playing a sound file if said file is already playing	
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToPlay = goAudio.GetComponent<AudioSource> ();
-		Debug.Log ("audioToPlay: " + audioToPlay);
-		audioToPlay.Play ();
-
+		if (audioToPlay.isPlaying) { 
+			Debug.Log (audioToPlay.ToString () + " is already playing!");
+		} else {
+			Debug.Log ("audioToPlay: " + audioToPlay);
+			audioToPlay.Play ();
+		}
 	}
-	private void StopAudio(string audioName) { 
+
+	private void StopAudio (string audioName)
+	{ 
 		GameObject goAudio = GameObject.Find (audioName);
 		AudioSource audioToStop = goAudio.GetComponent<AudioSource> ();
 		Debug.Log ("audioToStop: " + audioToStop);
 		audioToStop.Stop ();
 
 	}
+
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
 		Debug.Log ("TransitionAudio received " + amsToName);

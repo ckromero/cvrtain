@@ -25,10 +25,10 @@ Material:
     m_Colors:
     - first:
         name: _Data
-      second: {r: -0.005, g: -1.11, b: -0.76, a: 0}
+      second: {r: -0.0001, g: -0.04, b: 0, a: 0}
     - first:
         name: _LightColor
-      second: {r: 0.85294116, g: 0.6221454, b: 0.27595156, a: 1}
+      second: {r: 0.16176468, g: 0.13416953, b: 0.092776805, a: 1}
     - first:
         name: _Position
-      second: {r: -3.8, g: 11.44, b: 0, a: 0}
+      second: {r: 1, g: 1, b: 1, a: 0}

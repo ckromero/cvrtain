@@ -33,7 +33,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011233391044}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.5, y: 0.89560544, z: -0.0034221578}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -55,8 +55,8 @@ MonoBehaviour:
   audioManager: {fileID: 0}
   gestureManager: {fileID: 0}
   clapManager: {fileID: 0}
-  DelayBeforeDecayStarts: 20
-  DecayGap: 1
+  DelayBeforeDecayStarts: 15
+  DecayGap: 3
   IsIncrementStage: 0
   Levels:
   - StartingLevel: 1
@@ -70,6 +70,18 @@ MonoBehaviour:
       Limit: 10
       RemainingLimit: 0
     - Gesture: Deep bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands up bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand to heart bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wai
       Limit: 100
       RemainingLimit: 0
     NeutralGestures: []
@@ -89,24 +101,21 @@ MonoBehaviour:
     - Gesture: Deep bow
       Limit: 10
       RemainingLimit: 0
+    - Gesture: Hand to heart bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wai
+      Limit: 100
+      RemainingLimit: 0
     NeutralGestures:
     - Gesture: Wave
       Limit: 10
       RemainingLimit: 0
-    - Gesture: Double Wave
-      Limit: 10
-      RemainingLimit: 0
-    NegativeGestures:
-    - Gesture: Fist Pump
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Jazz Hands
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Pump it up
-      Limit: 10
-      RemainingLimit: 0
-    PromotionRequirment: 3
+    NegativeGestures: []
+    PromotionRequirment: 5
     DemotionRequirment: 3
   - StartingLevel: 0
     ClapLevel: 1
@@ -121,69 +130,78 @@ MonoBehaviour:
     - Gesture: Bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Wave
-      Limit: 2
+    - Gesture: One Hand High, One Hand Low
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand Sweep
+      Limit: 100
       RemainingLimit: 0
     - Gesture: Wai
-      Limit: 2
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand to heart bow
+      Limit: 100
       RemainingLimit: 0
     NeutralGestures:
     - Gesture: Wave
       Limit: 10
       RemainingLimit: 0
-    - Gesture: Double Wave
-      Limit: 10
-      RemainingLimit: 0
-    NegativeGestures:
-    - Gesture: Jazz Hands
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: Fist Pump
-      Limit: 10
-      RemainingLimit: 0
-    - Gesture: One Hand High, One Hand Low
-      Limit: 100
-      RemainingLimit: 0
-    PromotionRequirment: 3
+    NegativeGestures: []
+    PromotionRequirment: 7
     DemotionRequirment: 3
   - StartingLevel: 0
-    ClapLevel: 2
+    ClapLevel: 1
     Advancement: 1
     PositiveGestures:
     - Gesture: Deep bow
       Limit: 10
       RemainingLimit: 0
     - Gesture: Hands up bow
-      Limit: 100
+      Limit: 10
       RemainingLimit: 0
     - Gesture: Bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Wave
-      Limit: 2
-      RemainingLimit: 0
-    - Gesture: Double Wave
-      Limit: 2
-      RemainingLimit: 0
-    NeutralGestures:
-    - Gesture: Double Wave
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Wave
-      Limit: 100
-      RemainingLimit: 0
-    NegativeGestures:
-    - Gesture: Fist Pump
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Jazz Hands
-      Limit: 100
-      RemainingLimit: 0
     - Gesture: One Hand High, One Hand Low
-      Limit: 100
+      Limit: 10
       RemainingLimit: 0
     - Gesture: Pump it up
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
       Limit: 100
       RemainingLimit: 0
-    PromotionRequirment: 3
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand Sweep
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Wai
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand to heart bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures:
+    - Gesture: Wave
+      Limit: 10
+      RemainingLimit: 0
+    NegativeGestures: []
+    PromotionRequirment: 7
     DemotionRequirment: 3

@@ -7,7 +7,7 @@ public class ClapperManager : MonoBehaviour
 	//clapping levels: murmurs, quiet, polite, medium, large, huge
 	public ClapControl[] clapControls;
 	public float clapAdjustedChance=0.3f;
-	public bool IsMurmurs, IsQuiet, IsPolite, IsMedium, IsLarge, IsHuge;
+	public bool IsMurmurs, IsQuiet, IsPolite, IsMedium, IsLarge, IsHuge, IsAllQuiet;
 	
 	//	private List<ClapControl> clapControls;
 
@@ -48,9 +48,13 @@ public class ClapperManager : MonoBehaviour
 			ChangeLevel (5);
 			IsHuge = false;
 		}
+		if (IsAllQuiet) {
+			ChangeLevel (0,true);
+			IsAllQuiet = false;
+		}
 	}
 
-	public void ChangeLevel (int levelNum)
+	public void ChangeLevel (int levelNum, bool all=false)
 	{ 
 
 		Debug.Log ("Clap Manager called with levelNum" + levelNum);
@@ -59,19 +63,20 @@ public class ClapperManager : MonoBehaviour
 
 		switch (levelNum) {
 		case 0:
-			targetTrigger = "triggerMildClapping";	
+			//TODO: idle here?
+			targetTrigger = "triggerIdle";	
 			break;	
 		case 1:
-			targetTrigger = "triggerMildClapping";	
+			targetTrigger = "triggerIdle";	
 			break;	
 		case 2:
-			targetTrigger = "triggerHighClapping";	
+			targetTrigger = "triggerMildClapping";	
 			break;
 		case 3:
-			targetTrigger = "triggerHighClapping";	
+			targetTrigger = "triggerMildClapping";	
 			break;
 		case 4:
-			targetTrigger = "triggerRaisedFist";	
+			targetTrigger = "triggerHighClapping";	
 			break;
 		case 5:
 			targetTrigger = "triggerRaisedFist";	
@@ -79,7 +84,9 @@ public class ClapperManager : MonoBehaviour
 		}
 		
 		foreach (ClapControl clapControl in clapControls) {
-			if (Random.value > clapAdjustedChance) {
+			if (all) {
+				clapControl.WhichTrigger (targetTrigger);
+			} else if (Random.value > clapAdjustedChance) {
 				clapControl.WhichTrigger (targetTrigger);
 			}
 		}

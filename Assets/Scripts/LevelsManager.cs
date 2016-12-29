@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using System;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LevelsManager : MonoBehaviour
 {
@@ -36,13 +37,11 @@ public class LevelsManager : MonoBehaviour
 	private int stateLevelIndex = 0;
 	private bool listenToGestures = true;
 
-
 	void Awake() {
 		Performing = false;
 	}
 
-	void Start ()
-	{
+	void Start () {
 		// if (listenToGestures)
 		// 	UpdateLevelsBasedOnGestures ();
 		//TODO: make this a function that is called at start AND at reset.
@@ -72,6 +71,7 @@ public class LevelsManager : MonoBehaviour
         listenToGestures = true;
 		//TODO: expManager should be queued to audience start state	
 	}
+
 	public void StopPerforming () { 
 		//gestureManager.Reset();
         gestureManager.Tracking = false;
@@ -109,8 +109,6 @@ public class LevelsManager : MonoBehaviour
         //"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
         //completedGestures
 
-        Debug.Log("I'm trying to update the level");
-
 		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
 			_TimeSinceLastGesture = 0f;
@@ -129,7 +127,6 @@ public class LevelsManager : MonoBehaviour
 			}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
-            Debug.Log(lastGesture.Name + " evaluation for level " + stage + ": " + evaluation);
 			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {
 				var highEvaluation = Levels[_HighestStage].EvaluateGesture(lastGesture.Name);
 				if (highEvaluation > -1) {
@@ -215,7 +212,8 @@ public class LevelsManager : MonoBehaviour
 		listenToGestures = true;
 	}
 	public void StopLevels ()
-	{ 
+	{
+        Debug.Log("StopLevels called");
 		listenToGestures = false;
 		Performing = false;
 		stage = 0;

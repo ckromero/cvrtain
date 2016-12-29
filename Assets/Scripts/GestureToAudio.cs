@@ -18,9 +18,12 @@ public class GestureToAudio : MonoBehaviour
 	private float lastGestureTime = 0.0f;
 	private bool IsFirstGesture=true;
 	private CompletedGestureStruct checkLastGesture;
+	private List<string> weirdRandoms;
+
 	void Awake ()
 	{
 		SetUpGestureToAudioList ();
+		SetUpWeirdRandoms ();
 	}
 	// Use this for initialization
 	void Start ()
@@ -72,7 +75,7 @@ public class GestureToAudio : MonoBehaviour
 		if (gestureToAudioList.ContainsKey (lastGesture)) {
 			string soundToPlay = gestureToAudioList [lastGesture];
 			Debug.Log ("ready to trigger " + soundToPlay );
-//			audiomanager.TriggerSound ("missing sound");
+			audiomanager.TriggerSound (soundToPlay);
 		} else {
 			Debug.LogWarning ("no sound for " + lastGesture);
 		}
@@ -82,57 +85,46 @@ public class GestureToAudio : MonoBehaviour
 	{
 		gestureToAudioList = new Dictionary<string, string> ();
 
-		gestureToAudioList.Add ("Arms out, basking", "ArmsToSide_EDIT");
-		gestureToAudioList.Add ("gesture facing away", "Aww booo booo_EDITED");
+		gestureToAudioList.Add ("Arms out, basking", "1226_ArmsToSide");
+		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
 		gestureToAudioList.Add ("Blow Kisses", "BlowKisses_EDIT");
-		gestureToAudioList.Add ("Bow", "Bow_EDIT");
-		gestureToAudioList.Add ("Deep bow", "DeepBow_EDIT");
-		gestureToAudioList.Add ("Hand Slice", "HandSlice_EDIT");
-		gestureToAudioList.Add ("Hands Together", "HandsTogetherShaking_EDIT");
-		gestureToAudioList.Add ("Hands up bow", "HandsUpBow_EDIT");
+		gestureToAudioList.Add ("Bow", "1226_Bow");
+		gestureToAudioList.Add ("Deep bow", "1226_DeepBow");
+		gestureToAudioList.Add ("Hand Slice", "1226_HandUpLeft");
+		gestureToAudioList.Add ("Hands Together", "1226_HandsTogetherShake");
+		gestureToAudioList.Add ("Hands up bow", "1226_HandsUp");
 		//*********** TODO: @ckromero: Lets break this up into left and right!
-		gestureToAudioList.Add ("Hand Sweep", "HandSweepUpL_EDIT");
-		gestureToAudioList.Add ("Hand to heart bow", "HandToHeart_EDIT");
-		gestureToAudioList.Add ("no moving", "NotMoving_EDIT");
-		gestureToAudioList.Add ("One arm bow", "OneArmUp_EDIT");
-		gestureToAudioList.Add ("One Hand High, One Hand Low", "OneHandHighOneLow_EDIT");
-		gestureToAudioList.Add ("Pump it up", "PumpItUp_EDIT");
-		gestureToAudioList.Add ("Wai", "TwoHandsTogether_EDIT");
-		gestureToAudioList.Add ("Wave", "Wave_EDIT");	
-		gestureToAudioList.Add ("Weird dance", "WierdDance_EDIT");
+		gestureToAudioList.Add ("Hand Sweep", "1226_HandUpLeft");
+		gestureToAudioList.Add ("Hand to heart bow", "1226_RHandToHeart");
+		gestureToAudioList.Add ("no moving", "1226_NotMoving");
+		gestureToAudioList.Add ("One arm bow", "1226_OneArmUp");
+		gestureToAudioList.Add ("One Hand High, One Hand Low", "1226_OneHighOneLow");
+		gestureToAudioList.Add ("Pump it up", "1226_PumpItUp");
+		gestureToAudioList.Add ("Wai", "1226_TwoHandsTogether");
+		gestureToAudioList.Add ("Wave", "1226_Wave");	
+		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");
 		gestureToAudioList.Add ("Weird random", "WierdRandom_EDIT");
 
-		//gestureToAudioList.Add ("Testing bow", "ssob-2.wav");
-		//gestureToAudioList.Add ("Curtsy", "cheer yip swell 6.wav");
+	}
+	private void SetUpWeirdRandoms() {
+//		weirdRandoms={"WierdRandom1.wav",
+//			"WierdRandom10.wav",
+//			"WierdRandom11.wav",
+//			"WierdRandom12.wav",
+//			"WierdRandom13.wav",
+//			"WierdRandom2.wav",
+//			"WierdRandom3.wav",
+//			"WierdRandom4.wav",
+//			"WierdRandom5.wav",
+//			"WierdRandom6.wav",
+//			"WierdRandom7.wav",
+//			"WierdRandom8.wav",
+//			"WierdRandom9.wav"
+//		}
 
-//		gestureToAudioList.Add ("Hand sweep upper right", "Whistle clean highpass.wav");
-
-//		Bow		ssob-2.wav
-//		Deep bow		SSO5.wav
-//		Hands up bow	needs to be found/made	Swell with cheerrs
-//		gesture facing away		Aww booo booo.wav
-//		Pump it up		cheer yip swell_5.wav
-//		One arm up bow		large applause 3.wav
-//		Arms out to side		Cheer yip swell 2.wav
-//		Hand Sweep upper left 		bravo.wav
-//		Hand sweep upper right		Whistle clean highpass.wav
-//		Right hand to heart, bow		Cheer yip swell 3.wav
-//		not moving		Medium audience clapping, good natural taper.wav
-//		Curtsie		cheer yip swell 6
-//		Weird dance		Laughter3.wav
-//		Weird random		Laughter 2.wav
-//		Wave		
-//		Hand slice, everybody stop clapping	needs to be created	master room tone
-//		Blow kisses?		foot stomping (fireworks).wav
-//		Hands together & shaking		Cheer yip swell_4.wav
-//		One hand high, one low	needs to be found/made	medium swell
-//		two hands together bow	needs to be found/made	large swell
 
 
 
 
 	}
-
-
-
 }

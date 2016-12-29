@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: c520ca49a057b4de2bef799c4da4005f
+timeCreated: 1482621388
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: dude - bald head clapping 2_0
+    21300002: dude - bald head clapping 2_1
+    21300004: dude - bald head clapping 2_2
+    21300006: dude - bald head clapping 2_3
+    21300008: dude - bald head clapping 2_4
+    21300010: dude - bald head clapping 2_5
+    21300012: dude - bald head clapping 2_6
+    21300014: dude - bald head clapping 2_7
+    21300016: dude - bald head clapping 2_8
+    21300018: dude - bald head clapping 2_9
+    21300020: dude - bald head clapping 2_10
+    21300022: dude - bald head clapping 2_11
+    21300024: dude - bald head clapping 2_12
+    21300026: dude - bald head clapping 2_13
+    21300028: dude - bald head clapping 2_14
+    21300030: dude - bald head clapping 2_15
+    21300032: dude - bald head clapping 2_16
+    21300034: dude - bald head clapping 2_17
+    21300036: dude - bald head clapping 2_18
+    21300038: dude - bald head clapping 2_19
+    21300040: dude - bald head clapping 2_20
+    21300042: dude - bald head clapping 2_21
+    21300044: dude - bald head clapping 2_22
+    21300046: dude - bald head clapping 2_23
+    21300048: dude - bald head clapping 2_24
+    21300050: dude - bald head clapping 2_25
+    21300052: dude - bald head clapping 2_26
+    21300054: dude - bald head clapping 2_27
+    21300056: dude - bald head clapping 2_28
+    21300058: dude - bald head clapping 2_29
+    21300060: dude - bald head clapping 2_30
+    21300062: dude - bald head clapping 2_31
+    21300064: dude - bald head clapping 2_32
+    21300066: dude - bald head clapping 2_33
+    21300068: dude - bald head clapping 2_34
+    21300070: dude - bald head clapping 2_35
+    21300072: dude - bald head clapping 2_36
+    21300074: dude - bald head clapping 2_37
+    21300076: dude - bald head clapping 2_38
+    21300078: dude - bald head clapping 2_39
+    21300080: dude - bald head clapping 2_40
+    21300082: dude - bald head clapping 2_41
+    21300084: dude - bald head clapping 2_42
+    21300086: dude - bald head clapping 2_43
+    21300088: dude - bald head clapping 2_44
+    21300090: dude - bald head clapping 2_45
+    21300092: dude - bald head clapping 2_46
+    21300094: dude - bald head clapping 2_47
+    21300096: dude - bald head clapping 2_48
+    21300098: dude - bald head clapping 2_49
+    21300100: dude - bald head clapping 2_50
+    21300102: dude - bald head clapping 2_51
+    21300104: dude - bald head clapping 2_52
+    21300106: dude - bald head clapping 2_53
+    21300108: dude - bald head clapping 2_54
+    21300110: dude - bald head clapping 2_55
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_3
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_4
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_5
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_6
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 2282
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_8
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_9
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_10
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_11
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_12
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_13
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1956
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_16
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_17
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_18
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_19
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_20
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1630
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_23
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_24
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_25
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_26
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_27
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1304
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_29
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_30
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_31
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_32
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_33
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_34
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 978
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_36
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_37
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_38
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_39
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_40
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_41
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 652
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_43
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_44
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_45
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_46
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_47
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_48
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 326
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_50
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 0
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dude - bald head clapping 2_51
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 0
+        width: 163
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
