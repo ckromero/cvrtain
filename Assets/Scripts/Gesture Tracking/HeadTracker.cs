@@ -10,6 +10,9 @@ public class HeadTracker : MonoBehaviour {
     public HeadState HeadState {
         get {
             if (_StateBuffer.Count > 0) {
+                if (_StateBuffer.Contains(HeadState.Upright)) {
+                    return HeadState.Upright;
+                }
                 return _StateBuffer[0];
             }
             return HeadState.None;
