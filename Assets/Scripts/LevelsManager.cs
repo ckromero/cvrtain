@@ -13,6 +13,7 @@ public class LevelsManager : MonoBehaviour
 
 	public float DelayBeforeDecayStarts = 10f;
 	public float DecayGap = 2f;
+	public float InactionTimeout;
 	public int CurrentLevel { get{ return stage; }}
 	//TODO: @owenbell not sure if this needs public, get/set or if we even really need it all?
 	public bool Performing { get; set; }
@@ -29,6 +30,7 @@ public class LevelsManager : MonoBehaviour
 	//TODO: @ckromero brittle here, needs a shared enumeration
 	//private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
 	private float _TimeSinceLastGesture = 0f;
+	private float _TimeToFailure = 0f;
 	private int stage = 0;
 	private int _HighestStage;
 
@@ -136,14 +138,23 @@ public class LevelsManager : MonoBehaviour
 			}
 
 		}
+		else {
 		//TODO: change to weird dance or weird random gesture.
-		else if (!gestureManager.WeirdRandomMovement) {
+		// else if (!gestureManager.WeirdRandomMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
-				var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
-				if (decayTime > DecayGap) {
-					_TimeSinceLastGesture -= DecayGap;
-					Levels[stage].Decrement();
+				if (stage > 0) {
+					var decayTime = _TimeSinceLastGesture - DelayBeforeDecayStarts;
+					if (decayTime > DecayGap) {
+						_TimeSinceLastGesture -= DecayGap;
+						Levels[stage].Decrement();
+					}
+				}
+				else {
+					_TimeToFailure -= Time.deltaTime;
+					if (_TimeToFailure <= 0f) {
+						Debug.Log("TIME OUT THE PERFORMER");
+					}
 				}
 			}
 		}
@@ -161,6 +172,9 @@ public class LevelsManager : MonoBehaviour
 			// UpdateLevel();
 
 			UpdateLevel(-1);
+			if (stage == 0) {
+				_TimeToFailure = InactionTimeout;
+			}
 		}
 	}
 
