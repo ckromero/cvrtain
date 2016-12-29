@@ -108,13 +108,8 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		foreach (var gesture in Gestures) {
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-				if (_RemainingLockout <= 0f) {
-					if (name == string.Empty) {
-					// if (largestCompletion < gesture.RuleIndex) {
-					// 	largestCompletion = gesture.RuleIndex;
-						name = gesture.Name;
-					// }
-					}
+				if (_RemainingLockout <= 0f && name == string.Empty) {
+                    name = gesture.Name;
 				}
 				gesture.Reset();
 			}

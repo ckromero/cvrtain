@@ -7,9 +7,11 @@ public class ControllerReadout : MonoBehaviour {
 
     public Side LeftRight;
     public HandsTracker Tracker;
+    public HeadTracker HeadTracker;
 
     private Text _AngleText;
     private Text _ReachText;
+    private Text _DistanceText;
 
     private float _WaveTimer = 0f;
 
@@ -22,6 +24,10 @@ public class ControllerReadout : MonoBehaviour {
             else if (text.gameObject.name == "Reach") {
                 _ReachText = text;
             }
+            else if (text.gameObject.name == "Head distance")
+            {
+                _DistanceText = text;
+            }
         }
 	}
 	
@@ -29,12 +35,14 @@ public class ControllerReadout : MonoBehaviour {
 	void Update () {
         var angle = 0f;
         var reach = 0f;
+        var handPosition = Vector3.zero;
 	    if (LeftRight == Side.Left) {
             angle = Tracker.LeftHandAngle;
             reach = Tracker.LeftHandRing;
             if (Tracker.LeftHandWaving) {
                 _WaveTimer = 2f;
             }
+            handPosition = Tracker.LeftHand.localPosition;
         }
         else {
             angle = Tracker.RightHandAngle;
@@ -42,10 +50,15 @@ public class ControllerReadout : MonoBehaviour {
             if (Tracker.RightHandWaving) {
                 _WaveTimer = 2f;
             }
+            handPosition = Tracker.RightHand.localPosition;
         }
+
+        var headPosition = HeadTracker.HeadTransform.localPosition;
+        var distance = Vector3.Distance(handPosition, headPosition);
 
         _AngleText.text = "Angle: " + Mathf.Round(angle);
         _ReachText.text = "Reach: " + reach;
+        _DistanceText.text = "Distance: " + distance.ToString("F2");
 
         if (_WaveTimer > 0f) {
             _WaveTimer -= Time.deltaTime;
