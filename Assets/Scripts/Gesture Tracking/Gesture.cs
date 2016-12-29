@@ -22,7 +22,7 @@ public class Gesture {
     {
         get
         {
-            return (RuleIndex >= Rules.Length);
+            return (RuleIndex >= Rules.Length - 1);
         }
     }
 
