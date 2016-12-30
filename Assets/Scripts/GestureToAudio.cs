@@ -94,7 +94,7 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList = new Dictionary<string, string> ();
 
 		gestureToAudioList.Add ("Arms out, basking", "1229_ArmsToSide");
-		gestureToAudioList.Add ("Blow a Kiss", "1229_BlowKisses");
+		gestureToAudioList.Add ("Blow a Kiss", "1230_BlowKisses");
 		gestureToAudioList.Add ("Bow", "1229_Bow-Norm");
 		gestureToAudioList.Add ("Deep bow", "1229_DeepBow");
 		gestureToAudioList.Add ("Hand Slice", "1229_HandUpLeft");
@@ -112,7 +112,7 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");	
 		gestureToAudioList.Add ("First Backwards", "1229_FirstBackwards");
 		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
-		gestureToAudioList.Add ("Two Hands Up", "1229_OneHighOneLow");
+		gestureToAudioList.Add ("Two Hands Up", "1230_TwoArmsUp");
 
 //		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
 
