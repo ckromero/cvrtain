@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -11,6 +11,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public Gesture[] Gestures;
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
+	public int MaximumStreakLength;
 
 	public List<CompletedGestureStruct> PerformedGestures { get; private set; }
 	public Dictionary<string, int> GestureCounts {
@@ -108,8 +109,13 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		foreach (var gesture in Gestures) {
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
-				if (_RemainingLockout <= 0f && name == string.Empty) {
-                    name = gesture.Name;
+				if (_RemainingLockout <= 0f) {
+					if (name == string.Empty) {
+					// if (largestCompletion < gesture.RuleIndex) {
+					// 	largestCompletion = gesture.RuleIndex;
+						name = gesture.Name;
+					// }
+					}
 				}
 				gesture.Reset();
 			}
@@ -187,6 +193,25 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	}
 
 	public void DetectedGesture(string name) {
+
+		var streak = 0;
+		for (var i = PerformedGestures.Count - 1; i >= 0; i--) {
+			var testName = PerformedGestures[i].Name;
+			if (testName == name) {
+				streak++;
+				if (streak >= MaximumStreakLength) {
+					break;
+				}
+			}
+			else if (testName != name && testName != "Laughable") {
+				break;
+			}
+		}
+
+		if (streak >= MaximumStreakLength) {
+			name = "Laughable";
+		}
+
 		var message = "COMPLETED: " + name;
 		Debug.Log(message);
 		TestOutputText.text = message;
