@@ -58095,6 +58095,11 @@ Prefab:
       propertyPath: m_lensFlare.m_lensFlareGradTexture
       value: 
       objectReference: {fileID: 1297820958}
+    - target: {fileID: 114000010963121732, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: Gestures.Array.data[13].EvaluationDelay
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
   m_IsPrefabParent: 0

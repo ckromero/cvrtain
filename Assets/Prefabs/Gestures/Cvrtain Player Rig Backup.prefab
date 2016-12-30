@@ -8022,8 +8022,8 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 1
+    EvaluationDelay: 1
+    Disabled: 0
   - Name: Hands Together
     ForceCompleteKey: 49
     Rules:
