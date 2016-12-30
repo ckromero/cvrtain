@@ -22,7 +22,7 @@ public class Gesture {
     {
         get
         {
-            return (RuleIndex >= Rules.Length);
+            return (RuleIndex >= Rules.Length - 1);
         }
     }
 
@@ -57,7 +57,7 @@ public class Gesture {
 
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
-            Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
+            //Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
             LastHeadPosition = head.HeadTransform.localPosition;
             if (RuleIndex >= Rules.Length - 1) {
 				_DelayRemaining = EvaluationDelay;
@@ -91,12 +91,13 @@ public class Gesture {
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
         _LeftHandZoneSet = false;
-	    Debug.Log("reseting " + Name);
-	}
+        Debug.Log("reseting " + Name);
+    }
 
-	private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
+    private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
 		if (rule.RequireHeadState) {
-			if (!head.HeadStateList.Contains(rule.HeadState)) {
+			//if (!head.HeadStateList.Contains(rule.HeadState)) {
+            if (head.HeadState != rule.HeadState) {
 				return false;
 			}
 		}	

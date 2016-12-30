@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 	public float timeForTransition;
 	public float playNewSoundPercentage = 0.9f;
 	public float playNewSoundWait = 1.5f;
+	public string currentPad;
 
 	public enum AudienceState
 	{
@@ -32,6 +33,8 @@ public class AudioManager : MonoBehaviour
 	public AudioSource[] additionalPostShowSounds;
 
 	private AudienceState audState;
+	private string soundToFade="";
+	private float soundToFadeAudioLevel=1.0f;
 
 	private string[] wierdAudioList = new string[] { "WierdRandom1",
 		"WierdRandom2",
@@ -48,31 +51,62 @@ public class AudioManager : MonoBehaviour
 		"WierdRandom13"
 	};
 
+	private string lastGestureAltTriggered = "";
+	private string[] gestureAlts = new string[]{ "BowAlt_01", 
+		"BowAlt_02", 
+		"BowAlt_03", 
+		"BowAlt_04", 
+		"BowAlt_05",
+		"BowAlt_06", 
+		"BowAlt_07", 
+		"BowAlt_08", 
+		"BowAlt_09", 
+		"BowAlt_10",
+		"BowAlt_11",
+		"BowAlt_12",
+		"BowAlt_13",
+		"BowAlt_14",
+		"BowAlt_15",
+		"BowAlt_16",
+		"BowAlt_17",
+		"BowAlt_18",
+		"BowAlt_19",
+		"BowAlt_20",
+		"BowAlt_21"};
+
 	private  string currentAudioMixerSnapshot;
+    private List<AudioSource> triggerAudio=new List<AudioSource>();
 
-	void Awake ()
-	{
-		ChangePad ("murmur");
-	}
+    void Awake()
+    {
+        ChangePad("murmur");
+    }
 
+    public void StopAllTriggers()
+    {
+        foreach (AudioSource audio in triggerAudio)
+        {
+            audio.Stop();
+
+        }
+    }
 	void Start ()
-	{ 
-//		GameObject goc1 = GameObject.Find ("Coughs1");
-//		GameObject goc2 = GameObject.Find ("Coughs2");
+	{
+        AudioSource[] tempAudio = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audio in tempAudio)
+        {
+            if (audio.outputAudioMixerGroup && audio.outputAudioMixerGroup.name == "triggers")
+            {
+                triggerAudio.Add(audio);
+            }
+        }
+    }
 
-//		AudioSource c1 = goc1.GetComponent<AudioSource> ();
-//		AudioSource c2 = goc2.GetComponent<AudioSource> ();
 
-//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
-//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
-
-//		StartCoroutine (AdditionalSoundsBasedOnPads ());
-	}
 
 	void Update ()
 	{
-
-
+		FadeOut ();
 
 	}
 
@@ -124,6 +158,7 @@ public class AudioManager : MonoBehaviour
 		ChangePad (newPad);
 	}
 
+
 	public void ChangePad (string pad, float transitionTime = 0)
 	{ 
 		Debug.Log ("ChangePad Received: " + pad);
@@ -134,29 +169,36 @@ public class AudioManager : MonoBehaviour
 		case "quiet":
 			audState = AudienceState.murmur;	
 			TransitionAudio ("quiet", transitionTime);
+			currentPad = "quiet";
+
 			break;
 		case "murmur":
 			audState = AudienceState.murmur;	
 			TransitionAudio ("murmur", transitionTime);
+			currentPad = "murmur";
 			break;
 		case "polite":
 			audState = AudienceState.polite;	
 			TransitionAudio ("polite", transitionTime);
 			TriggerSound ("IntoSmall_EDIT");
+			currentPad = "polite";
 			break;
 		case "medium":
 			audState = AudienceState.medium;	
 			TransitionAudio ("medium", transitionTime);
 			TriggerSound ("Into Medium_EDIT");
+			currentPad = "medium";
 			break;
 		case "large":
 			audState = AudienceState.large;	
 			TransitionAudio ("large", transitionTime);
 			TriggerSound ("Into Large_EDIT");
+			currentPad = "large";
 			break;
 		case "huge":
 			audState = AudienceState.huge;	
 			TransitionAudio ("huge", transitionTime);
+			currentPad = "huge";
 			break;
 		case "postShowNeutral":
 			audState = AudienceState.postShow;	
@@ -205,8 +247,26 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	private string lastGestureAltTriggered = "";
-	private string[] gestureAlts = new string[]{ "BowAlt_01", "BowAlt_02", "BowAlt_03", "BowAlt_04" };
+	public void SetSoundToFade(string _soundToFade){
+		Debug.Log ("SetSoundToFade received: " + _soundToFade);
+		soundToFade = _soundToFade;
+	}
+
+	private void FadeOut(){
+		if (soundToFade != "") {
+			GameObject fadingAudioGO = GameObject.Find (soundToFade);
+			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
+			if (soundToFadeAudioLevel > 0.1) {
+				soundToFadeAudioLevel -= 0.1f * Time.deltaTime;
+
+				fadingAudioSource.volume = soundToFadeAudioLevel;
+				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
+			} else {
+				fadingAudioSource.Stop ();
+				soundToFade = "";
+			}
+		}			
+	}
 
 
 	private string PickAlt ()
@@ -229,7 +289,7 @@ public class AudioManager : MonoBehaviour
 			} else {
 				//not the last alt
 				string pack = "";
-				if (altNumber + 1 < 9) {
+				if (altNumber + 1 <= 9) {
 					pack = "0";
 				}
 				//alts root with underscore, packing zero if needed, increment the altNumber.	

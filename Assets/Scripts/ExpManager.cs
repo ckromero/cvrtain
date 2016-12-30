@@ -195,7 +195,8 @@ public class ExpManager : MonoBehaviour
 	private void StopIntro ()
 	{ 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
-		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
+//		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
+		audioManager.SetSoundToFade ("RoomToneCoughv2_EDIT");
 	}
 
 	private void CurtainOpened ()
@@ -216,6 +217,37 @@ public class ExpManager : MonoBehaviour
 
 			IsStartTimer = true;
 		}
+	}
+	private string padToStore;
+	private IEnumerator coroutine;
+	public bool IsInHandSlice=false;
+
+	public void HandleHandSlice (){
+		padToStore = audioManager.currentPad;
+		audioManager.ChangePad ("quiet",0.1f);
+        audioManager.StopAllTriggers();
+
+        audioManager.TriggerSound("RoomToneCoughv2_EDIT");
+        
+        IsInHandSlice = true;
+		coroutine=HandSliceCo();
+
+		StartCoroutine (coroutine);
+	}
+	public void StopHandSliceCo(){
+		StopCoroutine (coroutine);
+		audioManager.ChangePad (padToStore);
+        audioManager.SetSoundToFade("RoomToneCoughv2_EDIT");
+        IsInHandSlice = false;
+	}
+
+	IEnumerator HandSliceCo() {
+		yield return new WaitForSeconds(6);
+		audioManager.TriggerSound ("HandSlice_EDIT");	
+		yield return new WaitForSeconds(2);
+		audioManager.ChangePad (padToStore);
+        audioManager.SetSoundToFade("RoomToneCoughv2_EDIT");
+        IsInHandSlice = false;
 	}
 
 	private void ShowsOver ()

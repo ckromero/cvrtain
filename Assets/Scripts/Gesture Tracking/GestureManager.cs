@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -197,14 +197,14 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var streak = 0;
 		for (var i = PerformedGestures.Count - 1; i >= 0; i--) {
 			var testName = PerformedGestures[i].Name;
-			if (testName != name && testName != "Laughable") {
-				break;
-			}
-			else {
+			if (testName == name) {
 				streak++;
 				if (streak >= MaximumStreakLength) {
 					break;
 				}
+			}
+			else if (testName != name && testName != "Laughable") {
+				break;
 			}
 		}
 
