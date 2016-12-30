@@ -122,17 +122,17 @@ public class LevelsManager : MonoBehaviour
 
             Failing = false;
 
-			if (gestureManager.Facing == HeadFacing.Back) {
-				/* only trigger a response if the player is past the starting
-				* state */
-				if (stage <= stateLevelIndex) {
-					return;
-				}
-				Debug.Log("the player is being inappropriate");
-				//TODO: sendcue on experience manager
-				audioManager.TriggerSound("laugh");
-				return;
-			}
+			//if (gestureManager.Facing == HeadFacing.Back) {
+			//	/* only trigger a response if the player is past the starting
+			//	* state */
+			//	if (stage <= stateLevelIndex) {
+			//		return;
+			//	}
+			//	Debug.Log("the player is being inappropriate");
+			//	//TODO: sendcue on experience manager
+			//	audioManager.TriggerSound("laugh");
+			//	return;
+			//}
 
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
 			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {

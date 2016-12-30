@@ -211,6 +211,18 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		if (streak >= MaximumStreakLength) {
 			name = "Laughable";
 		}
+        else if (_HeadTracker.Facing == HeadFacing.Back)
+        {
+            name = "First Backwards";
+            foreach (var completed in PerformedGestures)
+            {
+                if (completed.Name == "First Backwards")
+                {
+                    name = "Laughable";
+                    break;
+                }
+            }
+        }
 
 		var message = "COMPLETED: " + name;
 		Debug.Log(message);

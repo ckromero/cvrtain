@@ -76,6 +76,9 @@ public class GestureToAudio : MonoBehaviour
 
 			if (lastGesture == "Hand Slice") { 
 				expManager.HandleHandSlice ();
+			} else if(lastGesture=="Laughable"){
+				//laughable
+				audiomanager.PlayWeirdSound();
 			} else {
 				string soundToPlay = gestureToAudioList [lastGesture];
 				Debug.Log ("ready to trigger " + soundToPlay);
@@ -90,24 +93,46 @@ public class GestureToAudio : MonoBehaviour
 	{
 		gestureToAudioList = new Dictionary<string, string> ();
 
-		gestureToAudioList.Add ("Arms out, basking", "1226_ArmsToSide");
-		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
-		gestureToAudioList.Add ("Blow a Kiss", "BlowKisses_EDIT");
-		gestureToAudioList.Add ("Bow", "1226_Bow");
-		gestureToAudioList.Add ("Deep bow", "1226_DeepBow");
-		gestureToAudioList.Add ("Hand Slice", "1226_HandUpLeft");
-		gestureToAudioList.Add ("Hands Together", "1226_HandsTogetherShake");
-		gestureToAudioList.Add ("Hands up bow", "1226_HandsUp");
-		gestureToAudioList.Add ("One arm sweep left", "1226_HandUpLeft");
-		gestureToAudioList.Add ("One arm sweep right", "1226_HandUpRight");
-		gestureToAudioList.Add ("Hand to heart bow", "1226_RHandToHeart");
+		gestureToAudioList.Add ("Arms out, basking", "1229_ArmsToSide");
+		gestureToAudioList.Add ("Blow a Kiss", "1229_BlowKisses");
+		gestureToAudioList.Add ("Bow", "1229_Bow-Norm");
+		gestureToAudioList.Add ("Deep bow", "1229_DeepBow");
+		gestureToAudioList.Add ("Hand Slice", "1229_HandUpLeft");
+		gestureToAudioList.Add ("Hands Together", "1229_HandsTogetherShake");
+		gestureToAudioList.Add ("Hands up bow", "1229_HandsUp");
+		gestureToAudioList.Add ("One arm sweep left", "1229_HandUpLeft");
+		gestureToAudioList.Add ("One arm sweep right", "1229_HandUpRight");
+		gestureToAudioList.Add ("Hand to heart bow", "1229_RHandToHeart");
 //		gestureToAudioList.Add ("no moving", "1226_NotMoving");
-		gestureToAudioList.Add ("One arm bow", "1226_OneArmUp");
-		gestureToAudioList.Add ("One Hand High, One Hand Low", "1226_OneHighOneLow");
-		gestureToAudioList.Add ("Pump it up", "1226_PumpItUp");
-		gestureToAudioList.Add ("Wai", "1226_TwoHandsTogether");
-		gestureToAudioList.Add ("Wave", "1226_Wave");	
-		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");
+		gestureToAudioList.Add ("One arm bow", "1229_OneArmUp");
+		gestureToAudioList.Add ("One Hand High, One Hand Low", "1229_OneHighOneLow");
+		gestureToAudioList.Add ("Pump it up", "1229_PumpItUp");
+		gestureToAudioList.Add ("Wai", "1229_TwoHandsTogether");
+		gestureToAudioList.Add ("Wave", "1229_Wave");	
+		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");	
+		gestureToAudioList.Add ("First Backwards", "1229_FirstBackwards");
+		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
+		gestureToAudioList.Add ("Two Hands Up", "1229_OneHighOneLow");
+
+//		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
+
 	}
 
 }
+
+//1229_ArmsToSide.wav
+//1229_BlowKisses.wav
+//1229_Bow-Norm.wav
+//1229_Curtsie-Norm.wav
+//1229_DeepBow.wav
+//1229_FacingAway.wav
+//1229_HandUpLeft.wav
+//1229_HandUpRight.wav
+//1229_HandsTogetherShake.wav
+//1229_HandsUp.wav
+//1229_OneArmUp.wav
+//1229_OneHighOneLow.wav
+//1229_PumpItUp.wav
+//1229_RHandToHeart.wav
+//1229_TwoHandsTogether.wav
+//1229_Wave.wav

@@ -7698,8 +7698,8 @@ MonoBehaviour:
       RequireHandAngles: 1
       EitherHand: 0
       LeftHandAngles:
-        Max: 90
-        Min: 35
+        Max: 80
+        Min: 0
       RightHandAngles:
         Max: 360
         Min: 0
@@ -7784,8 +7784,8 @@ MonoBehaviour:
         Max: 360
         Min: 0
       RightHandAngles:
-        Max: 90
-        Min: 35
+        Max: 80
+        Min: 0
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -8110,7 +8110,7 @@ MonoBehaviour:
     Rules:
     - RequireHeadState: 1
       HeadState: 0
-      RequireHandAngles: 1
+      RequireHandAngles: 0
       EitherHand: 0
       LeftHandAngles:
         Max: 270
@@ -8193,7 +8193,7 @@ MonoBehaviour:
     Rules:
     - RequireHeadState: 1
       HeadState: 0
-      RequireHandAngles: 1
+      RequireHandAngles: 0
       EitherHand: 0
       LeftHandAngles:
         Max: 270
