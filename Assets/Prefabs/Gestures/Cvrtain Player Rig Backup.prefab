@@ -7685,7 +7685,7 @@ MonoBehaviour:
       EitherHand: 0
       LeftHandAngles:
         Max: 90
-        Min: 0
+        Min: 35
       RightHandAngles:
         Max: 360
         Min: 0
@@ -7771,7 +7771,7 @@ MonoBehaviour:
         Min: 0
       RightHandAngles:
         Max: 90
-        Min: 0
+        Min: 35
       RequireHandReach: 1
       LeftHandReach:
         Max: 3
@@ -8172,8 +8172,91 @@ MonoBehaviour:
       MaxDuration: 0
       HasTimeLimit: 0
       TimeLimit: 0
-    EvaluationDelay: 0
-    Disabled: 1
+    EvaluationDelay: 1
+    Disabled: 0
+  - Name: Two Hands Up
+    ForceCompleteKey: 105
+    Rules:
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 270
+        Min: 90
+      RightHandAngles:
+        Max: 270
+        Min: 90
+      RequireHandReach: 0
+      LeftHandReach:
+        Max: 0
+        Min: 3
+      RightHandReach:
+        Max: 0
+        Min: 0
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    - RequireHeadState: 1
+      HeadState: 0
+      RequireHandAngles: 1
+      EitherHand: 0
+      LeftHandAngles:
+        Max: 45
+        Min: 0
+      RightHandAngles:
+        Max: 45
+        Min: 0
+      RequireHandReach: 1
+      LeftHandReach:
+        Max: 3
+        Min: 3
+      RightHandReach:
+        Max: 3
+        Min: 3
+      Waving: 0
+      LeftHandWaving: 0
+      RightHandWaving: 0
+      RequireHandDistance: 0
+      DistanceBetweenHands:
+        Max: 0
+        Min: 0
+      RequireHandToHeadDistance: 0
+      LeftHandHeadDistance:
+        Max: 0
+        Min: 0
+      RightHandHeadDistance:
+        Max: 0
+        Min: 0
+      RequireHeadMovement: 0
+      HeadMovement:
+        Max: 0
+        Min: 0
+      HasMaximumDuration: 0
+      MaxDuration: 0
+      HasTimeLimit: 0
+      TimeLimit: 0
+    EvaluationDelay: 1
+    Disabled: 0
   - Name: Bow
     ForceCompleteKey: 98
     Rules:

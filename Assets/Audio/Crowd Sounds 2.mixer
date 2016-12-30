@@ -49,6 +49,7 @@ AudioMixerController:
     - 2b13d54153dfcd3428818cef7307ce3d
     - 5d2d59f7390c0ed4da40a97dda7400e2
     - 4beb6fa4fd7704c1283266aed51b9675
+    - 9c574808581e94442ad9c97c8d57f4f0
     name: View
   - guids:
     - 51cb6b81677094ff183bb2ad557ea5cc
@@ -73,6 +74,7 @@ AudioMixerGroupController:
   m_Children:
   - {fileID: 243000014010105312}
   - {fileID: 243000012409057262}
+  - {fileID: 243774420271062346}
   - {fileID: 243059886050953742}
   - {fileID: 243287521753778898}
   m_Volume: 0ed426e98d93f4424ab9c420a7b8796c
@@ -535,6 +537,23 @@ AudioMixerGroupController:
   m_Pitch: d10861da8743f4bc7af2f86fc83a71a7
   m_Effects:
   - {fileID: 244049167546054046}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243774420271062346
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: weirds
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 9c574808581e94442ad9c97c8d57f4f0
+  m_Children: []
+  m_Volume: e818bd2cbc2ba074f8cf2ad441516b65
+  m_Pitch: c5768f29f504f4f459f482ec79b916ce
+  m_Effects:
+  - {fileID: 244867708724043056}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -1086,6 +1105,19 @@ AudioMixerEffectController:
   m_EffectID: 0468ed0b6050e0e46bf42ddfcadf496c
   m_EffectName: Attenuation
   m_MixLevel: 1d84f1e0bef364647a6e991ae67ae8c0
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244867708724043056
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: f63d313c08a0daf45a1bf81583ab343f
+  m_EffectName: Attenuation
+  m_MixLevel: 1d5c245f0fe135d4da09a624f22792e1
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
