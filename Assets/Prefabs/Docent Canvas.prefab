@@ -133,7 +133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLEASE CALLIBRATE
+  m_Text: PLEASE CALIBRATE
 --- !u!114 &114717333071447900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,7 +196,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Experience Over
+  m_Text: 
 --- !u!114 &114954044202530972
 MonoBehaviour:
   m_ObjectHideFlags: 1

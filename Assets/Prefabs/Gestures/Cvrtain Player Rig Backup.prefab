@@ -1271,7 +1271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1000012012536478
 GameObject:
   m_ObjectHideFlags: 1
@@ -7575,14 +7575,14 @@ MonoBehaviour:
     Rules:
     - RequireHeadState: 1
       HeadState: 0
-      RequireHandAngles: 0
+      RequireHandAngles: 1
       EitherHand: 1
       LeftHandAngles:
-        Max: 0
-        Min: 0
+        Max: -10
+        Min: -160
       RightHandAngles:
-        Max: 0
-        Min: 0
+        Max: -10
+        Min: -160
       RequireHandReach: 1
       LeftHandReach:
         Max: 1
@@ -8498,8 +8498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c165398aa3ff40248d3c5324a159c33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BowCollider: {fileID: 0}
-  CurtsyCollider: {fileID: 114000011510295878}
   BowColliderSubscriber: {fileID: 114983569450022104}
   UprightCollider: {fileID: 114000012782984544}
   HeadTransform: {fileID: 4000010627465446}
