@@ -112,6 +112,8 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");	
 		gestureToAudioList.Add ("First Backwards", "1229_FirstBackwards");
 		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
+		gestureToAudioList.Add ("Two Hands Up", "1229_OneHighOneLow");
+
 //		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
 
 	}
