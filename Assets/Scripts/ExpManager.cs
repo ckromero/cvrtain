@@ -218,6 +218,31 @@ public class ExpManager : MonoBehaviour
 			IsStartTimer = true;
 		}
 	}
+	private string padToStore;
+	private IEnumerator coroutine;
+	public bool IsInHandSlice=false;
+
+	public void HandleHandSlice (){
+		padToStore = audioManager.currentPad;
+		audioManager.ChangePad ("quiet",0.1f);
+		IsInHandSlice = true;
+		coroutine=HandSliceCo();
+
+		StartCoroutine (coroutine);
+	}
+	public void StopHandSliceCo(){
+		StopCoroutine (coroutine);
+		audioManager.ChangePad (padToStore);
+		IsInHandSlice = false;
+	}
+
+	IEnumerator HandSliceCo() {
+		yield return new WaitForSeconds(6);
+		audioManager.TriggerSound ("HandSlice_EDIT");	
+		yield return new WaitForSeconds(2);
+		audioManager.ChangePad (padToStore);
+		IsInHandSlice = false;
+	}
 
 	private void ShowsOver ()
 	{

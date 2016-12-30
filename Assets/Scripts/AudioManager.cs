@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 	public float timeForTransition;
 	public float playNewSoundPercentage = 0.9f;
 	public float playNewSoundWait = 1.5f;
+	public string currentPad;
 
 	public enum AudienceState
 	{
@@ -148,6 +149,7 @@ public class AudioManager : MonoBehaviour
 		ChangePad (newPad);
 	}
 
+
 	public void ChangePad (string pad, float transitionTime = 0)
 	{ 
 		Debug.Log ("ChangePad Received: " + pad);
@@ -158,29 +160,36 @@ public class AudioManager : MonoBehaviour
 		case "quiet":
 			audState = AudienceState.murmur;	
 			TransitionAudio ("quiet", transitionTime);
+			currentPad = "quiet";
+
 			break;
 		case "murmur":
 			audState = AudienceState.murmur;	
 			TransitionAudio ("murmur", transitionTime);
+			currentPad = "murmur";
 			break;
 		case "polite":
 			audState = AudienceState.polite;	
 			TransitionAudio ("polite", transitionTime);
 			TriggerSound ("IntoSmall_EDIT");
+			currentPad = "polite";
 			break;
 		case "medium":
 			audState = AudienceState.medium;	
 			TransitionAudio ("medium", transitionTime);
 			TriggerSound ("Into Medium_EDIT");
+			currentPad = "medium";
 			break;
 		case "large":
 			audState = AudienceState.large;	
 			TransitionAudio ("large", transitionTime);
 			TriggerSound ("Into Large_EDIT");
+			currentPad = "large";
 			break;
 		case "huge":
 			audState = AudienceState.huge;	
 			TransitionAudio ("huge", transitionTime);
+			currentPad = "huge";
 			break;
 		case "postShowNeutral":
 			audState = AudienceState.postShow;	

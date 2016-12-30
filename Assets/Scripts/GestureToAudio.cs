@@ -59,6 +59,7 @@ public class GestureToAudio : MonoBehaviour
 
 	}
 
+
 	void HandleGesture (CompletedGestureStruct _completedGestureStruct)
 	{
 		string lastGesture = _completedGestureStruct.Name;
@@ -67,14 +68,19 @@ public class GestureToAudio : MonoBehaviour
 			expManager.SendCue("StopIntro");
 			IsFirstGesture = false;
 		}
-		//consider ignoring if last trigger was too soon
-		//TODO: @ckromero add complex cues (hands out cuts off audience on level 3)
-		//TODO: @ckromero think about using alt sound cues too
+		if (expManager.IsInHandSlice) {
+			expManager.StopHandSliceCo ();
+		}
 
 		if (gestureToAudioList.ContainsKey (lastGesture)) {
-			string soundToPlay = gestureToAudioList [lastGesture];
-			Debug.Log ("ready to trigger " + soundToPlay );
-			audiomanager.TriggerSound (soundToPlay,"gesture");
+
+			if (lastGesture == "Hand Slice") { 
+				expManager.HandleHandSlice ();
+			} else {
+				string soundToPlay = gestureToAudioList [lastGesture];
+				Debug.Log ("ready to trigger " + soundToPlay);
+				audiomanager.TriggerSound (soundToPlay, "gesture");
+			}
 		} else {
 			Debug.LogWarning ("no sound for " + lastGesture);
 		}
