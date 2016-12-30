@@ -55405,6 +55405,16 @@ Prefab:
       propertyPath: m_lensFlare.m_lensFlareGradTexture
       value: 
       objectReference: {fileID: 1949425219}
+    - target: {fileID: 114000010758168856, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011226102008, guid: 0be389b891a504e7fb5db7014a411e7f,
+        type: 2}
+      propertyPath: BowColliderSubscriber
+      value: 
+      objectReference: {fileID: 1934203228}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0be389b891a504e7fb5db7014a411e7f, type: 2}
   m_IsPrefabParent: 0
@@ -61183,6 +61193,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1934050976}
+--- !u!1 &1934203226 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000012414727302, guid: 0be389b891a504e7fb5db7014a411e7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1703291355}
+--- !u!65 &1934203227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934203226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.7, z: 3}
+  m_Center: {x: 0, y: -0.16, z: 0}
+--- !u!114 &1934203228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1934203226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b0c2d48f2f142378abd4913d3c1c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1937295641
 GameObject:
   m_ObjectHideFlags: 0

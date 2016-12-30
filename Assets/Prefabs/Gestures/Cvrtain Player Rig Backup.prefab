@@ -1545,6 +1545,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4000010297655186}
   - component: {fileID: 114000010758168856}
+  - component: {fileID: 114983569450022104}
+  - component: {fileID: 65904727200994512}
   m_Layer: 8
   m_Name: Bow Collider
   m_TagString: Untagged
@@ -5923,6 +5925,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65904727200994512
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012414727302}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 0.7, z: 3}
+  m_Center: {x: 0, y: -0.16, z: 0}
 --- !u!81 &81000010875974108
 AudioListener:
   m_ObjectHideFlags: 1
@@ -8484,6 +8498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BowCollider: {fileID: 114000010758168856}
   CurtsyCollider: {fileID: 114000011510295878}
+  BowColliderSubscriber: {fileID: 114983569450022104}
   UprightCollider: {fileID: 114000012782984544}
   HeadTransform: {fileID: 4000010627465446}
   _LookMask:
@@ -10036,6 +10051,17 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!114 &114983569450022104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012414727302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44b0c2d48f2f142378abd4913d3c1c38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114993601246531204
 MonoBehaviour:
   m_ObjectHideFlags: 1
