@@ -11,6 +11,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	public Gesture[] Gestures;
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
+	public int MaximumStreakLength;
 
 	public List<CompletedGestureStruct> PerformedGestures { get; private set; }
 	public Dictionary<string, int> GestureCounts {
@@ -192,6 +193,25 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	}
 
 	public void DetectedGesture(string name) {
+
+		var streak = 0;
+		for (var i = PerformedGestures.Count - 1; i >= 0; i--) {
+			var testName = PerformedGestures[i].Name;
+			if (testName != name && testName != "Laughable") {
+				break;
+			}
+			else {
+				streak++;
+				if (streak >= MaximumStreakLength) {
+					break;
+				}
+			}
+		}
+
+		if (streak >= MaximumStreakLength) {
+			name = "Laughable";
+		}
+
 		var message = "COMPLETED: " + name;
 		Debug.Log(message);
 		TestOutputText.text = message;
