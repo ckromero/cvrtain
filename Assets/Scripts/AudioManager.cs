@@ -33,8 +33,8 @@ public class AudioManager : MonoBehaviour
 	public AudioSource[] additionalPostShowSounds;
 
 	private AudienceState audState;
-	private string soundToFade="";
-	private float soundToFadeAudioLevel=1.0f;
+	private string soundToFade = "";
+	private float soundToFadeAudioLevel = 1.0f;
 
 	private string[] wierdAudioList = new string[] { "WierdRandom1",
 		"WierdRandom2",
@@ -52,7 +52,7 @@ public class AudioManager : MonoBehaviour
 	};
 
 	private string lastGestureAltTriggered = "";
-	private string[] gestureAlts = new string[]{ "BowAlt_01", 
+	private string[] gestureAlts = new string[] { "BowAlt_01", 
 		"BowAlt_02", 
 		"BowAlt_03", 
 		"BowAlt_04", 
@@ -72,7 +72,8 @@ public class AudioManager : MonoBehaviour
 		"BowAlt_18",
 		"BowAlt_19",
 		"BowAlt_20",
-		"BowAlt_21"};
+		"BowAlt_21"
+	};
 
 	private  string currentAudioMixerSnapshot;
     private List<AudioSource> triggerAudio=new List<AudioSource>();
@@ -208,11 +209,11 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void TriggerSound (string soundName,string gesturePassthrough="")
+	public void TriggerSound (string soundName, string gesturePassthrough = "")
 	{ 
 //		Debug.Log ("Trigger Sound received: " + soundName);
 
-		TriggerAudio (soundName,gesturePassthrough);
+		TriggerAudio (soundName, gesturePassthrough);
 	}
 
 	public void StopSound (string soundName)
@@ -233,12 +234,7 @@ public class AudioManager : MonoBehaviour
 				pickedAltAudioToPlay.Play ();
 
 			} else {
-			
-				string wierdSound = PickWierdAudio ();
-				Debug.Log (audioToPlay.ToString () + " is already playing, so playing " + wierdSound + " instead.");
-				GameObject goWierdAudio = GameObject.Find (wierdSound);
-				AudioSource wierdAudioToPlay = goWierdAudio.GetComponent<AudioSource> ();
-				wierdAudioToPlay.Play ();
+				Debug.Log ("A NON GESTURE IS TRYING TO BE PLAYED AGAIN, IGNORING");	
 			}
 		} else {
 			Debug.Log ("audioToPlay: " + audioToPlay);
@@ -247,17 +243,29 @@ public class AudioManager : MonoBehaviour
 	}
 
 
-	public void SetSoundToFade(string _soundToFade){
+	public void PlayWeirdSound ()
+	{
+		string wierdSound = PickWierdAudio ();
+//		Debug.Log ( "Playing " + wierdSound);
+		GameObject goWierdAudio = GameObject.Find (wierdSound);
+		AudioSource wierdAudioToPlay = goWierdAudio.GetComponent<AudioSource> ();
+		wierdAudioToPlay.Play ();
+	}
+
+
+	public void SetSoundToFade (string _soundToFade)
+	{
 		Debug.Log ("SetSoundToFade received: " + _soundToFade);
 		soundToFade = _soundToFade;
 	}
 
-	private void FadeOut(){
+	private void FadeOut ()
+	{
 		if (soundToFade != "") {
 			GameObject fadingAudioGO = GameObject.Find (soundToFade);
 			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
 			if (soundToFadeAudioLevel > 0.1) {
-				soundToFadeAudioLevel -= 0.1f * Time.deltaTime;
+				soundToFadeAudioLevel -= 0.2f * Time.deltaTime;
 
 				fadingAudioSource.volume = soundToFadeAudioLevel;
 				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
@@ -300,7 +308,7 @@ public class AudioManager : MonoBehaviour
 		}
 
 		Debug.Log ("PickedAlt: " + pickedAlt);
-		lastGestureAltTriggered=pickedAlt;
+		lastGestureAltTriggered = pickedAlt;
 
 		return pickedAlt;
 
@@ -313,7 +321,6 @@ public class AudioManager : MonoBehaviour
 		string wierdSoundToPlay = wierdAudioList [whichWierd];
 		return wierdSoundToPlay;
 	}
-
 
 	private void StopAudio (string audioName)
 	{ 

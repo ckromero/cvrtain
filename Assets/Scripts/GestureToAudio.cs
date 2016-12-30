@@ -76,6 +76,9 @@ public class GestureToAudio : MonoBehaviour
 
 			if (lastGesture == "Hand Slice") { 
 				expManager.HandleHandSlice ();
+			} else if(lastGesture=="Laughable"){
+				//laughable
+				audiomanager.PlayWeirdSound();
 			} else {
 				string soundToPlay = gestureToAudioList [lastGesture];
 				Debug.Log ("ready to trigger " + soundToPlay);
@@ -108,6 +111,8 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Wai", "1226_TwoHandsTogether");
 		gestureToAudioList.Add ("Wave", "1226_Wave");	
 		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");
+		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
+
 	}
 
 }
