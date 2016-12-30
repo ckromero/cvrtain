@@ -12,6 +12,8 @@ public class ExpManager : MonoBehaviour
 	public GameObject rightCurtainController;
 	public GameObject afterCurtainOpen;
 
+	public DocentPrompter docentPrompter;
+
 	public enum ExpStates
 	{
 		Idle,
@@ -259,6 +261,7 @@ public class ExpManager : MonoBehaviour
 		rightCurtainController.SendMessage ("StartAnimation");
         levelsManager.StopPerforming();
         levelsManager.StopLevels();
+        docentPrompter.ExperienceOver();
 		ResetShow ();
 
 	}
@@ -272,6 +275,7 @@ public class ExpManager : MonoBehaviour
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("SideTone");
+		docentPrompter.ExperienceReset();
 	}
 
 	public void RestartCurtainAnimation ()
