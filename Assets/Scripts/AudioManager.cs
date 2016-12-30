@@ -76,25 +76,34 @@ public class AudioManager : MonoBehaviour
 	};
 
 	private  string currentAudioMixerSnapshot;
+    private List<AudioSource> triggerAudio=new List<AudioSource>();
 
-	void Awake ()
-	{
-		ChangePad ("murmur");
-	}
+    void Awake()
+    {
+        ChangePad("murmur");
+    }
 
+    public void StopAllTriggers()
+    {
+        foreach (AudioSource audio in triggerAudio)
+        {
+            audio.Stop();
+
+        }
+    }
 	void Start ()
-	{ 
-//		GameObject goc1 = GameObject.Find ("Coughs1");
-//		GameObject goc2 = GameObject.Find ("Coughs2");
+	{
+        AudioSource[] tempAudio = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource audio in tempAudio)
+        {
+            if (audio.outputAudioMixerGroup && audio.outputAudioMixerGroup.name == "triggers")
+            {
+                triggerAudio.Add(audio);
+            }
+        }
+    }
 
-//		AudioSource c1 = goc1.GetComponent<AudioSource> ();
-//		AudioSource c2 = goc2.GetComponent<AudioSource> ();
 
-//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
-//		additionalMurmurSounds = new AudioSource[]{ c1, c2 };
-
-//		StartCoroutine (AdditionalSoundsBasedOnPads ());
-	}
 
 	void Update ()
 	{

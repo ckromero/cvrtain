@@ -225,7 +225,11 @@ public class ExpManager : MonoBehaviour
 	public void HandleHandSlice (){
 		padToStore = audioManager.currentPad;
 		audioManager.ChangePad ("quiet",0.1f);
-		IsInHandSlice = true;
+        audioManager.StopAllTriggers();
+
+        audioManager.TriggerSound("RoomToneCoughv2_EDIT");
+        
+        IsInHandSlice = true;
 		coroutine=HandSliceCo();
 
 		StartCoroutine (coroutine);
@@ -233,7 +237,8 @@ public class ExpManager : MonoBehaviour
 	public void StopHandSliceCo(){
 		StopCoroutine (coroutine);
 		audioManager.ChangePad (padToStore);
-		IsInHandSlice = false;
+        audioManager.SetSoundToFade("RoomToneCoughv2_EDIT");
+        IsInHandSlice = false;
 	}
 
 	IEnumerator HandSliceCo() {
@@ -241,7 +246,8 @@ public class ExpManager : MonoBehaviour
 		audioManager.TriggerSound ("HandSlice_EDIT");	
 		yield return new WaitForSeconds(2);
 		audioManager.ChangePad (padToStore);
-		IsInHandSlice = false;
+        audioManager.SetSoundToFade("RoomToneCoughv2_EDIT");
+        IsInHandSlice = false;
 	}
 
 	private void ShowsOver ()
