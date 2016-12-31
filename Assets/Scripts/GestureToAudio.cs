@@ -86,6 +86,7 @@ public class GestureToAudio : MonoBehaviour
                 audiomanager.PlayReverseSounds();
 
             } else {
+                expManager.CheckCurtainCalling();
             string soundToPlay = gestureToAudioList[lastGesture];
             Debug.Log("ready to trigger " + soundToPlay);
             audiomanager.TriggerSound(soundToPlay, "gesture");

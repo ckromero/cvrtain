@@ -38,7 +38,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 0
         inSlope: 0
         outSlope: 0
@@ -78,7 +78,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 0
         inSlope: 0
         outSlope: 0
@@ -112,19 +112,19 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 51.47038
-        inSlope: -27.522936
-        outSlope: -27.522936
+        inSlope: -8
+        outSlope: -8
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.75
+        time: 27.616667
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 27.383333
+        time: 28.333334
         value: 0
         inSlope: 0
         outSlope: 0
@@ -168,7 +168,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 27.383333
+    m_StopTime: 28.333334
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -206,7 +206,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 0
         inSlope: 0
         outSlope: 0
@@ -246,7 +246,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 0
         inSlope: 0
         outSlope: 0
@@ -280,19 +280,19 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.45
+        time: 25.066668
         value: 51.47038
-        inSlope: -27.522936
-        outSlope: -27.522936
+        inSlope: -8
+        outSlope: -8
         tangentMode: 136
       - serializedVersion: 2
-        time: 18.75
+        time: 27.616667
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 27.383333
+        time: 28.333334
         value: 0
         inSlope: 0
         outSlope: 0
@@ -359,14 +359,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
-  - time: 18.483334
+  - time: 22.433332
     functionName: SendCue
     data: TurnOffMains
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 20.633333
+  - time: 27.45
     functionName: SendCue
     data: CurtainClosed
     objectReferenceParameter: {fileID: 0}
