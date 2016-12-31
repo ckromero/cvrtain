@@ -366,7 +366,7 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 27.016666
+  - time: 20.633333
     functionName: SendCue
     data: CurtainClosed
     objectReferenceParameter: {fileID: 0}

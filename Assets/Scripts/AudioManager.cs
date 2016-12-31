@@ -107,8 +107,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-
 
 	void Update ()
 	{
@@ -341,17 +339,6 @@ public class AudioManager : MonoBehaviour
 		}
 	}
 
-}
-
-
-
-
-
-
-
-
-
-
     public void PlayReverseSounds()
     {
         string reverseSound = PickReverseAudio();
@@ -387,14 +374,6 @@ public class AudioManager : MonoBehaviour
     }
 
 
-	public string currentSnapshot ()
-	{
-		if (currentAudioMixerSnapshot != null) {
-			return currentAudioMixerSnapshot;
-		} else {
-			return "";
-		}
-	}
 
 }
 
