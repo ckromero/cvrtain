@@ -12,6 +12,8 @@ public class ExpManager : MonoBehaviour
 	public GameObject rightCurtainController;
 	public GameObject afterCurtainOpen;
 
+	public DocentPrompter docentPrompter;
+
 	public enum ExpStates
 	{
 		Idle,
@@ -212,7 +214,7 @@ public class ExpManager : MonoBehaviour
 	{ 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 //		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
-		audioManager.SetSoundToFade ("RoomToneCoughv2_EDIT");
+		//audioManager.SetSoundToFade ("RoomToneCoughv2_EDIT");
 	}
 
 	private void CurtainOpened ()
@@ -290,6 +292,7 @@ public class ExpManager : MonoBehaviour
 		audioManager.ChangePad ("murmur",5.0f);
         levelsManager.StopPerforming();
         levelsManager.StopLevels();
+        docentPrompter.ExperienceOver();
 		ResetShow ();
 	}
 
@@ -305,6 +308,7 @@ public class ExpManager : MonoBehaviour
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("SideTone");
+		docentPrompter.ExperienceReset();
 	}
 
 	public void RestartCurtainAnimation ()

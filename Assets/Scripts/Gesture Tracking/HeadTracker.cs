@@ -43,8 +43,9 @@ public class HeadTracker : MonoBehaviour {
         }
     }
 
-	public OneWayCollider BowCollider;
-	public OneWayCollider CurtsyCollider;
+	//public OneWayCollider BowCollider;
+	//public OneWayCollider CurtsyCollider;
+    public ColliderSubscriber BowColliderSubscriber;
 	public ColliderSubscriber UprightCollider;
 	public Transform HeadTransform;
 
@@ -58,10 +59,12 @@ public class HeadTracker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		BowCollider.OnTriggerEnter += OnBowTriggerEnter;
-		BowCollider.OnTriggerExit += OnBowTriggerExit;
-		CurtsyCollider.OnTriggerEnter += OnCurtsyTriggerEnter;
-		CurtsyCollider.OnTriggerExit += OnCurtsyTriggerExit;
+		// BowCollider.OnTriggerEnter += OnBowTriggerEnter;
+		// BowCollider.OnTriggerExit += OnBowTriggerExit;
+        BowColliderSubscriber.OnTriggerEnterDelegate += OnBowTriggerEnter;
+        BowColliderSubscriber.OnTriggerExitDelegate += OnBowTriggerExit;
+		// CurtsyCollider.OnTriggerEnter += OnCurtsyTriggerEnter;
+		// CurtsyCollider.OnTriggerExit += OnCurtsyTriggerExit;
 		UprightCollider.OnTriggerEnterDelegate += OnUprightTriggerEnter;
 		UprightCollider.OnTriggerExitDelegate += OnUprightTriggerExit;
 	}
@@ -142,13 +145,13 @@ public class HeadTracker : MonoBehaviour {
 		RemoveState(HeadState.Bow);
 	}
 
-	void OnCurtsyTriggerEnter(Collider other) {
-		InsertState(HeadState.Curtsy);
-	}
+	// void OnCurtsyTriggerEnter(Collider other) {
+	// 	InsertState(HeadState.Curtsy);
+	// }
 
-	void OnCurtsyTriggerExit(Collider other) {
-		RemoveState(HeadState.Curtsy);
-	}
+	// void OnCurtsyTriggerExit(Collider other) {
+	// 	RemoveState(HeadState.Curtsy);
+	// }
 
 	void OnUprightTriggerEnter(Collider other) {
 		InsertState(HeadState.Upright);

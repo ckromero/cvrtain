@@ -203,7 +203,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 					break;
 				}
 			}
-			else if (testName != name && testName != "Laughable") {
+			else if ((testName != name && testName != "Laughable") || testName == "Backwards") {
 				break;
 			}
 		}
@@ -218,7 +218,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
             {
                 if (completed.Name == "First Backwards")
                 {
-                    name = "Laughable";
+                    name = "Backwards";
                     break;
                 }
             }

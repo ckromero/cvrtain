@@ -36,22 +36,26 @@ public class AudioManager : MonoBehaviour
 	private string soundToFade = "";
 	private float soundToFadeAudioLevel = 1.0f;
 
-	private string[] wierdAudioList = new string[] { "WierdRandom1",
-		"WierdRandom2",
-		"WierdRandom3",
-		"WierdRandom4",
-		"WierdRandom5",
-		"WierdRandom6",
-		"WierdRandom7",
-		"WierdRandom8",
-		"WierdRandom9",
-		"WierdRandom10",
-		"WierdRandom11",
-		"WierdRandom12",
-		"WierdRandom13"
+	private string[] wierdAudioList = new string[] {
+        "Laughable_01",
+        "Laughable_02",
+        "Laughable_03",
+        "Laughable_04",
+        "Laughable_05",
+        "Laughable_06",
+        "Laughable_07",
+        "Laughable_08",
+        "Laughable_09"
 	};
 
-	private string lastGestureAltTriggered = "";
+    private string[] reverseAudioList = new string[] {
+        "Reverse_01",
+        "Reverse_02",
+        "Reverse_03",
+        "Reverse_04"
+    };
+
+    private string lastGestureAltTriggered = "";
 	private string[] gestureAlts = new string[] { "BowAlt_01", 
 		"BowAlt_02", 
 		"BowAlt_03", 
@@ -103,6 +107,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
 
 
 	void Update ()
@@ -259,22 +264,7 @@ public class AudioManager : MonoBehaviour
 		soundToFade = _soundToFade;
 	}
 
-	private void FadeOut ()
-	{
-		if (soundToFade != "") {
-			GameObject fadingAudioGO = GameObject.Find (soundToFade);
-			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
-			if (soundToFadeAudioLevel > 0.1) {
-				soundToFadeAudioLevel -= 1.0f * Time.deltaTime;
 
-				fadingAudioSource.volume = soundToFadeAudioLevel;
-//				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
-			} else {
-				fadingAudioSource.Stop ();
-				soundToFade = "";
-			}
-		}			
-	}
 
 
 	private string PickAlt ()
@@ -352,3 +342,59 @@ public class AudioManager : MonoBehaviour
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+    public void PlayReverseSounds()
+    {
+        string reverseSound = PickReverseAudio();
+        GameObject reverseAudio = GameObject.Find(reverseSound);
+        AudioSource reverseAudioToPlay = reverseAudio.GetComponent<AudioSource>();
+        Debug.Log("reverseAudioToPlay: " + reverseAudioToPlay);
+        reverseAudioToPlay.Play();
+    }
+
+	private void FadeOut ()
+	{
+		if (soundToFade != "") {
+			GameObject fadingAudioGO = GameObject.Find (soundToFade);
+			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
+			if (soundToFadeAudioLevel > 0.1) {
+				soundToFadeAudioLevel -= 0.05f * Time.deltaTime;
+
+				fadingAudioSource.volume = soundToFadeAudioLevel;
+				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
+			} else {
+				fadingAudioSource.Stop ();
+				soundToFade = "";
+			}
+		}			
+	}
+
+    private string PickReverseAudio()
+    {
+        int length = reverseAudioList.Length;
+        int reverseLaughable = Random.Range(0, length - 1);
+        string reverseSoundToPlay = reverseAudioList[reverseLaughable];
+        return reverseSoundToPlay;
+    }
+
+
+	public string currentSnapshot ()
+	{
+		if (currentAudioMixerSnapshot != null) {
+			return currentAudioMixerSnapshot;
+		} else {
+			return "";
+		}
+	}
+
+}
+
