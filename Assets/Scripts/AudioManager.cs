@@ -265,10 +265,10 @@ public class AudioManager : MonoBehaviour
 			GameObject fadingAudioGO = GameObject.Find (soundToFade);
 			AudioSource fadingAudioSource = fadingAudioGO.GetComponent<AudioSource> ();
 			if (soundToFadeAudioLevel > 0.1) {
-				soundToFadeAudioLevel -= 0.2f * Time.deltaTime;
+				soundToFadeAudioLevel -= 1.0f * Time.deltaTime;
 
 				fadingAudioSource.volume = soundToFadeAudioLevel;
-				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
+//				Debug.Log (soundToFade + " now has audioLevel " + soundToFadeAudioLevel);
 			} else {
 				fadingAudioSource.Stop ();
 				soundToFade = "";

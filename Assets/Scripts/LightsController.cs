@@ -6,34 +6,51 @@ public class LightsController : MonoBehaviour
 {
 
 	public GameObject[] turnTheseOn;
+	public GameObject HouseLights;
+	private Light houseLight;
+	private bool rollUpHouseLights = false;
+	private float targetHouseLightIntensity = 0.8f;
 
 	public void TurnOnMains ()
 	{
 		foreach (GameObject go in turnTheseOn) { 
-
 			go.SetActive (true);
 		}
-
 	}
-
 
 	public void TurnOffMains ()
 	{
 		foreach (GameObject go in turnTheseOn) { 
-
 			go.SetActive (false);
 		}
 	}
 
-//	// Use this for initialization
-//	void Start ()
-//	{
-//		
-//	}
-//	
-//	// Update is called once per frame
-//	void Update ()
-//	{
-//		
-//	}
+	public void HouseToHalf ()
+	{
+		houseLight.intensity = 0.0f;
+		HouseLights.SetActive (true);
+		rollUpHouseLights = true;
+	}
+
+	public void HouseOff ()
+	{
+		HouseLights.SetActive (false);
+	}
+
+	void Start ()
+	{
+		houseLight = HouseLights.GetComponent<Light> ();
+	}
+
+	void Update ()
+	{
+		if (rollUpHouseLights) {
+			Debug.Log ("Rolling up house lights");
+			if (houseLight.intensity < targetHouseLightIntensity) {			
+				houseLight.intensity += 0.2f * Time.deltaTime;
+			} else {
+				rollUpHouseLights = false;
+			}
+		}
+	}
 }

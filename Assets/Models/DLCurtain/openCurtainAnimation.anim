@@ -37,6 +37,12 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 136
+      - serializedVersion: 2
+        time: 18.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -66,7 +72,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 13.616667
+        time: 15.133333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 18.45
         value: 0
         inSlope: 0
         outSlope: 0
@@ -94,19 +106,25 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 13.6
+        time: 15.116667
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 14
+        time: 18.45
+        value: 51.47038
+        inSlope: -27.522936
+        outSlope: -27.522936
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 18.75
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 14.766666
+        time: 27.383333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -150,7 +168,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 14.766666
+    m_StopTime: 27.383333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -187,6 +205,12 @@ AnimationClip:
         inSlope: 0
         outSlope: 0
         tangentMode: 136
+      - serializedVersion: 2
+        time: 18.45
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -216,7 +240,13 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 13.616667
+        time: 15.133333
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 18.45
         value: 0
         inSlope: 0
         outSlope: 0
@@ -244,19 +274,25 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 13.6
+        time: 15.116667
         value: 100
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 14
+        time: 18.45
+        value: 51.47038
+        inSlope: -27.522936
+        outSlope: -27.522936
+        tangentMode: 136
+      - serializedVersion: 2
+        time: 18.75
         value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 14.766666
+        time: 27.383333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -291,6 +327,48 @@ AnimationClip:
   - time: 13.533334
     functionName: StopAnimation
     data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 16.716667
+    functionName: SendCue
+    data: HouseLightsOn
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 16.783333
+    functionName: CheckRollBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 17.016666
+    functionName: CheckRollBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 18.383333
+    functionName: CheckRollBack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
+  - time: 18.483334
+    functionName: SendCue
+    data: TurnOffMains
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 27.016666
+    functionName: SendCue
+    data: CurtainClosed
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0

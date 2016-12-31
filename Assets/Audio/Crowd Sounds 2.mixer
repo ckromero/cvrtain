@@ -50,6 +50,7 @@ AudioMixerController:
     - 5d2d59f7390c0ed4da40a97dda7400e2
     - 4beb6fa4fd7704c1283266aed51b9675
     - 9c574808581e94442ad9c97c8d57f4f0
+    - 10c65151f3f1344ceb9411e3d90dc36a
     name: View
   - guids:
     - 51cb6b81677094ff183bb2ad557ea5cc
@@ -77,6 +78,7 @@ AudioMixerGroupController:
   - {fileID: 243774420271062346}
   - {fileID: 243059886050953742}
   - {fileID: 243287521753778898}
+  - {fileID: 243502078125803536}
   m_Volume: 0ed426e98d93f4424ab9c420a7b8796c
   m_Pitch: d88d3052403e2435ea7b173dd2a167d5
   m_Effects:
@@ -520,6 +522,23 @@ AudioMixerGroupController:
   m_Pitch: 2bdba4a9988be5c4787bbcd4c138f234
   m_Effects:
   - {fileID: 244445910540968318}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243502078125803536
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: outro track
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 10c65151f3f1344ceb9411e3d90dc36a
+  m_Children: []
+  m_Volume: 51179d565ad0641f6b358a897cd0e5be
+  m_Pitch: c8bebe4a13cb94c9ca75342d9e32bfc1
+  m_Effects:
+  - {fileID: 244378592693801610}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -1066,6 +1085,19 @@ AudioMixerEffectController:
   m_EffectID: 1eb85704bd61f4dbbb7f7b48d890ca0b
   m_EffectName: Attenuation
   m_MixLevel: 578dc59322b784e6e9bfe108ba35c2f9
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244378592693801610
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: ffdff5a5df7534b29bded1f54370d83b
+  m_EffectName: Attenuation
+  m_MixLevel: 9ba8c78e5fb5d487782368fe5656588e
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0

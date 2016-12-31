@@ -41,6 +41,10 @@ public class ExpManager : MonoBehaviour
 	private bool IsStartTimer = false;
 	private bool IsCheckTimer = false;
 	private bool IsCurtainNotificationSent = false;
+	private bool IsCurtainCalling = false;
+	private string padToStore;
+	private IEnumerator coroutine;
+	public bool IsInHandSlice=false;
 
 	void Start ()
 	{
@@ -60,7 +64,7 @@ public class ExpManager : MonoBehaviour
 		//how do we handle this on reset?
 
 		if (IsCheckTimer && (Time.time - startTrackingTime > showTime)) { 
-			SendCue ("ShowsOver");
+			SendCue ("CurtainCalling");
 			IsCheckTimer = false;
 		}
 
@@ -158,8 +162,20 @@ public class ExpManager : MonoBehaviour
 		case "TakeABow":
 			audioManager.TriggerSound ("TakeABow_EDIT");
 			break;
+		case "CurtainCalling":
+			CurtainCalling ();
+			break;
+		case "CurtainClosed":
+			CurtainClosed ();
+			break;
 		case "ShowsOver":
 			ShowsOver ();
+			break;
+		case "TurnOffMains":
+			lightsController.TurnOffMains ();
+			break;
+		case "HouseLightsOn":
+			lightsController.HouseToHalf ();
 			break;
 		}
 
@@ -218,9 +234,6 @@ public class ExpManager : MonoBehaviour
 			IsStartTimer = true;
 		}
 	}
-	private string padToStore;
-	private IEnumerator coroutine;
-	public bool IsInHandSlice=false;
 
 	public void HandleHandSlice (){
 		padToStore = audioManager.currentPad;
@@ -250,22 +263,42 @@ public class ExpManager : MonoBehaviour
         IsInHandSlice = false;
 	}
 
+	private void CurtainCalling() {
+		Debug.Log ("CurtainCalling");
+
+		audioManager.TriggerSound("TerryCloth_EDIT");
+		leftCurtainController.SendMessage ("StartAnimation");
+		rightCurtainController.SendMessage ("StartAnimation");
+		lightsController.HouseToHalf();
+		IsCurtainCalling = true;
+	}
+	public void CheckCurtainCalling() { 
+		Debug.Log ("In CheckCurtainCalling");
+		if (IsCurtainCalling) { 
+			leftCurtainController.SendMessage ("EnableIsRollingBack");
+			rightCurtainController.SendMessage ("EnableIsRollingBack");
+		}
+	}
+	private void CurtainClosed() { 
+		ShowsOver ();
+	}
 	private void ShowsOver ()
 	{
 		Debug.Log ("Shows Over");
-		audioManager.TriggerSound ("Aww1");
-		audioManager.ChangePad ("murmur");
-		leftCurtainController.SendMessage ("StartAnimation");
-		rightCurtainController.SendMessage ("StartAnimation");
+//		audioManager.TriggerSound ("Aww1");
+
+		audioManager.ChangePad ("murmur",5.0f);
         levelsManager.StopPerforming();
         levelsManager.StopLevels();
 		ResetShow ();
-
 	}
+
+
 
 	private void ResetShow ()
 	{ 
 		Debug.Log ("resetting show");
+//		audioManager.SetSoundToFade ("Terry Cloth");
 		lightsController.TurnOffMains ();
 		levelsManager.StopPerforming();
 		IsCurtainNotificationSent = false;
@@ -282,16 +315,6 @@ public class ExpManager : MonoBehaviour
 		audioManager.TriggerSound ("tympani");	
 		audioManager.ChangePad ("quiet", 10.0f);
 	}
-
-	//	public void StartShow ()
-	//	{
-	//		if (!IsStartShowNotificationSent) {
-	//			IsStartShowNotificationSent = true;
-	//			Debug.Log ("Experience Manager: Start the show!");
-	////			audioManager.TriggerSound ("tympani");
-	//		}
-	//	}
-
 
 }
 
