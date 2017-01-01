@@ -29,8 +29,8 @@ TagManager:
   - stage floor
   - back wall
   - curtain
-  - 
-  - 
+  - box seat
+  - sprites
   - 
   - 
   - 
@@ -38,6 +38,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: 5
+    uniqueID: 1045652981
+    locked: 0
+  - name: 4
+    uniqueID: 3008049283
+    locked: 0
+  - name: 3
+    uniqueID: 90200775
+    locked: 0
+  - name: 2
+    uniqueID: 3614257783
+    locked: 0
+  - name: 1
+    uniqueID: 2991782879
+    locked: 0
+  - name: top
+    uniqueID: 2840046669
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
