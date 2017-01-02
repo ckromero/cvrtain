@@ -308,7 +308,7 @@ public class ExpManager : MonoBehaviour
 		IsCheckTimer = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("SideTone");
-		docentPrompter.ExperienceReset();
+		// docentPrompter.ExperienceReset();
 	}
 
 	public void RestartCurtainAnimation ()
@@ -318,6 +318,7 @@ public class ExpManager : MonoBehaviour
 		rightCurtainController.SendMessage ("StartAnimation");
 		audioManager.TriggerSound ("tympani");	
 		audioManager.ChangePad ("quiet", 10.0f);
+		docentPrompter.ExperienceReset();
 	}
 
 }
