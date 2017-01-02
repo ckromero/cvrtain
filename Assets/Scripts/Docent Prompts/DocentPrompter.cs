@@ -9,9 +9,11 @@ public class DocentPrompter : MonoBehaviour {
 	public Text ExperienceOverText;
 	public GestureCallibrator Calibrator;
 
-	// Use this for initialization
-	void Start () {
-		
+	private GesturesCompletedScript _CompletedScript;
+
+	void Start() {
+		_CompletedScript = GetComponentInChildren<GesturesCompletedScript>();
+		_CompletedScript.HideGestures();
 	}
 	
 	// Update is called once per frame
@@ -26,10 +28,12 @@ public class DocentPrompter : MonoBehaviour {
 
 	public void ExperienceOver() {
 		ExperienceOverText.text = "Performance over";
+		_CompletedScript.DisplayGestures();
 	}
 
 	public void ExperienceReset() {
 		ExperienceOverText.text = "";
+		_CompletedScript.HideGestures();
 	}
 
 }
