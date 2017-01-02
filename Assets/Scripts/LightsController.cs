@@ -9,7 +9,7 @@ public class LightsController : MonoBehaviour
 	public GameObject HouseLights;
 	private Light houseLight;
 	private bool rollUpHouseLights = false;
-	private float targetHouseLightIntensity = 0.8f;
+	private float targetHouseLightIntensity = 0.4f;
 
 	public void TurnOnMains ()
 	{
@@ -27,9 +27,11 @@ public class LightsController : MonoBehaviour
 
 	public void HouseToHalf ()
 	{
-		houseLight.intensity = 0.0f;
-		HouseLights.SetActive (true);
-		rollUpHouseLights = true;
+		if (!rollUpHouseLights) {
+			houseLight.intensity = 0.0f;
+			HouseLights.SetActive (true);
+			rollUpHouseLights = true;
+		}
 	}
 
 	public void HouseOff ()
