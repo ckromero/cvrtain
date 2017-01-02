@@ -150,14 +150,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 5.0666666
+  - time: 30.5
     functionName: SendCue
     data: Whistle
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9.916667
+  - time: 55.1
     functionName: SendCue
     data: CurtainCalling
     objectReferenceParameter: {fileID: 0}
