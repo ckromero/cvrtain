@@ -76,7 +76,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _Data
-      second: {r: 0.00001, g: 5.1, b: 0.32, a: 0}
+      second: {r: 0.00001, g: 4.38, b: 0.33, a: 0}
     - first:
         name: _LightColor
       second: {r: 0.41911763, g: 0.34762105, b: 0.2403763, a: 1}
