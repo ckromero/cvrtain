@@ -8,6 +8,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 {
 
 	public Text TestOutputText;
+	public Text DocentText;
 	public Gesture[] Gestures;
 	public float GestureLockoutDuration = 0.5f;
 	private float _RemainingLockout;
@@ -100,6 +101,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		_ClearTextTimer -= Time.deltaTime;
 		if (_ClearTextTimer <= 0f) {
 			TestOutputText.text = "";
+			DocentText.text = "";
 		}
 
 		if (_RemainingLockout > 0f) _RemainingLockout -= Time.deltaTime;
@@ -227,6 +229,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		var message = "COMPLETED: " + name;
 		Debug.Log(message);
 		TestOutputText.text = message;
+		DocentText.text = message;
 		LastGesture = new CompletedGestureStruct (name, Time.time);
 		_ClearTextTimer = 1f;
 		_RemainingLockout = GestureLockoutDuration;

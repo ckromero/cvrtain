@@ -14,14 +14,10 @@ public class LevelStateDebugScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var text = "Current Level: " + LevelManager.CurrentLevel;
-        if (LevelManager.Failed)
-        {
-            text = "FAILED";
-        }
-        else if (LevelManager.Failing) {
-            text = "Failing";
-        }
+		var text = "";
+		if (LevelManager.Performing) {
+	        text = "Current Level: " + LevelManager.CurrentLevel;
+		}
 		GetComponent<Text>().text = text;
 	}
 }
