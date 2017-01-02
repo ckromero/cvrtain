@@ -43,8 +43,8 @@ public class HeadTracker : MonoBehaviour {
         }
     }
 
-	public OneWayCollider BowCollider;
-	public OneWayCollider CurtsyCollider;
+	//public OneWayCollider BowCollider;
+	//public OneWayCollider CurtsyCollider;
     public ColliderSubscriber BowColliderSubscriber;
 	public ColliderSubscriber UprightCollider;
 	public Transform HeadTransform;

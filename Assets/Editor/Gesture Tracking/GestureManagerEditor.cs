@@ -20,6 +20,7 @@ public class GestureManagerEditor : Editor {
 		var property = serializedObject.FindProperty("Gestures");
 		var gestureList = new List<Gesture>(script.Gestures);
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
+		EditorGUILayout.PropertyField(serializedObject.FindProperty("DocentText"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("GestureLockoutDuration"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("HoldStateRequirement"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("WeirdDanceRequirement"));

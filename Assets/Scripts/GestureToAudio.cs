@@ -70,20 +70,28 @@ public class GestureToAudio : MonoBehaviour
 		}
 		if (expManager.IsInHandSlice) {
 			expManager.StopHandSliceCo ();
+
 		}
+        Debug.Log("lastgesture is: " + lastGesture);
 
-		if (gestureToAudioList.ContainsKey (lastGesture)) {
+        if (gestureToAudioList.ContainsKey(lastGesture)) {
 
-			if (lastGesture == "Hand Slice") { 
-				expManager.HandleHandSlice ();
-			} else if(lastGesture=="Laughable"){
-				//laughable
-				audiomanager.PlayWeirdSound();
-			} else {
-				string soundToPlay = gestureToAudioList [lastGesture];
-				Debug.Log ("ready to trigger " + soundToPlay);
-				audiomanager.TriggerSound (soundToPlay, "gesture");
-			}
+            if (lastGesture == "Hand Slice") {
+                expManager.HandleHandSlice();
+            } else if (lastGesture == "Laughable") {
+                //laughable
+                audiomanager.PlayWeirdSound();
+            } else if (lastGesture == "Backwards") {
+                Debug.Log("Backwards gesture");
+                audiomanager.PlayReverseSounds();
+
+            } else {
+                expManager.CheckCurtainCalling();
+            string soundToPlay = gestureToAudioList[lastGesture];
+            Debug.Log("ready to trigger " + soundToPlay);
+            audiomanager.TriggerSound(soundToPlay, "gesture");
+        }
+
 		} else {
 			Debug.LogWarning ("no sound for " + lastGesture);
 		}
@@ -94,14 +102,14 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList = new Dictionary<string, string> ();
 
 		gestureToAudioList.Add ("Arms out, basking", "1229_ArmsToSide");
-		gestureToAudioList.Add ("Blow a Kiss", "1229_BlowKisses");
+		gestureToAudioList.Add ("Blow a Kiss", "1230_BlowKisses");
 		gestureToAudioList.Add ("Bow", "1229_Bow-Norm");
 		gestureToAudioList.Add ("Deep bow", "1229_DeepBow");
 		gestureToAudioList.Add ("Hand Slice", "1229_HandUpLeft");
 		gestureToAudioList.Add ("Hands Together", "1229_HandsTogetherShake");
 		gestureToAudioList.Add ("Hands up bow", "1229_HandsUp");
 		gestureToAudioList.Add ("One arm sweep left", "1229_HandUpLeft");
-		gestureToAudioList.Add ("One arm sweep right", "1229_HandUpRight");
+		gestureToAudioList.Add ("One arm sweep right", "1230_HandUpRight");
 		gestureToAudioList.Add ("Hand to heart bow", "1229_RHandToHeart");
 //		gestureToAudioList.Add ("no moving", "1226_NotMoving");
 		gestureToAudioList.Add ("One arm bow", "1229_OneArmUp");
@@ -109,10 +117,11 @@ public class GestureToAudio : MonoBehaviour
 		gestureToAudioList.Add ("Pump it up", "1229_PumpItUp");
 		gestureToAudioList.Add ("Wai", "1229_TwoHandsTogether");
 		gestureToAudioList.Add ("Wave", "1229_Wave");	
-		gestureToAudioList.Add ("Weird dance", "1226_WierdDance");	
+		gestureToAudioList.Add ("Weird dance", "1230_AVAILABLE");	
 		gestureToAudioList.Add ("First Backwards", "1229_FirstBackwards");
 		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
-		gestureToAudioList.Add ("Two Hands Up", "1229_OneHighOneLow");
+		gestureToAudioList.Add ("Two Hands Up", "1230_TwoArmsUp");
+		gestureToAudioList.Add ("Backwards", "1230_TwoArmsUp");
 
 //		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
 

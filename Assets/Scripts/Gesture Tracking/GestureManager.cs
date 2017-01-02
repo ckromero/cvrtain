@@ -1,4 +1,4 @@
-﻿﻿using UnityEngine;
+﻿﻿﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,7 +6,6 @@ using FRL.IO;
 
 public class GestureManager : MonoBehaviour, IGestureManager
 {
-
 	public Text TestOutputText;
 	public Text DocentText;
 	public Gesture[] Gestures;
