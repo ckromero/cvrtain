@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 26127902}
   - component: {fileID: 26127901}
   - component: {fileID: 26127900}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14103,7 +14103,7 @@ GameObject:
   - component: {fileID: 321768633}
   - component: {fileID: 321768632}
   - component: {fileID: 321768631}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17703,7 +17703,7 @@ GameObject:
   - component: {fileID: 353449097}
   - component: {fileID: 353449099}
   - component: {fileID: 353449098}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: top cvrtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18768,7 +18768,7 @@ GameObject:
   - component: {fileID: 355016000}
   - component: {fileID: 355015999}
   - component: {fileID: 355015998}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21078,7 +21078,7 @@ GameObject:
   - component: {fileID: 417865451}
   - component: {fileID: 417865450}
   - component: {fileID: 417865449}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21156,7 +21156,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 420167697}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Flyspace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21181,8 +21181,9 @@ Transform:
   - {fileID: 355015997}
   - {fileID: 26127899}
   - {fileID: 2068822462}
+  - {fileID: 1809579305}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &424456487
 GameObject:
@@ -21195,7 +21196,7 @@ GameObject:
   - component: {fileID: 424456491}
   - component: {fileID: 424456490}
   - component: {fileID: 424456489}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21975,8 +21976,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 444041690}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.389529, y: 9.81, z: -10.035}
-  m_LocalScale: {x: 1.5071474, y: 0.021745777, z: 0.06542209}
+  m_LocalPosition: {x: -2.389529, y: 9.78, z: -10.035}
+  m_LocalScale: {x: 1.5071474, y: 0.03364029, z: 0.06542209}
   m_Children: []
   m_Father: {fileID: 1344872066}
   m_RootOrder: 8
@@ -23807,7 +23808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &509531192
 Transform:
   m_ObjectHideFlags: 0
@@ -23822,7 +23823,7 @@ Transform:
   - {fileID: 2103211132}
   - {fileID: 1644815729}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &509852040
 Prefab:
@@ -24424,7 +24425,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1662506043}
-  - {fileID: 1809579305}
   - {fileID: 1713724835}
   - {fileID: 1791349274}
   - {fileID: 509531192}
@@ -25873,7 +25873,7 @@ GameObject:
   - component: {fileID: 582290738}
   - component: {fileID: 582290737}
   - component: {fileID: 582290736}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31451,7 +31451,7 @@ GameObject:
   - component: {fileID: 623675553}
   - component: {fileID: 623675555}
   - component: {fileID: 623675554}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: stage right cvrtain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43781,13 +43781,13 @@ GameObject:
   - component: {fileID: 887122700}
   - component: {fileID: 887122699}
   - component: {fileID: 887122698}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &887122697
 Transform:
   m_ObjectHideFlags: 0
@@ -44728,7 +44728,7 @@ Transform:
   m_Children:
   - {fileID: 672663856}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &918122671
 Prefab:
@@ -45838,7 +45838,7 @@ GameObject:
   - component: {fileID: 958968756}
   - component: {fileID: 958968758}
   - component: {fileID: 958968757}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: top cvrtain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46895,7 +46895,7 @@ GameObject:
   - component: {fileID: 962899861}
   - component: {fileID: 962899860}
   - component: {fileID: 962899859}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47985,7 +47985,7 @@ GameObject:
   - component: {fileID: 1009802216}
   - component: {fileID: 1009802215}
   - component: {fileID: 1009802214}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50403,7 +50403,7 @@ GameObject:
   - component: {fileID: 1084302258}
   - component: {fileID: 1084302257}
   - component: {fileID: 1084302256}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52502,7 +52502,7 @@ GameObject:
   - component: {fileID: 1146193008}
   - component: {fileID: 1146193007}
   - component: {fileID: 1146193006}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57229,11 +57229,11 @@ GameObject:
   - component: {fileID: 1209049494}
   - component: {fileID: 1209049495}
   m_Layer: 0
-  m_Name: work light (4)
+  m_Name: flyspace light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1209049494
 Transform:
@@ -57258,7 +57258,7 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.625, g: 0.6112132, b: 0.6112132, a: 1}
-  m_Intensity: 3.77
+  m_Intensity: 1.55
   m_Range: 41.04
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -57276,7 +57276,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 67108864
   m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -59419,7 +59419,7 @@ GameObject:
   - component: {fileID: 1299068508}
   - component: {fileID: 1299068507}
   - component: {fileID: 1299068506}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: ropes (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63428,7 +63428,7 @@ GameObject:
   - component: {fileID: 1434884192}
   - component: {fileID: 1434884191}
   - component: {fileID: 1434884190}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: stage right cvrtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71251,7 +71251,7 @@ Transform:
   - {fileID: 2024866800}
   - {fileID: 2111788420}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1561516539
 GameObject:
@@ -72150,7 +72150,7 @@ GameObject:
   - component: {fileID: 1576443852}
   - component: {fileID: 1576443854}
   - component: {fileID: 1576443853}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: back cvrtain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78389,7 +78389,7 @@ Transform:
   - {fileID: 812049051}
   - {fileID: 366684326}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1713747163
 GameObject:
@@ -85992,7 +85992,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1809579305}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: CVRTAINS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86013,8 +86013,8 @@ Transform:
   - {fileID: 353449097}
   - {fileID: 1576443852}
   - {fileID: 623675553}
-  m_Father: {fileID: 531256460}
-  m_RootOrder: 1
+  m_Father: {fileID: 420167697}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810394569
 GameObject:
@@ -86243,7 +86243,7 @@ Transform:
   - {fileID: 1712837809}
   - {fileID: 693475091}
   m_Father: {fileID: 531256460}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1822167333
 GameObject:
@@ -94802,7 +94802,7 @@ GameObject:
   - component: {fileID: 2068822465}
   - component: {fileID: 2068822464}
   - component: {fileID: 2068822463}
-  m_Layer: 0
+  m_Layer: 26
   m_Name: kaq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
