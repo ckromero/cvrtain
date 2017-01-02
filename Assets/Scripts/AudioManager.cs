@@ -202,6 +202,7 @@ public class AudioManager : MonoBehaviour
 		case "huge":
 			audState = AudienceState.huge;	
 			TransitionAudio ("huge", transitionTime);
+			TriggerSound ("0102_LargeToHugeV1");
 			currentPad = "huge";
 			break;
 		case "postShowNeutral":
