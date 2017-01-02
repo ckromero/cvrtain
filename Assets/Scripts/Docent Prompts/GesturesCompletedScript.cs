@@ -13,6 +13,7 @@ public class GesturesCompletedScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_Text = GetComponent<Text>();
+		_Text.text = "";
 	}
 	
 	// Update is called once per frame

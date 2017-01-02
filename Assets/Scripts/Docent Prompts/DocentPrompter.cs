@@ -13,7 +13,6 @@ public class DocentPrompter : MonoBehaviour {
 
 	void Start() {
 		_CompletedScript = GetComponentInChildren<GesturesCompletedScript>();
-		_CompletedScript.HideGestures();
 	}
 	
 	// Update is called once per frame
