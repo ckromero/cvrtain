@@ -13,6 +13,7 @@ public class ExpManager : MonoBehaviour
 	public GameObject afterCurtainOpen;
 
 	public DocentPrompter docentPrompter;
+	private bool IsListenForSpaceBar=true;
 
 	public enum ExpStates
 	{
@@ -74,6 +75,7 @@ public class ExpManager : MonoBehaviour
 			//TODO: add calibration check after reset 
 			print ("space key was pressed");
 			RestartCurtainAnimation ();
+			IsListenForSpaceBar = false;
 		}
 		
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
@@ -309,6 +311,7 @@ public class ExpManager : MonoBehaviour
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("SideTone");
 		// docentPrompter.ExperienceReset();
+		IsListenForSpaceBar = true;
 	}
 
 	public void RestartCurtainAnimation ()

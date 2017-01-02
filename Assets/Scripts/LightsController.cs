@@ -9,7 +9,7 @@ public class LightsController : MonoBehaviour
 	public GameObject HouseLights;
 	private Light houseLight;
 	private bool rollUpHouseLights = false;
-	private float targetHouseLightIntensity = 0.4f;
+	public float targetHouseLightIntensity = 0.3f;
 
 	public void TurnOnMains ()
 	{
