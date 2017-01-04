@@ -79,24 +79,25 @@ public class ExpManager : MonoBehaviour
 		}
 		
 		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
-			lastTriggerTime = triggerListener.LastDoublePress;
-			//TODO: AWFUL
-			if (expState == ExpStates.Idle)
-				IsIntroScreen = true;
-			if (expState == ExpStates.Intro)
-				IsInstructionScreen = true;
-			if (expState == ExpStates.Instructions)
-				IsCurtainOpen = true;
-			if (expState == ExpStates.CurtainOpen)
-				IsLevels = true;
-			if (expState == ExpStates.Levels)
-				IsCurtainClose = true;
-			if (expState == ExpStates.CurtainClose)
-				IsOutro = true;
-			if (expState == ExpStates.Outro)
-				IsCredits = true;
-			if (expState == ExpStates.Credits)
-				IsIdle = true;
+			//lastTriggerTime = triggerListener.LastDoublePress;
+			////TODO: AWFUL
+			//if (expState == ExpStates.Idle)
+			//	IsIntroScreen = true;
+			//if (expState == ExpStates.Intro)
+			//	IsInstructionScreen = true;
+			//if (expState == ExpStates.Instructions)
+			//	IsCurtainOpen = true;
+			//if (expState == ExpStates.CurtainOpen)
+			//	IsLevels = true;
+			//if (expState == ExpStates.Levels)
+			//	IsCurtainClose = true;
+			//if (expState == ExpStates.CurtainClose)
+			//	IsOutro = true;
+			//if (expState == ExpStates.Outro)
+			//	IsCredits = true;
+			//if (expState == ExpStates.Credits)
+			//	IsIdle = true;
+
 
 		}
 
