@@ -15,7 +15,6 @@ public class LevelsManager : MonoBehaviour
 	public float DecayGap = 2f;
 	public float InactionTimeout;
 	public int CurrentLevel { get{ return stage; }}
-	//TODO: @owenbell not sure if this needs public, get/set or if we even really need it all?
 	public bool Performing { get; set; }
 	public bool IsIncrementStage = false;
 	public bool MaxLevel { get; private set; }
@@ -29,8 +28,6 @@ public class LevelsManager : MonoBehaviour
 	[SerializeField]
 	private Level[] Levels;
 
-	//TODO: @ckromero brittle here, needs a shared enumeration
-	//private string[] audioPads = { "murmur", "allQuiet", "polite", "medium", "large", "huge" };
 	private float _TimeSinceLastGesture = 0f;
 	private float _TimeToFailure = 0f;
 	private int stage = 0;
@@ -46,24 +43,6 @@ public class LevelsManager : MonoBehaviour
 	}
 
 	void Start () {
-		// if (listenToGestures)
-		// 	UpdateLevelsBasedOnGestures ();
-		//TODO: make this a function that is called at start AND at reset.
-		// for (var i = 0; i < Levels.Length; i++) {
-		// 	if (Levels[i].StartingLevel) {
-		// 		stage = i;
-		// 		stateLevelIndex = i;
-		// 		_HighestStage = stage;
-		// 		break;
-		// 	}
-		// }
-		// Levels[stage].Reset();
-
-		// Reset();
-
-		// UpdateAV();
-		//TODO: make this a cue in experience manager
-		// audioManager.ChangePad("murmur");
 	}
 
 	public void BeginPerforming() {
@@ -73,7 +52,6 @@ public class LevelsManager : MonoBehaviour
 		Performing = true;
 		Reset();
         listenToGestures = true;
-		//TODO: expManager should be queued to audience start state	
 	}
 
 	public void StopPerforming () { 
@@ -102,7 +80,6 @@ public class LevelsManager : MonoBehaviour
 		if (listenToGestures && Performing) {
 			UpdateLevelsBasedOnGestures ();
 		}
-		//TODO: remove?
 		if (IsIncrementStage) { 
 			stage++;
 			UpdateAV ();
@@ -145,8 +122,6 @@ public class LevelsManager : MonoBehaviour
 
 		}
 		else {
-		//TODO: change to weird dance or weird random gesture.
-		// else if (!gestureManager.WeirdRandomMovement) {
 			_TimeSinceLastGesture += Time.deltaTime;
 			if (_TimeSinceLastGesture > DelayBeforeDecayStarts) {
 				if (stage > 0) {
@@ -167,10 +142,6 @@ public class LevelsManager : MonoBehaviour
 		}
 
 		if (Levels[stage].Complete) {
-			//TODO: nothing below polite applause
-            // stage += Levels[stage].Advancement;
-            // stage = Mathf.Clamp(stage, 0, Levels.Length - 1);
-            // UpdateLevel();
             Debug.Log("advance stage");
 			UpdateLevel(Levels[stage].Advancement);
 		}
@@ -217,8 +188,6 @@ public class LevelsManager : MonoBehaviour
 	void UpdateAV ()
 	{
 		//Debug.Log ("updating AV, stage is now " + stage);
-		//TODO: @ckromero move this to ExpManager. 
-		//LevelsManager should be concerned with level accumulation.
 
 		if (stage < Levels.Length && stage != 0) {
 			// audioManager.ChangePad (newPad);

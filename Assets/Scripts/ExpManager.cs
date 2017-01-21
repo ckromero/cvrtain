@@ -52,7 +52,6 @@ public class ExpManager : MonoBehaviour
 	void Start ()
 	{
 		triggerListener = GetComponent<TriggerListener> ();
-		//TODO: need an in game trigger to restart the animation
 		IsRestartAnimation = true;
 	}
 
@@ -72,7 +71,6 @@ public class ExpManager : MonoBehaviour
 		}
 
 		if (Input.GetKeyDown ("space")) {
-			//TODO: add calibration check after reset 
 			print ("space key was pressed");
 			RestartCurtainAnimation ();
 			IsListenForSpaceBar = false;

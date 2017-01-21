@@ -63,7 +63,6 @@ public class ClapperManager : MonoBehaviour
 
 		switch (levelNum) {
 		case 0:
-			//TODO: idle here?
 			targetTrigger = "triggerIdle";	
 			break;	
 		case 1:
