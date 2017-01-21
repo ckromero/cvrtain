@@ -76,28 +76,6 @@ public class ExpManager : MonoBehaviour
 			IsListenForSpaceBar = false;
 		}
 		
-		if (triggerListener.LastDoublePress != Mathf.Infinity && triggerListener.LastDoublePress > lastTriggerTime) {
-			//lastTriggerTime = triggerListener.LastDoublePress;
-			////TODO: AWFUL
-			//if (expState == ExpStates.Idle)
-			//	IsIntroScreen = true;
-			//if (expState == ExpStates.Intro)
-			//	IsInstructionScreen = true;
-			//if (expState == ExpStates.Instructions)
-			//	IsCurtainOpen = true;
-			//if (expState == ExpStates.CurtainOpen)
-			//	IsLevels = true;
-			//if (expState == ExpStates.Levels)
-			//	IsCurtainClose = true;
-			//if (expState == ExpStates.CurtainClose)
-			//	IsOutro = true;
-			//if (expState == ExpStates.Outro)
-			//	IsCredits = true;
-			//if (expState == ExpStates.Credits)
-			//	IsIdle = true;
-
-
-		}
 
 //		states = new bool[]{ IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsTitles };
 		if (IsIdle) { 
@@ -214,8 +192,6 @@ public class ExpManager : MonoBehaviour
 	private void StopIntro ()
 	{ 
 		afterCurtainOpen.SendMessage ("ResetAnimation");
-//		audioManager.StopSound ("RoomToneCoughv2_EDIT");	
-		//audioManager.SetSoundToFade ("RoomToneCoughv2_EDIT");
 	}
 
 	private void CurtainOpened ()

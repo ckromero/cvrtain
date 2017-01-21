@@ -99,18 +99,6 @@ public class LevelsManager : MonoBehaviour
 
             Failing = false;
 
-			//if (gestureManager.Facing == HeadFacing.Back) {
-			//	/* only trigger a response if the player is past the starting
-			//	* state */
-			//	if (stage <= stateLevelIndex) {
-			//		return;
-			//	}
-			//	Debug.Log("the player is being inappropriate");
-			//	//TODO: sendcue on experience manager
-			//	audioManager.TriggerSound("laugh");
-			//	return;
-			//}
-
 			var evaluation = Levels[stage].EvaluateGesture(lastGesture.Name);
 			if (_HighestStage == Levels.Length - 1 && _HighestStage != stage) {
 				var highEvaluation = Levels[_HighestStage].EvaluateGesture(lastGesture.Name);
@@ -190,13 +178,10 @@ public class LevelsManager : MonoBehaviour
 		//Debug.Log ("updating AV, stage is now " + stage);
 
 		if (stage < Levels.Length && stage != 0) {
-			// audioManager.ChangePad (newPad);
 
 			// clapManager.UpdateClappers(Levels[stage].ClapLevel);
 			expManager.LevelChanged(stage);
 
-//			animatorManager.changeAnimationState (newState);
-//			lightsManager.changeLightState(newState);
 		}
 	}
 

@@ -28,15 +28,6 @@ public class GestureToAudio : MonoBehaviour
 	void Start ()
 	{
 		gestures = gestureManager.Gestures;
-		CheckGestureToAudio ();
-	}
-
-	void CheckGestureToAudio ()
-	{ 
-		//check gestue list and see if we have corresponding audio.
-		//ensure values in dictionary list exist as game objects. 
-//		Debug.LogWarning ("Warning if gesture doesn't have corresponding audio");
-
 	}
 
 	public void Reset() { 
@@ -48,7 +39,6 @@ public class GestureToAudio : MonoBehaviour
 	void Update ()
 	{
 		if (levelsManager.Performing) {
-			
 			//if a new gesture has been detected
 			checkLastGesture = gestureManager.LastGesture;
 			if (checkLastGesture.Time != lastGestureTime) { 
@@ -129,19 +119,3 @@ public class GestureToAudio : MonoBehaviour
 
 }
 
-//1229_ArmsToSide.wav
-//1229_BlowKisses.wav
-//1229_Bow-Norm.wav
-//1229_Curtsie-Norm.wav
-//1229_DeepBow.wav
-//1229_FacingAway.wav
-//1229_HandUpLeft.wav
-//1229_HandUpRight.wav
-//1229_HandsTogetherShake.wav
-//1229_HandsUp.wav
-//1229_OneArmUp.wav
-//1229_OneHighOneLow.wav
-//1229_PumpItUp.wav
-//1229_RHandToHeart.wav
-//1229_TwoHandsTogether.wav
-//1229_Wave.wav
