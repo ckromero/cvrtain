@@ -11,9 +11,12 @@ public class LevelsManager : MonoBehaviour
 	public GestureManager gestureManager;
 	public ClapManager clapManager;
 
+	/* these three variables are used for tracking player inaction and
+	* determining if the current Level should be reduced due to inaction */
 	public float DelayBeforeDecayStarts = 10f;
 	public float DecayGap = 2f;
 	public float InactionTimeout;
+	
 	public int CurrentLevel { get{ return stage; }}
 	public bool Performing { get; set; }
 	public bool IsIncrementStage = false;
@@ -21,7 +24,6 @@ public class LevelsManager : MonoBehaviour
     public bool Failing { get; private set; }
     public bool Failed { get; private set; }
 
-	// private  string lastGesture;
 	private CompletedGestureStruct lastGesture;
 	private CompletedGestureStruct[] completedGestures;
 
@@ -55,7 +57,6 @@ public class LevelsManager : MonoBehaviour
 	}
 
 	public void StopPerforming () { 
-		//gestureManager.Reset();
         gestureManager.Tracking = false;
 		Performing = false;
 	}
@@ -89,9 +90,6 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateLevelsBasedOnGestures ()
 	{
-        //"Hands up bow","One Hand High, One Hand Low","Pump it up","Deep bow","Bow"
-        //completedGestures
-
 		if (!lastGesture.Time.Equals(gestureManager.LastGesture.Time)) {
 
 			_TimeSinceLastGesture = 0f;
@@ -107,7 +105,6 @@ public class LevelsManager : MonoBehaviour
 					return;
 				}
 			}
-
 		}
 		else {
 			_TimeSinceLastGesture += Time.deltaTime;
@@ -134,9 +131,6 @@ public class LevelsManager : MonoBehaviour
 			UpdateLevel(Levels[stage].Advancement);
 		}
 		else if (Levels[stage].Failed) {
-            // stage = Mathf.Clamp(--stage, 0, Levels.Length - 1);
-            // UpdateLevel();
-
             var lastStage = stage;
 			UpdateLevel(-1);
 			if (stage == 0 && lastStage != stage) {
@@ -175,11 +169,7 @@ public class LevelsManager : MonoBehaviour
 
 	void UpdateAV ()
 	{
-		//Debug.Log ("updating AV, stage is now " + stage);
-
 		if (stage < Levels.Length && stage != 0) {
-
-			// clapManager.UpdateClappers(Levels[stage].ClapLevel);
 			expManager.LevelChanged(stage);
 
 		}

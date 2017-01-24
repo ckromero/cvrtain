@@ -29,7 +29,15 @@ public class Gesture {
 	private float _TimeToNextRule = Mathf.Infinity;
 	private float _TimeLeftOnRule = Mathf.Infinity;
 
+	/* in the event that the Gesture is designed to be hand agnostic (ie, the 
+	* EitherHand bool in one of the GestureRules is true) then these are used to
+	* track which hand should be assoicated with which part of the rules. Should
+	* left hand check against the left or the right part of the rule, and vica versa
+	* for the right hand */
+
+	// Reveals whether the binding of a hand to a side occured yet?
 	private bool _LeftHandZoneSet = false;
+	// Is the left hand bound to the left zone? If false, then it's bound to the right
 	private bool _LeftHandInLeftZone = false;
 
 	private Vector3 LastHeadPosition;
@@ -40,7 +48,6 @@ public class Gesture {
 	}
 
 	public void GestureUpdate(HeadTracker head, HandsTracker hands) {
-
 		if (Completed || Disabled) {
 			return;
 		}
@@ -57,7 +64,6 @@ public class Gesture {
 
 		if (CheckRule(head, hands, Rules[RuleIndex+1])) {
 			RuleIndex++;
-            //Debug.Log("Completed rule: " + RuleIndex + " of " + Name);
             LastHeadPosition = head.HeadTransform.localPosition;
             if (RuleIndex >= Rules.Length - 1) {
 				_DelayRemaining = EvaluationDelay;
@@ -73,14 +79,12 @@ public class Gesture {
 		else if (RuleIndex >= 0 && CheckRule(head, hands, Rules[RuleIndex])) {
 			_TimeLeftOnRule -= Time.deltaTime;
 			if (_TimeLeftOnRule <= 0f) {
-				//Debug.Log(Name + " -- timed out on rule " + RuleIndex);
 				Reset();
 			}
 		}
 		else {
 			_TimeToNextRule -= Time.deltaTime;
 			if (_TimeToNextRule <= 0f) {
-				//Debug.Log(Name + " -- timed out getting to rule " + RuleIndex);
 				Reset();
 			}
 		}
@@ -94,9 +98,10 @@ public class Gesture {
         Debug.Log("reseting " + Name);
     }
 
+    /* check against all the different possible values for the current rule against
+    * the current value contained in the HeadTracker and HandsTracker. */
     private bool CheckRule(HeadTracker head, HandsTracker hands, GestureRule rule) {
 		if (rule.RequireHeadState) {
-			//if (!head.HeadStateList.Contains(rule.HeadState)) {
             if (head.HeadState != rule.HeadState) {
 				return false;
 			}

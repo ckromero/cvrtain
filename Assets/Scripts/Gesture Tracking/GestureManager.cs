@@ -171,6 +171,11 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 	}
 
+	/* Handles all code around processing a completed gesture.
+	* Has the gesture been perfomred 4 or more times in a row and a 
+	* Laughable should be fired instead? Was the gesure performed while
+	* the player was facing away from the audience?
+	* Also handles basic housekeeping like setting the value of LastGesture */
 	public void DetectedGesture(string name) {
 
 		var streak = 0;
@@ -190,8 +195,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		if (streak >= MaximumStreakLength) {
 			name = "Laughable";
 		}
-        else if (_HeadTracker.Facing == HeadFacing.Back)
-        {
+        else if (_HeadTracker.Facing == HeadFacing.Back) {
+        	/* the very first time the player performs away from the audience
+        	* fire the First Backwards gesture. Otherwise, Laughable should be
+        	* triggered instead */
             name = "First Backwards";
             foreach (var completed in PerformedGestures)
             {
