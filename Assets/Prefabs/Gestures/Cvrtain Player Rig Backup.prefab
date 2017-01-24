@@ -7963,7 +7963,7 @@ MonoBehaviour:
       HasTimeLimit: 0
       TimeLimit: 0
     EvaluationDelay: 0
-    Disabled: 0
+    Disabled: 1
   - Name: One arm sweep left
     ForceCompleteKey: 57
     Rules:
