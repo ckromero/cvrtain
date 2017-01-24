@@ -8752,7 +8752,6 @@ MonoBehaviour:
     Disabled: 1
   GestureLockoutDuration: 2
   MaximumStreakLength: 3
-  HoldStateRequirement: 16
   WeirdDanceRequirement: 16
   MovementTrackingWindow: 5
 --- !u!114 &114000010971698834

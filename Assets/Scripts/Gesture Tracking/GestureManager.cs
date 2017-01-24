@@ -60,13 +60,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	}
 	public bool WeirdRandomMovement { get; private set; }
 
-	public float HoldStateRequirement;
 	public float WeirdDanceRequirement;
 	public float MovementTrackingWindow;
 
-	// private Vector3[] _TrackedHandPositions;
 	private Vector3[] _TrackedRandomPositions;
-	private Vector3[] _TrackedDancePositions;
 	private int _HandIndex;
 
 	private HeadTracker _HeadTracker;
@@ -80,14 +77,12 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	void Awake () {
 	}
 
-	// Use this for initialization
 	void Start () {
 		_HeadTracker = GetComponent<HeadTracker> ();
 		_HandsTracker = GetComponent<HandsTracker> ();
 		_Callibrator = GetComponent<GestureCallibrator>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		/* update all gestures and sort them by how completed they are. This
 		* means that more complex, partially completed rules are evaluated
@@ -110,25 +105,25 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		foreach (var gesture in Gestures) {
 			gesture.GestureUpdate (_HeadTracker, _HandsTracker);
 			if (gesture.Completed) {
+				/* if the lockout time is over and another gesture has not already
+				* been detected this frame, register this gesture */
 				if (_RemainingLockout <= 0f) {
 					if (name == string.Empty) {
-					// if (largestCompletion < gesture.RuleIndex) {
-					// 	largestCompletion = gesture.RuleIndex;
 						name = gesture.Name;
-					// }
 					}
 				}
+				/* gestures should be reset regardless of whether or not they will
+				* be registerd to prevent state from backing up or overlapping */
 				gesture.Reset();
 			}
-            /* if a gesture is waiting on its delay, but another gesture has been completed
-             * go ahead and reset the waiting gesture */
+            /* if this gesture is being delayed and another gesture has been completed
+            * this frame, reset the delayed gesture */
             else if (gesture.DelayedComplete && name != string.Empty)
             {
                 gesture.Reset();
             }
 		}
 		if (name != string.Empty) {
-		// if (largestCompletion > 0) {
 			DetectedGesture(name);
 		}
 	}
@@ -140,23 +135,21 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 		var leftPos = _HandsTracker.LeftHand.position;
 		var rightPos = _HandsTracker.RightHand.position;
-
-		// _TrackedHandPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
-		// _TrackedHandPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
-
+		/* hand positions are translated into local space to account for the gesture
+		* tracker being scaled by the callibration process */
 		_TrackedRandomPositions[_HandIndex] = transform.InverseTransformPoint(leftPos);
 		_TrackedRandomPositions[_HandIndex+1] = transform.InverseTransformPoint(rightPos);
 
 		_HandIndex += 2;
 		var length = _TrackedRandomPositions.Length;
-		// if (_HandIndex >= _TrackedHandPositions.Length) {
 		if (_HandIndex >= _TrackedRandomPositions.Length) {
 			_HandIndex = 0;
 		}
 
+		/* iterate over _TrackedRandomPositions and add up the deltas between
+		* all saved positions. If the total distance is greater than 
+		* WeirdDanceRequirement, fire the Weird dance gesture */
 		var randomDistance = 0f;
-		var danceDistance = 0f;
-		// var length = _TrackedHandPositions.Length;
 		for (var i = _HandIndex - 1; i != _HandIndex; i--) {
             if (i < 0) {
                 i = length - 1;
@@ -164,32 +157,17 @@ public class GestureManager : MonoBehaviour, IGestureManager
                     break;
                 }
             }
+            /* index2 should be 2 away from index since each hand's positions
+            * are saved in alternating indices */
             var index = i;
             var index2 = (index <= 1) ? length - 1 - index : index - 2;
-            // var pos1 = _TrackedHandPositions[index];
-            // var pos2 = _TrackedHandPositions[index2];
             var pos1 = _TrackedRandomPositions[index];
             var pos2 = _TrackedRandomPositions[index2];
             randomDistance += Vector3.Distance(pos1, pos2);
-
-            pos1 = _TrackedDancePositions[index];
-            pos2 = _TrackedDancePositions[index2];
-            danceDistance += Vector3.Distance(pos1, pos2);
 		}
-
-		// WeirdRandomMovement = (randomDistance >= HoldStateRequirement);
 
 		if (randomDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
 			DetectedGesture("Weird dance");
-			//for (var i = 0; i < _TrackedDancePositions.Length; i++) {
-			//	_TrackedDancePositions[i] = Vector3.zero;
-			//}
-		}
-		else if (randomDistance >= HoldStateRequirement && _RemainingLockout <= 0f) {
-			DetectedGesture("Weird random");
-			//for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
-			//	_TrackedRandomPositions[i] = Vector3.zero;
-			//}
 		}
 	}
 
@@ -235,13 +213,14 @@ public class GestureManager : MonoBehaviour, IGestureManager
 
 		PerformedGestures.Add(LastGesture);
 
-        /* clear the random trackers */
-
-		for (var i = 0; i < _TrackedDancePositions.Length; i++) {
-			_TrackedDancePositions[i] = Vector3.zero;
-		}
+		/* random tracking should be cleared so that it doesn't fire
+		* due to movement caused by another, completed gesture */
 		for (var i = 0; i < _TrackedRandomPositions.Length; i++) {
-			_TrackedRandomPositions[i] = Vector3.zero;
+			var position = _HandsTracker.LeftHand.position;
+			if (i % 2 == 1) {
+				position = _HandsTracker.RightHand.position;
+			}
+			_TrackedRandomPositions[i] = _HandsTracker.transform.InverseTransformDirection(position);
 		}
 	}
 
@@ -269,15 +248,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 		LastGesture = new CompletedGestureStruct("", 0f);
 		var handMoveCount = MovementTrackingWindow * 60 * 2;
-		// _TrackedHandPositions = new Vector3[(int)handMoveCount];
 		_TrackedRandomPositions = new Vector3[(int)handMoveCount];
-		_TrackedDancePositions = new Vector3[(int)handMoveCount];
 		_HandIndex = 0;
 
 		PerformedGestures = new List<CompletedGestureStruct>();
-
-        /* this is a hack to fix the bug requiring a double bow to start performance */
-        //_HeadTracker.ForceUpright();
 	}
 }
 
