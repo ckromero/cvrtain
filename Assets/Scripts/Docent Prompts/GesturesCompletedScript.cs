@@ -41,6 +41,7 @@ public class GesturesCompletedScript : MonoBehaviour {
 		if (gestureManager.GestureCounts.Count == 0) {
 			message = "";
 		}
+        message += "\n\n#CVRTAIN";
 		_Text.text = message;
 	}
 

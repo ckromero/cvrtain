@@ -22,3 +22,5 @@
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.HoloLens.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.VR.dll
 /Users/ckromero/code/CVRTAIN/Temp/bin/Debug/AmplifyBloom.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/ckromero/code/CVRTAIN/Temp/bin/Debug/UnityEngine.Purchasing.dll

@@ -15,10 +15,6 @@ public class ClapperManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-//		foreach (GameObject go in clappers) { 
-//			animators.Add (go.GetComponent<Animator> ());
-//		}
-//		foreach (ClapControl clapControl in clapControls) { 
 	}
 	
 	// Update is called once per frame
@@ -63,7 +59,6 @@ public class ClapperManager : MonoBehaviour
 
 		switch (levelNum) {
 		case 0:
-			//TODO: idle here?
 			targetTrigger = "triggerIdle";	
 			break;	
 		case 1:
@@ -90,12 +85,6 @@ public class ClapperManager : MonoBehaviour
 				clapControl.WhichTrigger (targetTrigger);
 			}
 		}
-
-//		public bool triggerRaisedFist = false;
-//		public bool triggerHighClapping = false;
-//		public bool triggerMildClapping = false;
-
-
 
 	}
 }

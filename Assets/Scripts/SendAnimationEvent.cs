@@ -7,7 +7,6 @@ public class SendAnimationEvent : MonoBehaviour {
 	private Animator animator;
 //	public bool IsStartAnimation=false;
 	public bool IsRollingBack=false;
-
 	private int lastCheckedPoint=0;
 	private IEnumerator coroutine;
 	public float HoldAnimationSeconds = 4.0f;
