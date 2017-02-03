@@ -22,11 +22,9 @@ public class GestureManagerEditor : Editor {
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("TestOutputText"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("DocentText"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("GestureLockoutDuration"));
-		EditorGUILayout.PropertyField(serializedObject.FindProperty("HoldStateRequirement"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("WeirdDanceRequirement"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("MovementTrackingWindow"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("MaximumStreakLength"));
-
 
 		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
 		if (property.isExpanded) {
