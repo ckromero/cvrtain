@@ -21207,7 +21207,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 509531191}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 1.58, y: 5.001897, z: -0.32255173}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -21216,7 +21216,7 @@ Transform:
   - {fileID: 1644815729}
   m_Father: {fileID: 531256460}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &509852040
 Prefab:
   m_ObjectHideFlags: 0
@@ -42813,7 +42813,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147970160}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 35363876729f549cfa798ecac2656210, type: 2}
   m_CullingMode: 0
@@ -42829,14 +42829,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1147970160}
-  m_LocalRotation: {x: 0.001508588, y: 0.24347745, z: -0.0060094325, w: -0.9698868}
-  m_LocalPosition: {x: 0.48, y: -0.88, z: -1.98}
+  m_LocalRotation: {x: -0.0059203887, y: -0.9555145, z: -0.0018270733, w: -0.29487908}
+  m_LocalPosition: {x: -6.29, y: -0.68, z: 16.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1249291236}
   m_Father: {fileID: 0}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 331.816, z: 0.71000004}
+  m_LocalEulerAnglesHint: {x: 0, y: 505.699, z: 0.71000004}
 --- !u!1 &1149254083
 GameObject:
   m_ObjectHideFlags: 0
@@ -44108,7 +44108,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1201737164
 Transform:
   m_ObjectHideFlags: 0
@@ -45044,7 +45044,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 53.7
+  field of view: 14.7
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -45066,13 +45066,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249291231}
-  m_LocalRotation: {x: -0, y: -0, z: 1.0941603e-10, w: 1}
-  m_LocalPosition: {x: 0.0037595122, y: -0.00004659044, z: -2.0899968}
+  m_LocalRotation: {x: 0.0010047484, y: 0.081077024, z: 4.656613e-10, w: 0.9967074}
+  m_LocalPosition: {x: 0.14, y: 1.25, z: -2.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1147970162}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 360.103, z: 0.71000004}
+  m_LocalEulerAnglesHint: {x: 0.115, y: 369.301, z: 0.009000001}
 --- !u!114 &1249291237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45139,8 +45139,8 @@ MonoBehaviour:
   m_debugToScreen: 0
   m_highPrecision: 1
   m_bloomRange: {x: 500, y: 0.002, z: 0, w: 0}
-  m_overallThreshold: 0.17
-  m_bloomParams: {x: 0, y: 0.17, z: 1, w: 1}
+  m_overallThreshold: 0
+  m_bloomParams: {x: 0.76, y: 0, z: 1, w: 1}
   m_temporalFilteringActive: 0
   m_temporalFilteringValue: 0.05
   m_bloomDownsampleCount: 6
@@ -45216,7 +45216,7 @@ MonoBehaviour:
       m_Mode: 0
       m_NumColorKeys: 5
       m_NumAlphaKeys: 5
-    m_lensFlareGradTexture: {fileID: 1358081923}
+    m_lensFlareGradTexture: {fileID: 1678832386}
     m_lensFlareHaloParams: {x: 0.1, y: 0.573, z: 1, w: 128}
     m_lensFlareHaloChrDistortion: 1.51
     m_lensFlareGaussianBlurAmount: 1
@@ -45331,7 +45331,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1249291231}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3b9c9de1844714ae5830c517d44025e9, type: 2}
   m_CullingMode: 0
@@ -48052,38 +48052,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1357027852}
   m_Mesh: {fileID: 4300208, guid: 41d7252675dd5415b93722e46d914d9a, type: 3}
---- !u!28 &1358081923
-Texture2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  serializedVersion: 2
-  m_Width: 256
-  m_Height: 1
-  m_CompleteImageSize: 1024
-  m_TextureFormat: 5
-  m_MipCount: 1
-  m_IsReadable: 1
-  m_AlphaIsTransparency: 0
-  m_ImageCount: 1
-  m_TextureDimension: 2
-  m_TextureSettings:
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapMode: 0
-  m_LightmapFormat: 0
-  m_ColorSpace: 1
-  image data: 1024
-  _typelessdata: fffffffffffbfbfffff7f7fffff3f3ffffefefffffebebffffe7e7ffffe3e3ffffdfdfffffdbdbffffd7d7ffffd3d3ffffcfcfffffcbcbffffc7c7ffffc3c3ffffbfbfffffbbbbffffb7b7ffffb3b3ffffafafffffababffffa7a7ffffa3a3ffff9f9fffff9b9bffff9797ffff9393ffff8f8fffff8b8bffff8787ffff8383ffff8080ffff7c7cffff7878ffff7474ffff7070ffff6c6cffff6868ffff6464ffff6060ffff5c5cffff5858ffff5454ffff5050ffff4c4cffff4848ffff4444ffff4040ffff3c3cffff3838ffff3434ffff3030ffff2c2cffff2828ffff2424ffff2020ffff1c1cffff1818ffff1414ffff1010ffff0c0cffff0808ffff0404ffff0001feff0005faff0009f6ff000df2ff0011eeff0015eaff0019e6ff001de2ff0021deff0025daff0029d6ff002dd2ff0031ceff0035caff0039c6ff003dc2ff0041beff0045baff0049b6ff004db2ff0051aeff0055aaff0059a6ff005da2ff00619eff00659aff006996ff006d92ff00718eff00758aff007986ff007d82ff00807fff00847bff008877ff008c73ff00906fff00946bff009867ff009c63ff00a05fff00a45bff00a857ff00ac53ff00b04fff00b44bff00b847ff00bc43ff00c03fff00c43bff00c837ff00cc33ff00d02fff00d42bff00d827ff00dc23ff00e01fff00e41bff00e817ff00ec13ff00f00fff00f40bff00f807ff00fc03ff02ff00ff06ff00ff0afe00ff0efe00ff12fe00ff16fd00ff1afd00ff1efd00ff22fc01ff26fc01ff2afc01ff2efb01ff32fb01ff36fb01ff3afa01ff3efa01ff42fa01ff46fa01ff4af901ff4ef901ff52f901ff56f801ff5af801ff5ef801ff62f702ff66f702ff6af702ff6ef602ff72f602ff76f602ff7af502ff7ef502ff81f502ff85f502ff89f402ff8df402ff91f402ff95f302ff99f302ff9df302ffa1f203ffa5f203ffa9f203ffadf103ffb1f103ffb5f103ffb9f003ffbdf003ffc1f003ffc5f003ffc9ef03ffcdef03ffd1ef03ffd5ee03ffd9ee03ffddee03ffe1ed04ffe5ed04ffe9ed04ffedec04fff1ec04fff5ec04fff9eb04fffdeb04ffffe804ffffe504ffffe104ffffdd04ffffda04ffffd604ffffd204ffffcf04ffffcb03ffffc703ffffc403ffffc003ffffbc03ffffb903ffffb503ffffb103ffffad03ffffaa03ffffa603ffffa203ffff9f03ffff9b03ffff9703ffff9403ffff9002ffff8c02ffff8902ffff8502ffff8102ffff7e02ffff7a02ffff7602ffff7302ffff6f02ffff6b02ffff6802ffff6402ffff6002ffff5d02ffff5902ffff5501ffff5201ffff4e01ffff4a01ffff4701ffff4301ffff3f01ffff3c01ffff3801ffff3401ffff3101ffff2d01ffff2901ffff2601ffff2201ffff1e01ffff1b00ffff1700ffff1300ffff1000ffff0c00ffff0800ffff0500ffff0100
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1001 &1360539887
 Prefab:
   m_ObjectHideFlags: 0
@@ -58803,6 +58771,38 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1672976961}
   m_Mesh: {fileID: 4300270, guid: 41d7252675dd5415b93722e46d914d9a, type: 3}
+--- !u!28 &1678832386
+Texture2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  serializedVersion: 2
+  m_Width: 256
+  m_Height: 1
+  m_CompleteImageSize: 1024
+  m_TextureFormat: 5
+  m_MipCount: 1
+  m_IsReadable: 1
+  m_AlphaIsTransparency: 0
+  m_ImageCount: 1
+  m_TextureDimension: 2
+  m_TextureSettings:
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapMode: 0
+  m_LightmapFormat: 0
+  m_ColorSpace: 1
+  image data: 1024
+  _typelessdata: fffffffffffbfbfffff7f7fffff3f3ffffefefffffebebffffe7e7ffffe3e3ffffdfdfffffdbdbffffd7d7ffffd3d3ffffcfcfffffcbcbffffc7c7ffffc3c3ffffbfbfffffbbbbffffb7b7ffffb3b3ffffafafffffababffffa7a7ffffa3a3ffff9f9fffff9b9bffff9797ffff9393ffff8f8fffff8b8bffff8787ffff8383ffff8080ffff7c7cffff7878ffff7474ffff7070ffff6c6cffff6868ffff6464ffff6060ffff5c5cffff5858ffff5454ffff5050ffff4c4cffff4848ffff4444ffff4040ffff3c3cffff3838ffff3434ffff3030ffff2c2cffff2828ffff2424ffff2020ffff1c1cffff1818ffff1414ffff1010ffff0c0cffff0808ffff0404ffff0001feff0005faff0009f6ff000df2ff0011eeff0015eaff0019e6ff001de2ff0021deff0025daff0029d6ff002dd2ff0031ceff0035caff0039c6ff003dc2ff0041beff0045baff0049b6ff004db2ff0051aeff0055aaff0059a6ff005da2ff00619eff00659aff006996ff006d92ff00718eff00758aff007986ff007d82ff00807fff00847bff008877ff008c73ff00906fff00946bff009867ff009c63ff00a05fff00a45bff00a857ff00ac53ff00b04fff00b44bff00b847ff00bc43ff00c03fff00c43bff00c837ff00cc33ff00d02fff00d42bff00d827ff00dc23ff00e01fff00e41bff00e817ff00ec13ff00f00fff00f40bff00f807ff00fc03ff02ff00ff06ff00ff0afe00ff0efe00ff12fe00ff16fd00ff1afd00ff1efd00ff22fc01ff26fc01ff2afc01ff2efb01ff32fb01ff36fb01ff3afa01ff3efa01ff42fa01ff46fa01ff4af901ff4ef901ff52f901ff56f801ff5af801ff5ef801ff62f702ff66f702ff6af702ff6ef602ff72f602ff76f602ff7af502ff7ef502ff81f502ff85f502ff89f402ff8df402ff91f402ff95f302ff99f302ff9df302ffa1f203ffa5f203ffa9f203ffadf103ffb1f103ffb5f103ffb9f003ffbdf003ffc1f003ffc5f003ffc9ef03ffcdef03ffd1ef03ffd5ee03ffd9ee03ffddee03ffe1ed04ffe5ed04ffe9ed04ffedec04fff1ec04fff5ec04fff9eb04fffdeb04ffffe804ffffe504ffffe104ffffdd04ffffda04ffffd604ffffd204ffffcf04ffffcb03ffffc703ffffc403ffffc003ffffbc03ffffb903ffffb503ffffb103ffffad03ffffaa03ffffa603ffffa203ffff9f03ffff9b03ffff9703ffff9403ffff9002ffff8c02ffff8902ffff8502ffff8102ffff7e02ffff7a02ffff7602ffff7302ffff6f02ffff6b02ffff6802ffff6402ffff6002ffff5d02ffff5902ffff5501ffff5201ffff4e01ffff4a01ffff4701ffff4301ffff3f01ffff3c01ffff3801ffff3401ffff3101ffff2d01ffff2901ffff2601ffff2201ffff1e01ffff1b00ffff1700ffff1300ffff1000ffff0c00ffff0800ffff0500ffff0100
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1680808893
 GameObject:
   m_ObjectHideFlags: 0
@@ -67111,7 +67111,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1991556826
 Transform:
   m_ObjectHideFlags: 0
@@ -67135,7 +67135,7 @@ Light:
   serializedVersion: 7
   m_Type: 2
   m_Color: {r: 0.625, g: 0.6112132, b: 0.6112132, a: 1}
-  m_Intensity: 0.34
+  m_Intensity: 1.57
   m_Range: 41.04
   m_SpotAngle: 30
   m_CookieSize: 10
