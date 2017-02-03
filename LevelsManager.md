@@ -1,10 +1,10 @@
 ### Levels Manager
 
-The Levels Manager contains a collection of Levels which defines the different Gestures that the audience will respond to at different levels of excitement.
+The Levels Manager contains a collection of Levels which define the different Gestures that the audience will respond to at different levels of excitement.
 
-Every time GestureManager.LastGesture changes, the LevelsManager  passes the name into Level.EvaluateGesture() of the current Level.
+Every time GestureManager.LastGesture changes, the LevelsManager  passes the name into Level.EvaluateGesture() of the current Level. The Level then determines if it should move closer to completion, failure, or remain in its current state.
 
-By checking the Completed or Failed properties of the current Level then LevelsManager determines whether or not to advance to the next Level or fallback to the last.
+By checking Level.Completed or Level.Failed of the current Level after calling Level.EvaluateGesture(), the LevelManager determines whether or not to advance to the next Level or fallback to the last.
 
 The LevelManager also checks if the player has been inactive for a long period via **DelayBeforeDecayStarts**, **DecayGap** and **InactionTimeout**. Whenever the player is not performing a gesture, InactionTimeout increments. If it exceeds DelayBeforeDecayStarts, then LevelManager begins calling Level.Decrement() of the current Level which will eventually lead to its Failed property being true.
 

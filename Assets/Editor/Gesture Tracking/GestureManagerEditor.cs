@@ -26,7 +26,6 @@ public class GestureManagerEditor : Editor {
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("MovementTrackingWindow"));
 		EditorGUILayout.PropertyField(serializedObject.FindProperty("MaximumStreakLength"));
 
-
 		property.isExpanded = EditorGUILayout.Foldout(property.isExpanded, "Gestures");
 		if (property.isExpanded) {
 			/* since this updates very very frequently, I only need to save
