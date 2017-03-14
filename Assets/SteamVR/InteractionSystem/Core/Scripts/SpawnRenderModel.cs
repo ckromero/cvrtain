@@ -96,8 +96,7 @@ namespace Valve.VR.InteractionSystem
 				SteamVR_RenderModel renderModel = spawnRenderModels[spawnRenderModelUpdateIndex].renderModels[0];
 				if ( renderModel != null )
 				{
-					renderModel.UpdateComponents( );
-//					renderModel.UpdateComponents( OpenVR.RenderModels );
+					renderModel.UpdateComponents( OpenVR.RenderModels );
 				}
 			}
 
