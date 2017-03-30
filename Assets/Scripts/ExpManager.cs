@@ -70,11 +70,11 @@ public class ExpManager : MonoBehaviour
 			IsCheckTimer = false;
 		}
 
-		if (Input.GetKeyDown ("space")) {
-			print ("space key was pressed");
-			RestartCurtainAnimation ();
-			IsListenForSpaceBar = false;
-		}
+//		if (Input.GetKeyDown ("space")) {
+//			print ("space key was pressed");
+//			RestartCurtainAnimation ();
+//			IsListenForSpaceBar = false;
+//		}
 		
 
 //		states = new bool[]{ IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsTitles };

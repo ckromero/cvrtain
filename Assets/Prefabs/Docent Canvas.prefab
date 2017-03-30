@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 222984215992132218}
   - component: {fileID: 114638017573251064}
   - component: {fileID: 114565552836092766}
-  - component: {fileID: 114782404595788706}
+  - component: {fileID: 114381665612918738}
   m_Layer: 5
   m_Name: Gesture Count
   m_TagString: Untagged
@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1426752568612974
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,6 +165,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114381665612918738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1180468015543816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c586d8ac280442979a86ffba7bfa415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gestureManager: {fileID: 0}
 --- !u!114 &114539379203838700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,18 +198,19 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 4
     m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PLEASE CALIBRATE
+  m_Text: When you're ready play, face the cvrtain, put your hands at your side and
+    press a thumb button.
 --- !u!114 &114565552836092766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,18 +274,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &114782404595788706
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1180468015543816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c586d8ac280442979a86ffba7bfa415, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gestureManager: {fileID: 0}
 --- !u!114 &114790440457980406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -425,7 +426,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.4, y: 0.42800003}
   m_AnchorMax: {x: 1, y: 0.60800004}
-  m_AnchoredPosition: {x: -5, y: 0}
+  m_AnchoredPosition: {x: -5, y: 423.36}
   m_SizeDelta: {x: -10, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224274092827104366
@@ -502,5 +503,5 @@ RectTransform:
   m_AnchorMin: {x: 0.4, y: 0.178}
   m_AnchorMax: {x: 0.8006452, y: 0.30900002}
   m_AnchoredPosition: {x: 0, y: 6.5}
-  m_SizeDelta: {x: 0, y: -13}
+  m_SizeDelta: {x: 76, y: -13}
   m_Pivot: {x: 0.5, y: 0.5}

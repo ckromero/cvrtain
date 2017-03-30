@@ -16,7 +16,7 @@ public class CalibrationPromptScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!Calibrator.Callibrated) {
-			_Text.text = "PLEASE CALIBRATE";
+			_Text.text = "When you're ready play, face the cvrtain, put your hands at your side and press a thumb pad.";
 		}		
 		else {
 			_Text.text = "";

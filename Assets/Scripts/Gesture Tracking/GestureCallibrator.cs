@@ -11,9 +11,11 @@ public class GestureCallibrator : MonoBehaviour {
 
 	public SteamVR_TrackedObject LeftWand;
 	public SteamVR_TrackedObject RightWand;
+	private ExpManager expManager;
 
 	// Use this for initialization
 	void Start () {
+		expManager = GameObject.Find ("ExpManager").GetComponent<ExpManager> ();
 	}
 	
 	// Update is called once per frame
@@ -73,6 +75,7 @@ public class GestureCallibrator : MonoBehaviour {
 
         //GetComponent<HeadTracker>().Clear();
         //GetComponent<HeadTracker>().ForceUpright();
+		expManager.RestartCurtainAnimation();
 	}
 
 	public void Reset() {
