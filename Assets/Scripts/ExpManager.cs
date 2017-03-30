@@ -45,6 +45,7 @@ public class ExpManager : MonoBehaviour
 	private bool IsCheckTimer = false;
 	private bool IsCurtainNotificationSent = false;
 	private bool IsCurtainCalling = false;
+    private bool IsHouseToHalfCalled = false;
 	private string padToStore;
 	private IEnumerator coroutine;
 	public bool IsInHandSlice=false;
@@ -156,7 +157,11 @@ public class ExpManager : MonoBehaviour
 			lightsController.TurnOffMains ();
 			break;
 		case "HouseLightsOn":
-			lightsController.HouseToHalf ();
+                if (!IsHouseToHalfCalled)
+                {
+                    IsHouseToHalfCalled = true;
+                    lightsController.HouseToHalf();
+                }
 			break;
 		}
 
@@ -283,6 +288,7 @@ public class ExpManager : MonoBehaviour
 		levelsManager.StopPerforming();
 		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
+        IsHouseToHalfCalled = false;
 		afterCurtainOpen.SendMessage ("ResetAnimation");
 		audioManager.StopSound ("SideTone");
 		// docentPrompter.ExperienceReset();

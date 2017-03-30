@@ -95,7 +95,7 @@ public class Gesture {
 		_TimeLeftOnRule = Mathf.Infinity;
 		_TimeToNextRule = Mathf.Infinity;
         _LeftHandZoneSet = false;
-        Debug.Log("reseting " + Name);
+        //Debug.Log("reseting " + Name);
     }
 
     /* check against all the different possible values for the current rule against

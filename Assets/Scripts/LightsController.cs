@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LightsController : MonoBehaviour
 {
-
 	public GameObject[] turnTheseOn;
 	public GameObject HouseLights;
 	private Light houseLight;
@@ -28,10 +27,14 @@ public class LightsController : MonoBehaviour
 	public void HouseToHalf ()
 	{
 		if (!rollUpHouseLights) {
+            rollUpHouseLights = true;
 			houseLight.intensity = 0.0f;
 			HouseLights.SetActive (true);
-			rollUpHouseLights = true;
-		}
+            Debug.Log("Rolluphouselights is false");
+		}else
+        {
+            Debug.Log("Rolluphouselights is true");
+        }
 	}
 
 	public void HouseOff ()
@@ -47,7 +50,7 @@ public class LightsController : MonoBehaviour
 	void Update ()
 	{
 		if (rollUpHouseLights) {
-			Debug.Log ("Rolling up house lights");
+			//Debug.Log ("Rolling up house lights");
 			if (houseLight.intensity < targetHouseLightIntensity) {			
 				houseLight.intensity += 0.2f * Time.deltaTime;
 			} else {

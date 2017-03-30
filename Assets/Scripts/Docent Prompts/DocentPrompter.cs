@@ -18,7 +18,7 @@ public class DocentPrompter : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!Calibrator.Callibrated) {
-			CalibrationText.text = "PLEASE CALIBRATE";
+			CalibrationText.text = "When you're ready play, face the CVRTAIN, put your hands at your side and press a thumb button.";
 		}		
 		else {
 			CalibrationText.text = "";

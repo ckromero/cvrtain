@@ -119,7 +119,7 @@ public class LevelsManager : MonoBehaviour
 				else {
 					_TimeToFailure -= Time.deltaTime;
 					if (_TimeToFailure <= 0f) {
-						Debug.Log("TIME OUT THE PERFORMER");
+						//Debug.Log("TIME OUT THE PERFORMER");
                         Failed = true;
 					}
 				}

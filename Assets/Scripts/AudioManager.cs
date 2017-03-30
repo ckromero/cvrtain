@@ -240,7 +240,7 @@ public class AudioManager : MonoBehaviour
 				Debug.Log ("A NON GESTURE IS TRYING TO BE PLAYED AGAIN, IGNORING");	
 			}
 		} else {
-			Debug.Log ("audioToPlay: " + audioToPlay);
+			//Debug.Log ("audioToPlay: " + audioToPlay);
 			audioToPlay.Play ();
 		}
 	}
@@ -321,7 +321,7 @@ public class AudioManager : MonoBehaviour
 
 	private void TransitionAudio (string amsToName, float timeForTransition, float weight = 1.0f)
 	{ 
-		Debug.Log ("TransitionAudio received " + amsToName);
+		//Debug.Log ("TransitionAudio received " + amsToName);
 		AudioMixerSnapshot ams = audioMixer.FindSnapshot (amsToName);
 		AudioMixerSnapshot[] amsArray = new AudioMixerSnapshot[]{ ams };
 		float[] weightArray = new float[]{ weight };
