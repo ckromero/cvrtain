@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 1c279da3da52946328b87ac6f03e595e
-timeCreated: 1490749635
-licenseType: Pro
+timeCreated: 1490754550
+licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
   materialInstances:
@@ -178,7 +178,7 @@ SubstanceImporter:
     materialInformation:
       serializedVersion: 5
       offset: {x: 0, y: 0}
-      scale: {x: 10, y: 10}
+      scale: {x: 15, y: 15}
       generateMipmaps: 1
       generateAllOutputs: 0
       animationUpdateRate: 42
@@ -189,7 +189,7 @@ SubstanceImporter:
           name: _BumpMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       - first:
           name: _DetailAlbedoMap
@@ -213,36 +213,36 @@ SubstanceImporter:
           name: _EmissionMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       - first:
           name: _MainTex
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       - first:
           name: _MetallicGlossMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       - first:
           name: _OcclusionMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       - first:
           name: _ParallaxMap
         second:
           texture: {instanceID: 0}
-          scale: {x: 10, y: 10}
+          scale: {x: 15, y: 15}
           offset: {x: 0, y: 0}
       floats:
       - first:
           name: _BumpScale
-        second: 0.35
+        second: 0.05
       - first:
           name: _Cutoff
         second: 0.5
