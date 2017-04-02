@@ -253,7 +253,7 @@ public class ExpManager : MonoBehaviour
 		audioManager.TriggerSound("TerryCloth_EDIT");
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
-		lightsController.HouseToHalf();
+		//lightsController.HouseToHalf();
 		IsCurtainCalling = true;
 	}
 	public void CheckCurtainCalling() { 
