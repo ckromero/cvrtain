@@ -209,7 +209,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' '
+  m_Text: "To play:\n -face the CVRTAIN\n -hands at your sides\n -press a thumb button."
 --- !u!114 &114565552836092766
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -245,7 +245,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 28
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -256,7 +256,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Gestures performed
+  m_Text: 'Gestures Completed:
+
+    2x One arm sweep right
+
+    4x Weird dance
+
+    4x Laughable
+
+    1x One Hand High, One Hand Low
+
+'
 --- !u!114 &114717333071447900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -443,8 +453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 1}
-  m_AnchoredPosition: {x: 209, y: -44}
-  m_SizeDelta: {x: -10, y: -20}
+  m_AnchoredPosition: {x: 209, y: -65.8}
+  m_SizeDelta: {x: -10, y: -63.600002}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224344280078086892
 RectTransform:

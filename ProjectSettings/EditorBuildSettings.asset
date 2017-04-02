@@ -6,4 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BETA SCENES/B4.9.unity
+    path: Assets/Scenes/BETA SCENES/B4.10-intro.unity
+  - enabled: 1
+    path: Assets/Scenes/BETA SCENES/B4.10.unity
