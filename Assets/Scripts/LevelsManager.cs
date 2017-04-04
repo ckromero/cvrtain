@@ -48,7 +48,7 @@ public class LevelsManager : MonoBehaviour
 	}
 
 	public void BeginPerforming() {
-		Debug.Log("BEGIN THE PERFORMANCE!!!!!");
+		//Debug.Log("BEGIN THE PERFORMANCE!!!!!");
 		UpdateAV();		
 		gestureManager.Tracking = true;
 		Performing = true;
@@ -127,7 +127,7 @@ public class LevelsManager : MonoBehaviour
 		}
 
 		if (Levels[stage].Complete) {
-            Debug.Log("advance stage");
+            //Debug.Log("advance stage");
 			UpdateLevel(Levels[stage].Advancement);
 		}
 		else if (Levels[stage].Failed) {

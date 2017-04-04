@@ -130,7 +130,7 @@ public class HandsTracker : MonoBehaviour {
 	
 	void Update () {
 		if (Waving) {
-			Debug.Log("I'm waving");
+			//Debug.Log("I'm waving");
 		}
 	}
 
@@ -265,7 +265,7 @@ public class HandsTracker : MonoBehaviour {
 		* meaning a back and forth motion was found in the tracked history
 		* of the hand */
         if (thirdIndex >= 0) {
-        	Debug.Log("this should be a wave");
+        	//Debug.Log("this should be a wave");
             LastWave = Time.deltaTime;
             return true;
         }

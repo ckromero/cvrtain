@@ -65,19 +65,19 @@ public class SendAnimationEvent : MonoBehaviour {
 	}
 
 	public void StopAnimation() { 
-		Debug.Log ("stopping animation");
+		//Debug.Log ("stopping animation");
 		animator.speed=0;
 //		animator.enabled=false;
 	}
 
 	public void StartAnimation() { 
-		Debug.Log (this.gameObject.name + ": starting animation");
+		//Debug.Log (this.gameObject.name + ": starting animation");
 		animator.speed = 1;
 //		animator.enabled = true;
 	}
 
 	public void ResetAnimation() { 
-		Debug.Log("ResetAnimation received");
+		//Debug.Log("ResetAnimation received");
 //		animator.SetTime (0.0f);
 		//reset to beginning of clip
 		animator.Play("",-1,0.0f);

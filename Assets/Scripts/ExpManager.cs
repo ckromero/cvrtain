@@ -124,7 +124,7 @@ public class ExpManager : MonoBehaviour
 
 	public void SendCue (string cueName)
 	{
-		Debug.Log ("ExpManager.SendCue received: " + cueName);
+		//Debug.Log ("ExpManager.SendCue received: " + cueName);
 		switch (cueName) {
 		case "CurtainOpened":
 			CurtainOpened ();
@@ -170,7 +170,7 @@ public class ExpManager : MonoBehaviour
 	public void LevelChanged (int levelNum)
 	{ 
 		//
-		Debug.Log ("Level Changed:" + levelNum);
+		//Debug.Log ("Level Changed:" + levelNum);
 		switch (levelNum) {
 		case 1:
 			audioManager.ChangePad ("polite");
@@ -203,7 +203,7 @@ public class ExpManager : MonoBehaviour
 	{ 
 //		Debug.Log ("CurtainOpened called.");
 		if (!IsCurtainNotificationSent) { 
-			Debug.Log ("Experience Manager: Curtain is open");
+			//Debug.Log ("Experience Manager: Curtain is open");
 			audioManager.TriggerSound ("SWITCH_1");
 			audioManager.TriggerSound ("RoomToneCoughv2_EDIT");
 			audioManager.TriggerSound ("SideTone");
@@ -257,7 +257,7 @@ public class ExpManager : MonoBehaviour
 		IsCurtainCalling = true;
 	}
 	public void CheckCurtainCalling() { 
-		Debug.Log ("In CheckCurtainCalling");
+		//Debug.Log ("In CheckCurtainCalling");
 		if (IsCurtainCalling) { 
 			leftCurtainController.SendMessage ("EnableIsRollingBack");
 			rightCurtainController.SendMessage ("EnableIsRollingBack");
@@ -297,7 +297,7 @@ public class ExpManager : MonoBehaviour
 
 	public void RestartCurtainAnimation ()
 	{
-		Debug.Log ("RestartAnimation() called");
+		//Debug.Log ("RestartAnimation() called");
 		leftCurtainController.SendMessage ("StartAnimation");
 		rightCurtainController.SendMessage ("StartAnimation");
 		audioManager.TriggerSound ("tympani");	

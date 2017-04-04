@@ -49,7 +49,7 @@ public class ClapControl : MonoBehaviour
 
 	public void WhichTrigger (string triggerName)
 	{
-		Debug.Log ("WhichTrigger called with: " + triggerName);
+		//Debug.Log ("WhichTrigger called with: " + triggerName);
 		switch (triggerName) { 
 		case "triggerIdle":
 			triggerIdle = true;

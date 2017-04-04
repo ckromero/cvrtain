@@ -53,7 +53,7 @@ public class ClapperManager : MonoBehaviour
 	public void ChangeLevel (int levelNum, bool all=false)
 	{ 
 
-		Debug.Log ("Clap Manager called with levelNum" + levelNum);
+		//Debug.Log ("Clap Manager called with levelNum" + levelNum);
 		string targetTrigger = "";
 
 

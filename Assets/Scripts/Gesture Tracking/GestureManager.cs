@@ -46,10 +46,10 @@ public class GestureManager : MonoBehaviour, IGestureManager
 					_Callibrator.Reset();
 				}
 				else {
-					Debug.Log("I should be disabling the callibrator");
+					//Debug.Log("I should be disabling the callibrator");
                     if(_Callibrator == null)
                     {
-                        Debug.Log("I don't have a callibrator attached");
+                        Debug.Log("I don't have a calibrator attached");
                     }
 					_Callibrator.Disabled = true;
                    Reset();
@@ -167,7 +167,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 		}
 
 		if (randomDistance >= WeirdDanceRequirement && _RemainingLockout <= 0f) {
-			DetectedGesture("Weird dance");
+			//DetectedGesture("Weird dance");
 		}
 	}
 
@@ -177,7 +177,7 @@ public class GestureManager : MonoBehaviour, IGestureManager
 	* the player was facing away from the audience?
 	* Also handles basic housekeeping like setting the value of LastGesture */
 	public void DetectedGesture(string name) {
-
+        Debug.Log("DetectedGesture " + name);
 		var streak = 0;
 		for (var i = PerformedGestures.Count - 1; i >= 0; i--) {
 			var testName = PerformedGestures[i].Name;

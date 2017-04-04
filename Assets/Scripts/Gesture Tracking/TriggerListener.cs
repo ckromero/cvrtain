@@ -15,7 +15,7 @@ public class TriggerListener : MonoBehaviour, IGlobalTriggerHandler {
 	// Use this for initialization
 	void Start () {
 		LastDoublePress = Mathf.Infinity;
-        Debug.Log("starting trigger listener");	
+        //Debug.Log("starting trigger listener");	
 	}
 	
 	// Update is called once per frame

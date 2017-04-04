@@ -165,7 +165,7 @@ public class AudioManager : MonoBehaviour
 
 	public void ChangePad (string pad, float transitionTime = 0)
 	{ 
-		Debug.Log ("ChangePad Received: " + pad);
+		//Debug.Log ("ChangePad Received: " + pad);
 		if (transitionTime == 0) {
 			transitionTime = timeForTransition;
 		}
@@ -295,7 +295,7 @@ public class AudioManager : MonoBehaviour
 			}
 		}
 
-		Debug.Log ("PickedAlt: " + pickedAlt);
+		//Debug.Log ("PickedAlt: " + pickedAlt);
 		lastGestureAltTriggered = pickedAlt;
 
 		return pickedAlt;

@@ -78,7 +78,7 @@ public class GestureToAudio : MonoBehaviour
             } else {
                 expManager.CheckCurtainCalling();
             string soundToPlay = gestureToAudioList[lastGesture];
-            Debug.Log("ready to trigger " + soundToPlay);
+            //Debug.Log("ready to trigger " + soundToPlay);
             audiomanager.TriggerSound(soundToPlay, "gesture");
         }
 
