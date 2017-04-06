@@ -10,18 +10,22 @@ public class DocentPrompter : MonoBehaviour {
 	public GestureCallibrator Calibrator;
 
 	private GesturesCompletedScript _CompletedScript;
+	private GameObject promptImage;
 
 	void Start() {
 		_CompletedScript = GetComponentInChildren<GesturesCompletedScript>();
+		promptImage = this.gameObject.transform.Find ("Calibration prompt").gameObject.transform.Find ("PromptImage").gameObject;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (!Calibrator.Callibrated) {
-			CalibrationText.text = "To Play: Face the CVRTAIN. Hands at your sides. Press a thumb button.";
+			promptImage.SetActive (true);
+//			CalibrationText.text = "To Play: Face the CVRTAIN. Hands at your sides. Press a thumb button.";
 		}		
 		else {
-			CalibrationText.text = "";
+			promptImage.SetActive (false);
+//			CalibrationText.text = "";
 		}
 	}
 

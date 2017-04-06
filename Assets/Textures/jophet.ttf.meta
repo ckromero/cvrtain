@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 12880730cafab4ea68842be2c030bd2b
+timeCreated: 1491445308
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Jophet WF
+  fontNames:
+  - Jophet WF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
