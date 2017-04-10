@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class IntroRunner : MonoBehaviour {
     public Image image1;
     public Image image2;
-    public float timeToSwitch = 5.0f;
+    public float timeToSwitch = 2.0f;
     //public Camera camera;
 
     public Color secondColor;

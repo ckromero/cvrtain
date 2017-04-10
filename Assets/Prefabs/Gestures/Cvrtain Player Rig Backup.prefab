@@ -3059,7 +3059,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1779154208981200
 GameObject:
   m_ObjectHideFlags: 1
@@ -7283,7 +7283,7 @@ MonoBehaviour:
       TimeLimit: 0
     EvaluationDelay: 0
     Disabled: 0
-  - Name: HandTo Heart
+  - Name: Hand To Heart
     ForceCompleteKey: 104
     Rules:
     - RequireHeadState: 1
@@ -9629,7 +9629,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 12880730cafab4ea68842be2c030bd2b, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
@@ -27271,8 +27271,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 1}
-  m_AnchoredPosition: {x: 159, y: -44}
-  m_SizeDelta: {x: -13.299988, y: -97.50001}
+  m_AnchoredPosition: {x: 201, y: 64}
+  m_SizeDelta: {x: -97, y: -312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224144825495339844
 RectTransform:

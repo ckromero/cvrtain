@@ -91,26 +91,28 @@ public class GestureToAudio : MonoBehaviour
 	{
 		gestureToAudioList = new Dictionary<string, string> ();
 
-		gestureToAudioList.Add ("Arms out, basking", "1229_ArmsToSide");
-		gestureToAudioList.Add ("Blow a Kiss", "1230_BlowKisses");
-		gestureToAudioList.Add ("Bow", "1229_Bow-Norm");
+
+		gestureToAudioList.Add ("Prayer Bow", "1229_TwoHandsTogether");
+		gestureToAudioList.Add ("Two Arm Deep Bow", "1229_HandsUp");
+		gestureToAudioList.Add ("Hand to heart", "1229_RHandToHeart");
+		gestureToAudioList.Add ("Pump it up", "1229_PumpItUp");
 		gestureToAudioList.Add ("Deep bow", "1229_DeepBow");
-		gestureToAudioList.Add ("Hand Slice", "1229_HandUpLeft");
-		gestureToAudioList.Add ("Hands Together", "1229_HandsTogetherShake");
-		gestureToAudioList.Add ("Hands up bow", "1229_HandsUp");
+		gestureToAudioList.Add ("Wave", "1229_Wave");	
+		gestureToAudioList.Add ("Blow a Kiss", "1230_BlowKisses");
 		gestureToAudioList.Add ("One arm sweep left", "1229_HandUpLeft");
 		gestureToAudioList.Add ("One arm sweep right", "1230_HandUpRight");
-		gestureToAudioList.Add ("Hand to heart bow", "1229_RHandToHeart");
-//		gestureToAudioList.Add ("no moving", "1226_NotMoving");
 		gestureToAudioList.Add ("One arm bow", "1229_OneArmUp");
-		gestureToAudioList.Add ("One Hand High, One Hand Low", "1229_OneHighOneLow");
-		gestureToAudioList.Add ("Pump it up", "1229_PumpItUp");
-		gestureToAudioList.Add ("Wai", "1229_TwoHandsTogether");
-		gestureToAudioList.Add ("Wave", "1229_Wave");	
+		gestureToAudioList.Add ("Arms out, basking", "1229_ArmsToSide");
+		gestureToAudioList.Add ("Hands Together", "1229_HandsTogetherShake");
+		gestureToAudioList.Add ("One Arm Up", "1229_OneHighOneLow");
+		gestureToAudioList.Add ("Triumph", "1230_TwoArmsUp");
+		gestureToAudioList.Add ("Simple Bow", "1229_Bow-Norm");
+
+		gestureToAudioList.Add ("Hand Slice", "1229_HandUpLeft");
+//		gestureToAudioList.Add ("no moving", "1226_NotMoving");
 		gestureToAudioList.Add ("Weird dance", "1230_AVAILABLE");	
 		gestureToAudioList.Add ("First Backwards", "1229_FirstBackwards");
 		gestureToAudioList.Add ("Laughable", "1226_WierdDance");
-		gestureToAudioList.Add ("Two Hands Up", "1230_TwoArmsUp");
 		gestureToAudioList.Add ("Backwards", "1230_TwoArmsUp");
 
 //		gestureToAudioList.Add ("gesture facing away", "1226_FacingAway");
