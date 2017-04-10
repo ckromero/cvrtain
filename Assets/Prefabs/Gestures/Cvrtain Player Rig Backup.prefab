@@ -9626,8 +9626,8 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_Font: {fileID: 12800000, guid: 12880730cafab4ea68842be2c030bd2b, type: 3}
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -9637,8 +9637,8 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Gestures Completed:
+    m_LineSpacing: 1.05
+  m_Text: 'GESTURES COMPLETED
 
     2x One arm sweep right
 
@@ -9646,9 +9646,29 @@ MonoBehaviour:
 
     4x Laughable
 
-    1x One Hand High, One Hand Low
+    2x One arm sweep right
 
-'
+    4x Weird dance
+
+    4x Laughable
+
+    2x One arm sweep right
+
+    4x Weird dance
+
+    4x Laughable
+
+    2x One arm sweep right
+
+    4x Weird dance
+
+    4x Laughable
+
+    2x One arm sweep right
+
+    4x Weird dance
+
+    4x Laughable'
 --- !u!114 &114189987912749276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27251,7 +27271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.3, y: 1}
-  m_AnchoredPosition: {x: 210.65, y: -82.75}
+  m_AnchoredPosition: {x: 159, y: -44}
   m_SizeDelta: {x: -13.299988, y: -97.50001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224144825495339844
