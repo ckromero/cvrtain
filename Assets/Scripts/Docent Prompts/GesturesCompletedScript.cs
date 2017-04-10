@@ -13,7 +13,7 @@ public class GesturesCompletedScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		_Text = GetComponent<Text>();
-		_Text.text = "";
+//		_Text.text = "";
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class GesturesCompletedScript : MonoBehaviour {
 	}
 
 	public void DisplayGestures() {
-		var message = "Gestures Completed:\n";
+		var message = "GESTURES COMPLETED\n";
 		var keys = new string[gestureManager.GestureCounts.Count];
 		gestureManager.GestureCounts.Keys.CopyTo(keys, 0);
 		for (var i = keys.Length - 1; i >= 0; i--) {
