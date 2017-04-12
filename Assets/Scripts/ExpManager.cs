@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ExpManager : MonoBehaviour
 {
@@ -49,11 +50,13 @@ public class ExpManager : MonoBehaviour
 	private string padToStore;
 	private IEnumerator coroutine;
 	public bool IsInHandSlice=false;
+    private Text gestureCountText;
 
 	void Start ()
 	{
 		triggerListener = GetComponent<TriggerListener> ();
 		IsRestartAnimation = true;
+        gestureCountText = GameObject.Find("Gesture Count").gameObject.GetComponent<Text>();
 	}
 
 
@@ -71,15 +74,17 @@ public class ExpManager : MonoBehaviour
 			IsCheckTimer = false;
 		}
 
-//		if (Input.GetKeyDown ("space")) {
-//			print ("space key was pressed");
-//			RestartCurtainAnimation ();
-//			IsListenForSpaceBar = false;
-//		}
-		
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+            gestureCountText.text = "";
 
-//		states = new bool[]{ IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsTitles };
-		if (IsIdle) { 
+            ///*IsListenForSpaceBar*/ = false;
+        }
+
+
+        //		states = new bool[]{ IsIdle, IsIntroScreen, IsInstructionScreen, IsCurtainOpen, IsLevels, IsCurtainClose, IsOutro, IsTitles };
+        if (IsIdle) { 
 			expState = ExpStates.Idle;
 			audioManager.ChangePad ("quiet");
 			IsIdle = false;

@@ -64,69 +64,84 @@ MonoBehaviour:
     ClapLevel: 0
     Advancement: 1
     PositiveGestures:
-    - Gesture: Bow
+    - Gesture: Simple Bow
       Limit: 10
       RemainingLimit: 0
     - Gesture: Wave
       Limit: 10
       RemainingLimit: 0
-    - Gesture: Deep bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hands up bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: One arm bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hand to heart bow
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Wai
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Pump it up
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hand Sweep
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Blow a Kiss
+    - Gesture: Prayer Bow
       Limit: 100
       RemainingLimit: 0
     - Gesture: One arm sweep left
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One arm sweep right
+    - Gesture: One Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Deep bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hand To Heart
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Two Arm Deep Bow
       Limit: 100
       RemainingLimit: 0
     - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Triumph
       Limit: 100
       RemainingLimit: 0
     NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 1
     DemotionRequirment: 0
-  - StartingLevel: 0
+  - StartingLevel: 1
     ClapLevel: 0
     Advancement: 1
     PositiveGestures:
-    - Gesture: Bow
-      Limit: 100
+    - Gesture: Prayer Bow
+      Limit: 10
       RemainingLimit: 0
-    - Gesture: Hands up bow
-      Limit: 100
+    - Gesture: Wave
+      Limit: 10
       RemainingLimit: 0
     - Gesture: Deep bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Hand to heart bow
+    - Gesture: Two Arm Deep Bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One arm bow
+    - Gesture: Hand To Heart
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Wai
+    - Gesture: Blow a Kiss
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
       Limit: 100
       RemainingLimit: 0
     - Gesture: One arm sweep left
@@ -135,21 +150,45 @@ MonoBehaviour:
     - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
-    NeutralGestures:
-    - Gesture: Wave
-      Limit: 10
+    - Gesture: Hands Together
+      Limit: 100
       RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Triumph
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Simple Bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 3
     DemotionRequirment: 3
-  - StartingLevel: 0
-    ClapLevel: 1
+  - StartingLevel: 1
+    ClapLevel: 0
     Advancement: 1
     PositiveGestures:
+    - Gesture: Prayer Bow
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 10
+      RemainingLimit: 0
     - Gesture: Deep bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Hands up bow
+    - Gesture: Two Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Arm Up
       Limit: 100
       RemainingLimit: 0
     - Gesture: Pump it up
@@ -158,13 +197,57 @@ MonoBehaviour:
     - Gesture: Blow a Kiss
       Limit: 100
       RemainingLimit: 0
+    - Gesture: One arm sweep left
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One arm sweep right
+      Limit: 100
+      RemainingLimit: 0
     - Gesture: Hands Together
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Wai
+    - Gesture: Arms out, basking
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Hand to heart bow
+    - Gesture: Triumph
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Simple Bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures: []
+    NegativeGestures: []
+    PromotionRequirment: 5
+    DemotionRequirment: 3
+  - StartingLevel: 1
+    ClapLevel: 0
+    Advancement: 1
+    PositiveGestures:
+    - Gesture: Prayer Bow
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Deep bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Two Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Arm Up
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Pump it up
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Blow a Kiss
       Limit: 100
       RemainingLimit: 0
     - Gesture: One arm sweep left
@@ -173,24 +256,45 @@ MonoBehaviour:
     - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
-    NeutralGestures:
-    - Gesture: Wave
-      Limit: 10
+    - Gesture: Hands Together
+      Limit: 100
       RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Triumph
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Simple Bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 7
     DemotionRequirment: 3
-  - StartingLevel: 0
-    ClapLevel: 1
+  - StartingLevel: 1
+    ClapLevel: 0
     Advancement: 1
     PositiveGestures:
+    - Gesture: Prayer Bow
+      Limit: 10
+      RemainingLimit: 0
+    - Gesture: Wave
+      Limit: 10
+      RemainingLimit: 0
     - Gesture: Deep bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Hands up bow
+    - Gesture: Two Arm Deep Bow
       Limit: 100
       RemainingLimit: 0
-    - Gesture: One Hand High, One Hand Low
+    - Gesture: One Arm Deep Bow
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Hands Together
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: One Arm Up
       Limit: 100
       RemainingLimit: 0
     - Gesture: Pump it up
@@ -199,25 +303,25 @@ MonoBehaviour:
     - Gesture: Blow a Kiss
       Limit: 100
       RemainingLimit: 0
-    - Gesture: Hands Together
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Wai
-      Limit: 100
-      RemainingLimit: 0
-    - Gesture: Hand to heart bow
-      Limit: 100
-      RemainingLimit: 0
     - Gesture: One arm sweep left
       Limit: 100
       RemainingLimit: 0
     - Gesture: One arm sweep right
       Limit: 100
       RemainingLimit: 0
-    NeutralGestures:
-    - Gesture: Wave
-      Limit: 10
+    - Gesture: Hands Together
+      Limit: 100
       RemainingLimit: 0
+    - Gesture: Arms out, basking
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Triumph
+      Limit: 100
+      RemainingLimit: 0
+    - Gesture: Simple Bow
+      Limit: 100
+      RemainingLimit: 0
+    NeutralGestures: []
     NegativeGestures: []
     PromotionRequirment: 7
     DemotionRequirment: 3

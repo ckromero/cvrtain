@@ -94,7 +94,7 @@ public class GestureToAudio : MonoBehaviour
 
 		gestureToAudioList.Add ("Prayer Bow", "1229_TwoHandsTogether");
 		gestureToAudioList.Add ("Two Arm Deep Bow", "1229_HandsUp");
-		gestureToAudioList.Add ("Hand to heart", "1229_RHandToHeart");
+		gestureToAudioList.Add ("Hand To Heart", "1229_RHandToHeart");
 		gestureToAudioList.Add ("Pump it up", "1229_PumpItUp");
 		gestureToAudioList.Add ("Deep bow", "1229_DeepBow");
 		gestureToAudioList.Add ("Wave", "1229_Wave");	
