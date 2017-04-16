@@ -56,7 +56,8 @@ public class ExpManager : MonoBehaviour
 	{
 		triggerListener = GetComponent<TriggerListener> ();
 		IsRestartAnimation = true;
-        gestureCountText = GameObject.Find("Gesture Count").gameObject.GetComponent<Text>();
+        gestureCountText = GameObject.Find("Gesture Count screenspace").gameObject.GetComponent<Text>();
+        //gestureCountText = GameObject.Find("Gesture Count").gameObject.GetComponent<Text>();
 	}
 
 
@@ -78,6 +79,7 @@ public class ExpManager : MonoBehaviour
         {
             print("space key was pressed");
             gestureCountText.text = "";
+		SendCue("ShowsOver");
 
             ///*IsListenForSpaceBar*/ = false;
         }
@@ -290,7 +292,10 @@ public class ExpManager : MonoBehaviour
 		Debug.Log ("resetting show");
 //		audioManager.SetSoundToFade ("Terry Cloth");
 		lightsController.TurnOffMains ();
+		lightsController.HouseOff();
+		
 		levelsManager.StopPerforming();
+
 		IsCurtainNotificationSent = false;
 		IsCheckTimer = false;
         IsHouseToHalfCalled = false;

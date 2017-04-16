@@ -27,6 +27,8 @@ GameObject:
   - component: {fileID: 114999015899079026}
   - component: {fileID: 114994614494104442}
   - component: {fileID: 114646150084806912}
+  - component: {fileID: 114163582642223316}
+  - component: {fileID: 114547927575575608}
   m_Layer: 0
   m_Name: ExpManager
   m_TagString: Untagged
@@ -79,7 +81,7 @@ MonoBehaviour:
   afterCurtainOpen: {fileID: 0}
   docentPrompter: {fileID: 0}
   expState: 0
-  showTime: 105
+  showTime: 75
   state: 
   IsIdle: 0
   IsIntroScreen: 0
@@ -104,6 +106,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   module: {fileID: 0}
 --- !u!114 &114000013337724354
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
+--- !u!114 &114163582642223316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011486533290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cd86e68b01ec4496b1db0b16e0c80a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  module: {fileID: 0}
+--- !u!114 &114547927575575608
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

@@ -13,7 +13,8 @@ public class DocentPrompter : MonoBehaviour {
 	private GameObject promptImageGO;
 
 	void Start() {
-		_CompletedScript = GetComponentInChildren<GesturesCompletedScript>();
+		_CompletedScript = GameObject.Find("Gesture Count screenspace").GetComponent<GesturesCompletedScript>();
+		//_CompletedScript = GetComponentInChildren<GesturesCompletedScript>();
 		promptImageGO = GameObject.Find ("PromptImage");
 	}
 	

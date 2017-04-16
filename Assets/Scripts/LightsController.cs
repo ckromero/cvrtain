@@ -26,6 +26,7 @@ public class LightsController : MonoBehaviour
 
 	public void HouseToHalf ()
 	{
+		HouseLights.SetActive(true);
 		if (!rollUpHouseLights) {
             rollUpHouseLights = true;
 			houseLight.intensity = 0.0f;
